@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="Nhan_su_lds.group_baocom" model="res.groups">
+        <field name="name">Nhóm mới LDS Báo cơm</field>
+    </record>
+    <record id="Nhan_su_lds.group_ns" model="res.groups">
+        <field name="name">Nhóm mới LDS NS</field>
+    </record>
+</odoo>

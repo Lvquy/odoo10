@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+{
+    'name':'Nhân sự LDS',
+    'summary': """Nhân sự LDS""",
+    'version': '0.1',
+    'description': """Nhân sự LDS""",
+    'author': 'Lv Quý',
+    'company': 'LDS',
+    'website': 'http://tinyERP.net',
+    'category': 'Nhân sự LDS',
+    'depends': ['base', 'report','website','web_responsive','rowno_in_tree'],
+    'license': 'AGPL-3',
+    'data': [
+        'views/bao_com.xml',
+        'views/add_bophan.xml',
+        'views/nhansu.xml',
+        'views/baocao.xml',
+        'views/setting.xml',
+        'views/website_template.xml',
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'data/bo_phan_lds.xml',
+        'report/menu_report.xml',
+        'report/baocao_chitiet.xml',
+        'report/report_template.xml',
+        'report/nhan_su_report.xml',
+        'views/views.xml'
+    ],
+    'css': [],
+	'qweb': [
+	],
+    'demo': [],
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+}

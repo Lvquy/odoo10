@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="lds_report_salepackinglist_document">
+        <t> <!---  t-call="report.external_layout" Thêm dòng này để gọi thông tin cty vào đầu và cuối báo cáo-->
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})"/>
+            <div class="page">
+			 <link rel="stylesheet" href="/lds_report/static/src/css/sales_oder_style.css"/> 
+                <span>
+                    <center>
+                        <img src="/lds_report/static/src/img/logo.png" width="100%" height="auto"></img>
+                    </center>
+                </span>
+                <h2>
+                    <center>PACKING LIST</center>
+                </h2>              
+                <span class="col-xs-1 text-left">
+					No.:
+                </span> 
+				<span class="col-xs-7 text-left">
+					<span t-field="doc.LDS_NO"/>  
+                </span> 
+				<span class="col-xs-1">
+					DATE:
+                </span>
+				<span class="col-xs-3 text-left">   
+					<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%b %d, %Y')"/>
+					<!--<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%H:%M Giờ, Ngày %d, Tháng %m, Năm %Y' )"/>-->
+                </span>
+				<span class="col-xs-12 text-left">
+					INVOICE of AS FOLLOWS
+                </span>
+				<span class="col-xs-4 text-left">               
+					For account and risk of Messrs:
+                </span>
+				<span class="col-xs-8 text-left">
+					<span t-field="doc.partner_id"/>,
+					<span t-field="doc.partner_id.street"/>
+				</span>
+				<span class="col-xs-12 text-left">
+					Shipped by: LIN TA HSING JOINT STOCK COMPANY
+				</span>
+                <span class="col-xs-1 text-left">
+					ETD:
+				</span>
+				<span class="col-xs-3 text-left">
+					<t t-if="doc.LDS_ETD">			
+						<t t-esc="datetime.datetime.strptime(doc.LDS_ETD, '%Y-%m-%d').strftime('%b %d, %Y')"/>		
+					</t>
+					<t t-if="not doc.LDS_ETD">
+						Lỗi, chưa chọn ngày ETD
+					</t>
+				</span>
+				<span class="col-xs-1 text-left">
+					ETA:
+				</span>
+				<span class="col-xs-3 text-left">
+					<t t-if="doc.LDS_ETA">
+						<t t-esc="datetime.datetime.strptime(doc.LDS_ETA, '%Y-%m-%d').strftime('%b %d, %Y')"/>
+					</t>
+					<t t-if="not doc.LDS_ETA">
+						Lỗi, chưa chọn ngày ETA
+					</t>
+				</span>
+				<span class="col-xs-1 text-left">
+					TO:
+				</span>
+				<span class="col-xs-3 text-left">
+					<span t-field="doc.partner_id.street2"/>
+				</span>		              
+                <t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>
+                <t t-foreach="doc.order_lines_layouted()" t-as="page">
+					<table width="100%">
+						<tr class="tr1">
+							<th class="th1" style="padding:5px" width="10%" height="auto">
+								ITEM NO.
+							</th>
+							<th class="th1" width="50%">
+								DESCRIPTION OF GOODS
+								<br/>
+								<br/>
+								WOODEN FURNITURE<BR/>
+								COUNRTY OF ORIGIN: VIETNAM
+							</th>
+							<th class="th1" width="10%">
+								Q'ty(pcs)
+							</th>
+							<th class="th1" width="10%">
+								Q'ty(ctn)
+							</th>
+							<th class="th1" width="10%">
+								N.W(KG)
+							</th>
+							<th class="th1" width="10%">
+								G.W(KG)
+							</th>
+						</tr>
+						<tbody class="sale_tbody">
+							<t t-foreach="page" t-as="layout_category">
+								<!-- dữ liệu trong bảng -->
+								<t t-set="i" t-value="1"/>
+								<t t-set="total_qty" t-value="0"/>
+								<t t-set="total_qty_pac" t-value="0"/>
+								<t t-set="total_kg" t-value="0"/> 
+								<t t-set="total_kg_pac" t-value="0"/> 
+								<t t-foreach="layout_category['lines']" t-as="l">
+								<tr >
+								<td class="td1" style="padding:10px">
+									<t t-esc="i"/>
+									<t t-set="i" t-value="i+1"/>
+								</td>
+								<td class="td1" style=" padding:10px">
+									<span t-field="l.product_id"/>
+								</td>
+								<td class="td1" style="padding:10px">
+									<span t-field="l.product_uom_qty"/>
+								</td>
+								<td class="td1" style="padding:10px" >
+								<t t-if="l.product_packaging.qty !=0">
+									<span t-esc="l.product_uom_qty/l.product_packaging.qty"/>
+								</t>
+								<t t-if="not l.product_packaging.qty">
+								Lỗi, chưa đóng gói
+								</t>
+								</td>
+								<td class="td1" style="padding:10px">												
+									<span t-esc="l.product_id.weight*l.product_uom_qty"/>											
+								</td>
+								<td class="td1" style="padding:10px" >
+								<t t-if="not l.product_packaging.qty">
+								Lỗi, chưa đóng gói
+								</t>
+								<t t-if="l.product_packaging.qty !=0">
+									<span t-esc="(l.product_uom_qty/l.product_packaging.qty)*l.product_packaging.max_weight + l.product_uom_qty*l.product_id.weight "/>
+								</t>
+								</td>
+								<t t-set="total_qty" t-value="total_qty + l.product_uom_qty"/>
+								<t t-if="l.product_packaging.qty !=0">
+									<t t-set="total_qty_pac" t-value="total_qty_pac + l.product_uom_qty/l.product_packaging.qty"/>
+								</t>
+								<t t-set="total_kg" t-value="total_kg + l.product_id.weight*l.product_uom_qty"/>
+								<t t-if="l.product_packaging.qty !=0">
+									<t t-set="total_kg_pac" t-value="total_kg_pac + ((l.product_uom_qty/l.product_packaging.qty)*l.product_packaging.max_weight + l.product_uom_qty*l.product_id.weight)"/>
+								</t>
+								</tr>							
+								</t>
+								<td class="td1" style="padding:10px" colspan="2">
+									<strong>TOTAL</strong>
+								</td>
+								<td class="td1" style="padding:10px">							
+									<strong><t t-esc="total_qty"/></strong>
+								</td>
+								<td class="td1" style="padding:10px">
+								
+									<strong><t t-esc="total_qty_pac"/></strong>
+								</td>
+								<td class="td1" style="padding:10px">
+									<strong><t t-esc="total_kg"/></strong>
+								</td>
+								<td class="td1" style="padding:10px">							
+									<strong><t t-esc="total_kg_pac"/></strong>
+								</td>					
+							</t>
+						</tbody>
+					</table>
+                <span class="col-xs-12 text-right">
+					<strong>LIN TA HSING JOINT STOCK COMPANY</strong>
+				</span>
+				<t t-if="page_index &lt; page_size - 1" groups="sale.group_sale_layout">
+				<p style="page-break-before:always;"></p>
+				</t>
+				</t>
+				<div class="oe_structure"/>
+			</div>
+		</t>
+	</template>
+				<template id="lds_report_sale_packinglist">
+				<t t-call="report.html_container">
+				<t t-foreach="docs" t-as="doc">
+				<t t-call="lds_report.lds_report_salepackinglist_document" t-lang="doc.partner_id.lang"/>
+				</t>
+				</t>
+				</template>
+</odoo>

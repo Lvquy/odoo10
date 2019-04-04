@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="bophan_01" model="bophan">
+            <field name="name">IT</field>
+        </record>
+        <record id="bophan_02" model="bophan">
+            <field name="name">Kho</field>
+        </record>
+        <record id="bophan_03" model="bophan">
+            <field name="name">Lắp ráp</field>
+        </record>
+        <record id="bophan_04" model="bophan">
+            <field name="name">QC</field>
+        </record>
+        <record id="bophan_05" model="bophan">
+            <field name="name">Nhân sự</field>
+        </record>
+        <record id="bophan_06" model="bophan">
+            <field name="name">Thiết kế</field>
+        </record>
+        <record id="bophan_07" model="bophan">
+            <field name="name">Nghiệp vụ</field>
+        </record>
+        <record id="bophan_08" model="bophan">
+            <field name="name">Thu mua</field>
+        </record>
+        <record id="bophan_09" model="bophan">
+            <field name="name">XNK</field>
+        </record>
+        <record id="bophan_10" model="bophan">
+            <field name="name">Kế toán</field>
+        </record>
+        <record id="bophan_11" model="bophan">
+            <field name="name">Pha sơn</field>
+        </record>
+        <record id="os_1" model="os">
+            <field name="name">Window xp</field>
+        </record>
+        <record id="os_2" model="os">
+            <field name="name">Window 7, bản quyền</field>
+        </record>
+        <record id="os_3" model="os">
+            <field name="name">Window 10, bản quyền</field>
+        </record>
+        <record id="os_4" model="os">
+            <field name="name">Window 200, bản quyền</field>
+        </record>
+        <record id="os_5" model="os">
+            <field name="name">Window 7</field>
+        </record>
+        <record id="os_6" model="os">
+            <field name="name">Window 10</field>
+        </record>
+        <record id="os_7" model="os">
+            <field name="name">Ubuntu 16.04</field>
+        </record>
+        <record id="os_8" model="os">
+            <field name="name">Photoshop CS3 bản quyền</field>
+        </record>
+        <record id="os_9" model="os">
+            <field name="name">Autocad 2007, bản quyền</field>
+        </record>
+        <record id="os_10" model="os">
+            <field name="name">Office 2013, bản quyền</field>
+        </record>
+    </data>
+</odoo>

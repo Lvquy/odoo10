@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_log_check_tree" model="ir.ui.view">
+            <field name="name">log.check.tree</field>
+            <field name="model">log.check</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Lịch sử kiểm tra" decoration-danger="count_error != 0">
+                    <field name="ngay"/>
+                    <field name="count_error" sum="Tổng" widget="monetary"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_log_check_form" model="ir.ui.view">
+            <field name="name">log.check.form</field>
+            <field name="model">log.check</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Lịch sử kiểm tra">
+                    <sheet>
+                        <group>
+                            <field name="ngay"/>
+                        </group>
+                        <notebook>
+                            <page name="logcheck" string="Kiểm tra Camera">
+                                <field name="device"></field>
+                                <group class="oe_subtotal_footer oe_right" colspan="2" name="tong_loi">
+                                    <field name="count_error"/>
+                                </group>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

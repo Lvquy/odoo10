@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--tree view-->
+        <record id="view_email_noi_tree" model="ir.ui.view">
+            <field name="name">email.noi.tree</field>
+            <field name="model">email.noi</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Email nội bộ">
+                    <field name="name"/>
+                    <field name="passw"/>
+                    <field name="nguoi_sd"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_email_noi_form" model="ir.ui.view">
+            <field name="name">email.noi.form</field>
+            <field name="model">email.noi</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Email nội bộ">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="passw"/>
+                            <field name="nguoi_sd" options="{'no_create': True}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

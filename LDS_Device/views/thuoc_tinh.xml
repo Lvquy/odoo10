@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_thuoctinh_tree" model="ir.ui.view">
+            <field name="name">thuoctinh.tree</field>
+            <field name="model">thuoctinh</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Thuộc tính">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_thuoctinh_form" model="ir.ui.view">
+            <field name="name">thuoctinh.form</field>
+            <field name="model">thuoctinh</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Thuộc tính">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_adapter_mat_tree" model="ir.ui.view">
+            <field name="name">adapter.mat.tree</field>
+            <field name="model">adapter.mat</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Adapter, Mắt">
+                    <field name="ma_so" widget="handle"/>
+                    <field name="model"/>
+                    <field name="type"/>
+                    <field name="cho_daughi"/>
+                    <field name="gia_tri"/>
+                    <field name="bao_hanh"/>
+                    <field name="bao_hanh_toi"/>
+                    <field name="ngay_mua"/>
+                    <field name="ngay_bao_phe"/>
+                    <field name="state"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_adapter_mat_form" model="ir.ui.view">
+            <field name="name">adapter.mat.form</field>
+            <field name="model">adapter.mat</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Adapter, Mắt">
+                    <header>
+                        <button name ="action_adt_2_1" string="Xác nhận sử dụng" type="object"
+                                attrs="{'invisible': [('status', 'in', ('1','0'))]}"/>
+                        <button name ="action_adt_1_2" string="Chuyển vào kho" type="object"
+                                attrs="{'invisible': [('status', 'in', ('2','0'))]}"/>
+                        <button name ="action_adt_1_0" string="Báo phế" type="object"
+                                attrs="{'invisible': [('status', 'in', ('0','2'))]}" confirm="Xác nhận báo phế!"/>
+                        <field name="status" widget="statusbar" visible_status="0,1"/>
+                        <button name="action_state_0_1" string="Khóa" type="object" confirm="Xác nhận khóa"
+                                attrs="{'invisible': [('state', 'in', ('1'))]}"/>
+                        <field name="state" widget="statusbar" visible_status="0,1"/>
+
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="ma_so"/>
+                                <field name="type" widget="radio" attrs="{'readonly': [('state', 'in', ('1'))]}"/>
+                                <field name="model" attrs="{'readonly': [('state', 'in', ('1'))]}"/>
+                                <field name="cho_daughi" domain="[('type','=','daughi'),('status','=','1')]"
+                                       attrs="{'invisible': [('status', 'in', ('0'))]}" options="{'no_create': True}"/>
+                                <field name="ngay_bao_phe" attrs="{'readonly': [('status', 'in', ('0'))]}"/>
+                            </group>
+                            <group>
+                                <field name="gia_tri"/>
+                                <field name="ngay_mua"/>
+                                <field name="bao_hanh"/>
+                                <field name="bao_hanh_toi"/>
+                                <field name="nha_cc"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="note"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

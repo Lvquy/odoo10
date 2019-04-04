@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Phiếu chay trưa-->
+    <template id="trua_chay">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <div class="row mt32 mb32">
+                    <div t-foreach="o.chay_trua" t-as="k">
+                        <div class="col-xs-3 text-center">
+                            <div style="border:double">
+                            <p>CTY LÂM ĐẠT HƯNG <br/>
+                            PHIẾU ĂN TRƯA: CHAY<br/>
+                            Ngày: <span t-field="o.ngay_bao"/>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <strong>Trưa ngày: <span t-field="o.ngay_bao"/>, Tổng: <span t-field="o.chay_trua"/> suất chay</strong>
+            </div>
+        </t>
+    </template>
+    <template id="report_trua_chay">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.trua_chay"/>
+        </t>
+    </template>
+    <!-- Phiếu mặn trưa-->
+    <template id="trua_man">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <div class="row mt32 mb32">
+                    <div t-foreach="o.man_trua" t-as="k">
+                        <div class="col-xs-3 text-center">
+                            <div style="border:double">
+                            <p>CTY LÂM ĐẠT HƯNG <br/>
+                            PHIẾU ĂN TRƯA: MẶN<br/>
+                            Ngày: <span t-field="o.ngay_bao"/>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <strong>Trưa ngày: <span t-field="o.ngay_bao"/>, Tổng: <span t-field="o.man_trua"/> suất mặn</strong>
+            </div>
+        </t>
+    </template>
+    <template id="report_trua_man">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.trua_man"/>
+        </t>
+    </template>
+
+    <!-- Phiếu cháo trưa-->
+    <template id="trua_chao">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <div class="row mt32 mb32">
+                    <div t-foreach="o.chao_trua" t-as="k">
+                        <div class="col-xs-3 text-center">
+                            <div style="border:double">
+                            <p>CTY LÂM ĐẠT HƯNG <br/>
+                            PHIẾU ĂN TRƯA: CHÁO<br/>
+                            Ngày: <span t-field="o.ngay_bao"/>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <strong>Trưa ngày: <span t-field="o.ngay_bao"/>, Tổng: <span t-field="o.chao_trua"/> suất cháo</strong>
+            </div>
+        </t>
+    </template>
+    <template id="report_chao_trua">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.trua_chao"/>
+        </t>
+    </template>
+
+    <!-- Phiếu mặn chiều-->
+    <template id="man_4_chieu">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <div class="row mt32 mb32">
+                    <div t-foreach="o.man_4_chieu" t-as="k">
+                        <div class="col-xs-3 text-center">
+                            <div style="border:double">
+                            <p>CTY LÂM ĐẠT HƯNG <br/>
+                            PHIẾU ĂN CHIỀU: MẶN 4T<br/>
+                            Ngày: <span t-field="o.ngay_bao"/>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <strong>Chiều ngày: <span t-field="o.ngay_bao"/>, Tổng: <span t-field="o.man_4_chieu"/> suất mặn 4T</strong>
+            </div>
+        </t>
+    </template>
+    <template id="report_man_4_chieu">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.man_4_chieu"/>
+        </t>
+    </template>
+
+    <!-- Phiếu chay chiều-->
+    <template id="chay_4_chieu">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <div class="row mt32 mb32">
+                    <div t-foreach="o.chay_4_chieu" t-as="k">
+                        <div class="col-xs-3 text-center">
+                            <div style="border:double">
+                            <p>CTY LÂM ĐẠT HƯNG <br/>
+                            PHIẾU ĂN CHIỀU: CHAY 4T<br/>
+                            Ngày: <span t-field="o.ngay_bao"/>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <strong>Chiều ngày: <span t-field="o.ngay_bao"/>, Tổng: <span t-field="o.chay_4_chieu"/> suất chay 4T</strong>
+            </div>
+        </t>
+    </template>
+    <template id="report_chay_4_chieu">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.chay_4_chieu"/>
+        </t>
+    </template>
+
+    <!-- Phiếu cháo chiều-->
+    <template id="chao_4_chieu">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <div class="row mt32 mb32">
+                    <div t-foreach="o.chao_4_chieu" t-as="k">
+                        <div class="col-xs-3 text-center">
+                            <div style="border:double">
+                            <p>CTY LÂM ĐẠT HƯNG <br/>
+                            PHIẾU ĂN CHIỀU: CHÁO 4T<br/>
+                            Ngày: <span t-field="o.ngay_bao"/>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <strong>Chiều ngày: <span t-field="o.ngay_bao"/>, Tổng: <span t-field="o.chao_4_chieu"/> suất cháo 4T</strong>
+            </div>
+        </t>
+    </template>
+    <template id="report_chao_4_chieu">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.chao_4_chieu"/>
+        </t>
+    </template>
+
+    <!-- Phiếu bún chiều-->
+    <template id="bun_chieu">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <div class="row mt32 mb32">
+                    <div t-foreach="o.bun_chieu" t-as="k">
+                        <div class="col-xs-3 text-center">
+                            <div style="border:double">
+                            <p>CTY LÂM ĐẠT HƯNG <br/>
+                            PHIẾU ĂN CHIỀU: BÚN<br/>
+                            Ngày: <span t-field="o.ngay_bao"/>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <strong>Chiều ngày: <span t-field="o.ngay_bao"/>, Tổng: <span t-field="o.bun_chieu"/> suất bún</strong>
+            </div>
+        </t>
+    </template>
+    <template id="report_bun_chieu">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.bun_chieu"/>
+        </t>
+    </template>
+
+    <!-- Phiếu mì chiều-->
+    <template id="mi_chieu">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <div class="row mt32 mb32">
+                    <div t-foreach="o.mi_chieu" t-as="k">
+                        <div class="col-xs-3 text-center">
+                            <div style="border:double">
+                            <p>CTY LÂM ĐẠT HƯNG <br/>
+                            PHIẾU ĂN CHIỀU: MÌ<br/>
+                            Ngày: <span t-field="o.ngay_bao"/>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <strong>Chiều ngày: <span t-field="o.ngay_bao"/>, Tổng: <span t-field="o.mi_chieu"/> suất mì</strong>
+            </div>
+        </t>
+    </template>
+    <template id="report_mi_chieu">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.mi_chieu"/>
+        </t>
+    </template>
+
+    <!-- Phiếu mặn chiều-->
+    <template id="man_3_chieu">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <div class="row mt32 mb32">
+                    <div t-foreach="o.man_3_chieu" t-as="k">
+                        <div class="col-xs-3 text-center">
+                            <div style="border:double">
+                            <p>CTY LÂM ĐẠT HƯNG <br/>
+                            PHIẾU ĂN CHIỀU: MẶN 3T<br/>
+                            Ngày: <span t-field="o.ngay_bao"/>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <strong>Chiều ngày: <span t-field="o.ngay_bao"/>, Tổng: <span t-field="o.man_3_chieu"/> suất mặn 3T</strong>
+            </div>
+        </t>
+    </template>
+    <template id="report_man_3_chieu">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.man_3_chieu"/>
+        </t>
+    </template>
+
+    <!-- Phiếu chay chiều-->
+    <template id="chay_3_chieu">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <div class="row mt32 mb32">
+                    <div t-foreach="o.chay_3_chieu" t-as="k">
+                        <div class="col-xs-3 text-center">
+                            <div style="border:double">
+                            <p>CTY LÂM ĐẠT HƯNG <br/>
+                            PHIẾU ĂN CHIỀU: CHAY 3T<br/>
+                            Ngày: <span t-field="o.ngay_bao"/>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <strong>Chiều ngày: <span t-field="o.ngay_bao"/>, Tổng: <span t-field="o.chay_3_chieu"/> suất chay 3T</strong>
+            </div>
+        </t>
+    </template>
+    <template id="report_chay_3_chieu">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.chay_3_chieu"/>
+        </t>
+    </template>
+    <!-- Phiếu cháo chiều-->
+    <template id="chao_3_chieu">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <div class="row mt32 mb32">
+                    <div t-foreach="o.chao_3_chieu" t-as="k">
+                        <div class="col-xs-3 text-center">
+                            <div style="border:double">
+                            <p>CTY LÂM ĐẠT HƯNG <br/>
+                            PHIẾU ĂN CHIỀU: CHÁO 3T<br/>
+                            Ngày: <span t-field="o.ngay_bao"/>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <strong>Chiều ngày: <span t-field="o.ngay_bao"/>, Tổng: <span t-field="o.chao_3_chieu"/> suất cháo 3T</strong>
+            </div>
+        </t>
+    </template>
+    <template id="report_chao_3_chieu">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.chao_3_chieu"/>
+        </t>
+    </template>
+</odoo>

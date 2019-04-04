@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="add_bophan_form" model="ir.ui.view">
+            <field name="name">res.users.bophan.inherit.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/div/group/field[@name='partner_id']" position="after">
+                    <field name="bo_phan" string="Bộ phận"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

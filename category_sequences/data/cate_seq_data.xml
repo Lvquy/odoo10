@@ -1,0 +1,2705 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- NVL CHÍNH：1000 -->
+        <record id="product_category_1000" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">NVL CHÍNH</field>
+            <field name="type">view</field>
+            <field name="category_code">1000</field>
+        </record>
+
+        <!-- VÁN：1100 --> <!--  ref: là khai báo ID danh mục cha -->
+        <record id="product_category_1100" model="product.category">
+            <field name="parent_id" ref="product_category_1000"/>
+            <field name="name">VÁN</field>
+            <field name="type">view</field>
+            <field name="category_code">1100</field>
+        </record>
+
+        <!-- VAN LANG：1110 -->
+        <record id="product_category_1110" model="product.category">
+            <field name="parent_id" ref="product_category_1100"/>
+            <field name="name">VÁN LẠNG</field>
+            <field name="type">normal</field>
+            <field name="category_code">1110</field>
+        </record>
+
+        <!-- VÁN ÉP：1120 -->
+        <record id="product_category_1120" model="product.category">
+            <field name="parent_id" ref="product_category_1100"/>
+            <field name="name">VÁN ÉP</field>
+            <field name="type">normal</field>
+            <field name="category_code">1120</field>
+        </record>
+
+        <!-- MDF：1130 -->
+        <record id="product_category_1130" model="product.category">
+            <field name="parent_id" ref="product_category_1100"/>
+            <field name="name">MDF</field>
+            <field name="type">normal</field>
+            <field name="category_code">1130</field>
+        </record>
+
+        <!-- VÁN PB：1140 -->
+        <record id="product_category_1140" model="product.category">
+            <field name="parent_id" ref="product_category_1100"/>
+            <field name="name">VÁN PB</field>
+            <field name="type">normal</field>
+            <field name="category_code">1140</field>
+        </record>
+
+        <!-- VÁN HP：1150 -->
+        <record id="product_category_1150" model="product.category">
+            <field name="parent_id" ref="product_category_1100"/>
+            <field name="name">VÁN HP</field>
+            <field name="type">normal</field>
+            <field name="category_code">1150</field>
+        </record>
+
+        <!-- VÁN Ô TIM：1160 -->
+        <record id="product_category_1160" model="product.category">
+            <field name="parent_id" ref="product_category_1100"/>
+            <field name="name">VÁN Ô TIM</field>
+            <field name="type">normal</field>
+            <field name="category_code">1160</field>
+        </record>
+
+        <!-- VÁN HAR：1170 -->
+        <record id="product_category_1170" model="product.category">
+            <field name="parent_id" ref="product_category_1100"/>
+            <field name="name">VÁN HAR</field>
+            <field name="type">normal</field>
+            <field name="category_code">1170</field>
+        </record>
+
+        <!-- LOẠI KHÁC：1190 -->
+        <record id="product_category_1190" model="product.category">
+            <field name="parent_id" ref="product_category_1100"/>
+            <field name="name">LOẠI KHÁC</field>
+            <field name="type">normal</field>
+            <field name="category_code">1190</field>
+        </record>
+
+        <!-- GỖ：1200 -->
+        <record id="product_category_1200" model="product.category">
+            <field name="parent_id" ref="product_category_1000"/>
+            <field name="name">GỖ</field>
+            <field name="type">view</field>
+            <field name="category_code">1200</field>
+        </record>
+
+        <!--Cao su ：1210 -->
+        <record id="product_category_1210" model="product.category">
+            <field name="parent_id" ref="product_category_1200"/>
+            <field name="name">Cao su</field>
+            <field name="type">normal</field>
+            <field name="category_code">1210</field>
+        </record>
+
+        <!-- Tram ：1220 -->
+        <record id="product_category_1220" model="product.category">
+            <field name="parent_id" ref="product_category_1200"/>
+            <field name="name">TRÀM</field>
+            <field name="type">normal</field>
+            <field name="category_code">1220</field>
+        </record>
+
+        <!-- OAK: 1230 -->
+        <record id="product_category_1230" model="product.category">
+            <field name="parent_id" ref="product_category_1200"/>
+            <field name="name">OAK</field>
+            <field name="type">normal</field>
+            <field name="category_code">1230</field>
+        </record>
+
+        <!-- ASH: 1240 -->
+        <record id="product_category_1240" model="product.category">
+            <field name="parent_id" ref="product_category_1200"/>
+            <field name="name">ASH</field>
+            <field name="type">normal</field>
+            <field name="category_code">1240</field>
+        </record>
+
+        <!-- SYCAMO(RANDOMS): 1250 -->
+        <record id="product_category_1250" model="product.category">
+            <field name="parent_id" ref="product_category_1200"/>
+            <field name="name">SYCAMO(RANDOMS)</field>
+            <field name="type">normal</field>
+            <field name="category_code">1250</field>
+        </record>
+
+        <!-- BEECH: 1260 -->
+        <record id="product_category_1260" model="product.category">
+            <field name="parent_id" ref="product_category_1200"/>
+            <field name="name">BEECH</field>
+            <field name="type">normal</field>
+            <field name="category_code">1260</field>
+        </record>
+
+        <!-- BẠCH DƯƠNG: 1270 -->
+        <record id="product_category_1270" model="product.category">
+            <field name="parent_id" ref="product_category_1200"/>
+            <field name="name">BẠCH DƯƠNG</field>
+            <field name="type">normal</field>
+            <field name="category_code">1270</field>
+        </record>
+
+        <!-- DÁI NGỰA: 1280 -->
+        <record id="product_category_1280" model="product.category">
+            <field name="parent_id" ref="product_category_1200"/>
+            <field name="name">DÁI NGỰA</field>
+            <field name="type">normal</field>
+            <field name="category_code">1280</field>
+        </record>
+
+        <!-- XÀ CỪ: 1290 -->
+        <record id="product_category_1290" model="product.category">
+            <field name="parent_id" ref="product_category_1200"/>
+            <field name="name">XÀ CỪ</field>
+            <field name="type">normal</field>
+            <field name="category_code">1290</field>
+        </record>
+
+        <!-- LOẠI KHÁC(LENGE LUMBER, PHÁCH, HỒ ĐÀO...): 1291 -->
+        <record id="product_category_1291" model="product.category">
+            <field name="parent_id" ref="product_category_1200"/>
+            <field name="name">LOẠI KHÁC(LENGE LUMBER, PHÁCH, HỒ ĐÀO...)</field>
+            <field name="type">normal</field>
+            <field name="category_code">1291</field>
+        </record>
+
+        <!-- VENNER: 1300 -->
+        <record id="product_category_1300" model="product.category">
+            <field name="parent_id" ref="product_category_1000"/>
+            <field name="name">VENNER</field>
+            <field name="type">view</field>
+            <field name="category_code">1300</field>
+        </record>
+
+        <!-- WALNUT: 1310 -->
+        <record id="product_category_1310" model="product.category">
+            <field name="parent_id" ref="product_category_1300"/>
+            <field name="name">WALNUT</field>
+            <field name="type">normal</field>
+            <field name="category_code">1310</field>
+        </record>
+
+        <!-- CHERRY: 1320 -->
+        <record id="product_category_1320" model="product.category">
+            <field name="parent_id" ref="product_category_1300"/>
+            <field name="name">CHERRY</field>
+            <field name="type">normal</field>
+            <field name="category_code">1320</field>
+        </record>
+
+        <!-- OAK: 1330 -->
+        <record id="product_category_1330" model="product.category">
+            <field name="parent_id" ref="product_category_1300"/>
+            <field name="name">OAK</field>
+            <field name="type">normal</field>
+            <field name="category_code">1330</field>
+        </record>
+
+        <!-- ASH: 1340 -->
+        <record id="product_category_1340" model="product.category">
+            <field name="parent_id" ref="product_category_1300"/>
+            <field name="name">ASH</field>
+            <field name="type">normal</field>
+            <field name="category_code">1340</field>
+        </record>
+
+        <!-- CAO SU: 1350 -->
+        <record id="product_category_1350" model="product.category">
+            <field name="parent_id" ref="product_category_1300"/>
+            <field name="name">CAO SU</field>
+            <field name="type">normal</field>
+            <field name="category_code">1350</field>
+        </record>
+
+        <!-- ĐOẠN MỘC: 1360 -->
+        <record id="product_category_1360" model="product.category">
+            <field name="parent_id" ref="product_category_1300"/>
+            <field name="name">DOẠN MỘC</field>
+            <field name="type">normal</field>
+            <field name="category_code">1360</field>
+        </record>
+
+        <!-- BEECH: 1370 -->
+        <record id="product_category_1370" model="product.category">
+            <field name="parent_id" ref="product_category_1300"/>
+            <field name="name">BEECH</field>
+            <field name="type">normal</field>
+            <field name="category_code">1370</field>
+        </record>
+
+        <!-- LOẠI KHÁC( TRE, BỒ ĐỀ,ALDER, TRÀM...): 1380 -->
+        <record id="product_category_1380" model="product.category">
+            <field name="parent_id" ref="product_category_1300"/>
+            <field name="name">LOẠI KHÁC( TRE, BỒ ĐỀ,ALDER, TRÀM...)</field>
+            <field name="type">normal</field>
+            <field name="category_code">1380</field>
+        </record>
+
+        <!-- SƠN: 1400 -->
+        <record id="product_category_1400" model="product.category">
+            <field name="parent_id" ref="product_category_1000"/>
+            <field name="name">SƠN</field>
+            <field name="type">view</field>
+            <field name="category_code">1400</field>
+        </record>
+
+        <!-- TINH MÀU: 1410 -->
+        <record id="product_category_1410" model="product.category">
+            <field name="parent_id" ref="product_category_1400"/>
+            <field name="name">TINH MÀU</field>
+            <field name="type">normal</field>
+            <field name="category_code">1410</field>
+        </record>
+
+        <!-- DUNG MÔI: 1420 -->
+        <record id="product_category_1420" model="product.category">
+            <field name="parent_id" ref="product_category_1400"/>
+            <field name="name">DUNG MÔI</field>
+            <field name="type">normal</field>
+            <field name="category_code">1420</field>
+        </record>
+
+        <!-- SƠN LÓT: 1430 -->
+        <record id="product_category_1430" model="product.category">
+            <field name="parent_id" ref="product_category_1400"/>
+            <field name="name">SƠN LÓT</field>
+            <field name="type">normal</field>
+            <field name="category_code">1430</field>
+        </record>
+
+        <!-- SƠN BÓNG: 1440 -->
+        <record id="product_category_1440" model="product.category">
+            <field name="parent_id" ref="product_category_1400"/>
+            <field name="name">SƠN BÓNG</field>
+            <field name="type">normal</field>
+            <field name="category_code">1440</field>
+        </record>
+
+        <!-- STAIN TOP: 1450 -->
+        <record id="product_category_1450" model="product.category">
+            <field name="parent_id" ref="product_category_1400"/>
+            <field name="name">STAIN TOP</field>
+            <field name="type">normal</field>
+            <field name="category_code">1450</field>
+        </record>
+
+        <!-- STAIN MÀU: 1460 -->
+        <record id="product_category_1460" model="product.category">
+            <field name="parent_id" ref="product_category_1400"/>
+            <field name="name">STAIN MÀU</field>
+            <field name="type">normal</field>
+            <field name="category_code">1460</field>
+        </record>
+
+        <!-- SƠN MÀU: 1470 -->
+        <record id="product_category_1470" model="product.category">
+            <field name="parent_id" ref="product_category_1400"/>
+            <field name="name">SƠN MÀU</field>
+            <field name="type">normal</field>
+            <field name="category_code">1470</field>
+        </record>
+
+        <!-- WOOD FILLER: 1480 -->
+        <record id="product_category_1480" model="product.category">
+            <field name="parent_id" ref="product_category_1400"/>
+            <field name="name">WOOD FILLER</field>
+            <field name="type">normal</field>
+            <field name="category_code">1480</field>
+        </record>
+
+        <!-- WOOD FILLER: 1480 -->
+        <record id="product_category_1480" model="product.category">
+            <field name="parent_id" ref="product_category_1400"/>
+            <field name="name">WOOD FILLER</field>
+            <field name="type">normal</field>
+            <field name="category_code">1480</field>
+        </record>
+
+        <!-- LOẠI KHÁC(MÀU LAU, PHỤ GIA...): 1490 -->
+        <record id="product_category_1490" model="product.category">
+            <field name="parent_id" ref="product_category_1400"/>
+            <field name="name">LOẠI KHÁC(MÀU LAU, PHỤ GIA...)</field>
+            <field name="type">normal</field>
+            <field name="category_code">1490</field>
+        </record>
+
+        <!-- NVL PHỤ : 2000 -->
+        <record id="product_category_2000" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">NVL PHỤ</field>
+            <field name="type">view</field>
+            <field name="category_code">2000</field>
+        </record>
+
+        <!-- NGŨ KIM: 2100 -->
+        <record id="product_category_2100" model="product.category">
+            <field name="parent_id" ref="product_category_2000"/>
+            <field name="name">NGŨ KIM</field>
+            <field name="type">view</field>
+            <field name="category_code">2100</field>
+        </record>
+
+        <!-- VÍT: 2101 -->
+        <record id="product_category_2101" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">VÍT</field>
+            <field name="type">normal</field>
+            <field name="category_code">2101</field>
+        </record>
+
+        <!-- BULON: 2102 -->
+        <record id="product_category_2102" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">BULON</field>
+            <field name="type">normal</field>
+            <field name="category_code">2102</field>
+        </record>
+
+        <!-- TÁN: 2103 -->
+        <record id="product_category_2103" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">TÁN</field>
+            <field name="type">normal</field>
+            <field name="category_code">2103</field>
+        </record>
+
+        <!-- NỘI NGOẠI RĂNG: 2104 -->
+        <record id="product_category_2104" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">NỘI NGOẠI RĂNG</field>
+            <field name="type">normal</field>
+            <field name="category_code">2104</field>
+        </record>
+
+        <!-- BAS: 2105 -->
+        <record id="product_category_2105" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">BAS</field>
+            <field name="type">normal</field>
+            <field name="category_code">2105</field>
+        </record>
+
+        <!-- BẢN LỀ: 2106 -->
+        <record id="product_category_2106" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">BẢN LỀ</field>
+            <field name="type">normal</field>
+            <field name="category_code">2106</field>
+        </record>
+
+        <!-- LONG ĐỀN: 2107 -->
+        <record id="product_category_2107" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">LONG ĐỀN</field>
+            <field name="type">normal</field>
+            <field name="category_code">2107</field>
+        </record>
+
+        <!-- TAY NẮM - CHÂN: 2108 -->
+        <record id="product_category_2108" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">TAY NẮM - CHÂN</field>
+            <field name="type">normal</field>
+            <field name="category_code">2108</field>
+        </record>
+
+        <!-- BỘ LIÊN KẾT KD: 2109 -->
+        <record id="product_category_2109" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">BỘ LIÊN KẾT KD</field>
+            <field name="type">normal</field>
+            <field name="category_code">2109</field>
+        </record>
+
+        <!-- BÁNH XE: 2110 -->
+        <record id="product_category_2110" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">BÁNH XE</field>
+            <field name="type">normal</field>
+            <field name="category_code">2110</field>
+        </record>
+
+        <!-- ĐƯỜNG RẦY - RAY TRƯỢT: 2111 -->
+        <record id="product_category_2111" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">ĐƯỜNG RẦY - RAY TRƯỢT</field>
+            <field name="type">normal</field>
+            <field name="category_code">2111</field>
+        </record>
+
+        <!-- KHÓA MÓC: 2112 -->
+        <record id="product_category_2112" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">KHÓA MÓC</field>
+            <field name="type">normal</field>
+            <field name="category_code">2112</field>
+        </record>
+
+        <!-- CHỐT : 2113 -->
+        <record id="product_category_2113" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">CHỐT</field>
+            <field name="type">normal</field>
+            <field name="category_code">2113</field>
+        </record>
+
+        <!-- HAI ĐẦU RĂNG : 2114 -->
+        <record id="product_category_2114" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">HAI ĐẦU RĂNG</field>
+            <field name="type">normal</field>
+            <field name="category_code">2114</field>
+        </record>
+
+        <!-- TĂNG ĐƯA: 2115 -->
+        <record id="product_category_2115" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">TĂNG ĐƯA</field>
+            <field name="type">normal</field>
+            <field name="category_code">2115</field>
+        </record>
+
+        <!-- LOẠI KHÁC: 2116-->
+        <record id="product_category_2116" model="product.category">
+            <field name="parent_id" ref="product_category_2100"/>
+            <field name="name">LOẠI KHÁC</field>
+            <field name="type">normal</field>
+            <field name="category_code">2116</field>
+        </record>
+
+        <!-- THÙNG GIẤY: 2200 -->
+        <record id="product_category_2200" model="product.category">
+            <field name="parent_id" ref="product_category_2000"/>
+            <field name="name">THÙNG GIẤY</field>
+            <field name="type">view</field>
+            <field name="category_code">2200</field>
+        </record>
+
+        <!-- THÙNG: 2210-->
+        <record id="product_category_2210" model="product.category">
+            <field name="parent_id" ref="product_category_2200"/>
+            <field name="name">THÙNG</field>
+            <field name="type">normal</field>
+            <field name="category_code">2210</field>
+        </record>
+
+        <!-- HỘP: 2220-->
+        <record id="product_category_2220" model="product.category">
+            <field name="parent_id" ref="product_category_2200"/>
+            <field name="name">HỘP</field>
+            <field name="type">normal</field>
+            <field name="category_code">2220</field>
+        </record>
+
+        <!-- GIẤY LÓT: 2230-->
+        <record id="product_category_2230" model="product.category">
+            <field name="parent_id" ref="product_category_2200"/>
+            <field name="name">GIẤY LÓT</field>
+            <field name="type">normal</field>
+            <field name="category_code">2230</field>
+        </record>
+
+        <!-- LOẠI KHÁC: 2240 -->
+        <record id="product_category_2240" model="product.category">
+            <field name="parent_id" ref="product_category_2200"/>
+            <field name="name">LOẠI KHÁC</field>
+            <field name="type">normal</field>
+            <field name="category_code">2240</field>
+        </record>
+
+        <!-- TEM: 2300 -->
+        <record id="product_category_2300" model="product.category">
+            <field name="parent_id" ref="product_category_2000"/>
+            <field name="name">TEM</field>
+            <field name="type">view</field>
+            <field name="category_code">2300</field>
+        </record>
+
+        <!-- DECAL: 2310 -->
+        <record id="product_category_2310" model="product.category">
+            <field name="parent_id" ref="product_category_2300"/>
+            <field name="name">DECAL</field>
+            <field name="type">normal</field>
+            <field name="category_code">2310</field>
+        </record>
+
+        <!-- MÃ VẠCH: 2320 -->
+        <record id="product_category_2320" model="product.category">
+            <field name="parent_id" ref="product_category_2300"/>
+            <field name="name">MÃ VẠCH</field>
+            <field name="type">normal</field>
+            <field name="category_code">2320</field>
+        </record>
+
+        <!-- TEM KÍNH: 2330 -->
+        <record id="product_category_2330" model="product.category">
+            <field name="parent_id" ref="product_category_2300"/>
+            <field name="name">TEM KÍNH</field>
+            <field name="type">normal</field>
+            <field name="category_code">2330</field>
+        </record>
+
+        <!-- LOẠI KHÁC: 2340 -->
+        <record id="product_category_2340" model="product.category">
+            <field name="parent_id" ref="product_category_2300"/>
+            <field name="name">LOẠI KHÁC</field>
+            <field name="type">normal</field>
+            <field name="category_code">2340</field>
+        </record>
+
+        <!-- SÁCH HD: 2410 -->
+        <record id="product_category_2410" model="product.category">
+            <field name="parent_id" ref="product_category_2000"/>
+            <field name="name">SÁCH HD</field>
+            <field name="type">normal</field>
+            <field name="category_code">2410</field>
+        </record>
+
+        <!-- KÍNH: 2500 -->
+        <record id="product_category_2500" model="product.category">
+            <field name="parent_id" ref="product_category_2000"/>
+            <field name="name">KÍNH</field>
+            <field name="type">view</field>
+            <field name="category_code">2500</field>
+        </record>
+
+        <!-- KCL: 2510 -->
+        <record id="product_category_2510" model="product.category">
+            <field name="parent_id" ref="product_category_2500"/>
+            <field name="name">KCL</field>
+            <field name="type">normal</field>
+            <field name="category_code">2510</field>
+        </record>
+
+        <!-- KÍNH THỦY: 2520 -->
+        <record id="product_category_2520" model="product.category">
+            <field name="parent_id" ref="product_category_2500"/>
+            <field name="name">KÍNH THỦY</field>
+            <field name="type">normal</field>
+            <field name="category_code">2520</field>
+        </record>
+
+        <!-- KO CL: 2530 -->
+        <record id="product_category_2530" model="product.category">
+            <field name="parent_id" ref="product_category_2500"/>
+            <field name="name">KO CL</field>
+            <field name="type">normal</field>
+            <field name="category_code">2530</field>
+        </record>
+
+        <!-- LOẠI KHÁC: 2540 -->
+        <record id="product_category_2540" model="product.category">
+            <field name="parent_id" ref="product_category_2500"/>
+            <field name="name">LOẠI KHÁC</field>
+            <field name="type">normal</field>
+            <field name="category_code">2540</field>
+        </record>
+
+        <!-- VẢI: 2600 -->
+        <record id="product_category_2600" model="product.category">
+            <field name="parent_id" ref="product_category_2000"/>
+            <field name="name">VẢI</field>
+            <field name="type">view</field>
+            <field name="category_code">2600</field>
+        </record>
+
+        <!-- VẢI OR: 2610 -->
+        <record id="product_category_2610" model="product.category">
+            <field name="parent_id" ref="product_category_2600"/>
+            <field name="name">VẢI OR</field>
+            <field name="type">normal</field>
+            <field name="category_code">2610</field>
+        </record>
+
+        <!-- POLYESTER: 2620 -->
+        <record id="product_category_2620" model="product.category">
+            <field name="parent_id" ref="product_category_2600"/>
+            <field name="name">POLYESTER</field>
+            <field name="type">normal</field>
+            <field name="category_code">2620</field>
+        </record>
+
+        <!-- CHỐNG CHÁY: 2630 -->
+        <record id="product_category_2630" model="product.category">
+            <field name="parent_id" ref="product_category_2600"/>
+            <field name="name">CHỐNG CHÁY</field>
+            <field name="type">normal</field>
+            <field name="category_code">2630</field>
+        </record>
+
+        <!-- CRAY: 2640 -->
+        <record id="product_category_2640" model="product.category">
+            <field name="parent_id" ref="product_category_2600"/>
+            <field name="name">CRAY</field>
+            <field name="type">normal</field>
+            <field name="category_code">2640</field>
+        </record>
+
+        <!-- FABIC: 2650 -->
+        <record id="product_category_2650" model="product.category">
+            <field name="parent_id" ref="product_category_2600"/>
+            <field name="name">FABIC</field>
+            <field name="type">normal</field>
+            <field name="category_code">2650</field>
+        </record>
+
+        <!-- KHÔNG DỆT: 2660 -->
+        <record id="product_category_2660" model="product.category">
+            <field name="parent_id" ref="product_category_2600"/>
+            <field name="name">KHÔNG DỆT</field>
+            <field name="type">normal</field>
+            <field name="category_code">2660</field>
+        </record>
+
+        <!-- GẤM: 2670 -->
+        <record id="product_category_2670" model="product.category">
+            <field name="parent_id" ref="product_category_2600"/>
+            <field name="name">GẤM</field>
+            <field name="type">normal</field>
+            <field name="category_code">2670</field>
+        </record>
+
+        <!-- VOAM: 2680 -->
+        <record id="product_category_2680" model="product.category">
+            <field name="parent_id" ref="product_category_2600"/>
+            <field name="name">VOAM</field>
+            <field name="type">normal</field>
+            <field name="category_code">2680</field>
+        </record>
+
+        <!-- LOẠI KHÁC: 2690 -->
+        <record id="product_category_2690" model="product.category">
+            <field name="parent_id" ref="product_category_2600"/>
+            <field name="name">LOẠI KHÁC</field>
+            <field name="type">normal</field>
+            <field name="category_code">2690</field>
+        </record>
+
+        <!-- GIA CÔNG: 2700 -->
+        <record id="product_category_2700" model="product.category">
+            <field name="parent_id" ref="product_category_2000"/>
+            <field name="name">GIA CÔNG</field>
+            <field name="type">view</field>
+            <field name="category_code">2700</field>
+        </record>
+
+        <!-- DÁN VENNER: 2710 -->
+        <record id="product_category_2710" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">DÁN VENNER</field>
+            <field name="type">normal</field>
+            <field name="category_code">2710</field>
+        </record>
+
+        <!-- DÁN PVC: 2720 -->
+        <record id="product_category_2720" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">DÁN PVC</field>
+            <field name="type">normal</field>
+            <field name="category_code">2720</field>
+        </record>
+
+        <!-- KDKM: 2730 -->
+        <record id="product_category_2730" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">KDKM</field>
+            <field name="type">normal</field>
+            <field name="category_code">2730</field>
+        </record>
+
+        <!-- DÁN MELAMINE: 2740 -->
+        <record id="product_category_2740" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">DÁN MELAMINE</field>
+            <field name="type">normal</field>
+            <field name="category_code">2740</field>
+        </record>
+
+        <!-- CẮT VÁN: 2750 -->
+        <record id="product_category_2750" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">CẮT VÁN</field>
+            <field name="type">normal</field>
+            <field name="category_code">2750</field>
+        </record>
+
+        <!-- UỐN CONG: 2760 -->
+        <record id="product_category_2760" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">UỐN CONG</field>
+            <field name="type">normal</field>
+            <field name="category_code">2760</field>
+        </record>
+
+        <!-- TIỆN + CHÂN: 2770 -->
+        <record id="product_category_2770" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">TIỆN + CHÂN</field>
+            <field name="type">normal</field>
+            <field name="category_code">2770</field>
+        </record>
+
+        <!-- RA CHI TIẾT: 2780 -->
+        <record id="product_category_2780" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">RA CHI TIẾT</field>
+            <field name="type">normal</field>
+            <field name="category_code">2780</field>
+        </record>
+
+        <!-- THÀNH PHẨM: 2790 -->
+        <record id="product_category_2790" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">THÀNH PHẨM</field>
+            <field name="type">normal</field>
+            <field name="category_code">2790</field>
+        </record>
+
+        <!-- DÁN GIẤY: 2791 -->
+        <record id="product_category_2791" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">DÁN GIẤY</field>
+            <field name="type">normal</field>
+            <field name="category_code">2791</field>
+        </record>
+
+        <!-- LĂN UV: 2792 -->
+        <record id="product_category_2792" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">LĂN UV</field>
+            <field name="type">normal</field>
+            <field name="category_code">2792</field>
+        </record>
+
+        <!-- GĂN VÍT BAKE: 2793 -->
+        <record id="product_category_2793" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">GĂN VÍT BAKE</field>
+            <field name="type">normal</field>
+            <field name="category_code">2793</field>
+        </record>
+
+        <!-- TĂNG ĐƯA: 2794 -->
+        <record id="product_category_2794" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">TĂNG ĐƯA</field>
+            <field name="type">normal</field>
+            <field name="category_code">2794</field>
+        </record>
+
+        <!-- LOẠI KHÁC: 2795 -->
+        <record id="product_category_2795" model="product.category">
+            <field name="parent_id" ref="product_category_2700"/>
+            <field name="name">LOẠI KHÁC</field>
+            <field name="type">normal</field>
+            <field name="category_code">2795</field>
+        </record>
+
+        <!-- LOẠI KHÁC: 2800 -->
+        <record id="product_category_2800" model="product.category">
+            <field name="parent_id" ref="product_category_2000"/>
+            <field name="name">LOẠI KHÁC</field>
+            <field name="type">view</field>
+            <field name="category_code">2800</field>
+        </record>
+
+        <!-- MUSS 1 MẶT KEO: 2810 -->
+        <record id="product_category_2810" model="product.category">
+            <field name="parent_id" ref="product_category_2800"/>
+            <field name="name">MUSS 1 MẶT KEO</field>
+            <field name="type">normal</field>
+            <field name="category_code">2810</field>
+        </record>
+
+        <!-- NỈ: 2820 -->
+        <record id="product_category_2820" model="product.category">
+            <field name="parent_id" ref="product_category_2800"/>
+            <field name="name">NỈ</field>
+            <field name="type">normal</field>
+            <field name="category_code">2820</field>
+        </record>
+
+        <!-- MUSS TỔNG HỢP: 2830 -->
+        <record id="product_category_2830" model="product.category">
+            <field name="parent_id" ref="product_category_2800"/>
+            <field name="name">MUSS TỔNG HỢP</field>
+            <field name="type">normal</field>
+            <field name="category_code">2830</field>
+        </record>
+
+        <!-- NYLON: 2840 -->
+        <record id="product_category_2840" model="product.category">
+            <field name="parent_id" ref="product_category_2800"/>
+            <field name="name">NYLON</field>
+            <field name="type">normal</field>
+            <field name="category_code">2840</field>
+        </record>
+
+        <!-- MÁY SƯỞI ẤM: 2850 -->
+        <record id="product_category_2850" model="product.category">
+            <field name="parent_id" ref="product_category_2800"/>
+            <field name="name">MÁY SƯỞI ẤM</field>
+            <field name="type">normal</field>
+            <field name="category_code">2850</field>
+        </record>
+
+        <!-- VỈ NHỰA KHAY LÓT: 2860 -->
+        <record id="product_category_2860" model="product.category">
+            <field name="parent_id" ref="product_category_2800"/>
+            <field name="name">VỈ NHỰA KHAY LÓT</field>
+            <field name="type">normal</field>
+            <field name="category_code">2860</field>
+        </record>
+
+        <!-- GIẤY DÁN: 2870 -->
+        <record id="product_category_2870" model="product.category">
+            <field name="parent_id" ref="product_category_2800"/>
+            <field name="name">GIẤY DÁN</field>
+            <field name="type">normal</field>
+            <field name="category_code">2870</field>
+        </record>
+
+        <!-- GIẤY TỔ ONG: 2880 -->
+        <record id="product_category_2880" model="product.category">
+            <field name="parent_id" ref="product_category_2800"/>
+            <field name="name">GIẤY TỔ ONG</field>
+            <field name="type">normal</field>
+            <field name="category_code">2880</field>
+        </record>
+
+        <!-- MÚT XỐP: 2900 -->
+        <record id="product_category_2900" model="product.category">
+            <field name="parent_id" ref="product_category_2000"/>
+            <field name="name">MÚT XỐP</field>
+            <field name="type">view</field>
+            <field name="category_code">2900</field>
+        </record>
+
+        <!-- 8kg: 2910 -->
+        <record id="product_category_2910" model="product.category">
+            <field name="parent_id" ref="product_category_2900"/>
+            <field name="name">8kg</field>
+            <field name="type">normal</field>
+            <field name="category_code">2910</field>
+        </record>
+
+        <!-- 12kg: 2920 -->
+        <record id="product_category_2920" model="product.category">
+            <field name="parent_id" ref="product_category_2900"/>
+            <field name="name">12kg</field>
+            <field name="type">normal</field>
+            <field name="category_code">2920</field>
+        </record>
+        <!-- 16kg: 2930 -->
+        <record id="product_category_2930" model="product.category">
+            <field name="parent_id" ref="product_category_2900"/>
+            <field name="name">16kg</field>
+            <field name="type">normal</field>
+            <field name="category_code">2930</field>
+        </record>
+
+        <!-- NVL TIÊU HAO: 3000 -->
+        <record id="product_category_3000" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">NVL TIÊU HAO</field>
+            <field name="type">view</field>
+            <field name="category_code">3000</field>
+        </record>
+
+        <!-- KEO: 3110 -->
+        <record id="product_category_3110" model="product.category">
+            <field name="parent_id" ref="product_category_3000"/>
+            <field name="name">KEO</field>
+            <field name="type">normal</field>
+            <field name="category_code">3110</field>
+        </record>
+
+        <!-- NHÁM: 3210  -->
+        <record id="product_category_3210" model="product.category">
+            <field name="parent_id" ref="product_category_3000"/>
+            <field name="name">NHÁM</field>
+            <field name="type">normal</field>
+            <field name="category_code">3210</field>
+        </record>
+
+        <!-- ĐINH BẮN: 3310 -->
+        <record id="product_category_3310" model="product.category">
+            <field name="parent_id" ref="product_category_3000"/>
+            <field name="name">ĐINH BẮN</field>
+            <field name="type">normal</field>
+            <field name="category_code">3310</field>
+        </record>
+
+        <!-- BĂNG KEO: 3410 -->
+        <record id="product_category_3410" model="product.category">
+            <field name="parent_id" ref="product_category_3000"/>
+            <field name="name">BĂNG KEO</field>
+            <field name="type">normal</field>
+            <field name="category_code">3410</field>
+        </record>
+
+        <!-- PE: 3510 -->
+        <record id="product_category_3510" model="product.category">
+            <field name="parent_id" ref="product_category_3000"/>
+            <field name="name">PE</field>
+            <field name="type">normal</field>
+            <field name="category_code">3510</field>
+        </record>
+
+        <!-- BỘT TT: 3610 -->
+        <record id="product_category_3610" model="product.category">
+            <field name="parent_id" ref="product_category_3000"/>
+            <field name="name">BỘT TT</field>
+            <field name="type">normal</field>
+            <field name="category_code">3610</field>
+        </record>
+
+        <!-- XÚC TÁC: 3710 -->
+        <record id="product_category_3710" model="product.category">
+            <field name="parent_id" ref="product_category_3000"/>
+            <field name="name">XÚC TÁC</field>
+            <field name="type">normal</field>
+            <field name="category_code">3710</field>
+        </record>
+
+        <!-- LOẠI KHÁC: 3810 -->
+        <record id="product_category_3810" model="product.category">
+            <field name="parent_id" ref="product_category_3000"/>
+            <field name="name">LOẠI KHÁC</field>
+            <field name="type">normal</field>
+            <field name="category_code">3810</field>
+        </record>
+
+        <!-- TMTV(NVL KHÁC): 4000  -->
+        <record id="product_category_4000" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">TMTV(NVL KHÁC)</field>
+            <field name="type">view</field>
+            <field name="category_code">4000</field>
+        </record>
+
+        <!-- VPP: 4110  -->
+        <record id="product_category_4110" model="product.category">
+            <field name="parent_id" ref="product_category_4000"/>
+            <field name="name">VPP</field>
+            <field name="type">normal</field>
+            <field name="category_code">4110</field>
+        </record>
+
+        <!-- IT: 4210  -->
+        <record id="product_category_4210" model="product.category">
+            <field name="parent_id" ref="product_category_4000"/>
+            <field name="name">IT</field>
+            <field name="type">normal</field>
+            <field name="category_code">4210</field>
+        </record>
+
+        <!-- PCCC: 4310  -->
+        <record id="product_category_4310" model="product.category">
+            <field name="parent_id" ref="product_category_4000"/>
+            <field name="name">PCCC</field>
+            <field name="type">normal</field>
+            <field name="category_code">4310</field>
+        </record>
+
+        <!-- CCDC MỚI: 4410  -->
+        <record id="product_category_4410" model="product.category">
+            <field name="parent_id" ref="product_category_4000"/>
+            <field name="name">CCDC MỚI</field>
+            <field name="type">normal</field>
+            <field name="category_code">4410</field>
+        </record>
+
+        <!-- CCDC MỚI: 4400  -->
+        <record id="product_category_4400" model="product.category">
+            <field name="parent_id" ref="product_category_4000"/>
+            <field name="name">CCDC MỚI</field>
+            <field name="type">view</field>
+            <field name="category_code">4400</field>
+        </record>
+
+        <!-- DAO: 4410  -->
+        <record id="product_category_4410" model="product.category">
+            <field name="parent_id" ref="product_category_4400"/>
+            <field name="name">DAO</field>
+            <field name="type">normal</field>
+            <field name="category_code">4410</field>
+        </record>
+
+        <!-- LƯỠI CƯA: 4420  -->
+        <record id="product_category_4420" model="product.category">
+            <field name="parent_id" ref="product_category_4400"/>
+            <field name="name">LƯỠI CƯA</field>
+            <field name="type">normal</field>
+            <field name="category_code">4420</field>
+        </record>
+
+        <!-- DÂY CUROA: 4430  -->
+        <record id="product_category_4430" model="product.category">
+            <field name="parent_id" ref="product_category_4400"/>
+            <field name="name">DÂY CUROA</field>
+            <field name="type">normal</field>
+            <field name="category_code">4430</field>
+        </record>
+
+        <!-- BẠC ĐẠN: 4440  -->
+        <record id="product_category_4440" model="product.category">
+            <field name="parent_id" ref="product_category_4400"/>
+            <field name="name">BẠC ĐẠN</field>
+            <field name="type">normal</field>
+            <field name="category_code">4440</field>
+        </record>
+
+        <!-- SÚNG: 4450  -->
+        <record id="product_category_4450" model="product.category">
+            <field name="parent_id" ref="product_category_4400"/>
+            <field name="name">SÚNG</field>
+            <field name="type">normal</field>
+            <field name="category_code">4450</field>
+        </record>
+
+        <!-- MÁY MÓC: 4460  -->
+        <record id="product_category_4460" model="product.category">
+            <field name="parent_id" ref="product_category_4400"/>
+            <field name="name">MÁY MÓC</field>
+            <field name="type">normal</field>
+            <field name="category_code">4460</field>
+        </record>
+
+        <!-- LINH KIỆN: 4470  -->
+        <record id="product_category_4470" model="product.category">
+            <field name="parent_id" ref="product_category_4400"/>
+            <field name="name">LINH KIỆN</field>
+            <field name="type">normal</field>
+            <field name="category_code">4470</field>
+        </record>
+
+        <!-- MŨI KHOAN: 4480  -->
+        <record id="product_category_4480" model="product.category">
+            <field name="parent_id" ref="product_category_4400"/>
+            <field name="name">MŨI KHOAN</field>
+            <field name="type">normal</field>
+            <field name="category_code">4480</field>
+        </record>
+
+        <!-- LOẠI KHÁC: 4490  -->
+        <record id="product_category_4490" model="product.category">
+            <field name="parent_id" ref="product_category_4400"/>
+            <field name="name">LOẠI KHÁC</field>
+            <field name="type">normal</field>
+            <field name="category_code">4490</field>
+        </record>
+
+        <!-- CCDC SỬA CHỮA: 4500  -->
+        <record id="product_category_4500" model="product.category">
+            <field name="parent_id" ref="product_category_4000"/>
+            <field name="name">CCDC SỬA CHỮA</field>
+            <field name="type">view</field>
+            <field name="category_code">4500</field>
+        </record>
+
+        <!-- DAO: 4510  -->
+        <record id="product_category_4510" model="product.category">
+            <field name="parent_id" ref="product_category_4500"/>
+            <field name="name">DAO</field>
+            <field name="type">normal</field>
+            <field name="category_code">4510</field>
+        </record>
+
+        <!-- LƯỠI CƯA: 4520  -->
+        <record id="product_category_4520" model="product.category">
+            <field name="parent_id" ref="product_category_4500"/>
+            <field name="name">LƯỠI CƯA</field>
+            <field name="type">normal</field>
+            <field name="category_code">4520</field>
+        </record>
+
+        <!-- DÂY CUROA: 4530  -->
+        <record id="product_category_4530" model="product.category">
+            <field name="parent_id" ref="product_category_4500"/>
+            <field name="name">DÂY CUROA</field>
+            <field name="type">normal</field>
+            <field name="category_code">4530</field>
+        </record>
+
+        <!-- BẠC ĐẠN: 4540  -->
+        <record id="product_category_4540" model="product.category">
+            <field name="parent_id" ref="product_category_4500"/>
+            <field name="name">BẠC ĐẠN</field>
+            <field name="type">normal</field>
+            <field name="category_code">4540</field>
+        </record>
+
+        <!-- SÚNG: 4550  -->
+        <record id="product_category_4550" model="product.category">
+            <field name="parent_id" ref="product_category_4500"/>
+            <field name="name">SÚNG</field>
+            <field name="type">normal</field>
+            <field name="category_code">4550</field>
+        </record>
+
+        <!-- MÁY MÓC: 4560  -->
+        <record id="product_category_4560" model="product.category">
+            <field name="parent_id" ref="product_category_4500"/>
+            <field name="name">MÁY MÓC</field>
+            <field name="type">normal</field>
+            <field name="category_code">4560</field>
+        </record>
+
+        <!-- LINH KIỆN: 4570  -->
+        <record id="product_category_4570" model="product.category">
+            <field name="parent_id" ref="product_category_4500"/>
+            <field name="name">LINH KIỆN</field>
+            <field name="type">normal</field>
+            <field name="category_code">4570</field>
+        </record>
+
+        <!-- MŨI KHOAN: 4580  -->
+        <record id="product_category_4580" model="product.category">
+            <field name="parent_id" ref="product_category_4500"/>
+            <field name="name">MŨI KHOAN</field>
+            <field name="type">normal</field>
+            <field name="category_code">4580</field>
+        </record>
+
+        <!-- LOẠI KHÁC: 4590  -->
+        <record id="product_category_4590" model="product.category">
+            <field name="parent_id" ref="product_category_4500"/>
+            <field name="name">LOẠI KHÁC</field>
+            <field name="type">normal</field>
+            <field name="category_code">4590</field>
+        </record>
+
+        <!-- ######################################### 以下为序列数据 ################################ -->
+
+        <!-- VÁN LẠNG-->
+        <record id="seq_category_1110" model="ir.sequence">
+            <field name="name">1110</field>
+            <field name="code">1110</field>
+            <field name="prefix">1110</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <!-- VÁN ÉP-->
+        <record id="seq_category_1120" model="ir.sequence">
+            <field name="name">1120</field>
+            <field name="code">1120</field>
+            <field name="prefix">1120</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <!-- MDF -->
+        <record id="seq_category_1130" model="ir.sequence">
+            <field name="name">1130</field>
+            <field name="code">1130</field>
+            <field name="prefix">1130</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- VÁN PB -->
+        <record id="seq_category_1140" model="ir.sequence">
+            <field name="name">1140</field>
+            <field name="code">1140</field>
+            <field name="prefix">1140</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- VÁN HP -->
+        <record id="seq_category_1150" model="ir.sequence">
+            <field name="name">1150</field>
+            <field name="code">1150</field>
+            <field name="prefix">1150</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- VÁN Ô TIM -->
+        <record id="seq_category_1160" model="ir.sequence">
+            <field name="name">1160</field>
+            <field name="code">1160</field>
+            <field name="prefix">1160</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- VÁN HAR -->
+        <record id="seq_category_1170" model="ir.sequence">
+            <field name="name">1170</field>
+            <field name="code">1170</field>
+            <field name="prefix">1170</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- LOẠI KHÁC -->
+        <record id="seq_category_1190" model="ir.sequence">
+            <field name="name">1190</field>
+            <field name="code">1190</field>
+            <field name="prefix">1190</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- CAO SU -->
+        <record id="seq_category_1210" model="ir.sequence">
+            <field name="name">1210</field>
+            <field name="code">1210</field>
+            <field name="prefix">1210</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!--TRÀM -->
+        <record id="seq_category_1220" model="ir.sequence">
+            <field name="name">1220</field>
+            <field name="code">1220</field>
+            <field name="prefix">1220</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- OAK-->
+        <record id="seq_category_1230" model="ir.sequence">
+            <field name="name">1230</field>
+            <field name="code">1230</field>
+            <field name="prefix">1230</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- ASH -->
+        <record id="seq_category_1240" model="ir.sequence">
+            <field name="name">1240</field>
+            <field name="code">1240</field>
+            <field name="prefix">1240</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- SYCAMO -->
+        <record id="seq_category_1250" model="ir.sequence">
+            <field name="name">1250</field>
+            <field name="code">1250</field>
+            <field name="prefix">1250</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- BEECH -->
+        <record id="seq_category_1260" model="ir.sequence">
+            <field name="name">1260</field>
+            <field name="code">1260</field>
+            <field name="prefix">1260</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- BẠCH DƯƠNG -->
+        <record id="seq_category_1270" model="ir.sequence">
+            <field name="name">1270</field>
+            <field name="code">1270</field>
+            <field name="prefix">1270</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- DÁI NGỰA -->
+        <record id="seq_category_1280" model="ir.sequence">
+            <field name="name">1280</field>
+            <field name="code">1280</field>
+            <field name="prefix">1280</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- XÀ CỪ -->
+        <record id="seq_category_1290" model="ir.sequence">
+            <field name="name">1290</field>
+            <field name="code">1290</field>
+            <field name="prefix">1290</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- LOẠI KHÁC -->
+        <record id="seq_category_1291" model="ir.sequence">
+            <field name="name">1291</field>
+            <field name="code">1291</field>
+            <field name="prefix">1291</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- WALNUT -->
+        <record id="seq_category_1310" model="ir.sequence">
+            <field name="name">1310</field>
+            <field name="code">1310</field>
+            <field name="prefix">1310</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- CHERRY -->
+        <record id="seq_category_1320" model="ir.sequence">
+            <field name="name">1320</field>
+            <field name="code">1320</field>
+            <field name="prefix">1320</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- OAK -->
+        <record id="seq_category_1330" model="ir.sequence">
+            <field name="name">1330</field>
+            <field name="code">1330</field>
+            <field name="prefix">1330</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- ASH -->
+        <record id="seq_category_1340" model="ir.sequence">
+            <field name="name">1340</field>
+            <field name="code">1340</field>
+            <field name="prefix">1340</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- CAO SU -->
+        <record id="seq_category_1350" model="ir.sequence">
+            <field name="name">1350</field>
+            <field name="code">1350</field>
+            <field name="prefix">1350</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- ĐOẠN MỘC -->
+        <record id="seq_category_1360" model="ir.sequence">
+            <field name="name">1360</field>
+            <field name="code">1360</field>
+            <field name="prefix">1360</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- BEECH -->
+        <record id="seq_category_1370" model="ir.sequence">
+            <field name="name">1370</field>
+            <field name="code">1370</field>
+            <field name="prefix">1370</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- LOẠI KHÁC -->
+        <record id="seq_category_1380" model="ir.sequence">
+            <field name="name">1380</field>
+            <field name="code">1380</field>
+            <field name="prefix">1380</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- TINH MÀU -->
+        <record id="seq_category_1410" model="ir.sequence">
+            <field name="name">1410</field>
+            <field name="code">1410</field>
+            <field name="prefix">1410</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- DUNG MÔI -->
+        <record id="seq_category_1420" model="ir.sequence">
+            <field name="name">1420</field>
+            <field name="code">1420</field>
+            <field name="prefix">1420</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- SƠN LÓT -->
+        <record id="seq_category_1430" model="ir.sequence">
+            <field name="name">1430</field>
+            <field name="code">1430</field>
+            <field name="prefix">1430</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- SƠN BÓNG -->
+        <record id="seq_category_1440" model="ir.sequence">
+            <field name="name">1440</field>
+            <field name="code">1440</field>
+            <field name="prefix">1440</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 1450 -->
+        <record id="seq_category_1450" model="ir.sequence">
+            <field name="name">1450</field>
+            <field name="code">1450</field>
+            <field name="prefix">1450</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 1460 -->
+        <record id="seq_category_1460" model="ir.sequence">
+            <field name="name">1460</field>
+            <field name="code">1460</field>
+            <field name="prefix">1460</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 1470 -->
+        <record id="seq_category_1470" model="ir.sequence">
+            <field name="name">1470</field>
+            <field name="code">1470</field>
+            <field name="prefix">1470</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 1480 -->
+        <record id="seq_category_1480" model="ir.sequence">
+            <field name="name">1480</field>
+            <field name="code">1480</field>
+            <field name="prefix">1480</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 1490 -->
+        <record id="seq_category_1490" model="ir.sequence">
+            <field name="name">1490</field>
+            <field name="code">1490</field>
+            <field name="prefix">1490</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2101 -->
+        <record id="seq_category_2101" model="ir.sequence">
+            <field name="name">2101</field>
+            <field name="code">2101</field>
+            <field name="prefix">2101</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2102 -->
+        <record id="seq_category_2102" model="ir.sequence">
+            <field name="name">2102</field>
+            <field name="code">2102</field>
+            <field name="prefix">2102</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2103 -->
+        <record id="seq_category_2103" model="ir.sequence">
+            <field name="name">2103</field>
+            <field name="code">2103</field>
+            <field name="prefix">2103</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2104 -->
+        <record id="seq_category_2104" model="ir.sequence">
+            <field name="name">2104</field>
+            <field name="code">2104</field>
+            <field name="prefix">2104</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2105 -->
+        <record id="seq_category_2105" model="ir.sequence">
+            <field name="name">2105</field>
+            <field name="code">2105</field>
+            <field name="prefix">2105</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2106 -->
+        <record id="seq_category_2106" model="ir.sequence">
+            <field name="name">2106</field>
+            <field name="code">2106</field>
+            <field name="prefix">2106</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2107 -->
+        <record id="seq_category_2107" model="ir.sequence">
+            <field name="name">2107</field>
+            <field name="code">2107</field>
+            <field name="prefix">2107</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2108 -->
+        <record id="seq_category_2108" model="ir.sequence">
+            <field name="name">2108</field>
+            <field name="code">2108</field>
+            <field name="prefix">2108</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2109 -->
+        <record id="seq_category_2109" model="ir.sequence">
+            <field name="name">2109</field>
+            <field name="code">2109</field>
+            <field name="prefix">2109</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2110 -->
+        <record id="seq_category_2110" model="ir.sequence">
+            <field name="name">2110</field>
+            <field name="code">2110</field>
+            <field name="prefix">2110</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2111 -->
+        <record id="seq_category_2111" model="ir.sequence">
+            <field name="name">2111</field>
+            <field name="code">2111</field>
+            <field name="prefix">2111</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2112 -->
+        <record id="seq_category_2112" model="ir.sequence">
+            <field name="name">2112</field>
+            <field name="code">2112</field>
+            <field name="prefix">2112</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2113 -->
+        <record id="seq_category_2113" model="ir.sequence">
+            <field name="name">2113</field>
+            <field name="code">2113</field>
+            <field name="prefix">2113</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2114 -->
+        <record id="seq_category_2114" model="ir.sequence">
+            <field name="name">2114</field>
+            <field name="code">2114</field>
+            <field name="prefix">2114</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2115 -->
+        <record id="seq_category_2115" model="ir.sequence">
+            <field name="name">2115</field>
+            <field name="code">2115</field>
+            <field name="prefix">2115</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2116 -->
+        <record id="seq_category_2116" model="ir.sequence">
+            <field name="name">2116</field>
+            <field name="code">2116</field>
+            <field name="prefix">2116</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2210 -->
+        <record id="seq_category_2210" model="ir.sequence">
+            <field name="name">2210</field>
+            <field name="code">2210</field>
+            <field name="prefix">2210</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2220 -->
+        <record id="seq_category_2220" model="ir.sequence">
+            <field name="name">2220</field>
+            <field name="code">2220</field>
+            <field name="prefix">2220</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2230 -->
+        <record id="seq_category_2230" model="ir.sequence">
+            <field name="name">2230</field>
+            <field name="code">2230</field>
+            <field name="prefix">2230</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2240 -->
+        <record id="seq_category_2240" model="ir.sequence">
+            <field name="name">2240</field>
+            <field name="code">2240</field>
+            <field name="prefix">2240</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2310 -->
+        <record id="seq_category_2310" model="ir.sequence">
+            <field name="name">2310</field>
+            <field name="code">2310</field>
+            <field name="prefix">2310</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2320 -->
+        <record id="seq_category_2320" model="ir.sequence">
+            <field name="name">2320</field>
+            <field name="code">2320</field>
+            <field name="prefix">2320</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2330 -->
+        <record id="seq_category_2330" model="ir.sequence">
+            <field name="name">2330</field>
+            <field name="code">2330</field>
+            <field name="prefix">2330</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2340 -->
+        <record id="seq_category_2340" model="ir.sequence">
+            <field name="name">2340</field>
+            <field name="code">2340</field>
+            <field name="prefix">2340</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2410 -->
+        <record id="seq_category_2410" model="ir.sequence">
+            <field name="name">2410</field>
+            <field name="code">2410</field>
+            <field name="prefix">2410</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2510 -->
+        <record id="seq_category_2510" model="ir.sequence">
+            <field name="name">2510</field>
+            <field name="code">2510</field>
+            <field name="prefix">2510</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2520 -->
+        <record id="seq_category_2520" model="ir.sequence">
+            <field name="name">2520</field>
+            <field name="code">2520</field>
+            <field name="prefix">2520</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2530 -->
+        <record id="seq_category_2530" model="ir.sequence">
+            <field name="name">2530</field>
+            <field name="code">2530</field>
+            <field name="prefix">2530</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2540 -->
+        <record id="seq_category_2540" model="ir.sequence">
+            <field name="name">2540</field>
+            <field name="code">2540</field>
+            <field name="prefix">2540</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2610 -->
+        <record id="seq_category_2610" model="ir.sequence">
+            <field name="name">2610</field>
+            <field name="code">2610</field>
+            <field name="prefix">2610</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2620 -->
+        <record id="seq_category_2620" model="ir.sequence">
+            <field name="name">2620</field>
+            <field name="code">2620</field>
+            <field name="prefix">2620</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2630 -->
+        <record id="seq_category_2630" model="ir.sequence">
+            <field name="name">2630</field>
+            <field name="code">2630</field>
+            <field name="prefix">2630</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2640 -->
+        <record id="seq_category_2640" model="ir.sequence">
+            <field name="name">2640</field>
+            <field name="code">2640</field>
+            <field name="prefix">2640</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2650 -->
+        <record id="seq_category_2650" model="ir.sequence">
+            <field name="name">2650</field>
+            <field name="code">2650</field>
+            <field name="prefix">2650</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2660 -->
+        <record id="seq_category_2660" model="ir.sequence">
+            <field name="name">2660</field>
+            <field name="code">2660</field>
+            <field name="prefix">2660</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2670 -->
+        <record id="seq_category_2670" model="ir.sequence">
+            <field name="name">2670</field>
+            <field name="code">2670</field>
+            <field name="prefix">2670</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2680 -->
+        <record id="seq_category_2680" model="ir.sequence">
+            <field name="name">2680</field>
+            <field name="code">2680</field>
+            <field name="prefix">2680</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2690 -->
+        <record id="seq_category_2690" model="ir.sequence">
+            <field name="name">2690</field>
+            <field name="code">2690</field>
+            <field name="prefix">2690</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2710 -->
+        <record id="seq_category_2710" model="ir.sequence">
+            <field name="name">2710</field>
+            <field name="code">2710</field>
+            <field name="prefix">2710</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2720 -->
+        <record id="seq_category_2720" model="ir.sequence">
+            <field name="name">2720</field>
+            <field name="code">2720</field>
+            <field name="prefix">2720</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2730 -->
+        <record id="seq_category_2730" model="ir.sequence">
+            <field name="name">2730</field>
+            <field name="code">2730</field>
+            <field name="prefix">2730</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2740 -->
+        <record id="seq_category_2740" model="ir.sequence">
+            <field name="name">2740</field>
+            <field name="code">2740</field>
+            <field name="prefix">2740</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2750 -->
+        <record id="seq_category_2750" model="ir.sequence">
+            <field name="name">2750</field>
+            <field name="code">2750</field>
+            <field name="prefix">2750</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2760 -->
+        <record id="seq_category_2760" model="ir.sequence">
+            <field name="name">2760</field>
+            <field name="code">2760</field>
+            <field name="prefix">2760</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2770 -->
+        <record id="seq_category_2770" model="ir.sequence">
+            <field name="name">2770</field>
+            <field name="code">2770</field>
+            <field name="prefix">2770</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2780 -->
+        <record id="seq_category_2780" model="ir.sequence">
+            <field name="name">2780</field>
+            <field name="code">2780</field>
+            <field name="prefix">2780</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2790 -->
+        <record id="seq_category_2790" model="ir.sequence">
+            <field name="name">2790</field>
+            <field name="code">2790</field>
+            <field name="prefix">2790</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2791 -->
+        <record id="seq_category_2791" model="ir.sequence">
+            <field name="name">2791</field>
+            <field name="code">2791</field>
+            <field name="prefix">2791</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2792 -->
+        <record id="seq_category_2792" model="ir.sequence">
+            <field name="name">2792</field>
+            <field name="code">2792</field>
+            <field name="prefix">2792</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2793 -->
+        <record id="seq_category_2793" model="ir.sequence">
+            <field name="name">2793</field>
+            <field name="code">2793</field>
+            <field name="prefix">2793</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2794 -->
+        <record id="seq_category_2794" model="ir.sequence">
+            <field name="name">2794</field>
+            <field name="code">2794</field>
+            <field name="prefix">2794</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2795 -->
+        <record id="seq_category_2795" model="ir.sequence">
+            <field name="name">2795</field>
+            <field name="code">2795</field>
+            <field name="prefix">2795</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2810 -->
+        <record id="seq_category_2810" model="ir.sequence">
+            <field name="name">2810</field>
+            <field name="code">2810</field>
+            <field name="prefix">2810</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2820 -->
+        <record id="seq_category_2820" model="ir.sequence">
+            <field name="name">2820</field>
+            <field name="code">2820</field>
+            <field name="prefix">2820</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2830 -->
+        <record id="seq_category_2830" model="ir.sequence">
+            <field name="name">2830</field>
+            <field name="code">2830</field>
+            <field name="prefix">2830</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2840 -->
+        <record id="seq_category_2840" model="ir.sequence">
+            <field name="name">2840</field>
+            <field name="code">2840</field>
+            <field name="prefix">2840</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2850 -->
+        <record id="seq_category_2850" model="ir.sequence">
+            <field name="name">2850</field>
+            <field name="code">2850</field>
+            <field name="prefix">2850</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2860 -->
+        <record id="seq_category_2860" model="ir.sequence">
+            <field name="name">2860</field>
+            <field name="code">2860</field>
+            <field name="prefix">2860</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2870 -->
+        <record id="seq_category_2870" model="ir.sequence">
+            <field name="name">2870</field>
+            <field name="code">2870</field>
+            <field name="prefix">2870</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2880 -->
+        <record id="seq_category_2880" model="ir.sequence">
+            <field name="name">2880</field>
+            <field name="code">2880</field>
+            <field name="prefix">2880</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2910 -->
+        <record id="seq_category_2910" model="ir.sequence">
+            <field name="name">2910</field>
+            <field name="code">2910</field>
+            <field name="prefix">2910</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2920 -->
+        <record id="seq_category_2920" model="ir.sequence">
+            <field name="name">2920</field>
+            <field name="code">2920</field>
+            <field name="prefix">2920</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 2930 -->
+        <record id="seq_category_2930" model="ir.sequence">
+            <field name="name">2930</field>
+            <field name="code">2930</field>
+            <field name="prefix">2930</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 3110 -->
+        <record id="seq_category_3110" model="ir.sequence">
+            <field name="name">3110</field>
+            <field name="code">3110</field>
+            <field name="prefix">3110</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 3210 -->
+        <record id="seq_category_3210" model="ir.sequence">
+            <field name="name">3210</field>
+            <field name="code">3210</field>
+            <field name="prefix">3210</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 3310 -->
+        <record id="seq_category_3310" model="ir.sequence">
+            <field name="name">3310</field>
+            <field name="code">3310</field>
+            <field name="prefix">3310</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 3410 -->
+        <record id="seq_category_3410" model="ir.sequence">
+            <field name="name">3410</field>
+            <field name="code">3410</field>
+            <field name="prefix">3410</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 3510 -->
+        <record id="seq_category_3510" model="ir.sequence">
+            <field name="name">3510</field>
+            <field name="code">3510</field>
+            <field name="prefix">3510</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 3610 -->
+        <record id="seq_category_3610" model="ir.sequence">
+            <field name="name">3610</field>
+            <field name="code">3610</field>
+            <field name="prefix">3610</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 3710 -->
+        <record id="seq_category_3710" model="ir.sequence">
+            <field name="name">3710</field>
+            <field name="code">3710</field>
+            <field name="prefix">3710</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 3810 -->
+        <record id="seq_category_3810" model="ir.sequence">
+            <field name="name">3810</field>
+            <field name="code">3810</field>
+            <field name="prefix">3810</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4110 -->
+        <record id="seq_category_4110" model="ir.sequence">
+            <field name="name">4110</field>
+            <field name="code">4110</field>
+            <field name="prefix">4110</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4210 -->
+        <record id="seq_category_4210" model="ir.sequence">
+            <field name="name">4210</field>
+            <field name="code">4210</field>
+            <field name="prefix">4210</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4310 -->
+        <record id="seq_category_4310" model="ir.sequence">
+            <field name="name">4310</field>
+            <field name="code">4310</field>
+            <field name="prefix">4310</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4410 -->
+        <record id="seq_category_4410" model="ir.sequence">
+            <field name="name">4410</field>
+            <field name="code">4410</field>
+            <field name="prefix">4410</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4420 -->
+        <record id="seq_category_4420" model="ir.sequence">
+            <field name="name">4420</field>
+            <field name="code">4420</field>
+            <field name="prefix">4420</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4430 -->
+        <record id="seq_category_4430" model="ir.sequence">
+            <field name="name">4430</field>
+            <field name="code">4430</field>
+            <field name="prefix">4430</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <!-- 4440 -->
+        <record id="seq_category_4440" model="ir.sequence">
+            <field name="name">4440</field>
+            <field name="code">4440</field>
+            <field name="prefix">4440</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4450 -->
+        <record id="seq_category_4450" model="ir.sequence">
+            <field name="name">4450</field>
+            <field name="code">4450</field>
+            <field name="prefix">4450</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4460 -->
+        <record id="seq_category_4460" model="ir.sequence">
+            <field name="name">4460</field>
+            <field name="code">4460</field>
+            <field name="prefix">4460</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4470 -->
+        <record id="seq_category_4470" model="ir.sequence">
+            <field name="name">4470</field>
+            <field name="code">4470</field>
+            <field name="prefix">4470</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4480 -->
+        <record id="seq_category_4480" model="ir.sequence">
+            <field name="name">4480</field>
+            <field name="code">4480</field>
+            <field name="prefix">4480</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4490 -->
+        <record id="seq_category_4490" model="ir.sequence">
+            <field name="name">4490</field>
+            <field name="code">4490</field>
+            <field name="prefix">4490</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4510 -->
+        <record id="seq_category_4510" model="ir.sequence">
+            <field name="name">4510</field>
+            <field name="code">4510</field>
+            <field name="prefix">4510</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4520 -->
+        <record id="seq_category_4520" model="ir.sequence">
+            <field name="name">4520</field>
+            <field name="code">4520</field>
+            <field name="prefix">4520</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4530 -->
+        <record id="seq_category_4530" model="ir.sequence">
+            <field name="name">4530</field>
+            <field name="code">4530</field>
+            <field name="prefix">4530</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4540 -->
+        <record id="seq_category_4540" model="ir.sequence">
+            <field name="name">4540</field>
+            <field name="code">4540</field>
+            <field name="prefix">4540</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4550 -->
+        <record id="seq_category_4550" model="ir.sequence">
+            <field name="name">4550</field>
+            <field name="code">4550</field>
+            <field name="prefix">4550</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4560 -->
+        <record id="seq_category_4560" model="ir.sequence">
+            <field name="name">4560</field>
+            <field name="code">4560</field>
+            <field name="prefix">4560</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4570 -->
+        <record id="seq_category_4570" model="ir.sequence">
+            <field name="name">4570</field>
+            <field name="code">4570</field>
+            <field name="prefix">4570</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4580 -->
+        <record id="seq_category_4580" model="ir.sequence">
+            <field name="name">4580</field>
+            <field name="code">4580</field>
+            <field name="prefix">4580</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 4590 -->
+        <record id="seq_category_4590" model="ir.sequence">
+            <field name="name">4590</field>
+            <field name="code">4590</field>
+            <field name="prefix">4590</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+    </data>
+</odoo>

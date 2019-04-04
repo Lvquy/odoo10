@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_line_check_tree" model="ir.ui.view">
+            <field name="name">line.check.tree</field>
+            <field name="model">line.check</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Lịch sử kiểm tra">
+                    <field name="line_check"/>
+                    <field name="vi_tri"/>
+                    <field name="check"/>
+                    <field name="error"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_line_check_form" model="ir.ui.view">
+            <field name="name">line.check.form</field>
+            <field name="model">line.check</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Lịch sử kiểm tra">
+                    <sheet>
+                        <group>
+                            <field name="line_check"/>
+                            <field name="vi_tri"/>
+                            <field name="check"/>
+                            <field name="error" attrs="{'invisible': [('check', '=', False)]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

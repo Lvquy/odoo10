@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_baocao_tree" model="ir.ui.view">
+            <field name="name">bao.cao.tree</field>
+            <field name="model">bao.cao</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Báo cáo">
+                    <field name="ngay"/>
+                    <field name="tong_thietbi"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_baocao_form" model="ir.ui.view">
+            <field name="name">bao.cao.form</field>
+            <field name="model">bao.cao</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Báo cáo">
+                    <sheet>
+                        <group>
+                            <field name="ngay"/>
+                            <field name="tong_thietbi"/>
+                        </group>
+                        <table width="100%" border="1">
+                                        <tr>
+                                            <td style="text-align:center" width="7.14%">IT</td>
+                                            <td style="text-align:center" width="7.14%">KHO</td>
+                                            <td style="text-align:center" width="7.14%">LR</td>
+                                            <td style="text-align:center" width="7.14%">QC</td>
+                                            <td style="text-align:center" width="7.14%">NS</td>
+                                            <td style="text-align:center" width="7.14%">T.KẾ</td>
+                                            <td style="text-align:center" width="7.14%">NV</td>
+                                            <td style="text-align:center" width="7.14%">CT</td>
+                                            <td style="text-align:center" width="7.14%">XNK</td>
+                                            <td style="text-align:center" width="7.14%">K.TOÁN</td>
+                                            <td style="text-align:center" width="7.14%">P.SƠN</td>
+                                            <td style="text-align:center" width="7.14%">CNC</td>
+                                            <td style="text-align:center" width="7.14%">TIẾN ĐỘ</td>
+                                            <td style="text-align:center">S.XUẤT</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align:center"><field name="it"/> </td>
+                                            <td style="text-align:center"><field name="kho"/> </td>
+                                            <td style="text-align:center"><field name="lr"/> </td>
+                                            <td style="text-align:center"><field name="qc"/> </td>
+                                            <td style="text-align:center"><field name="ns"/> </td>
+                                            <td style="text-align:center"><field name="tk"/> </td>
+                                            <td style="text-align:center"><field name="nv"/> </td>
+                                            <td style="text-align:center"><field name="tm"/> </td>
+                                            <td style="text-align:center"><field name="xnk"/> </td>
+                                            <td style="text-align:center"><field name="kt"/> </td>
+                                            <td style="text-align:center"><field name="phason"/> </td>
+                                            <td style="text-align:center"><field name="cnc"/> </td>
+                                            <td style="text-align:center"><field name="tdo"/> </td>
+                                            <td style="text-align:center"><field name="sx"/> </td>
+                                        </tr>
+                                    </table>
+                        <notebook>
+                            <page name='tonghop' string="Tổng hợp">
+                                <field name="tong_hop"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--tree view-->
+        <record id="view_line_baocao_tree" model="ir.ui.view">
+            <field name="name">line.baocao.tree</field>
+            <field name="model">line.baocao</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Báo cáo">
+                    <field name="thiet_bi"/>
+                    <field name="kieu_thietbi"/>
+                    <field name="nguoi_bq"/>
+                    <field name="bo_phan"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_line_baocao_form" model="ir.ui.view">
+            <field name="name">line.baocao.form</field>
+            <field name="model">line.baocao</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Báo cáo">
+                    <sheet>
+                        <group>
+                            <field name="thiet_bi"/>
+                            <field name="kieu_thietbi"/>
+                            <field name="nguoi_bq"/>
+                            <field name="bo_phan"/>
+                        </group>
+
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

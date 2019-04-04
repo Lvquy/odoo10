@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Báo cáo chi tiết theo ngày-->
+    <template id="bao_cao">
+
+        <t t-foreach="docs" t-as="o">
+            <div class="page" t-foreach="docs" t-as="o">
+                <link rel="stylesheet" href="/Nhan_su_lds/static/src/css/baocao_style.css"/>
+            <center>
+                <img src="/Nhan_su_lds/static/src/img/logo.png" width="100%" height="auto"></img>
+                <h3 style="padding-bottom:20px">BÁO CÁO TỔNG HỢP</h3>
+            </center>
+
+            <h4 class="text-left"><span t-esc="context_timestamp(datetime.datetime.now()).strftime('Ngày %d, Tháng %m, Năm %Y' )"/></h4>
+            <h4 class="text-left">Kết quả từ ngày: <span t-field="o.from_date"/> - Tới ngày: <span t-field="o.to_date"/></h4>
+                <table width="100%" border="1">
+                                    <tr>
+                                        <th >Giờ</th>
+                                        <th>Loại</th>
+                                        <th>SL</th>
+                                        <th>Tiền</th>
+                                    </tr>
+                                    <tr>
+                                        <td rowspan="4">4T</td>
+                                        <td>Mặn</td>
+                                        <td><span t-field="o.total_man_4"/></td>
+                                        <td><span t-field ="o.price_total_man_4"/></td>
+                                    </tr>
+                                    <tr >
+                                        <td>Chay</td>
+                                        <td><span t-field ="o.total_chay_4"/></td>
+                                        <td><span t-field ="o.price_total_chay_4"/></td>
+                                    </tr>
+                                    <tr >
+                                        <td>Cháo</td>
+                                        <td><span t-field ="o.total_chao_4"/></td>
+                                        <td><span t-field ="o.price_total_chao_4"/></td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="2">Tổng tiền</td>
+                                        <td style="color:red"><span t-field ="o.price_total_4"/> </td>
+                                    </tr>
+                                    <tr >
+                                        <td rowspan="4">3T</td>
+                                        <td>Mặn</td>
+                                        <td><span t-field ="o.total_man_3"/></td>
+                                        <td><span t-field ="o.price_total_man_3"/></td>
+                                    </tr>
+                                    <tr >
+                                        <td>Chay</td>
+                                        <td><span t-field ="o.total_chay_3"/></td>
+                                        <td><span t-field ="o.price_total_chay_3"/></td>
+                                    </tr>
+                                    <tr >
+                                        <td>Cháo</td>
+                                        <td><span t-field ="o.total_chao_3"/></td>
+                                        <td><span t-field ="o.price_total_chao_3"/></td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="2">Tổng tiền</td>
+                                        <td style="color:red"><span t-field ="o.price_total_3"/> </td>
+                                    </tr>
+                                    <tr >
+                                        <td rowspan="3">2T</td>
+                                        <td>Bún</td>
+                                        <td><span t-field ="o.total_bun"/></td>
+                                        <td><span t-field ="o.price_total_bun"/></td>
+                                    </tr>
+                                    <tr >
+                                        <td>Mì</td>
+                                        <td><span t-field ="o.total_mi"/></td>
+                                        <td>0</td>
+                                    </tr>
+
+                                    <tr >
+                                        <td colspan="2">Tổng tiền</td>
+                                        <td style="color:red"><span t-field ="o.price_total_2"/> </td>
+                                    </tr>
+                                    <tr >
+                                        <td colspan="2">Đặc biệt</td>
+                                        <td><span t-field ="o.total_dacbiet"/> </td>
+                                        <td><span t-field ="o.price_total_dacbiet"/> </td>
+                                    </tr>
+                                    <tr id="tong_tien">
+                                        <td colspan="3">Tổng cộng(<span t-field ="o.doc_tien"/>)</td>
+                                        <td style="color:red"><span t-field ="o.total"/></td>
+                                    </tr>
+                                </table>
+                <div class="text-right" style="margin:5px">
+                    Nhân viên: <span t-esc="user.name"></span>
+                </div>
+        </div>
+        </t>
+    </template>
+    <template id="report_bao_cao">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.bao_cao"/>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--không cho tạo nhà cung cấp tại trình tạo sản phẩm-->
+        <record id="custom_options_name" model="ir.ui.view">
+            <field name="name">custom.options.name.form</field>
+            <field name="model">product.supplierinfo</field>
+            <field name="inherit_id" ref="product.product_supplierinfo_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/group/field[@name='name']" position="attributes">
+                    <attribute name="options">{'no_create':True}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--không cho tạo nhà cung cấp tại trình tạo báo giá-->
+        <record id="custom_options_partner_id_pur" model="ir.ui.view">
+            <field name="name">custom_options_partner_id_pur.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/group/group/field[@name='partner_id']" position="attributes">
+                    <attribute name="options">{'no_create':True}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--không cho tạo khách hàng tại trình tạo đơn hàng mới-->
+        <record id="custom_partner_id_sale" model="ir.ui.view">
+            <field name="name">custom_partner_id_sale.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/group/field[@name='partner_id']" position="attributes">
+                    <attribute name="options">{'no_create':True}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--không cho tạo sản phẩm mới tại đơn hàng mới-->
+        <record id="custom_product_id_sale" model="ir.ui.view">
+            <field name="name">custom_product_id_sale.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/notebook/page/field/form/group/group/field[@name='product_id']" position="attributes">
+                    <attribute name="options">{'no_create':True}</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

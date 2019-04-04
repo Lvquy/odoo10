@@ -1,0 +1,477 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* lds_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-08 06:45+0000\n"
+"PO-Revision-Date: 2017-09-08 13:49+0700\n"
+"Last-Translator: Wang ZhaoHua <zhaohuaw@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 1.7.6\n"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "- Điện thoại(電話): 0274-790038, 0274-790039 Fax: 0274-790035"
+msgstr "- Điện thoại(電話): 0274-790038, 0274-790039 Fax: 0274-790035"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "- Địa chỉ(發票地址): 37 Đại Lộ Thống Nhất, KCN Sóng Thần II, Dĩ An, Bình Dương."
+msgstr "- Địa chỉ(發票地址): 37 Đại Lộ Thống Nhất, KCN Sóng Thần II, Dĩ An, Bình Dương."
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid ""
+"<span class=\"col-xs-12\" align=\"left\">\n"
+"                                    <strong>Cộng thành tiền bằng chữ:</strong>\n"
+"                                </span>\n"
+"\n"
+"                                <span class=\"col-xs-12\" align=\"right\">\n"
+"                                    <strong>Ngày(日)......Tháng(月)......Năm(年)......</strong>\n"
+"                                </span>\n"
+"                                <span class=\"col-xs-4\">\n"
+"                                    <strong>Kế toán</strong>\n"
+"                                </span>\n"
+"                                <span class=\"col-xs-4\">\n"
+"                                    <strong>Người giao</strong>\n"
+"                                </span>\n"
+"                                <span class=\"col-xs-4\">\n"
+"                                    <strong>Thủ kho</strong>\n"
+"                                </span>\n"
+"                                <span class=\"col-xs-4\">\n"
+"                                    <strong>(會計)</strong>\n"
+"                                </span>\n"
+"                                <span class=\"col-xs-4\">\n"
+"                                    <strong>(供應商)</strong>\n"
+"                                </span>\n"
+"                                <span class=\"col-xs-4\">\n"
+"                                    <strong>(倉庫管理員)</strong>\n"
+"                                </span>"
+msgstr ""
+"<span class=\"col-xs-12\" align=\"left\">\n"
+"                                    <strong>Cộng thành tiền bằng chữ:</strong>\n"
+"                                </span>\n"
+"\n"
+"                                <span class=\"col-xs-12\" align=\"right\">\n"
+"                                    <strong>Ngày(日)......Tháng(月)......Năm(年)......</strong>\n"
+"                                </span>\n"
+"                                <span class=\"col-xs-4\">\n"
+"                                    <strong>Kế toán</strong>\n"
+"                                </span>\n"
+"                                <span class=\"col-xs-4\">\n"
+"                                    <strong>Người giao</strong>\n"
+"                                </span>\n"
+"                                <span class=\"col-xs-4\">\n"
+"                                    <strong>Thủ kho</strong>\n"
+"                                </span>\n"
+"                                <span class=\"col-xs-4\">\n"
+"                                    <strong>(會計)</strong>\n"
+"                                </span>\n"
+"                                <span class=\"col-xs-4\">\n"
+"                                    <strong>(供應商)</strong>\n"
+"                                </span>\n"
+"                                <span class=\"col-xs-4\">\n"
+"                                    <strong>(倉庫管理員)</strong>\n"
+"                                </span>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+msgid ""
+"<span class=\"col-xs-12\" align=\"left\">\n"
+"                        <strong>Cộng thành tiền bằng chữ:</strong>\n"
+"                    </span>"
+msgstr ""
+"<span class=\"col-xs-12\" align=\"left\">\n"
+"                        <strong>Cộng thành tiền bằng chữ:</strong>\n"
+"                    </span>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid ""
+"<span class=\"col-xs-12\">\n"
+"                                    <strong>Theo hóa đơn số</strong>(發票號):\n"
+"                                </span>"
+msgstr ""
+"<span class=\"col-xs-12\">\n"
+"                                    <strong>Theo hóa đơn số</strong>(發票號):\n"
+"                                </span>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+msgid ""
+"<span class=\"col-xs-12\">\n"
+"                        <strong>Bộ phận sử dụng(使用部門):</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-12\">\n"
+"                        <strong>Lý do sử dụng(使用理由):</strong>\n"
+"                    </span>"
+msgstr ""
+"<span class=\"col-xs-12\">\n"
+"                        <strong>Bộ phận sử dụng(使用部門):</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-12\">\n"
+"                        <strong>Lý do sử dụng(使用理由):</strong>\n"
+"                    </span>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+msgid ""
+"<span class=\"col-xs-3\">\n"
+"                        <strong>Bộ phận sử dụng</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>Kế toán</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>Người nhận</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>Thủ kho</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>(使用部門)</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>(會計)</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>(收貨人)</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>(倉庫管理員)</strong>\n"
+"                    </span>"
+msgstr ""
+"<span class=\"col-xs-3\">\n"
+"                        <strong>Bộ phận sử dụng</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>Kế toán</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>Người nhận</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>Thủ kho</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>(使用部門)</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>(會計)</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>(收貨人)</strong>\n"
+"                    </span>\n"
+"                    <span class=\"col-xs-3\">\n"
+"                        <strong>(倉庫管理員)</strong>\n"
+"                    </span>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "<strong>Cộng tiền hàng(貨款金額)</strong>"
+msgstr "<strong>Cộng tiền hàng(貨款金額)</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "<strong>Ghi Chú</strong>"
+msgstr "<strong>Ghi Chú</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "<strong>Không có thuế VAT(沒有稅)</strong>"
+msgstr "<strong>Không có thuế VAT(沒有稅)</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "<strong>Mã Số</strong>"
+msgstr "<strong>Mã Số</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "<strong>Ngày nhập</strong>(進庫日期):"
+msgstr "<strong>Ngày nhập</strong>(進庫日期):"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "<strong>Nhận của</strong>(供應商):"
+msgstr "<strong>Nhận của</strong>(供應商):"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "<strong>Nhập tại kho</strong>(接收倉庫):"
+msgstr "<strong>Nhập tại kho</strong>(接收倉庫):"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "<strong>STT</strong>"
+msgstr "<strong>STT</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "<strong>Thuế GTGT(稅)</strong>"
+msgstr "<strong>Thuế GTGT(稅)</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "<strong>Thành Tiền</strong>"
+msgstr "<strong>Thành Tiền</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "<strong>Tên Hàng/Quy Cách</strong>"
+msgstr "<strong>Tên Hàng/Quy Cách</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "<strong>Tổng Có Thuế(總計)</strong>"
+msgstr "<strong>Tổng Có Thuế(總計)</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "<strong>Tổng Cộng (未稅金額)</strong>"
+msgstr "<strong>Tổng Cộng (未稅金額)</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "<strong>Tổng Cộng(總計)</strong>"
+msgstr "<strong>Tổng Cộng(總計)</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+msgid "<strong>Xuất cho(出給):</strong>"
+msgstr "<strong>Xuất cho(出給):</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+msgid "<strong>Xuất tại kho(出庫於):</strong>"
+msgstr "<strong>Xuất tại kho(出庫於):</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "<strong>Đơn Giá</strong>"
+msgstr "<strong>Đơn Giá</strong>"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "CTY CP LÂM ĐẠT HƯNG"
+msgstr "CTY CP LÂM ĐẠT HƯNG"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "CÔNG TY CỔ PHẦN LÂM ĐẠT HƯNG 林達興股份公司"
+msgstr "CÔNG TY CỔ PHẦN LÂM ĐẠT HƯNG 林達興股份公司"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "Di động(Tel):"
+msgstr "Di động(Tel):"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "Email:"
+msgstr "电子邮箱:"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "Fax(傳真):"
+msgstr "Fax(傳真):"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "Ghi Chú"
+msgstr "Ghi Chú"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "Ghi chú: CTY CP LÂM ĐẠT HƯNG: Mã số thuế -( 本公司統一編號): 3700239896"
+msgstr "Ghi chú: CTY CP LÂM ĐẠT HƯNG: Mã số thuế -( 本公司統一編號): 3700239896"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "Khi thanh toán phải mang theo Hóa đơn tài chính(Hóa đơn đỏ)(申請貨款時,需附發票正本)"
+msgstr "Khi thanh toán phải mang theo Hóa đơn tài chính(Hóa đơn đỏ)(申請貨款時,需附發票正本)"
+
+#. module: lds_report
+#: model:ir.actions.report.xml,name:lds_report.lds_action_report_picking
+msgid "LDS Phieu nhap kho"
+msgstr "LDS 入库单"
+
+#. module: lds_report
+#: model:ir.actions.report.xml,name:lds_report.lds_action_report_delivery
+msgid "LDS Phieu xuat kho"
+msgstr "LDS 出库单"
+
+#. module: lds_report
+#: model:ir.actions.report.xml,name:lds_report.lds_purchase_order_01
+msgid "LDS Purchase order"
+msgstr "LDS 采购单"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "Mã VTHH"
+msgstr "Mã VTHH"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "Mã số đơn hàng(訂單編號):"
+msgstr "Mã số đơn hàng(訂單編號):"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "N.kho"
+msgstr "N.kho"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "NHÀ CUNG CẤP"
+msgstr "NHÀ CUNG CẤP"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "Ngày giao hàng(交貨日期):"
+msgstr "Ngày giao hàng(交貨日期):"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid ""
+"Ngày giao, chất lượng, quy cách phải theo yêu cầu của công ty, nếu không tuân\n"
+"                            theo những điều kiện trên chúng tôi có quyền cắt hết những đơn đặt hàng, những trường hợp\n"
+"                            trễ hẹn gây tổn thất cho công ty chúng tôi thì nhà cung cấp phải hoàn toàn chịu trách nhiệm\n"
+"                            về khoản thiệt hại đó.(交期,品質,規格須遵照本公司之要求,如有不符上述規定時,本公司有權取消部份或全部訂單,且供\n"
+"                            應廠商如因上述未符合規定而造成本公司之損失時,供應廠商同意負完全賠償之責任。)"
+msgstr ""
+"Ngày giao, chất lượng, quy cách phải theo yêu cầu của công ty, nếu không tuân\n"
+"                            theo những điều kiện trên chúng tôi có quyền cắt hết những đơn đặt hàng, những trường hợp\n"
+"                            trễ hẹn gây tổn thất cho công ty chúng tôi thì nhà cung cấp phải hoàn toàn chịu trách nhiệm\n"
+"                            về khoản thiệt hại đó.(交期,品質,規格須遵照本公司之要求,如有不符上述規定時,本公司有權取消部份或全部訂單,且供\n"
+"                            應廠商如因上述未符合規定而造成本公司之損失時,供應廠商同意負完全賠償之責任。)"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "Ngày đặt hàng(訂購日期):"
+msgstr "Ngày đặt hàng(訂購日期):"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "Người đại diện(連絡人):"
+msgstr "Người đại diện(連絡人):"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "Nhà cung cấp(廠商):"
+msgstr "Nhà cung cấp(廠商):"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "PHIẾU NHẬP KHO"
+msgstr "PHIẾU NHẬP KHO"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+msgid "PHIẾU XUẤT KHO"
+msgstr "PHIẾU XUẤT KHO"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "PHÊ DUYỆT"
+msgstr "PHÊ DUYỆT"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+msgid "SL"
+msgstr "SL"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "STT"
+msgstr "STT"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "Số lượng"
+msgstr "Số lượng"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "T.Toán"
+msgstr "T.Toán"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid ""
+"Thanh\n"
+"                                toán Công nợ(支付條款)"
+msgstr ""
+"Thanh\n"
+"                                toán Công nợ(支付條款)"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "Thuế VAT(稅)"
+msgstr "Thuế VAT(稅)"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "Thành Tiền"
+msgstr "Thành Tiền"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "Tên nhãn hiệu, Quy cách vật tư"
+msgstr "Tên nhãn hiệu, Quy cách vật tư"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+msgid "Tên, nhãn hiệu,quy cách vật tư"
+msgstr "Tên, nhãn hiệu,quy cách vật tư"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid ""
+"Yêu cầu cho LDS xác định mẫu\n"
+"                                trước khi sản xuất đại trà. Địa chỉ giao hàng: Số 37, Đường Đại Lộ Thống Nhất, KCN Sóng\n"
+"                                Thần II, Dĩ An, Bình Dương. Vui lòng ký nhận Fax lại dùm. Cảm ơn."
+msgstr ""
+"Yêu cầu cho LDS xác định mẫu\n"
+"                                trước khi sản xuất đại trà. Địa chỉ giao hàng: Số 37, Đường Đại Lộ Thống Nhất, KCN Sóng\n"
+"                                Thần II, Dĩ An, Bình Dương. Vui lòng ký nhận Fax lại dùm. Cảm ơn."
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "ĐVT"
+msgstr "ĐVT"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid "Điện thoại(電話):"
+msgstr "Điện thoại(電話):"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_delivery_document
+#: model:ir.ui.view,arch_db:lds_report.lds_report_picking
+msgid "Đơn Giá"
+msgstr "Đơn Giá"
+
+#. module: lds_report
+#: model:ir.ui.view,arch_db:lds_report.lds_report_purchaseorder_document
+msgid ""
+"Đơn đặt hàng phải có chữ ký xác nhận, Công ty sẽ thanh toán theo đơn đặt\n"
+"                            hàng(訂購單請務必簽回確認,本公司此為付款依據)"
+msgstr ""
+"Đơn đặt hàng phải có chữ ký xác nhận, Công ty sẽ thanh toán theo đơn đặt\n"
+"                            hàng(訂購單請務必簽回確認,本公司此為付款依據)"

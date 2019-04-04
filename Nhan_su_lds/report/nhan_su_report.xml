@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Báo cáo hàng ngày-->
+    <template id="today_report">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <link rel="stylesheet" href="/Nhan_su_lds/static/src/css/nhan_su_report_style.css"/>
+                <center>
+                    <img src="/Nhan_su_lds/static/src/img/logo.png" width="100%" height="auto"></img>
+                    <h3 style="padding-bottom:20px">TỔNG HỢP CƠM NGÀY</h3>
+
+                     <table width="100%">
+                            <tr style="color:red;">
+                                <td>Ngày</td>
+                                <td><span t-field="o.ngay_bao" attrs="{'readonly': [('status', 'in', ('1'))]}"/></td>
+                                <td colspan="8"><span t-field="o.total_today" /> ( <span t-field="o.doc_tien"/> ) </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="3">4T</td>
+                                <td colspan="3">3T</td>
+                                <td colspan="3">2T</td>
+                            </tr>
+                            <tr>
+                                <td>Loại</td>
+                                <td>SL</td>
+                                <td>Đơn giá</td>
+                                <td>Thành tiền</td>
+                                <td>SL</td>
+                                <td>Đơn giá</td>
+                                <td>Thành tiền</td>
+                                <td>SL</td>
+                                <td>Đơn giá</td>
+                                <td>Thành tiền</td>
+                            </tr>
+                            <tr>
+                                <td>Mặn</td>
+                                <td><span t-field="o.today_total_man_4"/></td>
+                                <td><span t-field="o.price_man_4" /></td>
+                                <td><span t-field="o.money_man_4"/> </td>
+                                <td><span t-field="o.today_total_man_3" /></td>
+                                <td><span t-field="o.price_man_3" /></td>
+                                <td><span t-field="o.money_man_3"/></td>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td>Chay</td>
+                                <td><span t-field="o.today_total_chay_4" /></td>
+                                <td><span t-field="o.price_chay_4" /></td>
+                                <td><span t-field="o.money_chay_4"/></td>
+                                <td><span t-field="o.today_total_chay_3" /></td>
+                                <td><span t-field="o.price_chay_3" /></td>
+                                <td><span t-field="o.money_chay_3"/></td>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td>Cháo</td>
+                                <td><span t-field="o.today_total_chao_4"/></td>
+                                <td><span t-field="o.price_chao_4" /></td>
+                                <td><span t-field="o.money_chao_4"/></td>
+                                <td><span t-field="o.today_total_chao_3"/></td>
+                                <td><span t-field="o.price_chao_3" /></td>
+                                <td><span t-field="o.money_chao_3"/></td>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td>Đặc biệt</td>
+                                <td><span t-field="o.total_dac_biet"/> </td>
+                                <td><span t-field="o.price_dacbiet"/> </td>
+                                <td><span t-field="o.money_dacbiet"/> </td>
+                                <td colspan="6"></td>
+                            </tr>
+                            <tr>
+                                <td>Bún</td>
+                                <td colspan="6"></td>
+                                <td><span t-field="o.today_total_bun"/></td>
+                                <td><span t-field="o.price_bun"/></td>
+                                <td><span t-field="o.money_bun"/></td>
+
+                            </tr>
+                            <tr>
+                                <td>Mì</td>
+                                <td colspan="6"></td>
+                                <td><span t-field="o.today_total_mi"/></td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </table>
+                </center>
+                <div class="text-right" style="margin:5px">
+                    Nhân viên: <span t-esc="user.name"></span>
+                </div>
+
+            </div>
+        </t>
+    </template>
+    <template id="report_nhansu">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="Nhan_su_lds.today_report"/>
+        </t>
+    </template>
+</odoo>

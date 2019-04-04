@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="lds_report_intrastatinvoice_document">
+    <t>
+       <t t-set="o" t-value="o.with_context(lang = o.partner_id.lang)"/>
+        <div class="page">
+		<link rel="stylesheet" href="/lds_report/static/src/css/invoice_style.css"/>
+           <img src="/lds_report/static/src/img/logo.png" width="100%" height="auto"></img>
+			<table class="table-nobd" width="100%">
+				<tr class="tr1" >
+					<td class="td1 " width="10%">
+						<strong>TO:</strong>
+					</td>
+					<td class="td1 td2 text-left" width="60%" rowspan="3">
+						<t t-if="o.partner_id.company_type == 'person'">		    
+							<span t-field="o.partner_id"/>,
+							<span t-field="o.partner_id.street"/>
+						</t>
+						<t t-if="o.partner_id.company_type == 'company'">
+							<span t-field="o.partner_id"/>,
+							<span t-field="o.partner_id.street" />
+						</t>
+					</td>
+					<td class="td1 " width="15%">
+						<strong>PI NO.:</strong>
+					</td>
+					<td class="td1 text-left" width="15%">
+						<span t-field="o.LDS_PINO"/>
+					</td>
+				</tr>
+				<tr class="tr1">
+					<td class="td1">
+					</td>
+					<td class="td1 ">
+						<strong>Date of issue:</strong>
+					</td>
+					<td class="td1 text-left">
+						<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%b %d, %Y')"/>
+					</td>
+				</tr>
+				<tr class="tr1">
+					<td class="td1">
+					</td>
+					<td class="td1 ">
+						<strong>PO NO.:</strong>
+					</td>
+					<td class="td1 text-left">
+						<span t-field="o.LDS_PONO"/>
+					</td>
+				</tr>
+				<tr class="tr1">
+					<td class="td1 ">
+						<strong>ETD:</strong>
+					</td>
+					<td class="td1 text-left" colspan="3">
+						<t t-if="o.LDS_ETD">
+							<span t-esc="time.strftime('%b %d, %Y',time.strptime(o.LDS_ETD,'%Y-%m-%d'))"/>
+						</t>
+						<t t-if="not o.LDS_ETD">
+							Lỗi, chưa chọn ngày ETD
+						</t>
+					</td>
+				</tr>
+			</table>
+
+            <center>
+				<h2>
+					PRO-FORMA INVOICE
+				</h2>
+			</center>
+            <!-- Is there a discount on at least one line? -->
+            <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
+            <table class="table-bd" >
+                <thead>
+                    <tr class="tr">
+                        <th class="text-center th">NO.</th>
+                        <th class="text-center th">DECRIPTION</th>
+                        <th class="text-center th">LDS PRODUCT NAME</th>
+                        <th class="text-center th">CUSTOMER'S NAME</th>
+                        <th class="text-center th">Q'TY / PCS</th>
+                        <th class="text-center th">Overall Dimension</th>
+                        <th class="text-center th">Price(USD)</th>
+                        <th class="text-center th">Amount(USD)</th>
+                        <th class="text-center th">CBM M3</th>
+						<th class="text-center th">Total CBM M3</th>
+                    </tr>
+                </thead>
+                <tbody>	
+					<t t-set="total_m3" t-value="0"/>
+					<t t-set="total_price" t-value="0"/>
+					<t t-set="total_qty" t-value="0"/>
+					<t t-set="stt" t-value="1"/>
+                    <tr class="tr" t-foreach="o.invoice_line_ids" t-as="l">
+						<t t-set="total_m3" t-value="total_m3 + l.quantity*l.product_id.volume"/>
+						<t t-set="total_price" t-value="total_price + l.quantity*l.price_unit"/>
+						<t t-set="total_qty" t-value="total_qty + l.quantity"/>
+                        <td class="td">
+							<t t-esc="stt"/>
+                            <t t-set="stt" t-value="stt+1"/>
+						</td>
+                        <td class="text-center td">
+							<span t-field="l.product_id.image_small" t-options='{"widget": "image"}'/>
+						</td>
+                        <td class="text-center td">
+							<span t-field="l.product_id.name"/>
+						</td>
+                        <td class="text-center td">
+							<span t-field="l.product_id.cust_product_name"/>
+						</td>
+						<td class="text-center td">
+							<span t-field="l.quantity"/>
+						</td>						
+                        <td class="text-center td">
+							<span t-foreach="l.product_id.attribute_value_ids" t-as="attrib_value">
+								<span t-esc=" '%s' % (attrib_value.name)"/>
+							</span>
+						</td>						
+                        <td class="text-center td">
+							<span t-field="l.price_unit"/>
+						</td>
+						<td class="text-center td">						
+							<span t-esc="'{0:,.2f}'.format(float(l.price_unit*l.quantity))"/>						
+						</td>
+                        <td class="text-center td">
+							<span t-field="l.product_id.volume"/>
+						</td>
+                        <td class="text-center td">
+							<span t-esc="l.quantity*l.product_id.volume"/>
+						</td>							
+                    </tr>
+					<tr  class="tr">
+						<td class="td" colspan="4">
+							TOTAL
+						</td>
+						<td class="td">									
+							<t t-esc="'{0:,.3f}'.format(float(total_qty))"/>
+						</td>
+						<td class="td" colspan="2"></td>
+						<td class="td">
+							<t t-esc="'{0:,.2f}'.format(float(total_price))"/>
+						</td>
+						<td class="td"></td>
+						<td class="td">
+							<t t-esc="'{0:,.2f}'.format(float(total_m3))"/>
+						</td>						
+					</tr>
+                </tbody>
+            </table>
+			<hr/>
+			<table class="table-nobd">
+				<tr class="tr1">
+					<td class="td1 " width="25%">
+						<strong>TERMS AND CONDITIONS</strong>
+					</td>			
+					<td class="text-left td1">
+						<span t-field="o.payment_term_id"/>
+					</td>
+				</tr>
+				<tr class="tr1">
+					<td class="td1 " width="25%">
+						<strong>BENEFICIARY'S NAME:</strong>
+					</td>
+					<td class="text-left td1">
+						Người thụ hưởng LDS						
+					</td>
+				</tr>
+				<tr class="tr1">
+					<td class="td1 " width="25%">
+						<strong>COMPANY ADD:</strong>
+					</td>
+					<td class="text-left td1">
+						NO.37, Thong Nhat Street, Song Than 2 Industrial Zone, Di An Hsien, Bin Duong Brovince, VIETNAM 						
+					</td>
+				</tr>
+				<tr class="tr1">
+					<td class="td1 " width="25%">
+						<strong>BANK:</strong>
+					</td>
+					<td class="text-left td1">
+						Tên Ngân Hàng LDS						
+					</td>
+				</tr>
+				<tr class="tr1">			
+					<td class="td1 " width="25%">
+						<strong>Address:</strong>
+					</td>
+					<td class="text-left td1">
+						NO.37, Thong Nhat Street, Song Than 2 Industrial Zone, Di An Hsien, Bin Duong Brovince, VIETNAM 
+					</td>
+				</tr>
+				<tr class="tr1">
+					<td class="td1 " width="25%">
+						<strong>Account No:</strong>
+					</td>
+					<td class="text-left td1">
+						Số Tài Khoản Ngân Hàng LDS Thụ Hưởng
+					</td>
+				</tr>
+				<tr class="tr1">
+					<td class="td1 " width="25%">
+						<strong>Swift Code:</strong>
+					</td>
+					<td class="text-left td1">
+						Zip CODE Bình Dương
+					</td>
+				</tr>	
+			</table>
+			<hr/>
+				<div class="row">	
+					<span class="col-xs-6 text-center ">
+						<strong><u>FOR THE BUYER</u>
+						<br/>
+						URITSUKOUGEICO.
+						</strong>
+					</span>
+					<span class="col-xs-6 text-center ">
+						<strong><u>FOR THE SELLER</u><br/>
+						RICH POWER LIMITED.
+						</strong>
+					</span>
+				</div>	
+        </div>
+    </t>
+</template>
+<template id="lds_report_intrastatinvoice">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="o">
+			<t t-call="lds_report.lds_report_intrastatinvoice_document" t-lang="o.partner_id.lang"/>
+        </t>
+    </t>
+</template>
+</odoo>

@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_baocom,Báo cơm,model_bao_com,Nhan_su_lds.group_baocom,1,0,1,0
+access_caidat_bc,Cài đặt,model_setting,Nhan_su_lds.group_baocom,1,0,0,0
+
+access_baocom_ns,Báo cơm,model_bao_com,Nhan_su_lds.group_ns,1,1,1,1
+access_baocao_ns,Báo cáo,model_bao_cao,Nhan_su_lds.group_ns,1,1,1,1
+access_nhansu_ns,Nhân sự,model_nhan_su,Nhan_su_lds.group_ns,1,1,1,1
+access_caidat_ns,Cài đặt,model_setting,Nhan_su_lds.group_ns,1,1,0,0

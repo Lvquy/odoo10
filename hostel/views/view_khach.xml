@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--tree view-->
+        <record id="khach_tro_tree" model="ir.ui.view">
+            <field name="name">khach.tro.tree</field>
+            <field name="model">khach.tro</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="ma_khach"/>
+                    <field name="name"/>
+                    <field name="cmnd"/>
+                    <field name="mobile"/>
+                    <field name="gioi_tinh"/>
+                    <field name="bank_acc"/>
+                    <field name="dang_o"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--from view-->
+        <record id="khach_tro_from" model="ir.ui.view">
+            <field name="name">khach.tro.form</field>
+            <field name="model">khach.tro</field>
+            <field name="arch" type="xml">
+                <form string="Khách trọ">
+                    <header>
+                        <button name="xacnhan0_1" string="Khóa" type="object"
+                                attrs="{'invisible':[('status','in',('1','2','3'))]}"/>
+                        <button name="set_0" groups="base.group_system,hostel.group_quanly" string="Xóa tài khoản" type="object"/>
+                        <!--<button name = "xacnhan1_2" string="xacnhan1_2" type="object"/>-->
+                        <!--<button name = "xacnhan2_3" string="xacnhan2_3" type="object"/>-->
+                        <field name="status" widget="statusbar" visible_status="0,1,2,3"/>
+                    </header>
+                    <sheet>
+                        <field widget="image" name="img" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <h3>
+                                <field name="ma_khach"/>
+                            </h3>
+                            <label for="bank_acc" string="Số dư: "/>
+                            <field name="bank_acc"/>
+                            <br/>
+                            <label for="doc_tien" string="Đọc tiền: "/>
+                            <field name="doc_tien"/>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name" attrs="{'readonly':[('status','in',('1','2','3'))]}"/>
+                                <field name="dang_o"/>
+                                <field name="gioi_tinh" attrs="{'readonly':[('status','in',('1','2','3'))]}"/>
+                                <field name="add" attrs="{'readonly':[('status','in',('1','2','3'))]}"/>
+                            </group>
+                            <group>
+                                <field name="cmnd" attrs="{'readonly':[('status','not in',('0'))]}"/>
+                                <field name="mobile"/>
+                                <field name="mobile_ngthan"/>
+                            </group>
+                            <group>
+                                <field name="ngay_toi"/>
+                                <field name="ngay_tra"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--tree view-->
+        <record id="nap_tien_tree" model="ir.ui.view">
+            <field name="name">nap.tien.tree</field>
+            <field name="model">nap.tien</field>
+            <field name="arch" type="xml">
+                <tree string="Nạp tiền vào tài khoản" decoration-success="status == '1'">
+                    <field name="ma_giaodich"/>
+                    <field name="ma_khach"/>
+                    <field name="ten_khach"/>
+                    <field name="cmnd"/>
+                    <field name="so_tien" sum="Tổng" widget="monetary"/>
+                    <field name="ngay_nap"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="nap_tien_form" model="ir.ui.view">
+            <field name="name">nap.tien.form</field>
+            <field name="model">nap.tien</field>
+            <field name="arch" type="xml">
+                <form string="Nạp tiền vào tài khoản">
+                    <header>
+                        <button name="lock" type="object" string="Xác nhận"
+                                attrs="{'invisible':[('status','in','1')]}"/>
+                        <button name="unlock" type="object" string="Hoàn tác"
+                                attrs="{'invisible':[('status','in','0')]}"
+                                groups="base.group_system,hostel.group_quanly"/>
+                        <field name="status" widget="statusbar" visible_status="0,1"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="ma_giaodich"/>
+                            <field name="ten_khach" attrs="{'readonly':[('status','in','1')]}"
+                                   domain="[('status','in',('1','2','3'))]" options="{'no_create': True}"/>
+                            <field name="ma_khach"/>, <field name="cmnd"/>
+                            <field name="so_tien" attrs="{'readonly':[('status','in','1')]}"/>
+                            <field name="doc_tien"/>
+                            <field name="ngay_nap" attrs="{'readonly':[('status','in','1')]}"/>
+                            <field name="ngay_tao_hoa_don"/>
+                            <field name="note"/>
+                            <field name="nhan_vien"/>
+                        </group>
+                        <div attrs="{'invisible':[('status','in','1')]}">
+                            <button name="add_5" type="object" string="+ 5K"/>-*-
+                            <button name="add_10" type="object" string="+ 10K"/>-*-
+                            <button name="add_50" type="object" string="+ 50K"/>-*-
+                            <button name="add_100" type="object" string="+ 100K"/>-*-
+                            <button name="add_200" type="object" string="+ 200K"/>-*-
+                            <button name="add_500" type="object" string="+ 500K"/>-*-
+                            <button name="reset" type="object" string="Đưa về 0"/>
+                        </div>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+
+        <!--tree view-->
+        <record id="log_bank_tree" model="ir.ui.view">
+            <field name="name">log.bank.tree</field>
+            <field name="model">log.bank</field>
+            <field name="arch" type="xml">
+                <tree string="Lịch sử thanh toán" decoration-danger="status == '2'" decoration-success="status == '1'">
+                    <field name="ma_khach"/>
+                    <field name="name"/>
+                    <field name="so_tien" sum="Tổng" widget="monetary"/>
+                    <field name="ngay"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="log_bank_from" model="ir.ui.view">
+            <field name="name">log.bank.form</field>
+            <field name="model">log.bank</field>
+            <field name="arch" type="xml">
+                <form string="Lịch sử thanh toán">
+                    <header>
+                        <button name="un_bank" string="Hoàn trả" type="object" attrs="{'invisible':[('status','in','2')]}"
+                                groups="base.group_system,hostel.group_quanly"/>
+                        <field name="status" widget="statusbar" visible_status="0,1,2"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="ma_khach" attrs="{'readonly':[('status','in','1')]}"/>
+                            <field name="name" attrs="{'readonly':[('status','in','1')]}"/>
+                            <field name="so_tien" attrs="{'readonly':[('status','in','1')]}"/>
+                            <field name="note" attrs="{'readonly':[('status','in','1')]}"/>
+                            <field name="so_hoadon"/>
+                            <field name="ngay" attrs="{'readonly':[('status','in','1')]}"/>
+                        </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

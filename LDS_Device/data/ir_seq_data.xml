@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!--Mã Adapter-->
+        <record id="seq_adapter_code" model="ir.sequence">
+            <field name="name">Adapter Code</field>
+            <field name="code">adapter_code</field>
+            <field name="prefix">ADT%(day)s%(month)s%(year)s</field>
+            <field name="padding">4</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!--Mã Mắt-->
+        <record id="seq_mat_code" model="ir.sequence">
+            <field name="name">Mắt Code</field>
+            <field name="code">mat_code</field>
+            <field name="prefix">MAT%(day)s%(month)s%(year)s</field>
+            <field name="padding">4</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!--Mã Nhật kí sửa chữa-->
+        <record id="seq_nhatky_code" model="ir.sequence">
+            <field name="name">Nhật ký sửa chữa</field>
+            <field name="code">nhatky_code</field>
+            <field name="prefix">LOG%(day)s%(month)s%(year)s</field>
+            <field name="padding">4</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!--Mã PC, laptop-->
+        <record id="seq_pc_code" model="ir.sequence">
+            <field name="name">PC, LAPTOP</field>
+            <field name="code">pc_code</field>
+            <field name="prefix">PC%(day)s%(month)s%(year)s</field>
+            <field name="padding">4</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!--Mã đầu ghi-->
+        <record id="seq_daughi_code" model="ir.sequence">
+            <field name="name">Đầu ghi</field>
+            <field name="code">daughi_code</field>
+            <field name="prefix">DG%(day)s%(month)s%(year)s</field>
+            <field name="padding">4</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!--Mã Other-->
+        <record id="seq_other_code" model="ir.sequence">
+            <field name="name">Other</field>
+            <field name="code">other_code</field>
+            <field name="prefix">OTH%(day)s%(month)s%(year)s</field>
+            <field name="padding">4</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!--Mã Xưởng máy Tổ máy-->
+        <record id="seq_xuong_tm_code" model="ir.sequence">
+            <field name="name">Tổ máy</field>
+            <field name="code">xuong_tm_code</field>
+            <field name="prefix">TM-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <!--Mã Xưởng máy CNC-->
+        <record id="seq_xuong_cnc_code" model="ir.sequence">
+            <field name="name">CNC</field>
+            <field name="code">xuong_cnc_code</field>
+            <field name="prefix">CNC-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <!--Mã Xưởng máy Chà nhám 1-->
+        <record id="seq_xuong_cn1_code" model="ir.sequence">
+            <field name="name">Chà nhám 1</field>
+            <field name="code">xuong_cn1_code</field>
+            <field name="prefix">CN1-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!--Mã Xưởng máy Chà nhám 2-->
+        <record id="seq_xuong_cn2_code" model="ir.sequence">
+            <field name="name">Chà nhám 2</field>
+            <field name="code">xuong_cn2_code</field>
+            <field name="prefix">CN2-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <!--Mã Xưởng máy Sơn-->
+        <record id="seq_xuong_s_code" model="ir.sequence">
+            <field name="name">Sơn</field>
+            <field name="code">xuong_s_code</field>
+            <field name="prefix">S-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <!--Mã Xưởng máy Xưởng 2-->
+        <record id="seq_xuong_x2_code" model="ir.sequence">
+            <field name="name">Xưởng 2</field>
+            <field name="code">xuong_x2_code</field>
+            <field name="prefix">X2-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+        <!--Mã Xưởng máy Tổ mẫu-->
+        <record id="seq_xuong_m_code" model="ir.sequence">
+            <field name="name">Tổ mẫu</field>
+            <field name="code">xuong_m_code</field>
+            <field name="prefix">M-</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

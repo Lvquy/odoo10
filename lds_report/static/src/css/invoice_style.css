@@ -1,0 +1,46 @@
+.table-bd {
+    border: 1px solid black;
+    vertical-align: middle;
+    margin-top: 0px;
+}
+.th {
+	border: 1px solid black;
+    vertical-align: middle;
+    padding: 3px;
+    text-align: center;	
+}
+.td {
+    border: 1px solid black;
+    vertical-align: middle;
+    padding: 3px;
+    text-align: center;
+}
+.tr {
+    border: 1px solid black;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table-nobd { 
+	border: 0px;
+	vertical-align: middle;
+    margin-top: 0px;}
+.th1 {
+    vertical-align: middle;
+    padding: 3px;
+   
+}
+.td1 {
+    vertical-align: middle;
+    padding: 3px;
+
+}
+.td2{
+	 vertical-align: top !important;
+}
+.tr1{
+	vertical-align: middle;
+	padding:3px
+	
+	
+}

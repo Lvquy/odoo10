@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_baotri_tree" model="ir.ui.view">
+            <field name="name">baotri.tree</field>
+            <field name="model">baotri</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Bảo trì">
+                    <field name="today_1"/>
+                    <field name="list_may"/>
+                </tree>
+            </field>
+        </record>
+        <!--form view-->
+        <record id="view_baotri_form" model="ir.ui.view">
+            <field name="name">baotri.form</field>
+            <field name="model">baotri</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Bảo trì">
+                    <sheet>
+                        <field name="today_1"/>
+                        <notebook>
+                            <page name="baotri" string="Danh sách bảo trì hôm nay">
+                                <field name="list_may"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

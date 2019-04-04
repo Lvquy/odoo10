@@ -1,0 +1,837 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* category_sequences
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-08 07:10+0000\n"
+"PO-Revision-Date: 2017-09-08 07:10+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2920
+msgid "12kg"
+msgstr "12kg"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2930
+msgid "16kg"
+msgstr "16kg"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2910
+msgid "8kg"
+msgstr "8kg"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8040
+#: model:product.category,name:category_sequences.product_category_9040
+msgid "ARM CHAIR"
+msgstr "ARM CHAIR"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1240
+#: model:product.category,name:category_sequences.product_category_1340
+msgid "ASH"
+msgstr "ASH"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2105
+msgid "BAS"
+msgstr "BAS"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8090
+#: model:product.category,name:category_sequences.product_category_9090
+msgid "BED"
+msgstr "BED"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1260
+#: model:product.category,name:category_sequences.product_category_1370
+msgid "BEECH"
+msgstr "BEECH"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8030
+#: model:product.category,name:category_sequences.product_category_9030
+msgid "BEMCH"
+msgstr "BEMCH"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2102
+msgid "BULON"
+msgstr "BULON"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2110
+msgid "BÁNH XE"
+msgstr "BÁNH XE"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_3410
+msgid "BĂNG KEO"
+msgstr "BĂNG KEO"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4440
+#: model:product.category,name:category_sequences.product_category_4540
+msgid "BẠC ĐẠN"
+msgstr "BẠC ĐẠN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1270
+msgid "BẠCH DƯƠNG"
+msgstr "BẠCH DƯƠNG"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2106
+msgid "BẢN LỀ"
+msgstr "BẢN LỀ"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2109
+msgid "BỘ LIÊN KẾT KD"
+msgstr "BỘ LIÊN KẾT KD"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_3610
+msgid "BỘT TT"
+msgstr "BỘT TT"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8070
+#: model:product.category,name:category_sequences.product_category_9070
+msgid "CABINET"
+msgstr "CABINET"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1350
+msgid "CAO SU"
+msgstr "CAO SU"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4400
+#: model:product.category,name:category_sequences.product_category_4410
+msgid "CCDC MỚI"
+msgstr "CCDC MỚI"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4500
+msgid "CCDC SỬA CHỮA"
+msgstr "CCDC SỬA CHỮA"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8020
+#: model:product.category,name:category_sequences.product_category_9020
+msgid "CHAIR"
+msgstr "CHAIR"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1320
+msgid "CHERRY"
+msgstr "CHERRY"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2630
+msgid "CHỐNG CHÁY"
+msgstr "CHỐNG CHÁY"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2113
+msgid "CHỐT"
+msgstr "CHỐT"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2640
+msgid "CRAY"
+msgstr "CRAY"
+
+#. module: category_sequences
+#: model:ir.ui.view,arch_db:category_sequences.Product_template_state_form
+msgid "Cancel"
+msgstr "取消"
+
+#. module: category_sequences
+#: selection:product.template,state:0
+msgid "Cancelled"
+msgstr "Cancelled"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1210
+msgid "Cao su"
+msgstr "Cao su"
+
+#. module: category_sequences
+#: model:ir.model.fields,field_description:category_sequences.field_product_category_category_code
+msgid "Category Code"
+msgstr "Category Code"
+
+#. module: category_sequences
+#: model:ir.model.fields,help:category_sequences.field_product_category_category_code
+msgid "Category of the code"
+msgstr "Category of the code"
+
+#. module: category_sequences
+#: model:ir.model.fields,field_description:category_sequences.field_product_product_cust_product_name
+#: model:ir.model.fields,field_description:category_sequences.field_product_template_cust_product_name
+msgid "Customer Product Name"
+msgstr "Customer Product Name"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2750
+msgid "CẮT VÁN"
+msgstr "CẮT VÁN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4510
+msgid "DAO"
+msgstr "DAO"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2310
+msgid "DECAL"
+msgstr "DECAL"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1360
+msgid "DOẠN MỘC"
+msgstr "DOẠN MỘC"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1420
+msgid "DUNG MÔI"
+msgstr "DUNG MÔI"
+
+#. module: category_sequences
+#: selection:product.template,state:0
+msgid "Draft"
+msgstr "Draft"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1280
+msgid "DÁI NGỰA"
+msgstr "DÁI NGỰA"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2791
+msgid "DÁN GIẤY"
+msgstr "DÁN GIẤY"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2740
+msgid "DÁN MELAMINE"
+msgstr "DÁN MELAMINE"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2720
+msgid "DÁN PVC"
+msgstr "DÁN PVC"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2710
+msgid "DÁN VENNER"
+msgstr "DÁN VENNER"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4430
+#: model:product.category,name:category_sequences.product_category_4530
+msgid "DÂY CUROA"
+msgstr "DÂY CUROA"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2650
+msgid "FABIC"
+msgstr "FABIC"
+
+#. module: category_sequences
+#: selection:product.template,product_type:0
+msgid "Finished"
+msgstr "Finished"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2700
+msgid "GIA CÔNG"
+msgstr "GIA CÔNG"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2870
+msgid "GIẤY DÁN"
+msgstr "GIẤY DÁN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2230
+msgid "GIẤY LÓT"
+msgstr "GIẤY LÓT"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2880
+msgid "GIẤY TỔ ONG"
+msgstr "GIẤY TỔ ONG"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2793
+msgid "GĂN VÍT BAKE"
+msgstr "GĂN VÍT BAKE"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2670
+msgid "GẤM"
+msgstr "GẤM"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2114
+msgid "HAI ĐẦU RĂNG"
+msgstr "HAI ĐẦU RĂNG"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8110
+#: model:product.category,name:category_sequences.product_category_9110
+msgid "HANGER"
+msgstr "HANGER"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2220
+msgid "HỘP"
+msgstr "HỘP"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4210
+msgid "IT"
+msgstr "IT"
+
+#. module: category_sequences
+#: model:ir.ui.view,arch_db:category_sequences.Product_template_state_form
+msgid "Internal Category"
+msgstr "Internal Category"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2510
+msgid "KCL"
+msgstr "KCL"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2730
+msgid "KDKM"
+msgstr "KDKM"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_3110
+msgid "KEO"
+msgstr "KEO"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2112
+msgid "KHÓA MÓC"
+msgstr "KHÓA MÓC"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2660
+msgid "KHÔNG DỆT"
+msgstr "KHÔNG DỆT"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2530
+msgid "KO CL"
+msgstr "KO CL"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2500
+msgid "KÍNH"
+msgstr "KÍNH"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2520
+msgid "KÍNH THỦY"
+msgstr "KÍNH THỦY"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4470
+#: model:product.category,name:category_sequences.product_category_4570
+msgid "LINH KIỆN"
+msgstr "LINH KIỆN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8130
+#: model:product.category,name:category_sequences.product_category_9130
+msgid "LIZ"
+msgstr "LIZ"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2107
+msgid "LONG ĐỀN"
+msgstr "LONG ĐỀN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1190
+#: model:product.category,name:category_sequences.product_category_2116
+#: model:product.category,name:category_sequences.product_category_2240
+#: model:product.category,name:category_sequences.product_category_2340
+#: model:product.category,name:category_sequences.product_category_2540
+#: model:product.category,name:category_sequences.product_category_2690
+#: model:product.category,name:category_sequences.product_category_2795
+#: model:product.category,name:category_sequences.product_category_2800
+#: model:product.category,name:category_sequences.product_category_3810
+#: model:product.category,name:category_sequences.product_category_4490
+#: model:product.category,name:category_sequences.product_category_4590
+msgid "LOẠI KHÁC"
+msgstr "LOẠI KHÁC"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1380
+msgid "LOẠI KHÁC( TRE, BỒ ĐỀ,ALDER, TRÀM...)"
+msgstr "LOẠI KHÁC( TRE, BỒ ĐỀ,ALDER, TRÀM...)"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1291
+msgid "LOẠI KHÁC(LENGE LUMBER, PHÁCH, HỒ ĐÀO...)"
+msgstr "LOẠI KHÁC(LENGE LUMBER, PHÁCH, HỒ ĐÀO...)"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1490
+msgid "LOẠI KHÁC(MÀU LAU, PHỤ GIA...)"
+msgstr "LOẠI KHÁC(MÀU LAU, PHỤ GIA...)"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8000
+#: model:product.category,name:category_sequences.product_category_9000
+msgid "LOẠI SẢN PHẨM"
+msgstr "LOẠI SẢN PHẨM"
+
+#. module: category_sequences
+#: model:ir.ui.view,arch_db:category_sequences.Product_template_state_form
+#: selection:product.template,state:0
+msgid "Locked"
+msgstr "Locked"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2792
+msgid "LĂN UV"
+msgstr "LĂN UV"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4420
+#: model:product.category,name:category_sequences.product_category_4520
+msgid "LƯỠI CƯA"
+msgstr "LƯỠI CƯA"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1130
+msgid "MDF"
+msgstr "MDF"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8100
+#: model:product.category,name:category_sequences.product_category_9100
+msgid "MIRROR"
+msgstr "MIRROR"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2810
+msgid "MUSS 1 MẶT KEO"
+msgstr "MUSS 1 MẶT KEO"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2830
+msgid "MUSS TỔNG HỢP"
+msgstr "MUSS TỔNG HỢP"
+
+#. module: category_sequences
+#: selection:product.template,product_type:0
+msgid "Material"
+msgstr "Material"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4460
+#: model:product.category,name:category_sequences.product_category_4560
+msgid "MÁY MÓC"
+msgstr "MÁY MÓC"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2850
+msgid "MÁY SƯỞI ẤM"
+msgstr "MÁY SƯỞI ẤM"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2320
+msgid "MÃ VẠCH"
+msgstr "MÃ VẠCH"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2900
+msgid "MÚT XỐP"
+msgstr "MÚT XỐP"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4480
+#: model:product.category,name:category_sequences.product_category_4580
+msgid "MŨI KHOAN"
+msgstr "MŨI KHOAN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2100
+msgid "NGŨ KIM"
+msgstr "NGŨ KIM"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_3210
+msgid "NHÁM"
+msgstr "NHÁM"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1000
+msgid "NVL CHÍNH"
+msgstr "NVL CHÍNH"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2000
+msgid "NVL PHỤ"
+msgstr "NVL PHỤ"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_3000
+msgid "NVL TIÊU HAO"
+msgstr "NVL TIÊU HAO"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2840
+msgid "NYLON"
+msgstr "NYLON"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2104
+msgid "NỘI NGOẠI RĂNG"
+msgstr "NỘI NGOẠI RĂNG"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1230
+#: model:product.category,name:category_sequences.product_category_1330
+msgid "OAK"
+msgstr "OAK"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4310
+msgid "PCCC"
+msgstr "PCCC"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_3510
+msgid "PE"
+msgstr "PE"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2620
+msgid "POLYESTER"
+msgstr "POLYESTER"
+
+#. module: category_sequences
+#: model:ir.model,name:category_sequences.model_res_partner
+msgid "Partner"
+msgstr "伙伴"
+
+#. module: category_sequences
+#: model:ir.model.fields,field_description:category_sequences.field_res_partner_partner_code
+#: model:ir.model.fields,field_description:category_sequences.field_res_users_partner_code
+#: model:ir.ui.view,arch_db:category_sequences.Partner_code_form
+msgid "Partner Code"
+msgstr "Partner Code"
+
+#. module: category_sequences
+#: model:ir.model.fields,help:category_sequences.field_res_partner_partner_code
+#: model:ir.model.fields,help:category_sequences.field_res_users_partner_code
+msgid "Partner of the code"
+msgstr "Partner of the code"
+
+#. module: category_sequences
+#: model:ir.model,name:category_sequences.model_product_category
+msgid "Product Category"
+msgstr "產品分類"
+
+#. module: category_sequences
+#: model:ir.model,name:category_sequences.model_product_template
+msgid "Product Template"
+msgstr "產品範本"
+
+#. module: category_sequences
+#: model:ir.model.fields,field_description:category_sequences.field_product_product_product_type
+#: model:ir.model.fields,field_description:category_sequences.field_product_template_product_type
+msgid "Product Type"
+msgstr "產品類型"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2780
+msgid "RA CHI TIẾT"
+msgstr "RA CHI TIẾT"
+
+#. module: category_sequences
+#: model:ir.model.fields,field_description:category_sequences.field_product_product_parent_id
+#: model:ir.model.fields,field_description:category_sequences.field_product_template_parent_id
+msgid "Related Company"
+msgstr "Related Company"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8120
+#: model:product.category,name:category_sequences.product_category_9120
+msgid "SCREEN"
+msgstr "SCREEN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8080
+#: model:product.category,name:category_sequences.product_category_9080
+msgid "SHELF"
+msgstr "SHELF"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8050
+#: model:product.category,name:category_sequences.product_category_9050
+msgid "SOFA"
+msgstr "SOFA"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8140
+#: model:product.category,name:category_sequences.product_category_9140
+msgid "SPEAKER"
+msgstr "SPEAKER"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1460
+msgid "STAIN MÀU"
+msgstr "STAIN MÀU"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1450
+msgid "STAIN TOP"
+msgstr "STAIN TOP"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8060
+#: model:product.category,name:category_sequences.product_category_9060
+msgid "STOOL"
+msgstr "STOOL"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1250
+msgid "SYCAMO(RANDOMS)"
+msgstr "SYCAMO(RANDOMS)"
+
+#. module: category_sequences
+#: selection:product.template,product_type:0
+msgid "Sample"
+msgstr "Sample"
+
+#. module: category_sequences
+#: model:ir.model.fields,field_description:category_sequences.field_product_product_state
+#: model:ir.model.fields,field_description:category_sequences.field_product_template_state
+msgid "Status"
+msgstr "狀態"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2410
+msgid "SÁCH HD"
+msgstr "SÁCH HD"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4450
+#: model:product.category,name:category_sequences.product_category_4550
+msgid "SÚNG"
+msgstr "SÚNG"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1400
+msgid "SƠN"
+msgstr "SƠN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1440
+msgid "SƠN BÓNG"
+msgstr "SƠN BÓNG"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1430
+msgid "SƠN LÓT"
+msgstr "SƠN LÓT"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1470
+msgid "SƠN MÀU"
+msgstr "SƠN MÀU"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_8010
+#: model:product.category,name:category_sequences.product_category_9010
+msgid "TABLE"
+msgstr "TABLE"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2108
+msgid "TAY NẮM - CHÂN"
+msgstr "TAY NẮM - CHÂN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2300
+msgid "TEM"
+msgstr "TEM"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2330
+msgid "TEM KÍNH"
+msgstr "TEM KÍNH"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2790
+msgid "THÀNH PHẨM"
+msgstr "THÀNH PHẨM"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2210
+msgid "THÙNG"
+msgstr "THÙNG"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2200
+msgid "THÙNG GIẤY"
+msgstr "THÙNG GIẤY"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1410
+msgid "TINH MÀU"
+msgstr "TINH MÀU"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2770
+msgid "TIỆN + CHÂN"
+msgstr "TIỆN + CHÂN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4000
+msgid "TMTV(NVL KHÁC)"
+msgstr "TMTV(NVL KHÁC)"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1220
+msgid "TRÀM"
+msgstr "TRÀM"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2103
+msgid "TÁN"
+msgstr "TÁN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2115
+#: model:product.category,name:category_sequences.product_category_2794
+msgid "TĂNG ĐƯA"
+msgstr "TĂNG ĐƯA"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2760
+msgid "UỐN CONG"
+msgstr "UỐN CONG"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1300
+msgid "VENNER"
+msgstr "VENNER"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2680
+msgid "VOAM"
+msgstr "VOAM"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_4110
+msgid "VPP"
+msgstr "VPP"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1100
+msgid "VÁN"
+msgstr "VÁN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1170
+msgid "VÁN HAR"
+msgstr "VÁN HAR"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1150
+msgid "VÁN HP"
+msgstr "VÁN HP"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1110
+msgid "VÁN LẠNG"
+msgstr "VÁN LẠNG"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1140
+msgid "VÁN PB"
+msgstr "VÁN PB"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1120
+msgid "VÁN ÉP"
+msgstr "VÁN ÉP"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1160
+msgid "VÁN Ô TIM"
+msgstr "VÁN Ô TIM"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2101
+msgid "VÍT"
+msgstr "VÍT"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2600
+msgid "VẢI"
+msgstr "VẢI"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2610
+msgid "VẢI OR"
+msgstr "VẢI OR"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2860
+msgid "VỈ NHỰA KHAY LÓT"
+msgstr "VỈ NHỰA KHAY LÓT"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1310
+msgid "WALNUT"
+msgstr "WALNUT"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1480
+msgid "WOOD FILLER"
+msgstr "WOOD FILLER"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_1290
+msgid "XÀ CỪ"
+msgstr "XÀ CỪ"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_3710
+msgid "XÚC TÁC"
+msgstr "XÚC TÁC"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_3310
+msgid "ĐINH BẮN"
+msgstr "ĐINH BẮN"
+
+#. module: category_sequences
+#: model:product.category,name:category_sequences.product_category_2111
+msgid "ĐƯỜNG RẦY - RAY TRƯỢT"
+msgstr "ĐƯỜNG RẦY - RAY TRƯỢT"
+

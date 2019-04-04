@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hostel.group_quanly" model="res.groups">
+        <field name="name">Nhóm Quản Lý Nhà Trọ</field>
+    </record>
+    <record id="hostel.group_nhanvien" model="res.groups">
+        <field name="name">Nhóm Nhân viên nhà trọ</field>
+    </record>
+</odoo>

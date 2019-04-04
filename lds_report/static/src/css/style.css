@@ -1,0 +1,29 @@
+table { border:1px solid black;
+		vertical-align:middle;
+		padding:2px;
+		margin-top:0px;
+		
+}
+
+td, th, tr {
+	border:1px solid black;
+	vertical-align:middle;
+	padding:3px;
+	text-align:center;
+			}
+p {
+    line-height: 1.2;
+	}
+.mot { text-align:center;
+		position:absolute;
+		left:50px
+		}
+.hai {	text-align:center;
+		position:absolute;
+		left:350px
+		}
+.ba {	text-align:center;
+		position:absolute;
+		left:650px
+
+		}

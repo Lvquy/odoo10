@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_bo_phan_tree" model="ir.ui.view">
+            <field name="name">bophan.tree</field>
+            <field name="model">bophan</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Bộ phận">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_bo_phan_form" model="ir.ui.view">
+            <field name="name">bophan.form</field>
+            <field name="model">bophan</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Bộ phận">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

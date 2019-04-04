@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- server -->
+    <template id="server">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <center><div class="row mt32 mb32">
+                    <h4>
+                        <div class="col-xs-12">DANH SÁCH SERVER LDS</div>
+                    </h4>
+                </div></center>
+            </div>
+        </t>
+    </template>
+    <template id="report_server_1">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="LDS_Device.server"/>
+        </t>
+    </template>
+</odoo>

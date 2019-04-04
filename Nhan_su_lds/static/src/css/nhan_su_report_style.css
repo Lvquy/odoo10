@@ -1,0 +1,19 @@
+table {
+    border:1px solid black;
+
+    vertical-align: middle;
+    margin-top: 0px;
+}
+
+td {
+border:1px solid black;
+    vertical-align: middle;
+    padding: 3px;
+    text-align: center;
+}
+
+tr th {
+border:1px solid black;
+    vertical-align: middle;
+    text-align: center;
+}

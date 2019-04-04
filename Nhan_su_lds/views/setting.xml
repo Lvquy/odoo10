@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--tree -->
+        <record id="view_setting_tree" model="ir.ui.view">
+            <field name="name">setting.tree</field>
+            <field name="model">setting</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Cài đặt">
+                    <field name="man_4"/>
+                    <field name="chay_4"/>
+                    <field name="chao_4"/>
+
+                    <field name="chao_3"/>
+                    <field name="chay_3"/>
+                    <field name="man_3"/>
+
+                    <field name="bun"/>
+                    <field name="dac_biet"/>
+
+                </tree>
+            </field>
+        </record>
+        <record id="view_setting_form" model="ir.ui.view">
+            <field name="name">setting.form</field>
+            <field name="model">setting</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Cài đặt">
+                    <header>
+                        <button groups="base.group_system" name="lock_stt" string = "Khóa/Mở khóa" type="object"/>
+                        <field name="status" widget="statusbar" invisible_status="0,1"/>
+                    </header>
+
+                    <h3>
+                        <field name="name" attrs="{'readonly':[('status','in','1')]}"/>
+                    </h3>
+                    <group>
+                        <group>
+                            <field name="man_4" attrs="{'readonly':[('status','in','1')]}"/>
+                            <field name="chay_4" attrs="{'readonly':[('status','in','1')]}" />
+                            <field name="chao_4" attrs="{'readonly':[('status','in','1')]}"/>
+                        </group>
+                        <group>
+                            <field name="man_3" attrs="{'readonly':[('status','in','1')]}"/>
+                            <field name="chay_3" attrs="{'readonly':[('status','in','1')]}"/>
+                            <field name="chao_3" attrs="{'readonly':[('status','in','1')]}"/>
+                        </group>
+                        <group>
+                            <field name="bun" attrs="{'readonly':[('status','in','1')]}"/>
+                            <field name="dac_biet" attrs="{'readonly':[('status','in','1')]}"/>
+                        </group>
+                    </group>
+                    <i style="color:blue">
+                        Đơn giá sử dụng đơn vị vnđ.
+                    </i>
+                    <i style="color:blue" groups="Nhan_su_lds.group_ns">
+                            Để thay đổi thời gian khóa báo cơm vui lòng liên hệ bộ phận IT
+                    </i>
+                    <notebook groups="base.group_system">
+                        <page  name="setting_hour" string="Cài đặt giờ">
+                            <link rel="stylesheet" href="/Nhan_su_lds/static/src/css/setting.css"/>
+                            <form >
+                                <table width="100%" class="table">
+                                    <tr class="tr" >
+                                        <td class="td">Buổi</td>
+                                        <td class="td">Giờ</td>
+                                        <td class="td">Phút</td>
+                                    </tr>
+                                    <tr >
+                                        <td class="td">Sáng 1</td>
+                                        <td class="td"><field name="sang1_h" attrs="{'readonly':[('status','in','1')]}"/></td>
+                                        <td class="td"><field name="sang1_m" attrs="{'readonly':[('status','in','1')]}"/></td>
+                                    </tr>
+                                    <tr >
+                                        <td class="td">Sáng 2</td>
+                                        <td class="td"><field name="sang2_h" attrs="{'readonly':[('status','in','1')]}"/></td>
+                                        <td class="td"><field name="sang2_m" attrs="{'readonly':[('status','in','1')]}"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td">Chiều 2</td>
+                                        <td class="td"><field name="chieu2_h" attrs="{'readonly':[('status','in','1')]}"/></td>
+                                        <td class="td"><field name="chieu2_m" attrs="{'readonly':[('status','in','1')]}"/></td>
+                                    </tr>
+                                    <tr >
+                                        <td class="td" colspan="3">
+                                            <p>
+                                                <b style="color:red"> Không cho phép báo cơm </b>- <strong>Sáng 1</strong> - Cho phép báo cơm trưa + chiều - <strong>Sáng 2</strong> - <b style="color:red">Không cho phép báo cơm trưa</b>
+                                            </p>
+                                            <p>
+                                                Cho phép báo cơm chiều - <strong>Chiều 2</strong> -<b style="color:red"> Không cho phép báo cơm</b>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </form>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

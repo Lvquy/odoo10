@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <template id="lds_report_delivery_document">
+        <t t-call="report.html_container">
+
+            <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
+            <div class="page">
+                <h3>
+                    <center>CÔNG TY CỔ PHẦN LÂM ĐẠT HƯNG 林達興股份公司</center>
+                </h3>
+                <h2>
+                    <center>PHIẾU XUẤT KHO</center>
+                    <center>出貨單</center>
+                </h2>
+                <div class="row mt32 mb32">
+                    <span t-if="o.partner_id" class="col-xs-12">
+                        <strong>Xuất cho(出給):</strong>
+                        <span t-field="o.partner_id"/>
+                    </span>
+                    <span class="col-xs-12">
+                        <strong>Bộ phận sử dụng(使用部門):</strong>
+                    </span>
+                    <span class="col-xs-12">
+                        <strong>Lý do sử dụng(使用理由):</strong>
+                    </span>
+                    <span t-if="o.picking_type_id.warehouse_id" class="col-xs-8">
+                        <strong>Xuất tại kho(出庫於):</strong>
+                        <span t-field="o.picking_type_id.warehouse_id"/>
+                    </span>
+                    <span t-if="o.name" class="col-xs-4">
+                        <strong>Số(單號):</strong>
+                        <span t-field="o.name"/>
+                    </span>
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr style="border: 1px solid black;">
+                            <th style="border: 1px solid black;" class="text-center" width="50">
+                                <p>STT</p>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="70px">
+                                <strong>
+                                    <p>Mã VTHH</p>
+                                </strong>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="250px">
+                                <strong>
+                                    <p>Tên, nhãn hiệu,quy cách vật tư</p>
+                                </strong>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="60px">
+                                <strong>
+                                    <p>ĐVT</p>
+                                </strong>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="80px">
+                                <strong>
+                                    <p>SL</p>
+                                </strong>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="100">
+                                <strong>
+                                    <p>Đơn Giá</p>
+                                </strong>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="120px">
+                                <strong>
+                                    <p>Thành Tiền</p>
+                                </strong>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="100px">
+                                <strong>
+                                    <p>Ghi Chú</p>
+                                </strong>
+                            </th>
+                        </tr>
+                        <tr style="border: 1px solid black;">
+                            <th style="border: 1px solid black;" class="text-center" width="50">
+                                <p>次序</p>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="70px">
+                                <strong>
+                                    <p>物料編號</p>
+                                </strong>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="250px">
+                                <strong>
+                                    <p>物料名稱</p>
+                                </strong>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="60px">
+                                <strong>
+                                    <p>單位</p>
+                                </strong>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="80px">
+                                <strong>
+                                    <p>數量</p>
+                                </strong>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="100">
+                                <strong>
+                                    <p>單價</p>
+                                </strong>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="120px">
+                                <strong>
+                                    <p>合計</p>
+                                </strong>
+                            </th>
+                            <th style="border: 1px solid black;" class="text-center" width="100px">
+                                <strong>
+                                    <p>備註</p>
+                                </strong>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody style="border: 1px solid black;">
+                        <t t-set="stt" t-value="1"/>
+                        <tr style="border: 1px solid black;" t-foreach="o.pack_operation_product_ids" t-as="line">
+                            <td style="border: 1px solid black;" class="text-center">
+                                <t t-esc="stt"/>
+                                <t t-set="stt" t-value="stt+1"/>
+                            </td>
+                            <td style="border: 1px solid black;" class="text-center">
+                                <span t-field="line.product_id.default_code"/>
+                            </td>
+                            <td style="border: 1px solid black;">
+                                <span t-field="line.product_id.name"/>
+                            </td>
+                            <td style="border: 1px solid black;" class="text-center">
+                                <span t-field="line.product_uom_id"/>
+                            </td>
+                            <td style="border: 1px solid black;" class="text-center">
+                                <span t-field="line.product_qty"/>
+                            </td>
+                            <td style="border: 1px solid black;" class="text-center">
+                            </td>
+                            <td style="border: 1px solid black;" class="text-center">
+                            </td>
+                            <td style="border: 1px solid black;" class="text-center">
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black;">
+                            <td style="border: 1px solid black;" align="right" colspan="6">
+                                <strong>Tổng Cộng(總計)</strong>
+                            </td>
+                            <td style="border: 1px solid black;" class="text-center">
+                            </td>
+                            <td style="border:1px solid black;">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row mt32 mb32" align="center">
+                    <span class="col-xs-12" align="left">
+                        <strong>Cộng thành tiền bằng chữ:</strong>
+                    </span>
+
+                    <span class="col-xs-12" align="right">
+                        <strong>
+                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%H:%M Giờ, Ngày %d, Tháng %m, Năm %Y' )"/>
+                        </strong>
+                    </span>
+                    <span class="col-xs-3">
+                        <strong>Bộ phận sử dụng</strong>
+                    </span>
+                    <span class="col-xs-3">
+                        <strong>Kế toán</strong>
+                    </span>
+                    <span class="col-xs-3">
+                        <strong>Người nhận</strong>
+                    </span>
+                    <span class="col-xs-3">
+                        <strong>Thủ kho</strong>
+                    </span>
+                    <span class="col-xs-3">
+                        <strong>(使用部門)</strong>
+                    </span>
+                    <span class="col-xs-3">
+                        <strong>(會計)</strong>
+                    </span>
+                    <span class="col-xs-3">
+                        <strong>(收貨人)</strong>
+                    </span>
+                    <span class="col-xs-3">
+                        <strong>(倉庫管理員)</strong>
+                    </span>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="lds_report_deliveryslip">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="lds_report.lds_report_delivery_document" t-lang="o.partner_id.lang"/>
+        </t>
+    </template>
+
+</odoo>

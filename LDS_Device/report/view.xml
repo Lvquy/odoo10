@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <report
+            string ="Nhãn thiết bị"
+            id = "report_nhan_thietbi_2"
+            model="thietbi"
+            report_type = "qweb-pdf"
+            name = "LDS_Device.report_nhan_thietbi_1"
+            file="LDS_Device.report_nhan_thietbi_1"
+        />
+        <report
+            string ="Danh sách email nội bộ"
+            id = "report_email_noibo_2"
+            model="email.noi"
+            report_type = "qweb-pdf"
+            name = "LDS_Device.report_email_noibo_1"
+            file="LDS_Device.report_email_noibo_1"
+        />
+        <report
+            string ="Danh sách email ngoại bộ"
+            id = "report_email_ngoaibo_2"
+            model="email.ngoai"
+            report_type = "qweb-pdf"
+            name = "LDS_Device.report_email_ngoaibo_1"
+            file="LDS_Device.report_email_ngoaibo_1"
+        />
+        <report
+            string ="Danh sách server"
+            id = "report_server_2"
+            model="server"
+            report_type = "qweb-pdf"
+            name = "LDS_Device.report_server_1"
+            file="LDS_Device.report_nhan_server_1"
+        />
+        <report
+            string ="Danh sách skype"
+            id = "report_skype_2"
+            model="skype"
+            report_type = "qweb-pdf"
+            name = "LDS_Device.report_skype_1"
+            file="LDS_Device.report_skype_1"
+        />
+
+        <report
+            string ="Báo cáo thống kê"
+            id = "report_baocao_2"
+            model="bao.cao"
+            report_type = "qweb-pdf"
+            name = "LDS_Device.report_baocao_thongke_1"
+            file="LDS_Device.report_baocao_thongke_1"
+        />
+    </data>
+</odoo>

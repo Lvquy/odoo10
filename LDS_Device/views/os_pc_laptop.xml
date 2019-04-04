@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_os_tree" model="ir.ui.view">
+            <field name="name">os.tree</field>
+            <field name="model">os</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Hệ thống">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_os_form" model="ir.ui.view">
+            <field name="name">os.form</field>
+            <field name="model">os</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Hệ thống">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

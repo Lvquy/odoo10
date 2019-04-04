@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- update: 15/1/2019-->
+<!-- update: 29/11/2017-->
+<odoo>
+	<template id="lds_report_saleorder_document">
+		<t> <!---  t-call="report.external_layout" Thêm dòng này để gọi thông tin cty vào đầu và cuối báo cáo-->
+			<t t-set="doc" t-value="doc.with_context({'lang':doc.partner_id.lang})"/>
+			<div class="page">
+				<link rel="stylesheet" href="/lds_report/static/src/css/sales_oder_style.css"/>
+				<span>
+					<center>
+						<img src="/lds_report/static/src/img/logo.png" width="100%" height="auto"></img>
+					</center>
+				</span>
+				<center>
+					<h2>
+						ĐƠN HÀNG MỚI
+					</h2>
+				</center>
+				<center>
+					<h2>
+						新訂單
+					</h2>
+				</center>
+				<span class="col-xs-3 text-left">
+					<strong>SỐ ĐƠN HÀNG(訂單號碼):&#160;</strong>
+				</span>
+				<span class="col-xs-9 text-left">
+					<strong>
+						<span t-field="doc.name"/>
+					</strong>
+				</span>
+				<span class="col-xs-3">
+					<strong>KHÁCH HÀNG(客戶):&#160;</strong>
+				</span>
+				<span class="col-xs-4">
+					<strong>
+						<span t-field="doc.partner_id"/>
+					</strong>
+				</span>
+				<span class="col-xs-3 text-right">
+					<strong>NGÀY GIAO(交貨日期):&#160;</strong>
+				</span>
+				<span class="col-xs-2 text-left">
+					<strong>
+						<span t-field="doc.validity_date" t-options="{&quot;format&quot;: &quot;dd-MM-yyyy&quot;}"/>
+					</strong>
+				</span>
+				<span class="col-xs-12">
+				</span>
+				<div name="payment_term" t-if="doc.payment_term_id" class="col-xs-3">
+				</div>
+				<!-- Nhãn filename, chú ý chỉ số width chỉ có tác dụng với kiểu pdf, không có tác dụng hiển thị đối với kiểu html -->
+				<t t-set="display_discount" t-value="any([l.discount for l in doc.order_line])"/>
+				<t t-foreach="doc.order_lines_layouted()" t-as="page">
+					<table width="100%">
+						<tr class="tr1">
+							<th class="th1" style="padding:3px" width="7%" height="auto">
+								<center>
+									<p>STT</p>
+									<p>序號</p>
+								</center>
+							</th>
+							<th class="th1" width="16%">
+								<center>
+									<p>IMG</p>
+									<p>圖片</p>
+								</center>
+							</th>
+							<th class="th1" width="25%">
+								<center>
+									<p>TÊN SP KHÁCH</p>
+									<p>客戶品名</p>
+								</center>
+							</th>
+							<th class="th1" width="29%">
+								<center>
+									<p>TÊN SẢN PHẨM LDS</p>
+									<p>LDS名品</p>
+								</center>
+							</th>
+
+							<th class="th1" width="8%">
+								<center>
+									<p>MÀU</p>
+									<p>顏色</p>
+								</center>
+							</th>
+							<th class="th1" width="5%">
+								<center>
+									<p>SL(CÁI)</p>
+									<p>數量</p>
+								</center>
+							</th>
+							<th class="th1" width="10%">
+								<center>
+									<p>GHI CHÚ</p>
+									<p>備註</p>
+								</center>
+							</th>
+						</tr>
+
+						<tbody class="sale_tbody">
+							<t t-foreach="page" t-as="layout_category">
+								<!-- dữ liệu trong bảng -->
+								<t t-set="i" t-value="1"/> <!--khởi tạo biến i là số thứ tự-->
+								<t t-set="k" t-value="0"/> <!--khởi tạo biến tổng số lượng ban đầu = 0 -->
+								<t t-foreach="layout_category['lines']" t-as="l">
+									<tr>
+										<td class="td1">
+											<t t-esc="i"/>
+											<t t-set="i" t-value="i+1"/>
+										</td>
+										<td class="td1">
+											<span class="img" t-field="l.product_id.image_medium" t-field-options='{"widget": "image"}'/>
+										</td>
+										<td class="td1">
+											<span t-field="l.product_id.cust_product_name"/>
+										</td>
+										<td class="td1">
+											<span t-field="l.product_id"/>
+										</td>
+
+										<td class="td1">
+											<span t-foreach="l.product_id.attribute_value_ids" t-as="attrib_value">
+												<t t-esc=" '%s' % (attrib_value.name)"/>
+											</span>
+										</td>
+										<td class="td1">
+											<span t-esc="'{0:,.0f}'.format(int(l.product_uom_qty))"/>
+										</td>
+										<td class="td1">
+											<span t-field="l.name"/>
+										</td>
+									</tr>
+									<t t-set="k" t-value="k+l.product_uom_qty"/>
+								</t>
+								<td class="td1" colspan="5">
+									<strong>Tổng số lượng(總共):</strong>
+								</td>
+								<!---0f là chỉ số phần thập phân-->
+								<td class="td1" style="padding:10px">
+									<strong>
+										<t t-esc="'{0:,.0f}'.format(int(k))"/>
+									</strong>
+								</td>
+								<td class="td1"></td>
+							</t>
+						</tbody>
+					</table>
+					<p></p>
+					<br/>
+					<p align="left">
+						<strong>Ghi chú(備註):&#160;</strong>
+						<span t-field="doc.note"/>
+					</p>
+					<span class="col-xs-6"/>
+					<span class="col-xs-6" align="center">
+						<strong>Người lập biểu(製表人) (
+							<span t-esc="context_timestamp(datetime.datetime.now()).strftime('Ngày %d, Tháng %m, Năm %Y' )"/>
+							)
+						</strong>
+					</span>
+					<span class="col-xs-6" align="left">
+						<strong></strong>
+					</span>
+					<span class="col-xs-6" align="center">
+						<strong>
+							<span t-field="doc.user_id"/>
+						</strong>
+					</span>
+
+					<table width="100%" border="0px">
+						<tr height="40px">
+						</tr>
+						<tr>
+							<td height="80px">
+								<u>Tổ Máy</u>
+								<p>
+									<u>打型組</u>
+								</p>
+							</td>
+							<td>
+								<u>Chà Nhám 1</u>
+								<p>
+									<u>磨砂組-1</u>
+								</p>
+							</td>
+							<td>
+								<u>Chà Nhám 2</u>
+								<p>
+									<u>磨砂組-2</u>
+								</p>
+							</td>
+							<td>
+								<u>Vecni + Pha Sơn</u>
+								<p>
+									<u>噴漆組</u>
+								</p>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td height="80px">
+								<u>XNK</u>
+								<p>
+									<u>進出口</u>
+								</p>
+							</td>
+							<td>
+								<u>Khai Thác</u>
+								<p>
+									<u>開發部門</u>
+								</p>
+							</td>
+							<td>
+								<u>Thiết Kế</u>
+								<p>
+									<u>設計組</u>
+								</p>
+							</td>
+							<td>
+								<u>Cung Tiêu</u>
+								<p>
+									<u>採購部門</u>
+								</p>
+							</td>
+							<td>
+								<u>Lắp Ráp</u>
+								<p>
+									<u>組合組</u>
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<td height="80px">
+								<u>QC</u>
+								<p>
+									<u>品質部門</u>
+								</p>
+							</td>
+							<td>
+								<u>Kho</u>
+								<p>
+									<u>倉庫部門</u>
+								</p>
+							</td>
+							<td>
+								<u>Tiến Độ SX</u>
+								<p>
+									<u>進度部門</u>
+								</p>
+							</td>
+							<td>
+								<u>CNC</u>
+								<p>
+									<u>CNC組</u>
+								</p>
+							</td>
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td height="80px">
+								<u>BP Điêu Khắc</u>
+								<p>
+									<u>雕刻部門</u>
+								</p>
+							</td>
+							<td>
+								<u>BP IN</u>
+								<p>
+									<u>噴繪</u>
+								</p>
+							</td>
+							<td>
+								<u>Xưởng Phó</u>
+								<p>
+									<u>副廠長</u>
+								</p>
+							</td>
+							<td>
+								<u>Đ.D Xưởng Trưởng</u>
+								<p>
+									<u>代表廠長</u>
+								</p>
+							</td>
+							<td>
+							</td>
+						</tr>
+					</table>
+
+					<t t-if="page_index &lt; page_size - 1" groups="sale.group_sale_layout">
+						<p style="page-break-before:always;"></p>
+					</t>
+				</t>
+				<div class="oe_structure"/>
+			</div>
+		</t>
+	</template>
+	<template id="lds_report_saleorder">
+		<t t-call="report.html_container">
+			<t t-foreach="docs" t-as="doc">
+				<t t-call="lds_report.lds_report_saleorder_document" t-lang="doc.partner_id.lang"/>
+			</t>
+		</t>
+	</template>
+</odoo>

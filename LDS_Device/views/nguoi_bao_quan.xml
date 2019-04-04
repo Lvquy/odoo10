@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_nguoi_baoquan_tree" model="ir.ui.view">
+            <field name="name">nguoi.baoquan.tree</field>
+            <field name="model">nguoi.baoquan</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Người bảo quản">
+                    <field name="name"/>
+                    <field name="so_the"/>
+                    <field name="bo_phan"/>
+                    <field name="user_mail_noi"/>
+                    <field name="user_mail_ngoai"/>
+                    <field name="user_server"/>
+                    <field name="skype"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_nguoi_baoquan_form" model="ir.ui.view">
+            <field name="name">nguoi.baoquan.form</field>
+            <field name="model">nguoi.baoquan</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Người bảo quản">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="so_the"/>
+                                <field name="bo_phan" options="{'no_open': True ,'no_create': True}"/>
+                            </group>
+                            <group>
+                                <field name="user_mail_noi" options="{'no_create': True}"/>
+                                <field name="user_mail_ngoai" options="{'no_create': True}"/>
+                            </group>
+                            <group>
+                                <field name="note"/>
+                            </group>
+                            <group>
+                                <field name="user_server" options="{'no_create': True}"/>
+                                <field name="skype" options="{'no_create': True}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="thietbi" string="Các thiết bị bảo quản">
+                                <field name="cac_thiet_bi_bq"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

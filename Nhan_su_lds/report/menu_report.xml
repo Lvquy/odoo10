@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <report
+            string ="Trưa: Mặn"
+            id = "report_trua_man_lds"
+            model="nhan.su"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_trua_man"
+            file="Nhan_su_lds.report_trua_man"
+        />
+
+        <report
+            string ="Trưa: Chay"
+            id = "report_trua_chay_lds"
+            model="nhan.su"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_trua_chay"
+            file="Nhan_su_lds.report_trua_chay"
+        />
+
+
+        <report
+            string ="Trưa: Cháo"
+            id = "report_chao_trua_lds"
+            model="nhan.su"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_chao_trua"
+            file="Nhan_su_lds.report_chao_trua"
+        />
+
+        <report
+            string ="Chiều: Mặn 4T"
+            id = "report_man_4_chieu_lds"
+            model="nhan.su"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_man_4_chieu"
+            file="Nhan_su_lds.report_man_4_chieu"
+        />
+
+
+        <report
+            string ="Chiều: Chay 4T"
+            id = "report_chay_4_chieu_lds"
+            model="nhan.su"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_chay_4_chieu"
+            file="Nhan_su_lds.report_chay_4_chieu"
+        />
+
+        <report
+            string ="Chiều: Cháo 4T"
+            id = "report_chao_4_chieu_lds"
+            model="nhan.su"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_chao_4_chieu"
+            file="Nhan_su_lds.report_chao_4_chieu"
+        />
+        <report
+            string ="Chiều: Mặn 3T"
+            id = "report_man_3_chieu_lds"
+            model="nhan.su"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_man_3_chieu"
+            file="Nhan_su_lds.report_man_3_chieu"
+        />
+        <report
+            string ="Chiều: Chay 3T"
+            id = "report_chay_3_chieu_lds"
+            model="nhan.su"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_chay_3_chieu"
+            file="Nhan_su_lds.report_chay_3_chieu"
+        />
+        <report
+            string ="Chiều: Cháo 3T"
+            id = "report_chao_3_chieu_lds"
+            model="nhan.su"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_chao_3_chieu"
+            file="Nhan_su_lds.report_chao_3_chieu"
+        />
+
+        <report
+            string ="Chiều: Bún"
+            id = "report_bun_chieu_lds"
+            model="nhan.su"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_bun_chieu"
+            file="Nhan_su_lds.report_bun_chieu"
+        />
+
+        <report
+            string ="Chiều: Mì"
+            id = "report_mi_chieu_lds"
+            model="nhan.su"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_mi_chieu"
+            file="Nhan_su_lds.report_mi_chieu"
+        />
+        <report
+            string ="Thống kê ngày"
+            id = "report_nhansu_lds"
+            model="nhan.su"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_nhansu"
+            file="Nhan_su_lds.report_nhansu"
+        />
+
+        <report
+            string ="Báo cáo chi tiết"
+            id = "report_bao_cao_lds"
+            model="bao.cao"
+            report_type = "qweb-pdf"
+            name = "Nhan_su_lds.report_bao_cao"
+            file="Nhan_su_lds.report_bao_cao"
+        />
+
+    </data>
+</odoo>

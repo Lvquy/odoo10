@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="setting_1" model="setting.hostel">
+            <field name="name">Cấu hình 1</field>
+            <field name="status">1</field>
+            <field name="gia_dien_k1">5000</field>
+            <field name="gia_dien_k2">6000</field>
+            <field name="gia_dien_k3">6500</field>
+
+            <field name="gia_nuoc_k1">20000</field>
+            <field name="gia_nuoc_k2">20000</field>
+            <field name="gia_nuoc_k3">20000</field>
+
+
+            <field name="gia_phong_k1">800000</field>
+            <field name="gia_phong_k2">900000</field>
+            <field name="gia_phong_k3">1000000</field>
+
+            <field name="tien_khac_k1">10000</field>
+            <field name="tien_khac_k2">10000</field>
+            <field name="tien_khac_k3">10000</field>
+
+        </record>
+        <record id="phong_a1" model="phong.tro">
+            <field name="so_phong">A1</field>
+            <field name="khu_vuc">k1</field>
+        </record>
+        <record id="phong_a2" model="phong.tro">
+            <field name="so_phong">A2</field>
+            <field name="khu_vuc">k2</field>
+        </record>
+        <record id="phong_a3" model="phong.tro">
+            <field name="so_phong">A3</field>
+            <field name="khu_vuc">k1</field>
+        </record>
+        <record id="phong_a4" model="phong.tro">
+            <field name="so_phong">A4</field>
+            <field name="khu_vuc">k1</field>
+        </record>
+        <record id="phong_a5" model="phong.tro">
+            <field name="so_phong">A5</field>
+            <field name="khu_vuc">k1</field>
+        </record>
+        <record id="phong_a6" model="phong.tro">
+            <field name="so_phong">A6</field>
+            <field name="khu_vuc">k1</field>
+        </record>
+        <record id="phong_b1" model="phong.tro">
+            <field name="so_phong">B1</field>
+            <field name="khu_vuc">k2</field>
+        </record>
+        <record id="phong_b2" model="phong.tro">
+            <field name="so_phong">B2</field>
+            <field name="khu_vuc">k2</field>
+        </record>
+        <record id="phong_b3" model="phong.tro">
+            <field name="so_phong">B3</field>
+            <field name="khu_vuc">k2</field>
+        </record>
+        <record id="phong_b4" model="phong.tro">
+            <field name="so_phong">B4</field>
+            <field name="khu_vuc">k2</field>
+        </record>
+        <record id="phong_b5" model="phong.tro">
+            <field name="so_phong">B5</field>
+            <field name="khu_vuc">k2</field>
+        </record>
+        <record id="phong_b6" model="phong.tro">
+            <field name="so_phong">B6</field>
+            <field name="khu_vuc">k2</field>
+        </record>
+        <record id="phong_c1" model="phong.tro">
+            <field name="so_phong">C1</field>
+            <field name="khu_vuc">k3</field>
+        </record>
+        <record id="phong_c2" model="phong.tro">
+            <field name="so_phong">C2</field>
+            <field name="khu_vuc">k3</field>
+        </record>
+        <record id="phong_c3" model="phong.tro">
+            <field name="so_phong">C3</field>
+            <field name="khu_vuc">k3</field>
+        </record>
+        <record id="phong_c4" model="phong.tro">
+            <field name="so_phong">C4</field>
+            <field name="khu_vuc">k3</field>
+        </record>
+        <record id="phong_c5" model="phong.tro">
+            <field name="so_phong">C5</field>
+            <field name="khu_vuc">k3</field>
+        </record>
+        <record id="phong_c6" model="phong.tro">
+            <field name="so_phong">C6</field>
+            <field name="khu_vuc">k3</field>
+        </record>
+        <record id="thiet_bi_1" model="thiet.bi">
+            <field name="name">Bóng đèn</field>
+            <field name="gia_tri">20000</field>
+            <field name="status">1</field>
+            <field name="ghi_chu">Bóng đèn huỳnh quang 1m2</field>
+        </record>
+
+        <record id="thiet_bi_2" model="thiet.bi">
+            <field name="name">Bộ bàn ghế</field>
+            <field name="gia_tri">500000</field>
+            <field name="status">1</field>
+            <field name="ghi_chu">Bộ bàn ghế phòng khách</field>
+        </record>
+    </data>
+</odoo>

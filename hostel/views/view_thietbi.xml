@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--tree view-->
+        <record id="thiet_bi_tree" model="ir.ui.view">
+            <field name="name">thiet.bi.tree</field>
+            <field name="model">thiet.bi</field>
+            <field name="arch" type="xml">
+                <tree string="Thiết bị">
+                    <field name="name"/>
+                    <field name="gia_tri"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--from view-->
+        <record id="thiet_bi_from" model="ir.ui.view">
+            <field name="name">thiet.bi.form</field>
+            <field name="model">thiet.bi</field>
+            <field name="arch" type="xml">
+                <form string="Thiết bị">
+                    <header>
+                        <button name="lock_thietbi" string="Khóa" type="object"
+                                attrs="{'invisible':[('status','in','1')]}"/>
+                        <button name="unlock_thietbi" string="Mở Khóa" type="object"
+                                attrs="{'invisible':[('status','in','0')]}"/>
+                        <field name="status" widget="statusbar" visible_status="0,1"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" attrs="{'readonly':[('status','in','1')]}"/>
+                                <field name="gia_tri" attrs="{'readonly':[('status','in','1')]}"/>
+                                <field name="ghi_chu" attrs="{'readonly':[('status','in','1')]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--tree view-->
+        <record id="line_thiet_bi_tree" model="ir.ui.view">
+            <field name="name">line.thiet.bi.tree</field>
+            <field name="model">line.thiet.bi</field>
+            <field name="arch" type="xml">
+                <tree string="Thiết bị">
+                    <field name="name"/>
+                    <field name="sl"/>
+                    <field name="status"/>
+                    <field name="ngay_kt"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="line_thiet_bi_form" model="ir.ui.view">
+            <field name="name">line.thiet.bi.form</field>
+            <field name="model">line.thiet.bi</field>
+            <field name="arch" type="xml">
+                <form string="Thiết bị">
+                    <sheet>
+                        <group>
+                            <field name="name" domain="[('status','=','1')]" options="{'no_create': True}"/>
+                            <field name="sl"/>
+                            <field name="status"/>
+                            <field name="note"/>
+                            <field name="ngay_kt"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

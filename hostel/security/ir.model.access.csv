@@ -1,0 +1,22 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_caidat,Cài đặt phòng,model_setting_hostel,hostel.group_nhanvien,1,0,0,0
+access_khach_tro,Khách trọ,model_khach_tro,hostel.group_nhanvien,1,1,1,1
+access_phong,Phòng,model_phong_tro,hostel.group_nhanvien,1,1,0,0
+access_line_khach,Line khách,model_line_khach,hostel.group_nhanvien,1,1,1,1
+access_thiet_bi,Thiết bị,model_thiet_bi,hostel.group_nhanvien,1,1,1,1
+access_dien_nuoc,Điện nước,model_dien_nuoc,hostel.group_nhanvien,1,1,1,1
+access_line_dien_nuoc,Line Điện nước,model_line_dien_nuoc,hostel.group_nhanvien,1,1,1,1
+access_line_thietbi,Line Thiết bị,model_line_thiet_bi,hostel.group_nhanvien,1,1,1,1
+access_naptien,Nạp tiền,model_nap_tien,hostel.group_nhanvien,1,1,1,0
+access_log_bank,Lịch sử trừ tiền,model_log_bank,hostel.group_nhanvien,1,0,0,0
+
+access_caidat_ql,Cài đặt phòng,model_setting_hostel,hostel.group_quanly,1,1,1,1
+access_khach_tro_ql,Khách trọ,model_khach_tro,hostel.group_quanly,1,1,1,1
+access_phong_ql,Phòng,model_phong_tro,hostel.group_quanly,1,1,1,1
+access_line_khach_ql,Line khách,model_line_khach,hostel.group_quanly,1,1,1,1
+access_thiet_bi_ql,Thiết bị,model_thiet_bi,hostel.group_quanly,1,1,1,1
+access_dien_nuoc_ql,Điện nước,model_dien_nuoc,hostel.group_quanly,1,1,1,1
+access_line_dien_nuoc_ql,Line Điện nước,model_line_dien_nuoc,hostel.group_quanly,1,1,1,1
+access_line_thietbi_ql,Line Thiết bị,model_line_thiet_bi,hostel.group_quanly,1,1,1,1
+access_naptien_ql,Nạp tiền,model_nap_tien,hostel.group_quanly,1,1,1,0
+acessc_log_bank_ql,Lịch sử trừ tiền,model_log_bank,hostel.group_quanly,1,0,0,0

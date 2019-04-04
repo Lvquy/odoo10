@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_xuong_may_tree" model="ir.ui.view">
+            <field name="name">xuong.may.tree</field>
+            <field name="model">xuong.may</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Xưởng Máy">
+                    <field name="cty"/>
+                    <field name="ma_so"/>
+                    <field name="name"/>
+                    <field name="bo_phan"/>
+                    <field name="nguoi_bao_quan"/>
+                    <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_xuong_may_form" model="ir.ui.view">
+            <field name="name">xuong.may.form</field>
+            <field name="model">xuong.may</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Máy xưởng">
+                    <header>
+                        <button name="lock" type="object" string="Khóa" attrs="{'invisible': [('status', 'in', '1')]}"/>
+                        <button name="action_2_1" type="object" string="Cho sử dụng" attrs="{'invisible': [('trang_thai', 'in', ('1','0'))]}"/>
+                        <button name="action_1_2" type="object" string="Chuyển vào kho" attrs="{'invisible': [('trang_thai', 'in', ('2','0'))]}"/>
+                        <button name="action_1_0" type="object" string="Báo phế" attrs="{'invisible': [('trang_thai', 'in', ('0'))]}"/>
+                         <field name="status" widget="statusbar" visible="0,1"/>
+                         <field name="trang_thai" widget="statusbar" visible="0,1,2"/>
+                    </header>
+                    <sheet>
+                        <field widget="image" name="img" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <h3>
+                                <field name="ma_so"/>
+                            </h3>
+                            <h4>
+                                <label for="bo_phan" string="Bộ Phận"/>
+                                <field name="bo_phan" widget="radio" attrs="{'readonly': [('status', 'in', '1')]}"/>
+                            </h4>
+                            <h4>
+                                <label for="cty" string="Công ty"/>
+                                <field name="cty" widget="radio" attrs="{'readonly': [('status', 'in', '1')]}"/>
+                            </h4>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="name" attrs="{'readonly': [('status', 'in', '1')]}"/>
+                                <field name="gia_tri"/>
+                            </group>
+                            <group>
+                                <field name="nguoi_bao_quan"/>
+                                <field name="ngay_sd"/>
+                                <field name="ngay_phe" attrs="{'readonly':[('trang_thai','in','0')]}"/>
+                            </group>
+                            <group>
+                                <field name="ghi_chu"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="sua_chua" string="Sửa chữa">
+                                <field name="sua_chua"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="xuongmay_kanban_view" model="ir.ui.view">
+            <field name="name">xuong.may.kanban</field>
+            <field name="model">xuong.may</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="img"/>
+                    <field name="ma_so"/>
+                    <field name="name"/>
+                    <field name="cty"/>
+                    <field name="bo_phan"/>
+                    <field name="color"/>
+                    <field name="status"/>
+                    <field name="trang_thai"/>
+
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)}
+                             oe_kanban_card oe_kanban_global_click">
+                                <div class="o_kanban_image">
+                                    <img t-att-src="kanban_image('thietbi', 'img', record.id.value)"/>
+                                    <div>
+                                        <strong><field name="bo_phan"/></strong>
+                                    </div>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        Mã thiết bị: <field name="ma_so"/>
+                                    </strong>
+                                    <div>
+                                        <div>
+                                            Cty: <field name="cty"/>
+                                        </div>
+                                        <div>
+                                            Tên máy: <field name="name"/>
+                                        </div>
+
+                                        <div class="o_dropdown_kanban dropdown" groups="base.group_user">
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                                <li>
+                                                    <ul class="oe_kanban_colorpicker" data-field="color" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="oe_kanban_bottom_right">
+                                            <span t-if="record.trang_thai.raw_value === '0'" type="object"
+                                                string="Phế"
+                                                class="oe_kanban_status oe_kanban_status_red ">
+                                            </span>
+                                            <span t-if="record.trang_thai.raw_value === '2'" type="object"
+                                                string="Trong kho"
+                                                class="oe_kanban_status ">
+                                            </span>
+                                            <span t-if="record.trang_thai.raw_value === '1'" type="object"
+                                                string="Đang sử dụng"
+                                                class="oe_kanban_status oe_kanban_status_green ">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>

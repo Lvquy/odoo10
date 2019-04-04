@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--  tree view  插入ETD_ETA tree视图 -->
+        <record id="sale_order_ETD_ETA_tree" model="ir.ui.view">
+            <field name="name">sale.order.etd_eta.inherit.tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_order']" position="after">
+                    <field name="LDS_ETD" string="LDS_ETD"/>
+                    <field name="LDS_ETA" string="LDS_ETA"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="sale_order_ETD_ETA_NO_form" model="ir.ui.view">
+            <field name="name">sale.order.etd_eta_no.inherit.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/group/group/field[@name='partner_shipping_id']" position="after">
+                    <field name="LDS_ETD" string="LDS_ETD"/>
+                    <field name="LDS_ETA" string="LDS_ETA"/>
+					<field name="LDS_NO" string="LDS_NO"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--  form view  插入ETD_ETA form视图 -->
+        <record id="LDS_ETD_ETA_PI_PO_form" model="ir.ui.view">
+            <field name="name">lds.etd_eta_pi_po.inherit.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/group/group/field[@name='payment_term_id']" position="after">
+                    <field name="LDS_ETD" string="LDS_ETD"/>
+                    <field name="LDS_ETA" string="LDS_ETA"/>
+                    <field name="LDS_NO" string="LDS_NO"/>
+                </xpath>
+                <xpath expr="//sheet/group/group/div" position="after">
+                    <field name="LDS_PINO" string="LDS_PINO"/>
+                    <field name="LDS_PONO" string="LDS_PONO"/>
+                </xpath>
+                <xpath expr="//sheet/notebook/page/field[@name='comment']" position="before">
+                    <field name="LDS_Words_Total" placeholder="Amount of capital..." string="Amount of capital"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="LDS_IMG_form" model="ir.ui.view">
+            <field name="name">lds.img.inherit.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[1]" position="after">
+                    <page string="Photo">
+                        <field name="LDS_IMG1" string="Ảnh 1" widget="image" class="oe_avatar"/>
+                        <field name="LDS_IMG2" string="Ảnh 2" widget="image" class="oe_avatar"/>
+                        <field name="LDS_IMG3" string="Ảnh 3" widget="image" class="oe_avatar"/>
+                        <field name="LDS_IMG4" string="Ảnh 4" widget="image" class="oe_avatar"/>
+                        <field name="LDS_IMG5" string="Ảnh 5" widget="image" class="oe_avatar"/>
+                        <field name="LDS_IMG6" string="Ảnh 6" widget="image" class="oe_avatar"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <report
+                auto="False"
+                id="lds_purchase_order_01"
+                string="LDS Purchase order"
+                model="purchase.order"
+                report_type="qweb-pdf"
+                file="lds_report.lds_report_purchase_order_01"
+                name="lds_report.lds_report_purchase_order_01"
+                header="False"
+        />
+        <report
+                auto="False"
+                id="lds_action_report_picking"
+                string="LDS Phieu nhap kho"
+                model="stock.picking"
+                report_type="qweb-pdf"
+                file="lds_report.lds_report_stockpicking"
+                name="lds_report.lds_report_stockpicking"
+                header="False"
+        />
+        <report
+                auto="False"
+                id="lds_action_report_delivery"
+                string="LDS Phieu xuat kho"
+                model="stock.picking"
+                report_type="qweb-pdf"
+                file="lds_report.lds_report_deliveryslip"
+                name="lds_report.lds_report_deliveryslip"
+                header="False"
+        />
+        <report
+                auto="False"
+                id="lds_sale_report_sale_order"
+                string="LDS Orders"
+                model="sale.order"
+                report_type="qweb-pdf"
+                file="lds_report.lds_report_saleorder"
+                name="lds_report.lds_report_saleorder"
+                header="False"
+        />
+        <report
+                auto="False"
+                id="lds_sale_report_packinglist"
+                string="LDS Packing List"
+                model="sale.order"
+                report_type="qweb-html"
+                file="lds_report.lds_report_sale_packinglist"
+                name="lds_report.lds_report_sale_packinglist"
+                header="False"
+        />
+        <report
+                id="lds_account_intrastatinvoices"
+                model="account.invoice"
+                string="LDS Pro-Forma Invoice"
+                report_type="qweb-pdf"
+                name="lds_report.lds_report_intrastatinvoice"
+                file="lds_report.lds_report_intrastatinvoice"
+                header="False"
+        />
+		<report
+                id="lds_account_intrastatinvoices01"
+                model="account.invoice"
+                string="LDS Invoice"
+                report_type="qweb-pdf"
+                name="lds_report.lds_report_intrastatinvoice01"
+                file="lds_report.lds_report_intrastatinvoice01"
+                header="False"
+        />
+
+        <report
+                id="lds_purchase_order_eng"
+                model="purchase.order"
+                string="LDS Purchase ENG"
+                report_type="qweb-pdf"
+                name="lds_report.lds_report_purchase_order_eng"
+                file="lds_report.lds_report_purchase_order_eng"
+                header="False"
+        />
+    </data>
+
+</odoo>

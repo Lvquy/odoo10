@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_nha_cungcap_tree" model="ir.ui.view">
+            <field name="name">nha.cungcap.tree</field>
+            <field name="model">nha.cungcap</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Nhà cung cấp">
+                    <field name="name"/>
+                    <field name="add"/>
+                    <field name="sdt"/>
+                    <field name="website"/>
+                    <field name="nguoi_dai_dien"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_nha_cungcap_form" model="ir.ui.view">
+            <field name="name">nha.cungcap.form</field>
+            <field name="model">nha.cungcap</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Nhà cung cấp">
+                    <header>
+                        <button name="action_nhacc_0_1" string="Khóa" type="object"
+                                attrs="{'invisible': [('state', 'in', ('1'))]}"/>
+                        <button name="action_nhacc_1_0" string="Mở khóa" type="object"
+                                attrs="{'invisible': [('state', 'in', ('0'))]}"/>
+                        <field name="state" widget="statusbar" visible_status="0,1"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name" attrs="{'readonly': [('state', 'in','1')]}"/>
+                            <field name="add" attrs="{'readonly': [('state', 'in','1')]}"/>
+                            <field name="sdt" attrs="{'readonly': [('state', 'in','1')]}"/>
+                            <field name="website" attrs="{'readonly': [('state', 'in','1')]}"/>
+                            <field name="nguoi_dai_dien" attrs="{'readonly': [('state', 'in','1')]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

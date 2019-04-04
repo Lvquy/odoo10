@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--views graph nhật ký sửa chữa -->
+        <record model="ir.ui.view" id="view_graph_log">
+            <field name="name">line.nhatky.graph</field>
+            <field name="model">line.nhatky</field>
+            <field name="arch" type="xml">
+                <graph string="Đồ thị so sánh"  type="bar">
+                    <field name="thoi_gian_sua" interval="month" type="row"/>
+                    <field name="chi_phi" type="measure" />
+                </graph>
+            </field>
+        </record>
+
+        <!-- pivot views  -->
+        <record model="ir.ui.view" id="view_pivot_log">
+            <field name="name">line.nhatky.pivot</field>
+            <field name="model">line.nhatky</field>
+            <field name="arch" type="xml">
+                <pivot string="Báo cáo">
+                    <field name="thoi_gian_sua" interval="year" type="row"/>
+                    <field name="thoi_gian_sua" interval="month" type="row"/>
+                    <field name="thoi_gian_sua" interval="day" type="row"/>
+                    <field name="chi_phi" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+        <!-- action view pivot -->
+        <record model="ir.actions.act_window" id="action_pivot">
+            <field name="name">Báo cáo</field>
+            <field name="res_model">line.nhatky</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">pivot</field>
+            <field name="view_id" ref="view_pivot_log"/>
+            <field name="domain">[('status','=','1')]</field>
+        </record>
+
+        <record id="device_kanban_view" model="ir.ui.view">
+            <field name="name">thietbi.kanban</field>
+            <field name="model">thietbi</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="img"/>
+                    <field name="ma_thietbi"/>
+                    <field name="model_thiet_bi"/>
+                    <field name="nguoi_bao_quan"/>
+                    <field name="status"/>
+                    <field name="color"/>
+                    <field name="vi_tri"/>
+                    <field name="type"/>
+                    <field name="ngo_vao"/>
+                    <field name="ngo_sd"/>
+                    <field name="ip"/>
+                    <field name="port"/>
+                    <field name="domain_1"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)}
+                             oe_kanban_card oe_kanban_global_click">
+                                <div class="o_kanban_image">
+                                    <img t-att-src="kanban_image('thietbi', 'img', record.id.value)"/>
+                                    <div>
+                                        <strong><field name="model_thiet_bi"/></strong>
+                                    </div>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        Mã thiết bị: <field name="ma_thietbi"/>
+                                    </strong>
+                                    <div>
+                                        <div attrs="{'invisible':[('type','in',('pc'))]}">
+                                            Vị trí: <field name="vi_tri"/>
+                                        </div>
+                                        <div attrs="{'invisible':[('type','in',('daughi','other'))]}">
+                                            Người bảo quản: <field name="nguoi_bao_quan"/>
+                                        </div>
+
+                                        <div attrs="{'invisible':[('type','in',('pc','other'))]}">
+                                            Ngõ sử dụng/Tổng: <field name="ngo_sd"/> / <field name="ngo_vao"/>
+                                        </div>
+                                        <div attrs="{'invisible':[('type','in',('pc','other'))]}">
+                                            IP/Port:
+                                                <t t-if="domain_1">
+                                                <field name="domain_1"/>
+                                            </t>
+                                            <t t-else="t-else">
+                                                <field name="ip"/>
+                                            </t>
+
+                                            / <field name="port"/>
+                                        </div>
+
+                                        <div class="o_dropdown_kanban dropdown" groups="base.group_user">
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                                <li>
+                                                    <ul class="oe_kanban_colorpicker" data-field="color" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="oe_kanban_bottom_right">
+                                            <span t-if="record.status.raw_value === '0'" type="object"
+                                                string="Phế"
+                                                class="oe_kanban_status oe_kanban_status_red ">
+                                            </span>
+                                            <span t-if="record.status.raw_value === '2'" type="object"
+                                                string="Trong kho"
+                                                class="oe_kanban_status ">
+                                            </span>
+                                            <span t-if="record.status.raw_value === '1'" type="object"
+                                                string="Đang sử dụng"
+                                                class="oe_kanban_status oe_kanban_status_green ">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
+
+
+        <!-- action view Bộ phận -->
+        <record model="ir.actions.act_window" id="action_view_bo_phan">
+            <field name="name">Bộ phận</field>
+            <field name="res_model">bophan</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view line thietbi -->
+        <record model="ir.actions.act_window" id="action_view_line_thietbi">
+            <field name="name">Line thiết bị</field>
+            <field name="res_model">line.thietbi</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view nguoi.baoquan -->
+        <record model="ir.actions.act_window" id="action_view_nguoi_baoquan">
+            <field name="name">Người bảo quản</field>
+            <field name="res_model">nguoi.baoquan</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view nha.cungcap -->
+        <record model="ir.actions.act_window" id="action_view_nha_cungcap">
+            <field name="name">Nhà cung cấp</field>
+            <field name="res_model">nha.cungcap</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view line.nhatky -->
+        <record model="ir.actions.act_window" id="action_view_line_nhatky">
+            <field name="name">Nhật ký sửa chữa</field>
+            <field name="res_model">line.nhatky</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view line.nhatky chưa xong -->
+        <record model="ir.actions.act_window" id="action_view_line_nhatky_chuaxong">
+            <field name="name">Chưa xong</field>
+            <field name="res_model">line.nhatky</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('status','=','0')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+        <!-- action view line.nhatky đã xong -->
+        <record model="ir.actions.act_window" id="action_view_line_nhatky_daxong">
+            <field name="name">Đã xong</field>
+            <field name="res_model">line.nhatky</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('status','=','1')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action báo cáo -->
+        <record model="ir.actions.act_window" id="action_view_graph">
+            <field name="name">Báo cáo</field>
+            <field name="res_model">line.nhatky</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_graph_log"/>
+            <field name="domain">[('status','=','1')]</field>
+        </record>
+
+        <!-- action view taikhoan -->
+        <record model="ir.actions.act_window" id="action_view_taikhoan">
+            <field name="name">Tài khoản kết nối</field>
+            <field name="res_model">taikhoan</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+
+        <!-- action view thiết bị pc, laptop-->
+        <record model="ir.actions.act_window" id="action_view_thietbi_pc">
+            <field name="name">PC, LAPTOP</field>
+            <field name="res_model">thietbi</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="device_kanban_view"/>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('type','=','pc')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view thiết bị đầu ghi-->
+        <record model="ir.actions.act_window" id="action_view_thietbi_daughi">
+            <field name="name">ĐẦU GHI</field>
+            <field name="res_model">thietbi</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="device_kanban_view"/>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('type','=','daughi')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view thiết bị khác -->
+        <record model="ir.actions.act_window" id="action_view_thietbi_khac">
+            <field name="name">KHÁC</field>
+            <field name="res_model">thietbi</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="device_kanban_view"/>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('type','=','other')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view thiết bị trong kho -->
+        <record model="ir.actions.act_window" id="action_view_thietbi_kho">
+            <field name="name">TRONG KHO</field>
+            <field name="res_model">thietbi</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="device_kanban_view"/>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('status','=','2')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view thiết bị đang sử dụng -->
+        <record model="ir.actions.act_window" id="action_view_thietbi_use">
+            <field name="name">ĐANG SỬ DỤNG</field>
+            <field name="res_model">thietbi</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="device_kanban_view"/>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('status','=','1')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view thiết bị PHẾ -->
+        <record model="ir.actions.act_window" id="action_view_thietbi_phe">
+            <field name="name">PHẾ</field>
+            <field name="res_model">thietbi</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="device_kanban_view"/>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('status','=','0')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view Thuộc tính -->
+        <record model="ir.actions.act_window" id="action_view_thuoctinh">
+            <field name="name">Thiết bị</field>
+            <field name="res_model">thuoctinh</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view Hệ thống -->
+        <record model="ir.actions.act_window" id="action_view_os">
+            <field name="name">Hệ thống</field>
+            <field name="res_model">os</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+
+
+        <!-- action view mail nội-->
+        <record model="ir.actions.act_window" id="action_view_email_noi">
+            <field name="name">Email nội bộ</field>
+            <field name="res_model">email.noi</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+
+
+        <!-- action view mail ngoại-->
+        <record model="ir.actions.act_window" id="action_view_email_ngoai">
+            <field name="name">Email ngoại bộ</field>
+            <field name="res_model">email.ngoai</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view skype-->
+        <record model="ir.actions.act_window" id="action_view_skype">
+            <field name="name">Skype</field>
+            <field name="res_model">skype</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view server-->
+        <record model="ir.actions.act_window" id="action_view_server">
+            <field name="name">Server</field>
+            <field name="res_model">server</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view log check-->
+        <record model="ir.actions.act_window" id="action_view_logcheck">
+            <field name="name">Lịch sử kiểm tra</field>
+            <field name="res_model">log.check</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view line check-->
+        <record model="ir.actions.act_window" id="action_view_linecheck">
+            <field name="name">Lịch sử kiểm tra</field>
+            <field name="res_model">line.check</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view xưởng máy đang sử dung-->
+        <record model="ir.actions.act_window" id="action_view_xuongmay_dang_sd">
+            <field name="name">Đang sử dụng</field>
+            <field name="res_model">xuong.may</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('trang_thai','=','1')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+        <!-- action view xưởng máy đang kho-->
+        <record model="ir.actions.act_window" id="action_view_xuongmay_kho">
+            <field name="name">Trong kho</field>
+            <field name="res_model">xuong.may</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('trang_thai','=','2')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+        <!-- action view xưởng máy Phế-->
+        <record model="ir.actions.act_window" id="action_view_xuongmay_phe">
+            <field name="name">Đã phế</field>
+            <field name="res_model">xuong.may</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('trang_thai','=','0')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view bảo trì-->
+        <!--<record model="ir.actions.act_window" id="action_view_baotri">-->
+            <!--<field name="name">Bảo trì</field>-->
+            <!--<field name="res_model">baotri</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="domain">[]</field>-->
+            <!--<field name="help" type="html">-->
+                <!--<p class="oe_view_nocontent_create">Tạo mới đối tượng-->
+                <!--</p>-->
+            <!--</field>-->
+        <!--</record>-->
+        <!-- action view line bảo trì-->
+        <!--<record model="ir.actions.act_window" id="action_view_line_baotri">-->
+            <!--<field name="name">Bảo trì</field>-->
+            <!--<field name="res_model">line.baotri</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="domain">[]</field>-->
+            <!--<field name="help" type="html">-->
+                <!--<p class="oe_view_nocontent_create">Tạo mới đối tượng-->
+                <!--</p>-->
+            <!--</field>-->
+        <!--</record>-->
+        <record id="view_thietbi_search" model="ir.ui.view">
+            <field name="name">thietbi.search</field>
+            <field name="model">thietbi</field>
+            <field name="arch" type="xml">
+                <search string="Lọc theo xxx">
+                    <filter domain="[('status','=','1')]" name="dang_sd" string="Đang sử dụng" />
+                    <filter domain="[('status','=','2')]"  string="Trong kho" />
+                    <filter domain="[('status','=','0')]"  string="Đã phế" />
+                    <field name="ma_thietbi"/>
+                    <field name="vi_tri"/>
+                    <field name="ip"/>
+                    <field name="domain_1"/>
+                    <field name="model_thiet_bi"/>
+                    <newline />
+                    <group expand="0" string="Nhóm theo">
+                        <filter name="nhom_theo_kieu" string="Nhóm theo Kiểu" icon="terp-personal"
+                            domain="[]" context="{'group_by':'type'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="view_adapter_mat_search" model="ir.ui.view">
+            <field name="name">adapter.mat.search</field>
+            <field name="model">adapter.mat</field>
+            <field name="arch" type="xml">
+                <search string="Lọc theo xxx">
+                    <filter domain="[('status','=','1')]" name="dang_sd" string="Đang sử dụng" />
+                    <filter domain="[('status','=','2')]" string="Trong kho" />
+                    <filter domain="[('status','=','0')]" string="Phế" />
+                    <field name="ma_so"/>
+                    <field name="cho_daughi"/>
+                    <field name="model"/>
+                    <newline />
+                    <group expand="0" string="Nhóm theo">
+                        <filter name="nhom_theo_kieu" string="Nhóm theo Kiểu" icon="terp-personal"
+                            domain="[]" context="{'group_by':'type'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="view_email_noi_search" model="ir.ui.view">
+            <field name="name">email.noi.search</field>
+            <field name="model">email.noi</field>
+            <field name="arch" type="xml">
+                <search string="Lọc theo xxx">
+                    <field name="name"/>
+                    <field name="nguoi_sd"/>
+                    <newline />
+                </search>
+            </field>
+        </record>
+        <record id="view_email_ngoai_search" model="ir.ui.view">
+            <field name="name">email.ngoai.search</field>
+            <field name="model">email.ngoai</field>
+            <field name="arch" type="xml">
+                <search string="Lọc theo xxx">
+                    <field name="name"/>
+                    <field name="nguoi_sd"/>
+                    <newline />
+                </search>
+            </field>
+        </record>
+        <record id="view_server_search" model="ir.ui.view">
+            <field name="name">server.search</field>
+            <field name="model">server</field>
+            <field name="arch" type="xml">
+                <search string="Lọc theo xxx">
+                    <field name="name"/>
+                    <field name="nguoi_sd"/>
+                    <newline />
+                </search>
+            </field>
+        </record>
+
+        <!-- action view adapter mắt -->
+        <record model="ir.actions.act_window" id="action_view_adapter_mat">
+            <field name="name">Adapter, Mắt</field>
+            <field name="res_model">adapter.mat</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_adapter_mat_search"/>
+            <field name="context">{"search_default_dang_sd":1}</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view adapter -->
+        <record model="ir.actions.act_window" id="action_view_adapter">
+            <field name="name">Adapter</field>
+            <field name="res_model">adapter.mat</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('type','=','ad')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+        <!-- action view mắt -->
+        <record model="ir.actions.act_window" id="action_view_mat">
+            <field name="name">Mắt camera</field>
+            <field name="res_model">adapter.mat</field>
+            <field name="view_type">form</field>
+            <field name="domain">[('type','=','mat')]</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <record id="view_xuong_may_search" model="ir.ui.view">
+            <field name="name">xuong.may.search</field>
+            <field name="model">xuong.may</field>
+            <field name="arch" type="xml">
+                <search string="Lọc theo xxx">
+                    <filter domain="[('trang_thai','=','1')]" name="dang_sd" string="Đang sử dụng" />
+                    <filter domain="[('bo_phan','=','cnc')]" name="cnc" string="CNC" />
+                    <filter domain="[('bo_phan','=','tm')]" name="tm" string="Tổ Máy" />
+                    <filter domain="[('bo_phan','=','cn1')]" name="cn1" string="Chà nhám 1" />
+                    <filter domain="[('bo_phan','=','cn2')]" name="cn2" string="Chà nhám 2" />
+                    <filter domain="[('bo_phan','=','m')]" name="m" string="Mẫu" />
+                    <filter domain="[('bo_phan','=','s')]" name="s" string="Sơn" />
+                    <filter domain="[('bo_phan','=','x2')]" name="x2" string="Xưởng 2" />
+                    <filter domain="[('cty','=','lds')]" name="lds" string="LDS" />
+                    <filter domain="[('cty','=','nt')]" name="nt" string="Nhật Tâm" />
+                    <field name="ma_so"/>
+                    <field name="name"/>
+                    <field name="bo_phan"/>
+                    <newline />
+                    <group expand="0" string="Nhóm theo">
+                        <filter name="nhom_theo_kieu" string="Nhóm theo Cty" icon="terp-personal"
+                            domain="[]" context="{'group_by':'cty'}" />
+                    </group>
+                    <group expand="0" string="Nhóm theo">
+                        <filter name="nhom_theo_bophan" string="Nhóm theo Bộ phận" icon="terp-personal"
+                            domain="[]" context="{'group_by':'bo_phan'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- action view xưởng máy-->
+        <record model="ir.actions.act_window" id="action_view_xuongmay">
+            <field name="name">Máy xưởng</field>
+            <field name="res_model">xuong.may</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+        <!-- action view all thiết bị -->
+        <record model="ir.actions.act_window" id="action_view_thietbi_all">
+            <field name="name">Thiết bị</field>
+            <field name="res_model">thietbi</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="device_kanban_view"/>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="search_view_id" ref="view_thietbi_search"/>
+            <field name="context">{"search_default_dang_sd":1}</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view báo cáo thiet bi -->
+        <record model="ir.actions.act_window" id="action_view_baocao_tonghop">
+            <field name="name">Thiết bị</field>
+            <field name="res_model">bao.cao</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!--<record model="ir.actions.act_window" id="action_view_line_tonghop">-->
+            <!--<field name="name">Thiết bị</field>-->
+            <!--<field name="res_model">line.baocao</field>-->
+            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">tree,form</field>-->
+            <!--<field name="domain">[]</field>-->
+            <!--<field name="help" type="html">-->
+                <!--<p class="oe_view_nocontent_create">Tạo mới đối tượng-->
+                <!--</p>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!--<menuitem id = "menu_baotri" name="Bảo trì máy xưởng"/>-->
+        <!--<menuitem id = "menu_baotri_1" parent="menu_baotri" name="Bảo trì máy xưởng"/>-->
+        <!--<menuitem id = "menu_baotri_11" parent="menu_baotri_1" action="action_view_baotri" name="Bảo trì máy xưởng"/>-->
+
+
+
+
+        <menuitem id = "menu_root" name="LDS Quản lý thiết bị" sequence="1"/>
+        <menuitem id = "menu_root_xuong_may" name="Xưởng máy" sequence="3"/>
+            <menuitem id = "menu_root_xuong_may_1" parent="menu_root_xuong_may" name="Xưởng máy"/>
+                <menuitem id = "menu_root_xuong_may_1_1" parent="menu_root_xuong_may_1" name="Tất cả" action="action_view_xuongmay"/>
+                <menuitem id = "menu_root_xuong_may_1_2" parent="menu_root_xuong_may_1" name="Đã phế" action="action_view_xuongmay_phe"/>
+                <menuitem id = "menu_root_xuong_may_1_3" parent="menu_root_xuong_may_1" name="Đang sử dụng" action="action_view_xuongmay_dang_sd"/>
+                <menuitem id = "menu_root_xuong_may_1_4" parent="menu_root_xuong_may_1" name="Trong kho" action="action_view_xuongmay_kho"/>
+
+
+        <menuitem id = "menu_logcheck" name="Kiểm tra Camera" sequence="4"/>
+        <menuitem id = "menu_logcheck_1" parent="menu_logcheck" name="Kiểm tra Camera"/>
+        <menuitem id = "menu_logcheck_2" parent="menu_logcheck_1" name="Kiểm tra Camera"  action="action_view_logcheck"/>
+        <!--<menuitem id = "menu_logcheck_3" parent="menu_logcheck_1" name="Camera"  action="action_view_linecheck"/>-->
+
+
+        <menuitem id = "menu_email_server_skype" name="Email, Server, Skype" sequence="2"/>
+            <menuitem id = "menu_email" name="Email" parent="menu_email_server_skype" sequence="1"/>
+                <menuitem id = "menu_email_noi" name="Email nội bộ" parent="menu_email" action="action_view_email_noi" sequence="1"/>
+                <menuitem id = "menu_email_ngoai" name="Email ngoại bộ" parent="menu_email" action="action_view_email_ngoai" sequence="2"/>
+            <menuitem id = "menu_server" name="Server" parent="menu_email_server_skype" sequence="2"/>
+                <menuitem id = "menu_server_1" name="Server" parent="menu_server" action="action_view_server" sequence="1"/>
+            <menuitem id = "menu_skype" name="Skype" parent="menu_email_server_skype" sequence="3"/>
+                <menuitem id = "menu_skype_1" name="Skype" parent="menu_skype" action="action_view_skype" sequence="1"/>
+
+        <menuitem id = "menu_baocao" name="Báo cáo" sequence="5"/>
+            <menuitem id = "menu_baocao_thang" name="Theo tháng" parent="menu_baocao" sequence="1"/>
+                <menuitem id = "menu_graph" name="Đồ thị" parent="menu_baocao_thang" action="action_view_graph" sequence="1"/>
+                <menuitem id = "menu_pivot" name="Đồ thị bảng chi tiết" parent="menu_baocao_thang" action="action_pivot" sequence="2"/>
+                <menuitem id = "menu_baocao_1" name="Báo cáo" parent="menu_baocao_thang" action="action_view_baocao_tonghop" sequence="3"/>
+
+        <menuitem id = "menu_root_1" name="Các thiết bị" parent="menu_root" sequence="1"/>
+            <menuitem id = "menu_thietbi" name="Thiết bị" parent="menu_root_1" action="action_view_thietbi_all"/>
+            <menuitem id = "menu_thietbi_pc" name="PC, Laptop" parent="menu_thietbi" action="action_view_thietbi_pc"/>
+            <menuitem id = "menu_thietbi_daughi" name="Đầu ghi" parent="menu_thietbi" action="action_view_thietbi_daughi"/>
+            <menuitem id = "menu_thietbi_khac" name="Loại khác" parent="menu_thietbi" action="action_view_thietbi_khac"/>
+            <menuitem id = "menu_thietbi_kho" name="Trong kho" parent="menu_thietbi" action="action_view_thietbi_kho"/>
+            <menuitem id = "menu_thietbi_use" name="Đang sử dụng" parent="menu_thietbi" action="action_view_thietbi_use"/>
+            <menuitem id = "menu_thietbi_phe" name="Đã phế" parent="menu_thietbi" action="action_view_thietbi_phe"/>
+
+        <menuitem id = "menu_root_2" name="Adapter, Mắt camera" parent="menu_root" sequence="2"/>
+            <menuitem id = "menu_adapter_mat" name="Adapter, Mắt" parent="menu_root_2" action="action_view_adapter_mat"/>
+            <menuitem id = "menu_adapter" name="Adapter" parent="menu_adapter_mat" action="action_view_adapter"/>
+            <menuitem id = "menu_mat" name="Mắt camera" parent="menu_adapter_mat" action="action_view_mat"/>
+
+        <menuitem id = "menu_root_3" name="Sửa chữa và thay thế" parent="menu_root" sequence="3"/>
+            <menuitem id = "menu_line_nhatky" name="Nhật ký sửa chữa" parent="menu_root_3" action="action_view_line_nhatky"/>
+            <menuitem id = "menu_line_nhatky_0" name="Chưa xong" parent="menu_line_nhatky" action="action_view_line_nhatky_chuaxong"/>
+            <menuitem id = "menu_line_nhatky_1" name="Đã xong" parent="menu_line_nhatky" action="action_view_line_nhatky_daxong"/>
+
+        <menuitem id = "menu_root_4" name="Nhà cung cấp, người bảo quản" parent="menu_root" sequence="4"/>
+            <menuitem id = "menu_nguoi_baoquan" name="Người bảo quản" parent="menu_root_4" action="action_view_nguoi_baoquan"/>
+            <menuitem id = "menu_nha_cungcap" name="Nhà cung cấp" parent="menu_root_4" action="action_view_nha_cungcap"/>
+
+        <menuitem id = "menu_root_5" name="Cài đặt" parent="menu_root" sequence="5"/>
+            <menuitem id = "menu_bophan" name="Bộ phận" parent="menu_root_5" action="action_view_bo_phan"/>
+            <menuitem id = "menu_taikhoan" name="Tài khoản kết nối" parent="menu_root_5" action="action_view_taikhoan"/>
+            <menuitem id = "menu_thuoctinh" name="Thuộc tính thiết bị" parent="menu_root_5" action="action_view_thuoctinh"/>
+            <menuitem id = "menu_os" name="Hệ thống" parent="menu_root_5" action="action_view_os"/>
+    </data>
+</odoo>

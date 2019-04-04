@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="lds_report_intrastatinvoice_document01">
+    <t>
+       <t t-set="o" t-value="o.with_context(lang = o.partner_id.lang)"/>
+        <div class="page">
+		<link rel="stylesheet" href="/lds_report/static/src/css/invoice_style.css"/>
+           <img src="/lds_report/static/src/img/logo.png" width="100%" height="auto"></img>
+		   <center><h2>INVOICE </h2></center>
+			<table width="100%" class="table-nobd">
+				  <tr class="tr1">
+					<td class="td1" width="7%">
+						No.:
+					</td>
+					<td class="td1" colspan="4">
+						<span t-field="o.LDS_NO"/>
+					</td>
+					<td class="td1" width="8%">
+						DATE:
+					</td>
+					<td class="td1" width="28%">
+						<span t-esc="context_timestamp(datetime.datetime.now()).strftime('%b %m, %Y')"/>
+					</td>
+				  </tr>
+				  <tr class="tr1">
+					<td class="td1" colspan="7">
+						INVOICE of AS FOLLOWS
+					</td>
+				  </tr>
+				  <tr class="tr1">
+					<td class="td1" colspan="2">
+						For account and risk of Messrs:
+					</td>
+					<td class="td1" colspan="5">
+						<span t-field="o.partner_id"/>,
+						<span t-field="o.partner_id.street"/>
+					</td>
+				  </tr>
+				  <tr class="tr1">
+					<td class="td1" colspan="7">
+						Shipped by : LIN TA HSING JOINT STOCK COMPANY
+					</td>
+				  </tr>
+				  <tr class="tr1">
+					<td class="td1" >
+						ETD:
+					</td>
+					<td class="td1" width="23%" > 
+						<t t-if="o.LDS_ETD">
+							<span t-esc="time.strftime('%b %d, %Y',time.strptime(o.LDS_ETD,'%Y-%m-%d'))"/>
+						</t>
+						<t t-if="not o.LDS_ETD">
+							Lỗi, chưa chọn ngày ETD
+						</t>
+					</td>
+					<td class="td1" width="9%">
+					</td>
+					<td class="td1" width="6%">
+						ETA:
+					</td>
+					<td class="td1"> 
+						<t t-if="o.LDS_ETA">
+							<span t-esc="time.strftime('%b %d, %Y',time.strptime(o.LDS_ETA,'%Y-%m-%d'))"/>
+						</t>
+						<t t-if="not o.LDS_ETA">
+							Lỗi, chưa chọn ngày ETA
+						</t>
+					</td>
+					<td class="td1" >
+						TO:
+					</td>
+					<td class="td1" >
+						<span t-field="o.partner_id.street2"/>
+					</td>
+				  </tr>
+			</table>
+
+            <!-- Is there a discount on at least one line? -->
+            <t t-set="display_discount" t-value="any([l.discount for l in o.invoice_line_ids])"/>
+            <table class="table-bd" width="100%" >
+                <thead>
+                    <tr class="tr">
+                        <th class="text-center th">
+							ITEM NO.
+						</th>
+                        <th class="text-center th">
+							DECRIPTION OF GOODS
+							<br/>
+							<br/>
+							WOODEN FURNITURE
+							<br/>
+							COUNRTY OF ORIGIN: VIETNAM
+						</th>
+                        <th class="text-center th">
+							Q'ty(Pcs)
+						</th>
+                        <th class="text-center th">
+							Q'ty(Ctn)
+						</th>
+                        <th class="text-center th">
+							UNIT PRICE(USD)
+						</th>
+                        <th class="text-center th">
+							AMOUNT(USD)
+						</th>
+                    </tr>
+                </thead>
+                <tbody>					
+					<t t-set="stt" t-value="1"/>
+					<t t-set="total_qty" t-value="0"/>
+					<t t-set="total_qty_pac" t-value="0"/>
+					<t t-set="total_amount" t-value="0"/>					
+                    <tr class="tr" t-foreach="o.invoice_line_ids" t-as="l">	
+					<!---Các phép tính-->					
+					<t t-set="total_qty" t-value="total_qty+l.quantity"/>
+					<t t-if="l.product_id.packaging_ids.qty !=0">
+						<t t-set="total_qty_pac" t-value="total_qty_pac+ l.quantity/l.product_id.packaging_ids.qty"/>
+					</t>
+					<t t-if="l.product_id.packaging_ids.qty ==0">
+						<t t-set="total_qty_pac" t-value="total_qty_pac + l.quantity"/>
+					</t>
+					<t t-set="total_amount" t-value="total_amount + l.price_unit*l.quantity "/>		
+					<!--end các phép tính-->
+                        <td class="td">
+							<t t-esc="stt"/>
+							<t t-set="stt" t-value="stt+1"/>
+						</td>
+                        <td class="text-center td">
+							<span t-field="l.product_id.name"/>
+						</td>
+                        <td class="text-center td">
+							<span t-field="l.quantity"/>
+						</td>
+                        <td class="text-center td" >
+							<t t-if="l.product_id.packaging_ids.qty != 0">
+								<t t-esc="l.quantity/l.product_id.packaging_ids.qty"/>
+							</t>
+							<t t-if="l.product_id.packaging_ids.qty == 0">
+								<t t-esc="l.quantity"/>
+							</t>
+						</td>
+						<td class="text-center td">
+							<span t-field="l.price_unit"/>
+						</td>						
+                        <td class="text-center td">
+							<span t-esc="'{0:,.2f}'.format(float(l.price_unit*l.quantity))"/>	
+						</td>
+                    </tr>
+					<tr  class="tr">
+						<td class="td" colspan="2">
+							TOTAL
+						</td>
+						<td class="td">									
+							<span t-esc="total_qty"/>
+						</td>
+						<td class="td">			
+							<span t-esc="total_qty_pac"/>
+						</td>
+						<td class="td">
+						</td>
+						<td class="td">
+							<span t-esc="'{0:,.2f}'.format(float(total_amount))"/>
+						</td>
+					</tr>
+                </tbody>
+            </table>
+								<hr/>
+					<div class="col-xs-12">
+						<strong>Say Total: </strong>
+						<span t-field="o.LDS_Words_Total"/>
+					</div>
+					<div class="col-xs-12 text-right">
+						<strong>LIN TA HSING JOINT STOCK COMPANY</strong>
+					</div>	
+        </div>
+    </t>
+</template>
+<template id="lds_report_intrastatinvoice01">
+    <t t-call="report.html_container">
+        <t t-foreach="docs" t-as="o">
+			<t t-call="lds_report.lds_report_intrastatinvoice_document01" t-lang="o.partner_id.lang"/>
+        </t>
+    </t>
+</template>
+</odoo>

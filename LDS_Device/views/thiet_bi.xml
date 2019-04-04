@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--tree view-->
+        <record id="view_thietbi_tree" model="ir.ui.view">
+            <field name="name">thietbi.tree</field>
+            <field name="model">thietbi</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Thiết bị">
+                    <field name="ma_thietbi"/>
+                    <field name="type"/>
+                    <field name="vi_tri"/>
+                    <field name="nguoi_bao_quan"/>
+                    <field name="thoi_gian_mua"/>
+                    <field name="bao_hanh"/>
+                    <field name="bao_hanh_toi"/>
+                    <field name="gia"/>
+                    <field name="nha_cung_cap"/>
+                    <field name="model_thiet_bi"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_thietbi_form" model="ir.ui.view">
+            <field name="name">thietbi.form</field>
+            <field name="model">thietbi</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Thiết bị">
+                    <header>
+                        <button name = "action_thietbi_2_1" string="Cho sử dụng" type = "object"
+                                attrs="{'invisible': [('status', 'in', ('1','0'))]}"/>
+                        <button name = "action_thietbi_1_0" string="Báo phế" type = "object"
+                                attrs="{'invisible': [('status', 'in', ('0','2'))]}" confirm="Xác nhận báo phế!"/>
+                        <button name = "action_thietbi_1_2" string="Chuyển vào kho" type = "object"
+                                attrs="{'invisible': [('status', 'in', ('2','0'))]}"/>
+                        <field name="status" widget="statusbar" visible_status="1,2,0"/>
+                    </header>
+                    <sheet>
+                        <field widget="image" name="img" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <h3>
+                                <field name="ma_thietbi"/>
+                            </h3>
+                            <h3>
+                                <field name="type" widget="radio"/>
+                            </h3>
+                            <div>
+                                <field name="thuoc_tinh" widget="many2many_tags" options="{'no_open': True, 'no_create': True}"/>
+                            </div>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="model_thiet_bi"/>
+                                <field name="nguoi_bao_quan" options="{'no_create': True}"
+                                       attrs="{'invisible': [('type', 'in', ('daughi'))]}"/>
+                                <field name="thoi_gian_mua"/>
+                                <field name="bao_hanh"/>
+                                <field name="bao_hanh_toi"/>
+                            </group>
+                            <group>
+                                <field name="gia" widget="progressbar"/>
+                                <field name="nha_cung_cap" domain="[('state','=','1')]" options="{'no_create': True}"/>
+                                <field name="vi_tri"/>
+                                <field name="note"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="suachua" string="Sửa chữa và thay thế">
+                                <field name="nhat_ky_sua_chua"/>
+                            </page>
+                            <page name="taikhoan" string="Tài khoản" attrs="{'invisible': [('type', 'in', ('pc','other'))]}">
+                                <field name="tai_khoan"/>
+                            </page>
+                            <page name="adapter" string="Adapter, Mắt" attrs="{'invisible': [('type', 'in', ('pc','other'))]}" >
+                                <field name="adapter_mat" domain="[('status','=','2')]"/>
+                            </page>
+                            <page name="info_pc" string="Cấu hình chi tiết" attrs="{'invisible': [('type', 'in', ('daughi','other'))]}">
+                                <group>
+                                    <group>
+                                        <field name="cpu"/>
+                                        <field name="ram"/>
+                                        <field name="hdd"/>
+                                        <field name="ups"/>
+                                    </group>
+                                    <group>
+                                        <field name="vga"/>
+                                        <field name="keyb"/>
+                                        <field name="mouse"/>
+                                        <field name="monitor"/>
+                                    </group>
+                                    <group>
+                                        <field name="mainb"/>
+                                        <field name="power"/>
+                                        <field name="syst" options="{'no_open': True, 'no_create': True}" widget="many2many_tags"/>
+                                    </group>
+                                    <group>
+                                        <field name="ip_noibo"/>
+                                        <field name="ip_ngoaibo"/>
+                                        <field name="user_may"/>
+                                        <field name="passw_may"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page name="daughi" string="Thông tin đầu ghi" attrs="{'invisible': [('type', 'in', ('pc','other'))]}">
+                                <group>
+                                    <field name="ip"/>
+                                    <field name="domain_1"/>
+                                    <field name="port"/>
+                                    <field name="hdd_dau_ghi"/>
+                                    <field name="ngo_vao"/>
+                                    <field name="ngo_sd"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

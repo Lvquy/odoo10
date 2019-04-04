@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- update: 15/03/2018-->
+
+<odoo>
+    <template id="lds_report_purchaseorder_document_en">
+        <t>
+            <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
+            <t t-set="Taxes" t-value="0"/>
+            <div class="page">
+                        <link rel="stylesheet" href="/lds_report/static/src/css/purchase_order_style.css"/>         
+                <span>
+                    <center>
+                        <img src="/lds_report/static/src/img/logo.png" width="100%" height="auto"></img>
+                    </center>
+                </span>
+                <span style="margin-bottom:0px !important">
+                    <center>
+                        <img src="/lds_report/static/src/img/po_bg_en.png" width="25%" height="auto"></img>
+                    </center>
+                </span>
+                <div style="margin-bottom:2px !important; margin-top:3px !important" class="row mt32 mb32">
+					<span class="col-xs-7">
+                        <strong>Supplier</strong>(廠商):
+                        <span t-field="o.partner_id"/>
+                    </span>			
+					<span class="col-xs-5">
+                        <strong>PO date</strong>(訂購日期):
+                            <span t-field="o.date_order" t-options='{"format":"dd-MM-yyyy"}'/>                         
+                    </span>	
+                    <span class="col-xs-7">
+                        <strong>Attn</strong>(連絡人):
+                        <span t-field="o.partner_id.child_ids[0].name"/>,
+						<span t-field="o.partner_id.street"/>
+                    </span>
+				   <span class="col-xs-5">
+                        <strong>PO No</strong>(訂單編號):
+                        <span t-field="o.name"/>
+                    </span>
+                    <span class="col-xs-7">
+                        <strong>Tel</strong>(電話):
+                            <span t-field="o.partner_id.phone"/>
+                    </span>
+					<span class="col-xs-5">
+                        <strong>Delivery date</strong>(交貨日期):
+                        <span t-field="o.date_planned" t-options='{"format":"dd-MM-yyyy"}'/>
+                    </span>
+                    <span class="col-xs-7">
+                        <strong>Fax</strong>(傳真):
+                        <span t-field="o.partner_id.fax"/>
+                    </span>
+					<span class="col-xs-5">
+						<strong>
+						Delivery port: 
+						</strong>
+						<span t-field="o.partner_id.street2"/>	
+					</span>
+                    <span class="col-xs-12">
+                        <strong>Email:</strong>
+                        <span t-field="o.partner_id.email"/>
+                    </span>
+                </div>
+                <table width="100%">
+                    <tr>
+                        <td width="6%" rowspan="2">
+                            <p>No.<br/>(序號)
+                             </p>
+                        </td>
+                        <td width="12%" rowspan="2">
+                            <p>PART No.<br/>(編碼)
+                            </p>
+                        </td>
+                        <td width="30%" rowspan="2">
+                            <p>NAME<br/>(品名/規格)
+                            </p>
+                        </td>
+                        <td width="8%" rowspan="2">
+                            <p>QTY<br/>(數量)
+                            </p>
+                        </td>
+						<td width="8%" rowspan="2">
+                            <p>UNIT<br/>(單位)
+                            </p>
+                        </td>
+                        <td width="10%">
+                            <p>PRICE<br/>(單價)
+                            </p>
+                        </td>
+                        <td width="10%">
+                            <p>TOTAL<br/>(總價)
+                            </p>
+                        </td>
+                        <td width="16%" rowspan="2">
+                            <p>NOTE<br/>(備註)
+                            </p>
+                        </td>     
+                    </tr>
+					<tr>
+						<td>USD</td>
+						<td>USD</td>
+					</tr>
+                    <tbody>
+                        <t t-set="stt" t-value="1"/>
+						<t t-set="total_qty" t-value="0"/>
+						<t t-set="total_price" t-value="0"/>		
+                        <tr class="tr" t-foreach="o.order_line" t-as="line">
+                        <t t-set="total_qty" t-value="total_qty + line.product_qty"/> 
+						<t t-set="total_price" t-value="total_price + line.price_subtotal"/> 
+							<td>
+                                <t t-esc="stt"/>
+                                <t t-set="stt" t-value="stt+1"/>
+                            </td>
+                            <td>
+                                <span t-field="line.product_id.default_code"/>
+                            </td>
+                            <td>
+                                <span t-field="line.product_id.name"/>
+                            </td>
+                            <td>
+                                <span t-field="line.product_qty"/>
+                            </td>
+                            <td>
+								<span t-field="line.product_uom.name"/>                               
+                            </td>
+                            <td>
+                                <span t-field="line.price_unit"/> 
+                            </td>
+                            <td>
+								<span t-field="line.price_subtotal"/> 
+                            </td>
+                            <td>
+                                <span t-field="line.name"/>    
+                            </td>
+                        </tr>
+					  <tr>
+						<td colspan="3">
+						<strong>AMOUNT</strong>
+						</td>						
+						<td>
+						<t t-esc="'{0:,.2f}'.format(float(total_qty))"/>
+						</td>
+						<td>
+						</td>
+						<td>
+						</td>
+						<td>
+							<span t-esc="'{0:,.2f}'.format(float(total_price))"/> <t t-esc="o.currency_id.symbol"/>
+						</td>
+						<td>
+						</td>
+					   </tr>
+                    </tbody>
+                </table>		
+			<div>
+				<br/>
+				<strong>*NOTED TERM</strong><br/>
+				<center style="text-align:center; font-size:30px">
+				  大致急！請幫忙安排儘快，謝謝！							
+				</center>
+				<p>
+				1。出貨之後必須儘快提供出貨文件草稿給林達興公司確認，提單草稿確認了之後才能做出正式的出貨文件。<br/>
+				否則更改出貨文件費用會由供應商來負擔。<br/>
+				2。出貨之前安排匯款100%訂單總金額。<br/>
+				3。供應商收到訂單之後，必須回簽並確認出貨日期，用傳真或者郵件方式寄回簽訂單給林達興公司。<br/>
+				4。以上的單價已經包括運費<br/>
+				5。訂單的鐵鈎照片如下，請根據這款來生產，謝謝！<br/>
+				</p>
+				<br/>
+				<br/>
+			</div>
+                <center>
+				<t t-if="o.LDS_IMG1">
+					<div class="col-xs-4" t-field="o.LDS_IMG1" t-field-options='{"widget": "image"}'/>
+				</t>
+				<t t-if="o.LDS_IMG2">
+					<div class="col-xs-4" t-field="o.LDS_IMG2" t-field-options='{"widget": "image"}'/>
+				</t>
+				<t t-if="o.LDS_IMG3">
+					<div class="col-xs-4" t-field="o.LDS_IMG3" t-field-options='{"widget": "image"}'/>
+				</t>
+				<center>&#160;</center>
+				<t t-if="o.LDS_IMG4">	
+					<div class="col-xs-4" t-field="o.LDS_IMG4" t-field-options='{"widget": "image"}'/>
+				</t>
+				<t t-if="o.LDS_IMG5">
+					<div class="col-xs-4" t-field="o.LDS_IMG5" t-field-options='{"widget": "image"}'/>
+				</t>
+				<t t-if="o.LDS_IMG6">
+					<div class="col-xs-4" t-field="o.LDS_IMG6" t-field-options='{"widget": "image"}'/>
+				</t>
+				</center>
+				<center>&#160;</center>
+                <div class="col-xs-4 text-center">
+                    <p>LINTAHING J.S COMPANY<br/>(林達興股份公司)
+                    </p>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <p>CONFIRMED<br/>(审 核)
+                    </p>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <p>SUPPLIER<br/>(廠商簽認)
+                    </p>
+                </div>
+            </div>
+            <div class="oe_structure"/>
+        </t>
+    </template>
+    <template id="lds_report_purchase_order_eng">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="lds_report.lds_report_purchaseorder_document_en" t-lang="o.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+</odoo>

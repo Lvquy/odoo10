@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="ns1" model="res.users">
+            <field name="name">Đào Thị Thu Hương</field>
+            <field name="login">ns1</field>
+            <field name="bo_phan">VPHONG</field>
+            <field name="groups">Nhan_su_lds.ns</field>
+        </record>
+        <record id="ns" model="res.users">
+            <field name="name">Võ Thị Thanh Tịnh</field>
+            <field name="login">ns</field>
+            <field name="bo_phan">VPHONG</field>
+        </record>
+
+        <record id="tmay" model="res.users">
+            <field name="name">Tổ Máy</field>
+            <field name="login">tm</field>
+            <field name="bo_phan">TMAY</field>
+        </record>
+
+        <record id="cnc" model="res.users">
+            <field name="name">CNC</field>
+            <field name="login">cnc</field>
+            <field name="bo_phan">CNC</field>
+        </record>
+
+        <record id="cn1" model="res.users">
+            <field name="name">Chà nhám 1</field>
+            <field name="login">cn1</field>
+            <field name="bo_phan">CN1</field>
+        </record>
+        <record id="cn2" model="res.users">
+            <field name="name">Chà nhám 2</field>
+            <field name="login">cn2</field>
+            <field name="bo_phan">CN2</field>
+        </record>
+
+        <record id="mau" model="res.users">
+            <field name="name">Mẫu</field>
+            <field name="login">mau</field>
+            <field name="bo_phan">MAU</field>
+        </record>
+
+        <record id="vecni" model="res.users">
+            <field name="name">Vecni</field>
+            <field name="login">vecni</field>
+            <field name="bo_phan">VECNI</field>
+        </record>
+        <record id="lrap" model="res.users">
+            <field name="name">Lắp ráp</field>
+            <field name="login">lr</field>
+            <field name="bo_phan">LRAP</field>
+        </record>
+        <record id="ctrinh" model="res.users">
+            <field name="name">Công trình</field>
+            <field name="login">ct</field>
+            <field name="bo_phan">CTRINH</field>
+        </record>
+        <record id="tdo" model="res.users">
+            <field name="name">Tiến độ</field>
+            <field name="login">tdo</field>
+            <field name="bo_phan">TDO</field>
+        </record>
+
+        <record id="kho" model="res.users">
+            <field name="name">Kho</field>
+            <field name="login">kho</field>
+            <field name="bo_phan">KHO</field>
+        </record>
+        <record id="qc" model="res.users">
+            <field name="name">QC</field>
+            <field name="login">qc</field>
+            <field name="bo_phan">QC</field>
+        </record>
+        <record id="btri" model="res.users">
+            <field name="name">Bảo trì</field>
+            <field name="login">baotri</field>
+            <field name="bo_phan">BTRI</field>
+        </record>
+        <record id="it" model="res.users">
+            <field name="name">IT</field>
+            <field name="login">it</field>
+            <field name="bo_phan">IT</field>
+        </record>
+    </data>
+</odoo>

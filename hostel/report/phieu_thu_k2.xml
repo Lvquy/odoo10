@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- phieu thu k2 -->
+    <template id="phieu_thu_khu2">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <center>
+                    <div class="row mt32 mb32">
+                        <h4>
+                            <div class="col-xs-12">PHIẾU THU TIỀN K2</div>
+                        </h4>
+
+                    </div>
+                </center>
+                <div class="col-xs-6"><span t-field="o.so_hoadon"/></div>
+                <table with="100%" class="table table-bordered">
+                    <t>
+                    <tr t-foreach="o.total_phong" t-as="l">
+                        <t t-if="l.khu_vuc == 'k2'">
+                        <td height="100px">
+                            No<br/>
+                            <span t-field="l.so_hoadon"/>
+                        </td>
+                        <td>Phòng/Tháng<br/>
+                            <span t-field="l.phong.so_phong"/>/<span t-field="o.tien_thang"/>
+                        </td>
+                        <td>Kv<br/>
+                            <span t-field="l.phong.khu_vuc"/>
+                        </td>
+                        <td>
+                            Điện<br/>
+                            <span t-field="l.d_tieu_thu"/>
+                        </td>
+                        <td>
+                            Nước<br/>
+                            <span t-field="l.n_tieu_thu"/>
+                        </td>
+                        <td>
+                            Tiền phòng<br/>
+                            <span t-field="l.tien_phong"/>
+                        </td>
+                        <td>
+                            Khác<br/>
+                            <span t-field="l.tien_khac"/>
+                        </td>
+                        <td>
+                            Tổng<br/>
+                            <span t-field="l.tong_tien"/>
+                        </td>
+                            <td>
+                                Kí tên<br/>
+                            </td>
+                        </t>
+                    </tr>
+                    </t>
+                </table>
+            </div>
+        </t>
+    </template>
+    <template id="report2">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="hostel.phieu_thu_khu2"/>
+        </t>
+    </template>
+</odoo>

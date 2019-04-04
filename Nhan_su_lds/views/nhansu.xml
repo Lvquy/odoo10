@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--tree ns-->
+        <record id="view_tonghop_tree" model="ir.ui.view">
+            <field name="name">nhan.su.tree</field>
+            <field name="model">nhan.su</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Tổng hợp" decoration-info="status == '1'">
+                    <field name="ngay_bao"/>
+                    <field name="total_today" sum="Tổng" widget="monetary"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form tổng hợp -->
+        <record id="view_tonghop_form" model="ir.ui.view">
+            <field name="name">nhan.su.form</field>
+            <field name="model">nhan.su</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Tổng hợp">
+                    <style type="text/css">
+                        .img-small-cus{
+                        display: block;
+                        max-width: 100px;
+                        height: auto;
+                        }
+                        td{margin:5px;
+                        padding:5px;
+                        text-align:center;
+                        font-weight:bold}
+                    </style>
+                    <header>
+                        <button name="get_total" class="btn btn-primary" type="object"
+                                string="Lấy dữ liệu" icon="fa-download" attrs="{'invisible': [('status', 'in', ('1'))]}"/>
+                        <button name="lock" class="btn btn-primary" icon="fa-unlock" type="object"
+                                string="Khóa" confirm="Xác nhận khóa!" attrs="{'invisible': [('status', 'in', ('1'))]}"/>
+                        <button name="unlock" icon="fa-lock" type="object" string="Mở khóa" groups="base.group_system,Nhan_su_lds.group_ns" attrs="{'invisible': [('status', 'in', ('0'))]}"/>
+                        <button name="check_bophan_trua" icon="fa-info-circle" type="object" string="Kiểm tra trưa"/>
+                        <button name="check_bophan_chieu" icon="fa-info-circle" type="object" string="Kiểm tra chiều"/>
+                        <field name="status" widget="statusbar" visible_status="0,1"/>
+
+                    </header>
+                    <sheet>
+                        <i style="color:blue">Sau mỗi lần thêm, sửa, xóa vui lòng nhấp "Lấy dữ liệu" để cập nhật dữ liệu cho đúng.</i>
+
+                        <table width="100%" border="1">
+                            <tr style="color:red;">
+                                <td>Ngày</td>
+                                <td><field name="ngay_bao" attrs="{'readonly': [('status', 'in', ('1'))]}"/></td>
+                                <td colspan="8"><field name="total_today" /> ( <field name="doc_tien"/> ) </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="3">4T</td>
+                                <td colspan="3">3T</td>
+                                <td colspan="3">2T</td>
+                            </tr>
+                            <tr>
+                                <td>Loại</td>
+                                <td>SL</td>
+                                <td>Đơn giá</td>
+                                <td>Thành tiền</td>
+                                <td>SL</td>
+                                <td>Đơn giá</td>
+                                <td>Thành tiền</td>
+                                <td>SL</td>
+                                <td>Đơn giá</td>
+                                <td>Thành tiền</td>
+                            </tr>
+                            <tr>
+                                <td>Mặn</td>
+                                <td><field name="today_total_man_4"/></td>
+                                <td><field name="price_man_4" /></td>
+                                <td><field name="money_man_4"/> </td>
+                                <td><field name="today_total_man_3" /></td>
+                                <td><field name="price_man_3" /></td>
+                                <td><field name="money_man_3"/></td>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td>Chay</td>
+                                <td><field name="today_total_chay_4" /></td>
+                                <td><field name="price_chay_4" /></td>
+                                <td><field name="money_chay_4"/></td>
+                                <td><field name="today_total_chay_3" /></td>
+                                <td><field name="price_chay_3" /></td>
+                                <td><field name="money_chay_3"/></td>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td>Cháo</td>
+                                <td><field name="today_total_chao_4"/></td>
+                                <td><field name="price_chao_4" /></td>
+                                <td><field name="money_chao_4"/></td>
+                                <td><field name="today_total_chao_3"/></td>
+                                <td><field name="price_chao_3" /></td>
+                                <td><field name="money_chao_3"/></td>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <td>Đặc biệt</td>
+                                <td><field name="total_dac_biet"/> </td>
+                                <td><field name="price_dacbiet"/> </td>
+                                <td><field name="money_dacbiet"/> </td>
+                                <td colspan="6"></td>
+                            </tr>
+                            <tr>
+                                <td>Bún</td>
+                                <td colspan="6"></td>
+                                <td><field name="today_total_bun"/></td>
+                                <td><field name="price_bun"/></td>
+                                <td><field name="money_bun"/></td>
+
+                            </tr>
+                            <tr>
+                                <td>Mì</td>
+                                <td colspan="6"></td>
+                                <td><field name="today_total_mi"/></td>
+                                <td colspan="2"></td>
+                            </tr>
+
+                        </table>
+                        <notebook>
+                            <page name="2" string="Buổi trưa">
+                                <table width="100%" border="1">
+                                    <tr>
+                                        <td width="20%"></td>
+                                        <td width="20%">
+                                            SL
+                                        </td>
+                                        <td width="40%">
+                                            Ảnh minh họa
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            Mặn Trưa
+                                        </td>
+                                        <td align="center">
+                                            <field name="man_trua" />
+                                        </td>
+                                        <td align="center">
+                                            <field name="img_man_trua" class="img-small-cus" widget="image" attrs="{'readonly': [('status', 'in', ('1'))]}"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            Chay trưa
+                                        </td>
+                                        <td align="center">
+                                            <field name="chay_trua" />
+                                        </td>
+                                        <td align="center">
+                                            <field name="img_chay_trua" class="img-small-cus" widget="image" attrs="{'readonly': [('status', 'in', ('1'))]}"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">Cháo trưa</td>
+                                        <td>
+                                            <field name="chao_trua" />
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">Ghi chú</td>
+                                        <td colspan="3">
+                                            <field name="note" placeholder="Thông báo cho nhân viên" attrs="{'readonly': [('status', 'in', ('1'))]}"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </page>
+                            <page name="3" string="Buổi chiều">
+                                <table width="100%" border="1">
+                                    <tr>
+                                        <td width="20%">Giờ tăng ca</td>
+                                        <td width="20%">Cơm buổi</td>
+                                        <td width="15%">SL</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td rowspan='3'>4 Tiếng</td>
+                                        <td>Mặn 4t</td>
+                                        <td><field name = "man_4_chieu"/></td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Chay 4t</td>
+                                        <td><field name = "chay_4_chieu"/></td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td>Cháo 4t</td>
+                                        <td><field name = "chao_4_chieu"/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td rowspan='3'>3 Tiếng</td>
+                                        <td>Mặn 3t</td>
+                                        <td><field name = "man_3_chieu"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chay 3t</td>
+                                        <td><field name = "chay_3_chieu" /></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Cháo 3t</td>
+                                        <td><field name = "chao_3_chieu" /></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td rowspan='2'>2 Tiếng</td>
+                                        <td>Bún</td>
+                                        <td><field name = "bun_chieu" /></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Mì</td>
+                                        <td><field name = "mi_chieu" /></td>
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>Ghi chú</td>
+                                        <td colspan="2"><field name = "note_chieu" attrs="{'readonly': [('status', 'in', ('1'))]}"/></td>
+                                    </tr>
+                                </table>
+
+                            </page>
+                            <page name="dacbiet" string="Phần đặc biệt">
+                                <table width="100%" border="1">
+                                    <tr>
+                                        <td>Số lượng phần ăn đặc biệt</td>
+                                        <td><field name="dac_biet" attrs="{'readonly': [('status', 'in', ('1'))]}"/></td>
+                                    </tr>
+                                </table>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

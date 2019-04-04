@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_taikhoan_tree" model="ir.ui.view">
+            <field name="name">taikhoan.tree</field>
+            <field name="model">taikhoan</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Tài khoản kết nối">
+                    <field name="user"/>
+                    <field name="passw"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view-->
+        <record id="view_taikhoan_form" model="ir.ui.view">
+            <field name="name">taikhoan.form</field>
+            <field name="model">taikhoan</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Tài khoản kết nối">
+                    <sheet>
+                        <group>
+                            <field name="user"/>
+                            <field name="passw"/>
+                            <field name="type"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

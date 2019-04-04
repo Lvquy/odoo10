@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Nhãn thiết bị -->
+    <template id="nhan_thietbi">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <center>
+                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %
+                    ('Code128', o.ma_thietbi, 500, 500)" style="width:100%;height:50px;"/>
+                    <!--<img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s'-->
+                             <!--% ('Codabar', o.nguoi_bao_quan.name, 500, 500)" style="width:200px;height:200px"/>-->
+                    <span t-field="o.nguoi_bao_quan.name"/>, <span t-field="o.vi_tri"/>
+                </center>
+            </div>
+        </t>
+    </template>
+    <template id="report_nhan_thietbi_1">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="LDS_Device.nhan_thietbi"/>
+        </t>
+    </template>
+</odoo>

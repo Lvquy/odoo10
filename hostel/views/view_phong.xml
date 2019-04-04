@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--tree view phong-->
+        <record id="view_phong_tree" model="ir.ui.view">
+            <field name="name">phong.tro.tree</field>
+            <field name="model">phong.tro</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <tree string="Phòng">
+                    <field name="so_phong"/>
+                    <field name="khu_vuc" string="Khu vực"/>
+                    <field name="gia_phong" string="Giá phòng"/>
+                    <field name="state" string="Trạng thái"/>
+                    <field name="status" string="Trạng thái"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form view phong-->
+        <record id="view_phong_form" model="ir.ui.view">
+            <field name="name">phong.tro.form</field>
+            <field name="model">phong.tro</field>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <form string="Phòng">
+                    <header>
+                        <button name = 'get_default_price' type="object" string="Lấy giá mặc định" class="btn-primary" attrs="{'invisible':[('state','in','1')]}"/>
+                        <button name = 'lock_phong' type="object" string="Xác nhận" class="btn-primary" attrs="{'invisible':[('status','in','khach')]}"/>
+                        <button name = 'unlock_phong' type="object" string="Trả phòng" class="btn-primary" attrs="{'invisible':[('status','in','trong')]}"/>
+                        <button name = 'lock_state' type="object" string="Khóa phòng" class="btn-primary" attrs="{'invisible':[('state','in','1')]}"/>
+                        <button name = 'unlock_state' type="object" string="Mở khóa phòng" class="btn-primary" attrs="{'invisible':[('state','in','0')]}" groups="hostel.group_quanly,base.group_system"/>
+                        <field name="status" widget="statusbar" visible_status="trong,khach" string="Trạng thái"/>
+                        <field name="state" widget="statusbar" visible_status="0,1" string="Trạng thái khóa"/>
+                    </header>
+                    <sheet>
+                        <field widget="image" name="img" class="oe_avatar"/>
+                        <div class="oe_title">
+                            <h3>
+                                <field name="so_phong" attrs="{'readonly':[('state','in',('1'))]}"/>
+                            </h3>
+                            <h4>Khu vực: <field name="khu_vuc" string="Khu vực" attrs="{'readonly':[('state','in',('1'))]}"/></h4>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="chu_phong" attrs="{'readonly':[('status','in',('khach'))]}"
+                                       domain="[('status','=',('1','3'))]" options="{'no_create': True}"/>
+                                <field name="ma_chu_phong"/>
+                                <field name="ngay_khach_vao" attrs="{'readonly':[('status','in',('khach'))]}"/>
+                                <field name="ngay_khach_tra" attrs="{'readonly':[('status','in',('khach'))]}"/>
+                            </group>
+                            <group>
+                                <field name="gia_phong" string="Giá phòng" attrs="{'readonly':[('state','in',('1'))]}"/>
+                                <field name="gia_dien" string="Giá điện" attrs="{'readonly':[('state','in',('1'))]}"/>
+                                <field name="gia_nuoc" string="Giá nước" attrs="{'readonly':[('state','in',('1'))]}"/>
+                                <field name="tien_khac" string="Tiền khác" attrs="{'readonly':[('state','in',('1'))]}"/>
+                            </group>
+                            <group>
+                                <field name="cong_to_dien" string="Chỉ số công tơ điện" attrs="{'readonly':[('state','in',('1'))]}"/>
+                                <field name="cong_to_nuoc" string="Chỉ số công tơ nước" attrs="{'readonly':[('state','in',('1'))]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="khach" string="Khách trọ">
+                                <field name="khach_tro" attrs="{'readonly':[('status','in','khach')]}"/>
+                            </page>
+                            <page name="thietbi" string="Thiết bị">
+                                <field name="thiet_bi"/>
+                            </page>
+                            <!--<page name="hopdong" string="Hợp đồng">-->
+                                <!--<field name="hop_dong"/>-->
+                            <!--</page>-->
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="line_khach_tro_tree" model="ir.ui.view">
+            <field name="name">line.khach.tree</field>
+            <field name="model">line.khach</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="ma_khach"/>
+                    <field name="line_khach"/>
+                    <field name="dien_thoai"/>
+                    <field name="bank_acc"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="line_khach_tro_form" model="ir.ui.view">
+            <field name="name">line.khach.form</field>
+            <field name="model">line.khach</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <group>
+                        <field name="ma_khach"/>
+                        <field name="line_khach" domain="[('status','=',('1','3'))]" options="{'no_create': True}"/>
+                        <field name="dien_thoai"/>
+                        <field name="bank_acc"/>
+                    </group>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="view_phong_search" model="ir.ui.view">
+            <field name="name">phong.tro.search</field>
+            <field name="model">phong.tro</field>
+            <field name="arch" type="xml">
+                <search string="Lọc theo xxx">
+                    <filter domain="[('status','=','khach')]" name="status_1" string="Có khách" />
+                    <filter domain="[('status','=','trong')]" name="status_0" string="Trống" />
+                    <filter domain="[('khu_vuc','=','k1')]" name="k1" string="Khu 1" />
+                    <filter domain="[('khu_vuc','=','k2')]" name="k2" string="Khu 2" />
+                    <filter domain="[('khu_vuc','=','k3')]" name="k3" string="Khu 3" />
+                    <filter domain="[('state','=','0')]" name="k3" string="Bản thảo" />
+                    <filter domain="[('state','=','1')]" name="k3" string="Đã khóa" />
+                    <field name="status"/>
+                    <field name="khu_vuc"/>
+                    <newline />
+                    <group expand="0" string="Nhóm theo trạng thái phòng">
+                        <filter name="nhom_theo_status" string="Trạng thái" icon="terp-personal"
+                            domain="[]" context="{'group_by':'status'}" />
+                    </group>
+                    <group expand="0" string="Nhóm theo khu vực">
+                        <filter name="nhom_theo_khuv" string="Khu vực" icon="terp-personal"
+                            domain="[]" context="{'group_by':'khu_vuc'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

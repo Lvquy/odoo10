@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--tree báo cơm -->
+        <record id="view_baocom_tree" model="ir.ui.view">
+            <field name="name">bao.com.tree</field>
+            <field name="model">bao.com</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Báo cơm" decoration-info="com_buoi == 'trua'">
+                    <field name="gio_bao" />
+                    <field name="com_buoi" />
+                    <field name="bo_phan" />
+                    <field name="note" />
+                    <field name="nguoi_bao"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--form báo cơm-->
+        <record id="view_baocom_form" model="ir.ui.view">
+            <field name="name">bao.com.form</field>
+            <field name="model">bao.com</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Báo cơm">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="gio_bao"/>
+                                <field name="com_buoi"  widget="radio" />
+                                <field name="bo_phan"/>
+                                <field name="nguoi_bao" options="{'no_open':True, 'no_create':True}"/>
+                            </group>
+                            <group >
+                                <field name="com_man_trua" attrs="{'invisible': ['|',('com_buoi', '=','chieu'),('com_buoi','=',False)]}" />
+                                <field name="com_chay_trua" attrs="{'invisible': ['|',('com_buoi', '=','chieu'),('com_buoi','=',False)]}"/>
+                                <field name="chao_trua" attrs="{'invisible': ['|',('com_buoi', '=','chieu'),('com_buoi','=',False)]}" />
+                            </group>
+                            <group >
+                                <field name="man_4_chieu" attrs="{'invisible': ['|',('com_buoi', '=','trua'),('com_buoi','=',False)]}"/>
+                                <field name="chay_4_chieu" attrs="{'invisible': ['|',('com_buoi', '=','trua'),('com_buoi','=',False)]}"/>
+                                <field name="chao_4_chieu" attrs="{'invisible': ['|',('com_buoi', '=','trua'),('com_buoi','=',False)]}"/>
+                            </group>
+                            <group >
+                                <field name="man_3_chieu" attrs="{'invisible': ['|',('com_buoi', '=','trua'),('com_buoi','=',False)]}"/>
+                                <field name="chay_3_chieu" attrs="{'invisible': ['|',('com_buoi', '=','trua'),('com_buoi','=',False)]}"/>
+                                <field name="chao_3_chieu" attrs="{'invisible': ['|',('com_buoi', '=','trua'),('com_buoi','=',False)]}"/>
+                            </group>
+                            <group >
+                                <field name="bun" attrs="{'invisible': ['|',('com_buoi', '=','trua'),('com_buoi','=',False)]}"/>
+                                <field name="mi" attrs="{'invisible': ['|',('com_buoi', '=','trua'),('com_buoi','=',False)]}"/>
+                            </group>
+                            <group>
+                                <field name="note"/>
+                            </group>
+                            <group>
+                                <field name="bao_thay" groups="Nhan_su_lds.group_ns,base.group_system"/>
+                            </group>
+                        </group>
+                        <i style="color:blue" groups="Nhan_su_lds.group_ns,base.group_system">
+                            Chú ý! khi sử dụng chức năng báo thay cần kiểm tra mỗi một bộ phận / buổi / ngày chỉ được phép tạo 1 lần báo cơm, nếu tồn tại rồi thì dùng chức năng sửa.
+                        </i>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

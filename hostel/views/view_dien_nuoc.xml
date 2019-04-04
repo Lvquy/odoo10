@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <!--tree view-->
+        <record id="dien_nuoc_tree" model="ir.ui.view">
+            <field name="name">dien.nuoc.tree</field>
+            <field name="model">dien.nuoc</field>
+            <field name="arch" type="xml">
+                <tree string="Điện nước" decoration-success="status == '1'">
+                    <field name="so_hoadon" widget="handle"/>
+                    <field name="tien_thang"/>
+                    <field name="count_phong" />
+                    <field name="tong_thu_thang" sum="Tổng" widget="monetary"/>
+                    <field name="doc_tien"/>
+                    <field name="status"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!--from view-->
+        <record id="dien_nuoc_from" model="ir.ui.view">
+            <field name="name">dien.nuoc.form</field>
+            <field name="model">dien.nuoc</field>
+            <field name="arch" type="xml">
+                <form string="Điện nước">
+                    <header>
+                        <button name="lock" type="object" string="Xác nhận thu tiền xong tất cả"
+                                attrs="{'invisible':[('status','in','1')]}"/>
+                        <button name="unlock" type="object" string="Hoàn tác về bản thảo"
+                                attrs="{'invisible':[('status','in','0')]}" groups="base.group_system"/>
+                        <field name="status" widget="statusbar" visible_status="0,1"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="so_hoadon"/>
+                            <field name="tien_thang"/>
+                            <field name="count_phong"/>
+                            <field name="tong_thu_thang"/>
+                            <field name="doc_tien"/>
+                        </group>
+                        <notebook>
+                            <page string="Tính tiền">
+                                <field name="total_phong"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="line_dien_nuoc_tree" model="ir.ui.view">
+            <field name="name">line.dien.nuoc.tree</field>
+            <field name="model">line.dien.nuoc</field>
+            <field name="arch" type="xml">
+                <tree string="Điện nước">
+                    <field name="so_hoadon" widget="handle"/>
+                    <field name="phong"/>
+                    <field name="khu_vuc"/>
+                    <field name="dien_new"/>
+                    <field name="dien_old"/>
+                    <field name="d_tieu_thu"/>
+                    <field name="nuoc_new"/>
+                    <field name="nuoc_old"/>
+                    <field name="n_tieu_thu"/>
+                    <field name="tien_phong"/>
+                    <field name="tien_khac"/>
+                    <field name="tong_tien"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+        <record id="line_dien_nuoc_form" model="ir.ui.view">
+            <field name="name">line.dien.nuoc.form</field>
+            <field name="model">line.dien.nuoc</field>
+            <field name="arch" type="xml">
+                <form string="Điện nước">
+                    <header>
+                        <button name="tru_tai_khoan" string="Trừ tài khoản" confirm="Bạn chắc chắn? việc này không thể hoàn tác."
+                                type="object" attrs="{'invisible':[('status','in','1')]}" />
+                        <button name="thu_tien_mat" string="Thu tiền mặt" confirm="Bạn chắc chắn? việc này không thể hoàn tác."
+                                type="object" attrs="{'invisible':[('status','in','1')]}"/>
+                        <button name="unlock_status" string="Cưỡng chế về trạng thái chưa thu tiền" type="object" groups="base.group_system"
+                                attrs="{'invisible':[('status','in','0')]}"/>
+                        <button name="get_def" string="Lấy thông tin" type="object" attrs="{'invisible':[('status','in','1')]}"/>
+                        <field name="status" widget="statusbar" visible_status="0,1"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h2>
+                                <field name="so_hoadon"/><br/>
+                                Phòng: <field name="phong"/><br/>
+                                Khu vực: <field name="khu_vuc"/><br/>
+                            </h2>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="chu_phong"/>
+                                <field name="so_du"/>
+                                <field name="note"/>
+                            </group>
+                            <group>
+                                <field name="dien_new" attrs="{'readonly':[('status','in','1')]}"/>
+                                <field name="dien_old" attrs="{'readonly':[('status','in','1')]}"/>
+                                <field name="d_tieu_thu"/>
+                            </group>
+                            <group>
+                                <field name="nuoc_new" attrs="{'readonly':[('status','in','1')]}"/>
+                                <field name="nuoc_old" attrs="{'readonly':[('status','in','1')]}"/>
+                                <field name="n_tieu_thu"/>
+                            </group>
+
+                            <group>
+                                <field name="tien_phong" attrs="{'readonly':[('status','in','1')]}"/>
+                                <field name="tien_khac" attrs="{'readonly':[('status','in','1')]}"/>
+                                <field name="tong_tien"/>
+                                <field name="type_thu_tien" attrs="{'invisible':[('status','in','0')]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--views graph chi phí hàng tháng -->
+        <record model="ir.ui.view" id="view_graph_chiphi">
+            <field name="name">dien.nuoc.graph</field>
+            <field name="model">dien.nuoc</field>
+            <field name="arch" type="xml">
+                <graph string="Đồ thị so sánh"  type="bar">
+                    <field name="tien_thang" interval="month" type="row"/>
+                    <field name="tong_thu_thang" type="measure" />
+                </graph>
+            </field>
+        </record>
+
+        <!-- pivot báo cáo thu chi views -->
+        <record model="ir.ui.view" id="view_pivot_doanhthu">
+            <field name="name">dien.nuoc.pivot</field>
+            <field name="model">dien.nuoc</field>
+            <field name="arch" type="xml">
+                <pivot string="Báo cáo">
+                    <field name="tien_thang" interval="year" type="row"/>
+                    <field name="tien_thang" interval="month" type="row"/>
+
+                    <field name="tong_thu_thang" type="measure"/>
+                    <field name="count_phong" type="measure"/>
+
+                </pivot>
+            </field>
+        </record>
+
+        <record id="view_diennuoc_search" model="ir.ui.view">
+            <field name="name">dien.nuoc.search</field>
+            <field name="model">dien.nuoc</field>
+            <field name="arch" type="xml">
+                <search string="Lọc theo xxx">
+                    <filter domain="[('status','=','1')]" name="status_1" string="Đã thu tiền xong" />
+                    <filter domain="[('status','=','0')]" name="status_0" string="Chưa thu tiền xong" />
+                    <field name="status"/>
+                    <field name="so_hoadon"/>
+                    <field name="tien_thang"/>
+                    <newline />
+                    <group expand="0" string="Nhóm theo tháng">
+                        <filter name="nhom_theo_thang" string="Tháng" icon="terp-personal"
+                            domain="[]" context="{'group_by':'tien_thang'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

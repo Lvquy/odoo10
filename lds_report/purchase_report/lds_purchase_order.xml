@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- update: 29/11/2017-->
+<odoo>
+    <template id="lds_report_purchaseorder_document">
+        <t>
+            <t t-set="o" t-value="o.with_context({'lang':o.partner_id.lang})"/>
+            <t t-set="Taxes" t-value="0"/>
+            <div class="page">
+                <!-- khai báo css-->
+                <!--<template id="assets_backend" name="lds_purchase_order" inherit_id="web.assets_backend">-->
+                    <!--<xpath expr="." position="inside">-->
+                        <link rel="stylesheet" href="/lds_report/static/src/css/purchase_order_style.css"/>
+                    <!--</xpath>-->
+                <!--</template>-->
+                <span>
+                    <center>
+                        <img src="/lds_report/static/src/img/logo.png" width="100%" height="auto"></img>
+                    </center>
+                </span>
+                <span style="margin-bottom:0px !important">
+                    <center>
+                        <img src="/lds_report/static/src/img/po_bg.png" width="25%" height="auto"></img>
+                    </center>
+                </span>
+                <div style="margin-bottom:2px !important; margin-top:3px !important" class="row mt32 mb32">
+                    <span class="col-xs-7">
+                        <strong>Nhà cung cấp(廠商):
+                            <span t-field="o.partner_id"/>
+                        </strong>
+                    </span>
+					<span class="col-xs-5 text-right">
+					<strong><span t-field="o.notes"/></strong>
+					</span>
+                    <span class="col-xs-7">
+                        <strong>Người đại diện(連絡人):
+                            <span t-field="o.partner_id.child_ids[0].name"/>
+                        </strong>
+                    </span>
+                    <span class="col-xs-5">
+                        <strong>Ngày đặt hàng(訂購日期):
+                            <span t-field="o.date_order" t-options='{"format":"dd-MM-yyyy"}'/>
+                            <!-- <span t-field="o.date_order" t-options='{"widget": "relative"}'/> --> <!--显示：两个月前  -->
+                        </strong>
+                    </span>
+                    <span class="col-xs-7">
+                        <strong>Điện thoại(電話):
+                            <span t-field="o.partner_id.phone"/>
+                        </strong>
+                    </span>
+                    <span class="col-xs-5">
+                        <strong>Mã số đơn hàng(訂單編號):
+                            <span t-field="o.name"/>
+                        </strong>
+                    </span>
+                    <span class="col-xs-7">
+                        <strong>Fax(傳真):
+                            <span t-field="o.partner_id.fax"/>
+                        </strong>
+                    </span>
+                    <span class="col-xs-5">
+                        <strong>Ngày giao hàng(交貨日期):
+                            <span t-field="o.date_planned" t-options='{"format":"dd-MM-yyyy"}'/>
+                        </strong>
+                    </span>
+                    <span class="col-xs-7">
+                        <strong>Email:
+                            <span t-field="o.partner_id.email"/>
+                        </strong>
+                    </span>
+                    <span class="col-xs-5">
+                        <strong>Di động(手機):
+                            <span t-field="o.partner_id.mobile"/>
+                        </strong>
+                    </span>
+                </div>
+                <table>
+                    <tr>
+                        <td width="6%">
+                            <strong>
+                                <p>STT<br/>(序號)
+                                </p>
+                            </strong>
+                        </td>
+                        <td width="11.3%">
+                            <strong>
+                                <p>Mã Số<br/>(編碼)
+                                </p>
+                            </strong>
+                        </td>
+                        <td width="23.8%">
+                            <strong>
+                                <p>Tên Hàng/Quy Cách<br/>(品名/規格)
+                                </p>
+                            </strong>
+                        </td>
+                        <td width="7%">
+                            <strong>
+                                <p>ĐVT<br/>(單位)
+                                </p>
+                            </strong>
+                        </td>
+                        <td width="8.3%">
+                            <strong>
+                                <p>SL<br/>(數量)
+                                </p>
+                            </strong>
+                        </td>
+                        <td width="10.3%">
+                            <strong>
+                                <p>Đơn Giá<br/>(單價)
+                                </p>
+                            </strong>
+                        </td>
+                        <td width="12.3%">
+                            <strong>
+                                <p>Thành Tiền<br/>(總價)
+                                </p>
+                            </strong>
+                        </td>
+                        <td width="20.5%">
+                            <strong>
+                                <p>Ghi Chú<br/>(備註)
+                                </p>
+                            </strong>
+                        </td>
+                    </tr>
+                    <tbody>
+                        <t t-set="stt" t-value="1"/>
+                        <tr class="tr" t-foreach="o.order_line" t-as="line">
+                            <td>
+                                <t t-esc="stt"/>
+                                <t t-set="stt" t-value="stt+1"/>
+                            </td>
+                            <td>
+                                <span t-field="line.product_id.default_code"/>
+                            </td>
+                            <td>
+                                <span t-field="line.product_id.name"/>
+                            </td>
+                            <td>
+                                <span t-field="line.product_uom.name"/>
+                            </td>
+                            <td>
+                                <t t-if="line.product_uom.name.upper() =='M3'
+								or line.product_uom.name.upper() =='(3)M3'
+								or line.product_uom.name.upper() =='(4)M3'
+								or line.product_uom.name.upper() =='(4.75)M3'
+								or line.product_uom.name.upper() =='(12)M3'
+								or line.product_uom.name.upper() =='(18)M3'
+								or line.product_uom.name.upper() =='(9)M3'
+								or line.product_uom.name.upper() =='(6)M3'
+								or line.product_uom.name.upper() =='(21)M3'
+								">
+									<span t-esc="'{0:,.3f}'.format(float(line.product_qty))"/>							
+								</t>
+								<t t-else="t-else">
+									<span t-esc="'{0:,.0f}'.format(int(line.product_qty))"/>								
+								</t>	
+                            </td>
+                            <td>
+                                <t t-if="o.currency_id.name == 'VND'">
+                                    <!--<span t-esc="'%.2f'%line.price_unit"/>-->
+                                    <span t-esc="'{0:,.0f}'.format(int(line.price_unit))"/>
+                                </t>
+                                <t t-else="t-else">
+                                    <span t-esc="'{0:,.2f}'.format(float(line.price_unit))"/>
+                                </t>
+                            </td>
+                            <td>
+                                <span t-field="line.price_subtotal"
+                                      t-options='{"widget":"monetary","display_currency":o.currency_id}'/>
+                            </td>
+                            <td>
+                                <span t-field="line.name"/>
+                                <t t-set="Taxes" t-value="int(line.taxes_id.amount)"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5"><strong>Thanh toán Công nợ (支付條款)</strong>
+                            </td>
+                            <td colspan="3">
+                                <span t-field="o.payment_term_id"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:left" colspan="5">Yêu cầu cho LDS xác định mẫu trước khi sản xuất đại
+                                trà. Địa chỉ giao hàng: Số 37, Đường Đại Lộ Thống Nhất, KCN Sóng Thần II, Dĩ An, Bình
+                                Dương. Vui lòng ký nhận Fax lại dùm. Cảm ơn.
+                            </td>
+                            <td>
+                                <strong><p>Tổng Cộng<br/>(未稅金額)</p></strong>
+                            </td>
+                            <td>
+                                <span t-field="o.amount_untaxed"
+                                      t-options='{"widget":"monetary","display_currency":o.currency_id}'/>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td style="text-align:right" colspan="6">
+                                <t t-if="o.amount_tax ==0">
+                                    <strong>Không có thuế VAT(沒有稅)</strong>
+                                </t>
+                                <t t-else="t-else">
+                                    <t t-if="o.amount_tax > 0">
+                                        <strong>Thuế VAT(稅)&#160;<span t-esc="Taxes"/>%&#160;
+                                        </strong>
+                                    </t>
+                                </t>
+                            </td>
+                            <td>
+                                <t t-if="o.amount_tax > 0">
+                                    <span t-field="o.amount_tax"
+                                          t-options='{"widget":"monetary","display_currency":o.currency_id}'/>
+                                </t>
+                                <t t-else="t-else">
+                                    0
+                                </t>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" style="text-align:right">
+                                <strong>Tổng Có Thuế(總計)</strong>
+                            </td>
+                            <td>
+                                <span t-field="o.amount_total"
+                                      t-options='{"widget":"monetary","display_currency":o.currency_id}'/>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="tex-trai">
+                    <p>
+                        <br/>
+                        Ghi chú: CÔNG TY CỔ PHẦN LÂM ĐẠT HƯNG  Mã số thuế -( 本公司統一編號): 3700239896
+                        <br/>
+                        - Địa chỉ(發票地址): Số 37, Đường Đại Lộ Thống Nhất, KCN Sóng Thần II, Dĩ An, Bình Dương.
+                        <br/>
+                        - Điện thoại(電話): 0274-3790038, 0274-3790039  Fax(傳真): 0274-3790735
+                        <br/>
+                        Khi thanh toán phải mang theo Hóa đơn tài chính(Hóa đơn đỏ)(申請貨款時,需附發票正本。)
+                        <br/>
+                        Đơn đặt hàng phải có chữ ký xác nhận, Công ty sẽ thanh toán theo đơn đặt
+                        hàng(訂購單請務必簽回確認,本公司以此為付款依據。)
+                        <br/>
+                        Ngày giao, chất lượng, quy cách phải theo yêu cầu của công ty, nếu không tuân theo những điều
+                        kiện trên chúng tôi có quyền cắt hết những đơn đặt hàng, những trường hợp trễ hẹn gây tổn thất
+                        cho công ty chúng tôi thì nhà cung cấp phải hoàn toàn chịu trách nhiệm về khoản thiệt hại
+                        đó.(交期、品質、規格須遵照本公司之要求,如有不符上述規定時,本公司有權取消部份或全部訂單,且供應廠商如因上述未符合規定而造成本公司之損失時,供應廠商同意負完全賠償之責任。)
+                        <br/>
+                    </p>
+                </div>
+                <div class="mot">
+                    <p>CTY CP LÂM ĐẠT HƯNG<br/>(林達興股份公司)
+                    </p>
+                </div>
+                <div class="hai">
+                    <p>PHÊ DUYỆT<br/>(审 核)
+                    </p>
+                </div>
+                <div class="ba">
+                    <p>NHÀ CUNG CẤP<br/>(廠商簽認)
+                    </p>
+                </div>
+            </div>
+
+            <div class="oe_structure"/>
+        </t>
+    </template>
+
+    <template id="lds_report_purchase_order_01">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="lds_report.lds_report_purchaseorder_document" t-lang="o.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+</odoo>

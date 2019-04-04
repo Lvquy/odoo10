@@ -1,0 +1,1093 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* LDS_Device
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-10 08:34+0000\n"
+"PO-Revision-Date: 2018-07-10 16:03+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"Last-Translator: \n"
+"Language: cn\n"
+
+#. module: LDS_Device
+#: selection:adapter.mat,type:0
+#: model:ir.actions.act_window,name:LDS_Device.action_view_adapter
+#: model:ir.ui.menu,name:LDS_Device.menu_adapter
+msgid "Adapter"
+msgstr "电源"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_adapter_mat
+msgid "Adapter & Mắt"
+msgstr "电源，监视器镜头"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_adapter_mat
+#: model:ir.ui.menu,name:LDS_Device.menu_adapter_mat
+#: model:ir.ui.view,arch_db:LDS_Device.view_adapter_mat_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_adapter_mat_tree
+#: model:ir.ui.view,arch_db:LDS_Device.view_thietbi_form
+msgid "Adapter, Mắt"
+msgstr "电源，监视器镜头"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_root_2
+msgid "Adapter, Mắt camera"
+msgstr "电源，监视器镜头"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_keyb
+msgid "Bàn phím"
+msgstr "键盘"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_pivot
+#: model:ir.actions.act_window,name:LDS_Device.action_view_graph
+#: model:ir.ui.menu,name:LDS_Device.menu_baocao
+#: model:ir.ui.view,arch_db:LDS_Device.view_pivot_log
+msgid "Báo cáo"
+msgstr "报告"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_adapter_mat_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_thietbi_form
+msgid "Báo phế"
+msgstr "报废"
+
+#. module: LDS_Device
+#: selection:adapter.mat,state:0 selection:nha.cungcap,state:0
+msgid "Bản thảo"
+msgstr "参考"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_bao_hanh_toi
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_bao_hanh_toi
+msgid "Bảo hành tới"
+msgstr "保修到"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.device_kanban_view
+msgid "Bảo hành tới:"
+msgstr "保修到:"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_bao_hanh
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_bao_hanh
+msgid "Bảo hành(tháng)"
+msgstr "保修(月)"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_bo_phan
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_bo_phan
+#: model:ir.ui.menu,name:LDS_Device.menu_bophan
+#: model:ir.ui.view,arch_db:LDS_Device.view_bo_phan_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_bo_phan_tree
+msgid "Bộ phận"
+msgstr "部门"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_cpu
+msgid "CPU"
+msgstr "CPU"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_chi_phi
+msgid "Chi phí sửa chữa"
+msgstr "维修费用"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_thietbi_form
+msgid "Cho sử dụng"
+msgstr "供使用"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_cho_daughi
+msgid "Cho đầu ghi"
+msgstr "供主机"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_adapter_mat_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_thietbi_form
+msgid "Chuyển vào kho"
+msgstr "转入仓库"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_mouse
+msgid "Chuột"
+msgstr "Mouse"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_line_nhatky_chuaxong
+#: model:ir.ui.menu,name:LDS_Device.menu_line_nhatky_0
+msgid "Chưa xong"
+msgstr "未完"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_line_thietbi_cnect_nguoi_bao_quan
+msgid "Cnect nguoi bao quan"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_cnect_thiet_bi
+msgid "Cnect thiet bi"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_color
+msgid "Color"
+msgstr "颜色"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_bophan_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_email_ngoai_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_email_noi_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_line_thietbi_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_os_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_server_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_skype_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_taikhoan_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_create_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_thuoctinh_create_uid
+msgid "Created by"
+msgstr "能造于"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_bophan_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_email_ngoai_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_email_noi_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_line_thietbi_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_os_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_server_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_skype_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_taikhoan_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_create_date
+#: model:ir.model.fields,field_description:LDS_Device.field_thuoctinh_create_date
+msgid "Created on"
+msgstr "时间造"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_root_5
+msgid "Cài đặt"
+msgstr "设置"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_root_1
+msgid "Các thiết bị"
+msgstr "各设备"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_cac_thiet_bi_bq
+#: model:ir.ui.view,arch_db:LDS_Device.view_nguoi_baoquan_form
+msgid "Các thiết bị bảo quản"
+msgstr "各设备保管"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_thietbi_form
+msgid "Cấu hình chi tiết"
+msgstr "构造细节"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_bophan_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_email_ngoai_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_email_noi_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_line_thietbi_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_os_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_server_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_skype_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_taikhoan_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_display_name
+#: model:ir.model.fields,field_description:LDS_Device.field_thuoctinh_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_domain_1
+msgid "Domain"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_email
+msgid "Email"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_email_ngoai
+#: model:ir.ui.menu,name:LDS_Device.menu_email_ngoai
+#: model:ir.ui.view,arch_db:LDS_Device.view_email_ngoai_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_email_ngoai_tree
+msgid "Email ngoại bộ"
+msgstr "LDS 外部名册"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_email_noi
+#: model:ir.ui.menu,name:LDS_Device.menu_email_noi
+#: model:ir.ui.view,arch_db:LDS_Device.view_email_noi_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_email_noi_tree
+msgid "Email nội bộ"
+msgstr "LDS 内部名册"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_email_server_skype
+msgid "Email, Server, Skype"
+msgstr "Email，Server，Skype"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_note
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_note
+msgid "Ghi chú"
+msgstr "备注"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_gia
+msgid "Giá trị"
+msgstr "价值"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thuoctinh_value
+msgid "Giá trị thuộc tính"
+msgstr "品种价值"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.nhan_thietbi
+msgid "Giá trị:"
+msgstr "价值:"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.device_kanban_view
+msgid "Giá:"
+msgstr "价值:"
+
+#. module: LDS_Device
+#: selection:taikhoan,type:0
+msgid "Guest"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_hdd
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_hdd_dau_ghi
+msgid "HDD"
+msgstr "硬盘"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_img
+msgid "Hình ảnh"
+msgstr "屏幕"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_os
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_syst
+#: model:ir.ui.menu,name:LDS_Device.menu_os
+#: model:ir.ui.view,arch_db:LDS_Device.view_os_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_os_tree
+msgid "Hệ thống"
+msgstr "系统"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_id
+#: model:ir.model.fields,field_description:LDS_Device.field_bophan_id
+#: model:ir.model.fields,field_description:LDS_Device.field_email_ngoai_id
+#: model:ir.model.fields,field_description:LDS_Device.field_email_noi_id
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_id
+#: model:ir.model.fields,field_description:LDS_Device.field_line_thietbi_id
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_id
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap_id
+#: model:ir.model.fields,field_description:LDS_Device.field_os_id
+#: model:ir.model.fields,field_description:LDS_Device.field_server_id
+#: model:ir.model.fields,field_description:LDS_Device.field_skype_id
+#: model:ir.model.fields,field_description:LDS_Device.field_taikhoan_id
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_id
+#: model:ir.model.fields,field_description:LDS_Device.field_thuoctinh_id
+msgid "ID"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_ip
+msgid "IP"
+msgstr "IP"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_ip_ngoaibo
+msgid "IP ngoại bộ"
+msgstr "IP外部"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_ip_noibo
+msgid "IP nội bộ"
+msgstr "IP内部"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_thietbi_khac
+msgid "KHÁC"
+msgstr "另外"
+
+#. module: LDS_Device
+#: selection:thietbi,type:0
+msgid "Khác"
+msgstr "另外"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_adapter_mat_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_nha_cungcap_form
+msgid "Khóa"
+msgstr "Lock"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thuoctinh_name
+msgid "Kiểu thuộc tính"
+msgstr "品种类型"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_root
+msgid "LDS Quản lý thiết bị"
+msgstr "LDS设备管理"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_bophan___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_email_ngoai___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_email_noi___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_line_thietbi___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_os___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_server___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_skype___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_taikhoan___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi___last_update
+#: model:ir.model.fields,field_description:LDS_Device.field_thuoctinh___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_bophan_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_email_ngoai_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_email_noi_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_line_thietbi_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_os_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_server_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_skype_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_taikhoan_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_write_uid
+#: model:ir.model.fields,field_description:LDS_Device.field_thuoctinh_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_bophan_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_email_ngoai_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_email_noi_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_line_thietbi_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_os_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_server_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_skype_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_taikhoan_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_write_date
+#: model:ir.model.fields,field_description:LDS_Device.field_thuoctinh_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_line_thietbi
+#: model:ir.ui.view,arch_db:LDS_Device.view_line_thietbi_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_line_thietbi_tree
+msgid "Line thiết bị"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_thietbi_khac
+msgid "Loại khác"
+msgstr "其他配件"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_noi_dung_sua
+msgid "Lý do sửa"
+msgstr "维修理由"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_user_mail_ngoai
+msgid "Mail ngoại bộ"
+msgstr "外部名册"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_user_mail_noi
+msgid "Mail nội bộ"
+msgstr "内部名册"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_mainb
+msgid "MainB"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_model
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_model_thiet_bi
+msgid "Model"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.device_kanban_view
+#: model:ir.ui.view,arch_db:LDS_Device.nhan_thietbi
+msgid "Model:"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_monitor
+msgid "Màn hình"
+msgstr "屏幕"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_ma_so
+msgid "Mã số"
+msgstr "编号"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_ma_thietbi
+msgid "Mã thiết bị"
+msgstr "设备编号"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.device_kanban_view
+msgid "Mã thiết bị:"
+msgstr "设备编号:"
+
+#. module: LDS_Device
+#: selection:adapter.mat,type:0
+msgid "Mắt"
+msgstr "监视器镜头"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_mat
+#: model:ir.ui.menu,name:LDS_Device.menu_mat
+msgid "Mắt camera"
+msgstr "监视器镜头"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_nha_cungcap_form
+msgid "Mở khóa"
+msgstr "开锁"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_power
+msgid "Nguồn"
+msgstr "来源"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_ngay_bao_phe
+msgid "Ngày báo phế"
+msgstr "报废日期"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_line_thietbi_ngay_bao_quan
+msgid "Ngày bắt đầu bảo quản"
+msgstr "开始保修日期"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_line_thietbi_ngay_tra
+msgid "Ngày trả"
+msgstr "交还日期"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_nguoi_baoquan
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_nguoi_bao_quan
+#: model:ir.ui.menu,name:LDS_Device.menu_nguoi_baoquan
+#: model:ir.ui.view,arch_db:LDS_Device.view_nguoi_baoquan_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_nguoi_baoquan_tree
+msgid "Người bảo quản"
+msgstr "保管人"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.device_kanban_view
+#: model:ir.ui.view,arch_db:LDS_Device.nhan_thietbi
+msgid "Người bảo quản:"
+msgstr "保管人:"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_email_ngoai_nguoi_sd
+#: model:ir.model.fields,field_description:LDS_Device.field_email_noi_nguoi_sd
+#: model:ir.model.fields,field_description:LDS_Device.field_server_nguoi_sd
+#: model:ir.model.fields,field_description:LDS_Device.field_skype_nguoi_sd
+msgid "Người sử dụng"
+msgstr "使用人"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap_nguoi_dai_dien
+msgid "Người đại diện"
+msgstr "代表人"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_nha_cungcap
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_nha_cung_cap
+#: model:ir.ui.menu,name:LDS_Device.menu_nha_cungcap
+#: model:ir.ui.view,arch_db:LDS_Device.view_nha_cungcap_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_nha_cungcap_tree
+msgid "Nhà cung cấp"
+msgstr "供应商"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_root_4
+msgid "Nhà cung cấp, người bảo quản"
+msgstr "供应商，保管人"
+
+#. module: LDS_Device
+#: model:ir.actions.report.xml,name:LDS_Device.report_nhan_thietbi_2
+msgid "Nhãn thiết bị"
+msgstr "设备标志"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_line_nhatky_form
+msgid "Nhật ký"
+msgstr "维修记录"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_line_nhatky
+#: model:ir.ui.menu,name:LDS_Device.menu_line_nhatky
+#: model:ir.ui.view,arch_db:LDS_Device.view_line_nhatky_tree
+msgid "Nhật ký sửa chữa"
+msgstr "维修记录"
+
+#. module: LDS_Device
+#: selection:taikhoan,type:0
+msgid "Normal"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_noi_sua
+msgid "Nơi sửa"
+msgstr "维修地点"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_thietbi_pc
+msgid "PC, LAPTOP"
+msgstr "电脑"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_thietbi_pc selection:thietbi,type:0
+msgid "PC, Laptop"
+msgstr "电脑"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_thietbi_phe
+msgid "PHẾ"
+msgstr "已废"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_passw_may
+msgid "Passw mở máy"
+msgstr "开机密码"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_email_ngoai_passw
+#: model:ir.model.fields,field_description:LDS_Device.field_email_noi_passw
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_passw_skype
+#: model:ir.model.fields,field_description:LDS_Device.field_server_passw
+#: model:ir.model.fields,field_description:LDS_Device.field_skype_passw
+#: model:ir.model.fields,field_description:LDS_Device.field_taikhoan_passw
+msgid "Password"
+msgstr "密码"
+
+#. module: LDS_Device
+#: selection:adapter.mat,status:0
+#: model:ir.ui.view,arch_db:LDS_Device.device_kanban_view
+#: selection:thietbi,status:0
+msgid "Phế"
+msgstr "已废"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_port
+msgid "Port"
+msgstr "端口"
+
+#. module: LDS_Device
+#: selection:taikhoan,type:0
+msgid "Power user"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_ram
+msgid "RAM"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_server
+#: model:ir.ui.menu,name:LDS_Device.menu_server
+#: model:ir.ui.menu,name:LDS_Device.menu_server_1
+#: model:ir.ui.view,arch_db:LDS_Device.view_server_form
+msgid "Server"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_skype
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_skype
+#: model:ir.ui.menu,name:LDS_Device.menu_skype
+#: model:ir.ui.menu,name:LDS_Device.menu_skype_1
+#: model:ir.ui.view,arch_db:LDS_Device.view_skype_form
+msgid "Skype"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_state
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap_state
+msgid "State"
+msgstr "阶段"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_status
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_status
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_status
+msgid "Status"
+msgstr "状态"
+
+#. module: LDS_Device
+#: selection:taikhoan,type:0
+msgid "Supervisor"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_ngo_sd
+msgid "Số Ngõ sử dụng"
+msgstr "使用端口数量"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_so_nhat_ki
+msgid "Số nhật ký"
+msgstr "日记号码"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_so_the
+msgid "Số thẻ"
+msgstr "卡号"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap_sdt
+msgid "Số điện thoại"
+msgstr "电话"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_nhat_ky_sua_chua
+msgid "Sửa chữa & thay thế"
+msgstr "维修和跟换"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_root_3
+#: model:ir.ui.view,arch_db:LDS_Device.view_thietbi_form
+msgid "Sửa chữa và thay thế"
+msgstr "维修和跟换"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.nhan_thietbi
+msgid "THIẾT BỊ LDS"
+msgstr "LDS设备"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_thietbi_kho
+msgid "TRONG KHO"
+msgstr "仓库内"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_baocao_thang
+msgid "Theo tháng"
+msgstr "月份根据"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_thietbi_all
+#: model:ir.actions.act_window,name:LDS_Device.action_view_thuoctinh
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_thiet_bi
+#: model:ir.model.fields,field_description:LDS_Device.field_line_thietbi_thiet_bi
+#: model:ir.ui.menu,name:LDS_Device.menu_thietbi
+#: model:ir.ui.view,arch_db:LDS_Device.view_thietbi_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_thietbi_tree
+msgid "Thiết bị"
+msgstr "设备"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_thuoc_tinh
+#: model:ir.ui.view,arch_db:LDS_Device.view_thuoctinh_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_thuoctinh_tree
+msgid "Thuộc tính"
+msgstr "设置品类"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_thuoctinh
+msgid "Thuộc tính thiết bị"
+msgstr "设置品类"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_thietbi_form
+msgid "Thông tin đầu ghi"
+msgstr "记录主机通讯"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_thoi_gian_sua
+msgid "Thời gian bắt đầu sửa"
+msgstr "开始维修时间"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_line_nhatky_thoi_gian_hoan_thanh
+msgid "Thời gian hoàn thành"
+msgstr "完成时间"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_thoi_gian_mua
+msgid "Thời gian mua"
+msgstr "购买时间"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.device_kanban_view
+msgid "Thời gian mua:"
+msgstr "购买时间:"
+
+#. module: LDS_Device
+#: selection:adapter.mat,status:0
+#: model:ir.ui.menu,name:LDS_Device.menu_thietbi_kho
+#: model:ir.ui.view,arch_db:LDS_Device.device_kanban_view
+#: selection:thietbi,status:0
+msgid "Trong kho"
+msgstr "仓库内"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.device_kanban_view
+msgid "Trạng thái:"
+msgstr "状态:"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_line_thietbi_form
+msgid "Trả thiết bị"
+msgstr "设置返还"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_adapter_mat_type
+#: model:ir.model.fields,field_description:LDS_Device.field_taikhoan_type
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_type
+msgid "Type"
+msgstr "种类"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_thietbi_form
+msgid "Tài khoản"
+msgstr "账号"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_taikhoan
+#: model:ir.ui.menu,name:LDS_Device.menu_taikhoan
+#: model:ir.ui.view,arch_db:LDS_Device.view_taikhoan_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_taikhoan_tree
+msgid "Tài khoản kết nối"
+msgstr "账号连接主机"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_tai_khoan
+msgid "Tài khoản đăng nhập"
+msgstr "账号"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_name
+msgid "Tên"
+msgstr "姓名"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_bophan_name
+msgid "Tên bộ phận"
+msgstr "部门名称"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_os_name
+msgid "Tên hệ thống"
+msgstr "系统名称"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap_name
+msgid "Tên nhà cung cấp"
+msgstr "供应商"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,help:LDS_Device.action_view_adapter
+#: model:ir.actions.act_window,help:LDS_Device.action_view_adapter_mat
+#: model:ir.actions.act_window,help:LDS_Device.action_view_bo_phan
+#: model:ir.actions.act_window,help:LDS_Device.action_view_email_ngoai
+#: model:ir.actions.act_window,help:LDS_Device.action_view_email_noi
+#: model:ir.actions.act_window,help:LDS_Device.action_view_line_nhatky
+#: model:ir.actions.act_window,help:LDS_Device.action_view_line_nhatky_chuaxong
+#: model:ir.actions.act_window,help:LDS_Device.action_view_line_nhatky_daxong
+#: model:ir.actions.act_window,help:LDS_Device.action_view_line_thietbi
+#: model:ir.actions.act_window,help:LDS_Device.action_view_mat
+#: model:ir.actions.act_window,help:LDS_Device.action_view_nguoi_baoquan
+#: model:ir.actions.act_window,help:LDS_Device.action_view_nha_cungcap
+#: model:ir.actions.act_window,help:LDS_Device.action_view_os
+#: model:ir.actions.act_window,help:LDS_Device.action_view_server
+#: model:ir.actions.act_window,help:LDS_Device.action_view_skype
+#: model:ir.actions.act_window,help:LDS_Device.action_view_taikhoan
+#: model:ir.actions.act_window,help:LDS_Device.action_view_thietbi_all
+#: model:ir.actions.act_window,help:LDS_Device.action_view_thietbi_daughi
+#: model:ir.actions.act_window,help:LDS_Device.action_view_thietbi_khac
+#: model:ir.actions.act_window,help:LDS_Device.action_view_thietbi_kho
+#: model:ir.actions.act_window,help:LDS_Device.action_view_thietbi_pc
+#: model:ir.actions.act_window,help:LDS_Device.action_view_thietbi_phe
+#: model:ir.actions.act_window,help:LDS_Device.action_view_thietbi_use
+#: model:ir.actions.act_window,help:LDS_Device.action_view_thuoctinh
+msgid "Tạo mới đối tượng"
+msgstr "新造对象"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_total_adt
+msgid "Tổng adapter camera"
+msgstr "电源，监视器镜头统计"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_total_other
+msgid "Tổng các loại khác"
+msgstr "各类总计"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_total_mat
+msgid "Tổng mắt camera"
+msgstr "监视器镜头总计"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_ngo_vao
+msgid "Tổng ngõ vào"
+msgstr "总入阜"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_total_pc
+msgid "Tổng số máy tính"
+msgstr "电脑总数"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_total_daughi
+msgid "Tổng số đầu ghi"
+msgstr "主机总数"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_ups
+msgid "UPS"
+msgstr "UPS"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_email_ngoai_name
+#: model:ir.model.fields,field_description:LDS_Device.field_email_noi_name
+#: model:ir.model.fields,field_description:LDS_Device.field_server_name
+#: model:ir.model.fields,field_description:LDS_Device.field_skype_name
+#: model:ir.model.fields,field_description:LDS_Device.field_taikhoan_user
+msgid "User"
+msgstr "使用者"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_user_may
+msgid "User máy"
+msgstr "使用者"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_nguoi_baoquan_user_server
+msgid "User server"
+msgstr "Server 使用者"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_vga
+msgid "VGA"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_thietbi_vi_tri
+msgid "Vị trí hiện tại"
+msgstr "现今位置"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap_website
+msgid "Website"
+msgstr "网站"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_adapter_mat_form
+#: model:ir.ui.view,arch_db:LDS_Device.view_thietbi_form
+msgid "Xác nhận báo phế!"
+msgstr "报废记录!"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_adapter_mat_form
+msgid "Xác nhận khóa"
+msgstr "封锁确认!"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_adapter_mat_form
+msgid "Xác nhận sử dụng"
+msgstr "使用确认!"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_line_nhatky_form
+msgid "Xác nhận sửa xong"
+msgstr "维修完毕确认!"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_line_nhatky_form
+msgid "Xác nhận sửa xong!"
+msgstr "维修完毕确认!"
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_adapter_mat
+msgid "adapter.mat"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_bophan
+msgid "bophan"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_email_ngoai
+msgid "email.ngoai"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_email_noi
+msgid "email.noi"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_line_nhatky
+msgid "line.nhatky"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_line_thietbi
+msgid "line.thietbi"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_nguoi_baoquan
+msgid "nguoi.baoquan"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_nha_cungcap
+msgid "nha.cungcap"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_os
+msgid "os"
+msgstr "系统"
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_server
+#: model:ir.ui.view,arch_db:LDS_Device.view_server_tree
+msgid "server"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_skype
+#: model:ir.ui.view,arch_db:LDS_Device.view_skype_tree
+msgid "skype"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_taikhoan
+msgid "taikhoan"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_thietbi
+msgid "thietbi"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.model,name:LDS_Device.model_thuoctinh
+msgid "thuoctinh"
+msgstr ""
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_thietbi_use
+msgid "ĐANG SỬ DỤNG"
+msgstr "正在使用"
+
+#. module: LDS_Device
+#: selection:adapter.mat,status:0
+#: model:ir.ui.menu,name:LDS_Device.menu_thietbi_use
+#: model:ir.ui.view,arch_db:LDS_Device.device_kanban_view
+#: selection:thietbi,status:0
+msgid "Đang sử dụng"
+msgstr "正在使用"
+
+#. module: LDS_Device
+#: selection:line.nhatky,status:0
+msgid "Đang sửa"
+msgstr "正在维修"
+
+#. module: LDS_Device
+#: selection:adapter.mat,state:0 selection:nha.cungcap,state:0
+msgid "Đã khóa"
+msgstr "已锁"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_thietbi_phe
+msgid "Đã phế"
+msgstr "已废"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_line_nhatky_daxong
+#: model:ir.ui.menu,name:LDS_Device.menu_line_nhatky_1
+#: selection:line.nhatky,status:0
+msgid "Đã xong"
+msgstr "已完"
+
+#. module: LDS_Device
+#: model:ir.actions.act_window,name:LDS_Device.action_view_thietbi_daughi
+msgid "ĐẦU GHI"
+msgstr "主机"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_thietbi_daughi
+msgid "Đầu ghi"
+msgstr "主机"
+
+#. module: LDS_Device
+#: selection:thietbi,type:0
+msgid "Đầu ghi hình"
+msgstr "主机"
+
+#. module: LDS_Device
+#: model:ir.model.fields,field_description:LDS_Device.field_nha_cungcap_add
+msgid "Địa chỉ"
+msgstr "地址"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_graph
+msgid "Đồ thị"
+msgstr "图示"
+
+#. module: LDS_Device
+#: model:ir.ui.menu,name:LDS_Device.menu_pivot
+msgid "Đồ thị bảng chi tiết"
+msgstr "以图示现示"
+
+#. module: LDS_Device
+#: model:ir.ui.view,arch_db:LDS_Device.view_graph_log
+msgid "Đồ thị so sánh"
+msgstr "图示比较"

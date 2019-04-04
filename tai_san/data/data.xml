@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+<!--Mã thiết bị-->
+        <record id="seq_thietbi_code" model="ir.sequence">
+            <field name="name">Mã thiết bị</field>
+            <field name="code">code_code</field>
+            <field name="prefix">DEV%(month)s%(year)s</field>
+            <field name="padding">3</field>
+            <field name="number_increment">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

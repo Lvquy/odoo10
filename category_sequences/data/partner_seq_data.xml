@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sequences for partner Customer 给客户 添加自动编号-->
+        <record id="seq_partner_customer" model="ir.sequence">
+            <field name="name">partner_cu_code</field>
+            <field name="code">partner_cu_code</field>
+            <field name="prefix">CU</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">2</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- Sequences for partner Supplier 给供应商 添加自动编号-->
+        <record id="seq_partner_supplier" model="ir.sequence">
+            <field name="name">partner_sr_code</field>
+            <field name="code">partner_sr_code</field>
+            <field name="prefix">SR</field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">3</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+    </data>
+</odoo>

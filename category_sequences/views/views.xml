@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+    <data>
+        <!-- explicit list view definition -->
+        <!--  tree view  插入category tree视图，用于显示 类别编码 -->
+        <record id="Category_code_tree" model="ir.ui.view">
+            <field name="name">product.category.code.inherit.tree</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_list_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="after">
+                    <field name="category_code"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--  form view   插入category form视图，用于显示及编辑 类别编码 -->
+        <record id="Category_code_form" model="ir.ui.view">
+            <field name="name">product.category.code.inherit.form</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='first']//field[@name='parent_id']" position="after">
+                    <field name="category_code"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--  tree view  插入partner tree视图，用于显示 合作伙伴编码 -->
+        <record id="Partner_code_tree" model="ir.ui.view">
+            <field name="name">Partner.code.inherit.tree</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='display_name']" position="after">
+                    <field name="partner_code"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--  form view   插入partner form视图，用于显示及编辑 合作伙伴编码 (只有开启技术特性才能看到)  -->
+        <record id="Partner_code_form" model="ir.ui.view">
+            <field name="name">Partner.code.inherit.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet//div[@class='oe_title']//div[last()]"
+                       position="after">    <!-- 增加合作伙伴编码 只有开启技术特性才能看到  -->
+                    <div>
+                        <field name="partner_code" groups="base.group_no_one"
+                               placeholder="Partner Code"/>  <!--  placeholder属性:预先显示在栏位的提示信息  -->
+                    </div>
+                </xpath>
+                <xpath expr="//page[@name='sales_purchases']//group[@name='sale']//field[@name='customer']"
+                       position="replace">    <!-- 客户 复选框 只有开启技术特性才能看到  -->
+                    <field name="customer" groups="base.group_no_one"/>
+                </xpath>
+                <xpath expr="//page[@name='sales_purchases']//group[@name='purchase']//field[@name='supplier']"
+                       position="replace">    <!-- 供应商 复选框 只有开启技术特性才能看到  -->
+                    <field name="supplier" groups="base.group_no_one"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--  tree view   插入Product template tree视图，用于显示状态栏位 -->
+        <record id="Product_template_state_tree" model="ir.ui.view">
+            <field name="name">Product.template.state.inherit.tree</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='uom_id']" position="after">   <!-- 增加状态字段  -->
+                    <field name="state"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--  form view   插入Product template form视图，用于显示状态栏位 -->
+        <record id="Product_template_state_form" model="ir.ui.view">
+            <field name="name">Product.template.state.inherit.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header//button[last()]" position="after">  <!-- 增加按钮和状态栏  -->
+                    <button name="action_done" states="draft" type="object" string="Locked"/>
+                    <button name="action_cancel" states="draft,done" type="object" string="Cancel"/>
+                    <button name="action_draft" states="cancel" type="object" string="Set to draft" groups="base.group_no_one"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,done,cancel"/>
+                </xpath>
+                <xpath expr="//div[@name='options']//div[last()]" position="after"> <!-- 增加单选形式的产品类型：原料，样品，成品 ,设定为 -->
+                    <field name="product_type" widget="radio"
+                           options="{'horizontal': true}" groups="sales_team.group_sale_salesman"/>
+                </xpath>
+                <xpath expr="//group[@name='group_general']//field[last()]"
+                       position="after"> <!-- 增加客户栏位:产品类型为原料 不显示 ,当类型为样品，成品时，为必填字段  没有新建和编辑功能 -->
+                    <field name="parent_id" domain="[('is_company', '=', True),('customer', '=', True)]"
+                           attrs="{'invisible': [('product_type','=', 'material')], 'required': ['|', ('product_type','=', 'sample'), ('product_type','=', 'finished')]}"
+                           options="{'no_create' : True}"/>
+                </xpath>
+                <xpath expr="//group[@name='group_general']//field[@name='categ_id']"
+                       position="replace"> <!-- 替换类别字段 修改类别字段：没有新建和编辑功能  -->
+                    <field name="categ_id" string="Internal Category" options="{'no_create' : True}"/>
+                </xpath>
+                <xpath expr="//group[@name='group_general']//field[last()]"
+                       position="after"> <!-- 增加 产品名称(客户) 栏位: 产品类型为 原料、样品 不显示, 当类型为:成品时，显示  -->
+                    <field name="cust_product_name"
+                           attrs="{'invisible': ['|',('product_type','=', 'material'),('product_type','=', 'sample')]}"/>
+                </xpath>
+                <xpath expr="//button[@name='toggle_active']" position="attributes"> <!-- 修改 '有效' 按钮属性:开启技术特性才能看到 -->
+                    <!--<attribute name="invisible">1</attribute>-->
+                    <attribute name="groups">base.group_no_one</attribute>
+                    <!--<attribute name="groups">sales_team.group_sale_salesman</attribute>-->
+                    <!--<attribute name="groups">sales_team.group_sale_salesman_all_leads</attribute>-->
+                </xpath>
+            </field>
+        </record>
+
+
+        <!--  代码修改菜单项，给菜单 销售/销售/产品:增加上下文值，设定产品新建时的预设值 -->
+        <record model="ir.actions.act_window" id="product.product_template_action">
+            <field name="context">{"search_default_filter_to_sell":1,'default_sale_ok': 1,'default_purchase_ok': 0,'default_product_type': 'finished'}</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1"> <!--noupdate:0 or 1 默认为：0  值为：1 代表初始化时 安装，更新，删除。 值：0 代表更新的时 安装，更新，删除。 -->
+
+        <!-- SAMPLE PRODUCTS -->
+        <record id="product_category_8000" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">MẪU</field>
+            <field name="type">view</field>
+            <field name="category_code">8000</field>
+        </record>
+
+        <!-- TABLE: 8010 -->
+        <record id="product_category_8010" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">TABLE</field>
+            <field name="type">normal</field>
+            <field name="category_code">8010</field>
+        </record>
+
+        <!-- CHAIR: 8020 -->
+        <record id="product_category_8020" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">CHAIR</field>
+            <field name="type">normal</field>
+            <field name="category_code">8020</field>
+        </record>
+
+        <!-- BENCH: 8030 -->
+        <record id="product_category_8030" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">BENCH</field>
+            <field name="type">normal</field>
+            <field name="category_code">8030</field>
+        </record>
+
+        <!-- ARM CHAIR: 8040 -->
+        <record id="product_category_8040" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">ARM CHAIR</field>
+            <field name="type">normal</field>
+            <field name="category_code">8040</field>
+        </record>
+
+        <!-- SOFA: 8050 -->
+        <record id="product_category_8050" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">SOFA</field>
+            <field name="type">normal</field>
+            <field name="category_code">8050</field>
+        </record>
+
+        <!-- STOOL: 8060 -->
+        <record id="product_category_8060" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">STOOL</field>
+            <field name="type">normal</field>
+            <field name="category_code">8060</field>
+        </record>
+
+        <!-- CABINET: 8070 -->
+        <record id="product_category_8070" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">CABINET</field>
+            <field name="type">normal</field>
+            <field name="category_code">8070</field>
+        </record>
+
+        <!-- SHELF: 8080 -->
+        <record id="product_category_8080" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">SHELF</field>
+            <field name="type">normal</field>
+            <field name="category_code">8080</field>
+        </record>
+
+        <!-- BED: 8090 -->
+        <record id="product_category_8090" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">BED</field>
+            <field name="type">normal</field>
+            <field name="category_code">8090</field>
+        </record>
+
+        <!-- MIRROR: 8100 -->
+        <record id="product_category_8100" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">MIRROR</field>
+            <field name="type">normal</field>
+            <field name="category_code">8100</field>
+        </record>
+
+        <!-- HANGER: 8110 -->
+        <record id="product_category_8110" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">HANGER</field>
+            <field name="type">normal</field>
+            <field name="category_code">8110</field>
+        </record>
+
+        <!-- SCREEN: 8120 -->
+        <record id="product_category_8120" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">SCREEN</field>
+            <field name="type">normal</field>
+            <field name="category_code">8120</field>
+        </record>
+
+        <!-- LIZ: 8130 -->
+        <record id="product_category_8130" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">LIZ</field>
+            <field name="type">normal</field>
+            <field name="category_code">8130</field>
+        </record>
+
+        <!-- SPEAKER: 8140 -->
+        <record id="product_category_8140" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">SPEAKER</field>
+            <field name="type">normal</field>
+            <field name="category_code">8140</field>
+        </record>
+
+        <!-- BÁN HÀNG TRÊN MẠNG: 8150 -->
+        <record id="product_category_8150" model="product.category">
+            <field name="parent_id" ref="product_category_8000"/>
+            <field name="name">BÁN HÀNG TRÊN MẠNG</field>
+            <field name="type">normal</field>
+            <field name="category_code">8150</field>
+        </record>
+
+
+        <!--LOẠI SẢN PHẨM: 9000 -->
+        <record id="product_category_9000" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">THÀNH PHẨM</field>
+            <field name="type">view</field>
+            <field name="category_code">9000</field>
+        </record>
+
+        <!-- TABLE: 9010 -->
+        <record id="product_category_9010" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">TABLE</field>
+            <field name="type">normal</field>
+            <field name="category_code">9010</field>
+        </record>
+
+        <!-- CHAIR: 9020 -->
+        <record id="product_category_9020" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">CHAIR</field>
+            <field name="type">normal</field>
+            <field name="category_code">9020</field>
+        </record>
+
+        <!-- BENCH: 9030 -->
+        <record id="product_category_9030" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">BENCH</field>
+            <field name="type">normal</field>
+            <field name="category_code">9030</field>
+        </record>
+
+        <!-- ARM CHAIR: 9040 -->
+        <record id="product_category_9040" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">ARM CHAIR</field>
+            <field name="type">normal</field>
+            <field name="category_code">9040</field>
+        </record>
+
+        <!-- SOFA: 9050 -->
+        <record id="product_category_9050" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">SOFA</field>
+            <field name="type">normal</field>
+            <field name="category_code">9050</field>
+        </record>
+
+        <!-- STOOL: 9060 -->
+        <record id="product_category_9060" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">STOOL</field>
+            <field name="type">normal</field>
+            <field name="category_code">9060</field>
+        </record>
+
+        <!-- CABINET: 9070 -->
+        <record id="product_category_9070" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">CABINET</field>
+            <field name="type">normal</field>
+            <field name="category_code">9070</field>
+        </record>
+
+        <!-- SHELF: 9080 -->
+        <record id="product_category_9080" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">SHELF</field>
+            <field name="type">normal</field>
+            <field name="category_code">9080</field>
+        </record>
+
+        <!-- BED: 9090 -->
+        <record id="product_category_9090" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">BED</field>
+            <field name="type">normal</field>
+            <field name="category_code">9090</field>
+        </record>
+
+        <!-- MIRROR: 9100 -->
+        <record id="product_category_9100" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">MIRROR</field>
+            <field name="type">normal</field>
+            <field name="category_code">9100</field>
+        </record>
+
+        <!-- HANGER: 9110 -->
+        <record id="product_category_9110" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">HANGER</field>
+            <field name="type">normal</field>
+            <field name="category_code">9110</field>
+        </record>
+
+        <!-- SCREEN: 9120 -->
+        <record id="product_category_9120" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">SCREEN</field>
+            <field name="type">normal</field>
+            <field name="category_code">9120</field>
+        </record>
+
+        <!-- LIZ: 9130 -->
+        <record id="product_category_9130" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">LIZ</field>
+            <field name="type">normal</field>
+            <field name="category_code">9130</field>
+        </record>
+
+        <!-- SPEAKER: 9140 -->
+        <record id="product_category_9140" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">SPEAKER</field>
+            <field name="type">normal</field>
+            <field name="category_code">9140</field>
+        </record>
+
+        <!-- BÁN HÀNG TRÊN MẠNG: 9150 -->
+        <record id="product_category_9150" model="product.category">
+            <field name="parent_id" ref="product_category_9000"/>
+            <field name="name">BÁN HÀNG TRÊN MẠNG</field>
+            <field name="type">normal</field>
+            <field name="category_code">9150</field>
+        </record>
+
+        <!-- ######################################### 以下为序列数据 ################################ -->
+        <!-- Sequences for category 给类别添加自动编号-->
+        <record id="seq_category_8010" model="ir.sequence">
+            <field name="name">8010</field>
+            <field name="code">8010</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8020 -->
+        <record id="seq_category_8020" model="ir.sequence">
+            <field name="name">8020</field>
+            <field name="code">8020</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8030 -->
+        <record id="seq_category_8030" model="ir.sequence">
+            <field name="name">8030</field>
+            <field name="code">8030</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8040 -->
+        <record id="seq_category_8040" model="ir.sequence">
+            <field name="name">8040</field>
+            <field name="code">8040</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8050 -->
+        <record id="seq_category_8050" model="ir.sequence">
+            <field name="name">8050</field>
+            <field name="code">8050</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8060 -->
+        <record id="seq_category_8060" model="ir.sequence">
+            <field name="name">8060</field>
+            <field name="code">8060</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8070 -->
+        <record id="seq_category_8070" model="ir.sequence">
+            <field name="name">8070</field>
+            <field name="code">8070</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8080 -->
+        <record id="seq_category_8080" model="ir.sequence">
+            <field name="name">8080</field>
+            <field name="code">8080</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8090 -->
+        <record id="seq_category_8090" model="ir.sequence">
+            <field name="name">8090</field>
+            <field name="code">8090</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8100 -->
+        <record id="seq_category_8100" model="ir.sequence">
+            <field name="name">8100</field>
+            <field name="code">8100</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8110 -->
+        <record id="seq_category_8110" model="ir.sequence">
+            <field name="name">8110</field>
+            <field name="code">8110</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8120 -->
+        <record id="seq_category_8120" model="ir.sequence">
+            <field name="name">8120</field>
+            <field name="code">8120</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8130 -->
+        <record id="seq_category_8130" model="ir.sequence">
+            <field name="name">8130</field>
+            <field name="code">8130</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8140 -->
+        <record id="seq_category_8140" model="ir.sequence">
+            <field name="name">8140</field>
+            <field name="code">8140</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 8150 -->
+        <record id="seq_category_8150" model="ir.sequence">
+            <field name="name">8150</field>
+            <field name="code">8150</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+        <!-- 9010 -->
+        <record id="seq_category_9010" model="ir.sequence">
+            <field name="name">9010</field>
+            <field name="code">9010</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9020 -->
+        <record id="seq_category_9020" model="ir.sequence">
+            <field name="name">9020</field>
+            <field name="code">9020</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9030 -->
+        <record id="seq_category_9030" model="ir.sequence">
+            <field name="name">9030</field>
+            <field name="code">9030</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9040 -->
+        <record id="seq_category_9040" model="ir.sequence">
+            <field name="name">9040</field>
+            <field name="code">9040</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9050 -->
+        <record id="seq_category_9050" model="ir.sequence">
+            <field name="name">9050</field>
+            <field name="code">9050</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9060 -->
+        <record id="seq_category_9060" model="ir.sequence">
+            <field name="name">9060</field>
+            <field name="code">9060</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9070 -->
+        <record id="seq_category_9070" model="ir.sequence">
+            <field name="name">9070</field>
+            <field name="code">9070</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9080 -->
+        <record id="seq_category_9080" model="ir.sequence">
+            <field name="name">9080</field>
+            <field name="code">9080</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9090 -->
+        <record id="seq_category_9090" model="ir.sequence">
+            <field name="name">9090</field>
+            <field name="code">9090</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9100 -->
+        <record id="seq_category_9100" model="ir.sequence">
+            <field name="name">9100</field>
+            <field name="code">9100</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9110 -->
+        <record id="seq_category_9110" model="ir.sequence">
+            <field name="name">9110</field>
+            <field name="code">9110</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9120 -->
+        <record id="seq_category_9120" model="ir.sequence">
+            <field name="name">9120</field>
+            <field name="code">9120</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9130 -->
+        <record id="seq_category_9130" model="ir.sequence">
+            <field name="name">9130</field>
+            <field name="code">9130</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9140 -->
+        <record id="seq_category_9140" model="ir.sequence">
+            <field name="name">9140</field>
+            <field name="code">9140</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+        <!-- 9150 -->
+        <record id="seq_category_9150" model="ir.sequence">
+            <field name="name">9150</field>
+            <field name="code">9150</field>
+            <field name="prefix"></field>
+            <field name="number_next" eval="1"/>
+            <field name="number_increment" eval="1"/>
+            <field name="use_date_range" eval="False"/>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
+
+    </data>
+</odoo>

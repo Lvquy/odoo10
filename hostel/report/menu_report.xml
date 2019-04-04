@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <report
+            string ="Phiếu thu k1"
+            id = "report_pt_1"
+            model="dien.nuoc"
+            report_type = "qweb-pdf"
+            name = "hostel.report1"
+            file="hostel.report1"
+        />
+        <report
+            string ="Phiếu thu k2"
+            id = "report_pt_2"
+            model="dien.nuoc"
+            report_type = "qweb-pdf"
+            name = "hostel.report2"
+            file="hostel.report2"
+        />
+        <report
+            string ="Phiếu thu k3"
+            id = "report_pt_3"
+            model="dien.nuoc"
+            report_type = "qweb-pdf"
+            name = "hostel.report3"
+            file="hostel.report3"
+        />
+        <report
+            string ="Hóa đơn nạp tiền"
+            id = "invoice_nt"
+            model="nap.tien"
+            report_type = "qweb-pdf"
+            name = "hostel.invoice_naptien"
+            file="hostel.invoice_naptien"
+        />
+    </data>
+</odoo>

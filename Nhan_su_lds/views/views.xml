@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="services_page_link" model="website.menu">
+            <field name="name">Báo cơm</field>
+            <field name="url">/page/services</field>
+            <field name="parent_id" ref="website.main_menu" />
+            <field name="sequence" type="int">3</field>
+        </record>
+
+        <record id="services_page_link_2" model="website.menu">
+            <field name="name">Hình ảnh</field>
+            <field name="url">/page/img/</field>
+            <field name="sequence" type="int">2</field>
+        </record>
+        <record id="services_page_link_3" model="website.menu">
+            <field name="name">Báo cơm</field>
+            <field name="url">/page/baocom/</field>
+            <field name="sequence" type="int">1</field>
+        </record>
+
+        <record id="page_author" model="website.menu">
+            <field name="name">Hướng dẫn, Điều khoản</field>
+            <field name="parent_id" ref="website.main_menu" />
+            <field name="url">/page/author/</field>
+            <field name="sequence" type="int">3</field>
+        </record>
+
+        <record id="view_baocom_search" model="ir.ui.view">
+            <field name="name">bao.com.search</field>
+            <field name="model">bao.com</field>
+            <field name="arch" type="xml">
+                <search string="Lọc theo xxx">
+
+                    <filter domain="[('ngay_bao','=',time.strftime('%%Y-%%m-%%d')),('create_uid','=',uid)]" name="current_user" string="Báo cơm hôm nay của bạn" />
+                    <filter domain="[('create_uid','=',uid)]" name="self"  string="Báo cơm của bạn" />
+                    <filter domain="[('ngay_bao','=',time.strftime('%%Y-%%m-%%d'))]" name="today" string="Báo cơm hôm nay" />
+                    <filter domain="[('ngay_bao','=',time.strftime('%%Y-%%m-%%d')),('com_buoi','=','trua')]" name="today_trua" string="Trưa nay" />
+                    <filter domain="[('ngay_bao','=',time.strftime('%%Y-%%m-%%d')),('com_buoi','=','chieu')]" name="today_chieu" string="Chiều nay" />
+                    <field name="bo_phan"/>
+                    <field name="create_uid"/>
+                    <field name="com_buoi"/>
+                    <field name="ngay_bao"/>
+                    <newline />
+                    <group expand="0" string="Nhóm theo">
+                        <filter name="nhom_theo_nv" string="Bộ phận" icon="terp-personal"
+                            domain="[]" context="{'group_by':'bo_phan'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- action view  -->
+        <record model="ir.actions.act_window" id="action_view_baocom">
+            <field name="name">Báo cơm</field>
+            <field name="res_model">bao.com</field>
+            <field name="view_type">form</field>
+            <!--cho phép chỉ thấy những recode mình tạo-->
+            <!--<field name="domain">[('create_uid','=',uid)]</field>-->
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_baocom_search"/>
+            <field name="context">{"search_default_current_user":1}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+         <!--pivot báo cáo thu chi views -->
+        <record model="ir.ui.view" id="view_pivot_nhansu_month">
+            <field name="name">nhan.su.pivot</field>
+            <field name="model">nhan.su</field>
+            <field name="arch" type="xml">
+                <pivot string="Báo cáo">
+                    <field name="ngay_bao" interval="year" type="row"/>
+                    <field name="ngay_bao" interval="month" type="row"/>
+                    <field name="ngay_bao" interval="day" type="row"/>
+
+                    <field name="today_total_man_4" type="measure"/>
+                    <field name="money_man_4" type="measure"/>
+
+                    <field name="today_total_chay_4" type="measure"/>
+                    <field name="money_chay_4" type="measure"/>
+
+                    <field name="today_total_man_3" type="measure"/>
+                    <field name="money_man_3" type="measure"/>
+
+                    <field name="today_total_chay_3" type="measure"/>
+                    <field name="money_chay_3" type="measure"/>
+
+                    <field name="today_total_chao_4" type="measure"/>
+                    <field name="money_chao_4" type="measure"/>
+
+                    <field name="today_total_chao_3" type="measure"/>
+                    <field name="money_chao_3" type="measure"/>
+
+                    <field name="today_total_bun" type="measure"/>
+                    <field name="money_bun" type="measure"/>
+
+                    <field name="dac_biet" type="measure"/>
+                    <field name="money_dacbiet" type="measure"/>
+
+                    <field name="today_total_mi" type="measure"/>
+                    <field name="total_today" type="measure"/>
+
+                </pivot>
+            </field>
+        </record>
+
+        <!-- action view  -->
+        <record model="ir.actions.act_window" id="action_view_ns">
+            <field name="name">Nhân sự tổng hợp</field>
+            <field name="res_model">nhan.su</field>
+            <field name="view_type">form</field>
+            <!--cho phép chỉ thấy những recode mình tạo-->
+            <!--<field name="domain">[('create_uid','=',uid)]</field>-->
+            <field name="view_mode">tree,form</field>
+            <!--<field name="search_view_id" ref="view_baocom_search"/>-->
+            <!--<field name="context">{"search_default_current_user":1}</field>-->
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!--views graph nhan su -->
+        <record model="ir.ui.view" id="view_graph_nhan_su">
+            <field name="name">nhan.su.graph</field>
+            <field name="model">nhan.su</field>
+            <field name="arch" type="xml">
+                <graph string="Đồ thị so sánh" type="bar">
+                    <field name="ngay_bao" interval="month" type="row"/>
+                    <field name="total_today" type ="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- action view  -->
+        <record model="ir.actions.act_window" id="action_view_ns_done">
+            <field name="name">Nhân sự tổng hợp hoàn thành</field>
+            <field name="res_model">nhan.su</field>
+            <field name="view_type">form</field>
+            <!--cho phép chỉ thấy những recode mình tạo-->
+            <field name="domain">[('status','=','1')]</field>
+            <field name="view_mode">tree,form,pivot,graph</field>
+            <!--<field name="search_view_id" ref="view_baocom_search"/>-->
+            <!--<field name="context">{"search_default_current_user":1}</field>-->
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!--views graph báo cáo  -->
+        <record model="ir.ui.view" id="view_graph_bao_cao">
+            <field name="name">bao.cao.graph</field>
+            <field name="model">bao.cao</field>
+            <field name="arch" type="xml">
+                <graph string="Đồ thị so sánh" type="bar">
+                    <field name="ngay_baocao" interval="day" type="row"/>
+                    <field name="total" type ="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- action view báo cáo -->
+        <record model="ir.actions.act_window" id="action_view_baocao">
+            <field name="name">Báo cáo</field>
+            <field name="res_model">bao.cao</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+        <!-- action view báo cáo hoàn thành-->
+        <record model="ir.actions.act_window" id="action_view_baocao_done">
+            <field name="name">Báo cáo</field>
+            <field name="res_model">bao.cao</field>
+            <field name="domain">[('status','=','1')]</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view cài đặt -->
+        <record model="ir.actions.act_window" id="action_view_caidat">
+            <field name="name">Cài đặt</field>
+            <field name="res_model">setting</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_root_2" name="Kết quả báo cơm" web_icon="Nhan_su_lds,static/description/icon-baocom.png" sequence="2"/>
+
+            <menuitem id="menu_bc" name="Báo cơm"  parent="menu_root_2" sequence="1"/>
+            <menuitem id="menu_bc_1" name="Báo cơm"  parent="menu_bc" sequence="1" action="action_view_baocom"/>
+        <menuitem id="menu_root_3" name="Nhân sự" web_icon="Nhan_su_lds,static/description/hr.jpg" sequence="3"/>
+        <menuitem id="ns_1" name="Nhân sự Tổng hợp" parent="menu_root_3" action="action_view_ns" sequence="1"/>
+        <menuitem id="ns_2" name="Hoàn thành" parent="menu_root_3" action="action_view_ns_done" sequence="2"/>
+
+        <menuitem id="menu_root_4" name="Báo cáo" web_icon="Nhan_su_lds,static/description/baocao.png" sequence="4"/>
+        <menuitem id="menu_root_5" parent="menu_root_4" name="Báo cáo"  action="action_view_baocao" sequence="1"/>
+        <menuitem id="menu_root_6" parent="menu_root_4" name="Hoàn thành"  action="action_view_baocao_done" sequence="2"/>
+        <menuitem id="menu_root_7"  name="Cài đặt hệ thống" web_icon="Nhan_su_lds,static/description/setting.png" action="action_view_caidat" sequence="6" groups="Nhan_su_lds.group_ns,base.group_system"/>
+    </data>
+</odoo>

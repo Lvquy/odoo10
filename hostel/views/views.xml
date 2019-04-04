@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="phong_kanban_view" model="ir.ui.view">
+            <field name="name">phong.tro.kanban</field>
+            <field name="model">phong.tro</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="img"/>
+                    <field name="so_phong"/>
+                    <field name="state"/>
+                    <field name="khu_vuc"/>
+                    <field name="status"/>
+                    <field name="chu_phong"/>
+                    <field name="gia_phong"/>
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)}
+                             oe_kanban_card oe_kanban_global_click">
+                                <div class="o_kanban_image">
+                                    <img t-att-src="kanban_image('phong.tro', 'img', record.id.value)"/>
+                                    <div>
+                                        <strong><field name="so_phong"/></strong>
+                                    </div>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <strong>
+                                        Giá phòng: <field name="gia_phong"/>
+                                    </strong>
+                                    <div>
+                                        <div>
+                                            Khu vực: <field name="khu_vuc"/>
+                                        </div>
+                                        <div>
+                                            Chủ phòng: <field name="chu_phong"/>
+                                        </div>
+
+                                        <div class="o_dropdown_kanban dropdown" groups="base.group_user">
+                                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                                <li>
+                                                    <ul class="oe_kanban_colorpicker" data-field="color" />
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="oe_kanban_bottom_right">
+                                            <span t-if="record.status.raw_value === 'trong'" type="object"
+                                                string="Phòng trống"
+                                                class="oe_kanban_status oe_kanban_status_red ">
+                                            </span>
+                                            <span t-if="record.status.raw_value === 'khach'" type="object"
+                                                string="Có khách"
+                                                class="oe_kanban_status oe_kanban_status_green ">
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        <!-- action view phòng trọ -->
+		<record model="ir.actions.act_window" id="phong_tro">
+            <field name="name">Phòng</field>
+            <field name="res_model">phong.tro</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="phong_kanban_view"/>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="context">{"search_default_status_1":1}</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view khách trọ -->
+		<record model="ir.actions.act_window" id="khach_tro">
+            <field name="name">Khách</field>
+            <field name="res_model">khach.tro</field>
+            <field name="view_type">form</field>
+            <!--<field name="view_id" ref="phong_tro_kanban_view"/>-->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view thiết bị -->
+		<record model="ir.actions.act_window" id="thiet_bi">
+            <field name="name">Thiết bị</field>
+            <field name="res_model">thiet.bi</field>
+            <field name="view_type">form</field>
+            <!--<field name="view_id" ref="phong_tro_kanban_view"/>-->
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view thiết bị -->
+		<record model="ir.actions.act_window" id="setting_nhatro">
+            <field name="name">Cài đặt</field>
+            <field name="res_model">setting.hostel</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+
+        <!-- action view tính tiền-->
+		<record model="ir.actions.act_window" id="dien_nuoc">
+            <field name="name">Điện nước</field>
+            <field name="res_model">dien.nuoc</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph,pivot</field>
+            <field name="context">{"search_default_status_1":1}</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view nạp tiền-->
+		<record model="ir.actions.act_window" id="nap_tien">
+            <field name="name">Nạp tiền</field>
+            <field name="res_model">nap.tien</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <!-- action view lịch sử trừ tiền-->
+		<record model="ir.actions.act_window" id="log_bank">
+            <field name="name">Lịch sử giao dịch</field>
+            <field name="res_model">log.bank</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+
+
+        <menuitem id="menu_root" name="Quản lý Phòng Trọ" web_icon="hostel,static/description/room.png"/>
+        <menuitem id="menu_phong_1" name="Thông tin phòng" parent="menu_root" action="phong_tro"/>
+
+        <menuitem id="menu_root_3" name="Tính tiền hàng tháng" web_icon="hostel,static/description/invoice.png"/>
+        <menuitem id="menu_diennuoc" name="Điện nước" parent="menu_root_3" action="dien_nuoc"/>
+
+
+        <menuitem id="menu_root_4" name="Cài đặt phòng trọ" web_icon="hostel,static/description/setting.png"/>
+        <menuitem id="menu_setting" name="Cài đặt phòng trọ" parent="menu_root_4" action="setting_nhatro"/>
+
+        <menuitem id="menu_root_1" name="Quản lý Khách Trọ" web_icon="hostel,static/description/khach.png"/>
+        <menuitem id="menu_khach" name="Thông tin khách" parent="menu_root_1" action="khach_tro"/>
+        <menuitem id="menu_nap_tien" name="Nạp tiền" parent="menu_root_1" action="nap_tien"/>
+        <menuitem id="menu_log_bank" name="Lịch sử trừ tiền" parent="menu_root_1" action="log_bank"/>
+
+        <menuitem id="menu_root_2" name="Quản lý Thiết bị" web_icon="hostel,static/description/thiet bi.jpg"/>
+        <menuitem id="menu_thietbi" name="Thiết bị" parent="menu_root_2"/>
+        <menuitem id="menu_thietbi_1" name="Thiết bị" parent="menu_thietbi" action="thiet_bi"/>
+
+    </data>
+</odoo>

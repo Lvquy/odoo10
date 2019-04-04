@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hostel_setting_tree" model="ir.ui.view">
+            <field name="name">setting.hostel.tree</field>
+            <field name="model">setting.hostel</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hostel_setting_form" model="ir.ui.view">
+            <field name="name">setting.hostel.form</field>
+            <field name="model">setting.hostel</field>
+            <field name="arch" type="xml">
+                <form string="Cài đặt">
+                    <header>
+                        <button name ='lock' string="Kích hoạt cấu hình" type="object" attrs="{'invisible':[('status','=','1')]}"/>
+                        <button name ='unlock' string="Hủy kích hoạt" type="object" attrs="{'invisible':[('status','=','0')]}" groups="base.group_system"/>
+                        <field name="status" widget="statusbar" visible_status="0,1"/>
+                    </header>
+                        <h3>
+                        Tên cấu hình: <field name="name"/>
+                    </h3>
+                    <group>
+                        <group string="KHU 1">
+                            <field name="gia_dien_k1"/>
+                            <field name="gia_nuoc_k1"/>
+                            <field name="gia_phong_k1"/>
+                            <field name="tien_khac_k1"/>
+                        </group>
+                        <group string="KHU 2">
+                            <field name="gia_dien_k2"/>
+                            <field name="gia_nuoc_k2"/>
+                            <field name="gia_phong_k2"/>
+                            <field name="tien_khac_k2"/>
+                        </group>
+                        <group string="KHU 3">
+                            <field name="gia_dien_k3"/>
+                            <field name="gia_nuoc_k3"/>
+                            <field name="gia_phong_k3"/>
+                            <field name="tien_khac_k3"/>
+                        </group>
+                        <group string="CHÚ Ý">
+                            <span>
+                                Cấu hình có trạng thái là 'Đã kích hoạt' mới <strong>có hiệu lực</strong> .<br/>
+                                cấu hình có trạng thái là 'Bản thảo' là đang <strong>vô hiệu hóa</strong>.<br/>
+                                Khi kích hoạt 1 cấu hình, thì tất cả các cấu hình còn lại sẽ bị vô hiệu hóa<br/>
+                                Cho phép tạo tối đa <strong>2 cấu hình</strong>, nếu tạo nhiều hơn hệ thống sẽ tự động
+                                <strong>xóa tất cả</strong> các cấu hình có trạng thái là <strong>'Bản thảo'</strong>
+                            </span>
+
+
+
+                        </group>
+                    </group>
+
+                </form>
+            </field>
+        </record>
+</odoo>

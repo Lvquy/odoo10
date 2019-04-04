@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--tree view-->
+        <record id="view_line_baotri_tree" model="ir.ui.view">
+            <field name="name">line.baotri.tree</field>
+            <field name="model">line.baotri</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Bảo trì">
+                    <field name="thiet_bi"/>
+                    <field name="ngay_bao_tri"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+        <!--form view-->
+        <record id="view_line_baotri_form" model="ir.ui.view">
+            <field name="name">line.baotri.form</field>
+            <field name="model">line.baotri</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Bảo trì">
+                    <field name="thiet_bi"/>
+                    <field name="ngay_bao_tri"/>
+                    <field name="status"/>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

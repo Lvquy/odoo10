@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="default_get_data">
+            <link rel="stylesheet" href="/Nhan_su_lds/static/src/css/website.css"/>
+            <t t-call="website.layout">
+                <div class="container text-center">
+                    <form t-att-action="'/Nhan_su_lds/insert_data_info'" method="post" class="text-center">
+                        <div class="col-xs-1 text-left">Cơm trưa</div>
+                        <div class="col-xs-1 text-left">
+                        <input type="radio" name="com_buoi" value="trua"/>
+                        </div>
+                        <div class="col-xs-2 text-left">Cơm chiều</div>
+                        <div class="col-xs-8 text-left">
+                        <input type="radio" name="com_buoi" value="chieu"/>
+                        </div>
+                        <br/>
+                        <div class="col-xs-2 text-left">Cơm mặn</div>
+                        <div class="col-xs-10 text-left"><input name="com_man" type="text" value="0"/></div>
+                        <br/>
+                        <div class="col-xs-2 text-left">Cơm chay</div>
+                        <div class="col-xs-10 text-left"><input name="com_chay" type="text" value="0"/></div>
+                        <br/>
+                        <div class="col-xs-2 text-left">Bún</div>
+                        <div class="col-xs-10 text-left"><input name="bun" type="text" value="0"/></div>
+                        <br/>
+                        <div class="col-xs-2 text-left">Mì</div>
+                        <div class="col-xs-10 text-left"><input name="mi" type="text" value="0"/></div>
+                        <div class="col-xs-12 text-left"><button id="submit" type="submit" width="100px" t-att-class="submit_class">Submit</button> </div>
+                    </form>
+                </div>
+            </t>
+        </template>
+        <template id="thank">
+            <h3>Thank you!</h3>
+            <a href="http://odoo.demo/" title="odoo">Quay lại trang chủ</a>
+        </template>
+        <template id="loi_trua">
+            <h3>Bạn đã báo cơm trưa rồi, để sửa vui lòng gặp nhân sự.</h3>
+            <a href="http://odoo.demo/" title="odoo">Về trang chủ</a>
+        </template>
+        <template id="loi_chieu">
+            <h3>Bạn đã báo cơm chiều rồi, để sửa vui lòng gặp nhân sự.</h3>
+            <a href="http://odoo.demo/" title="odoo">Về trang chủ</a>
+        </template>
+        <!-- Customize header  -->
+        <template id="custom_header" inherit_id="website.layout" name="Custom Header">
+          <!-- Assign an id  -->
+            <xpath expr="//div[@id='wrapwrap']/header" position="attributes">
+                <attribute name="id">my_header</attribute>
+            </xpath>
+
+          <!-- Add an element after the top menu  -->
+            <xpath expr="//div[@id='wrapwrap']/header/div" position="after">
+                <div class="container">
+                    <div class="alert alert-info mt16" role="alert">
+                        <strong>LÂM ĐẠT HƯNG</strong>
+                        <button class="btn-info btn-xs btn" type="button" onclick="go_back()">Quay lại</button>
+                        <button class="btn-info btn-xs btn" type="button" onclick="next()">Next</button>
+                    <script>
+                        function go_back(){
+                        history.back();
+                        }
+                        function next(){
+                        window.history.forward();
+                        }
+                    </script>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        <template name="Báo cơm" id="website.insert_data" page="True">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="container">
+                        <center>
+                            <h4>BÁO CƠM LDS</h4>
+                        </center>
+                        danh sách các món ăn
+               <!-- === Snippets' area === -->
+                        <div class="oe_structure" />
+                    </div>
+                </div>
+            </t>
+        </template>
+        <template id="mystyle" name="services style" inherit_id="website.assets_frontend">
+            <xpath expr="link[last()]" position="after">
+                <link href="/Nhan_su_lds/static/src/css/style.less" rel="stylesheet" type="text/less"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>
