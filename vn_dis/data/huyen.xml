@@ -1,0 +1,4261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="452" model="huyen">
+            <field name="name">Huyện Minh Hóa</field>
+            <field name="code_huyen">452</field>
+            <field name="parent_code">44</field>
+            <field name="thuoc_tinh" ref="44"/>
+        </record>
+        <record id="016" model="huyen">
+            <field name="name">Huyện Sóc Sơn</field>
+            <field name="code_huyen">016</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="017" model="huyen">
+            <field name="name">Huyện Đông Anh</field>
+            <field name="code_huyen">017</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="018" model="huyen">
+            <field name="name">Huyện Gia Lâm</field>
+            <field name="code_huyen">018</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="019" model="huyen">
+            <field name="name">Quận Nam Từ Liêm</field>
+            <field name="code_huyen">019</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="198" model="huyen">
+            <field name="name">Huyện Bình Liêu</field>
+            <field name="code_huyen">198</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="818" model="huyen">
+            <field name="name">Huyện Tân Phước</field>
+            <field name="code_huyen">818</field>
+            <field name="parent_code">82</field>
+            <field name="thuoc_tinh" ref="82"/>
+        </record>
+        <record id="819" model="huyen">
+            <field name="name">Huyện Cái Bè</field>
+            <field name="code_huyen">819</field>
+            <field name="parent_code">82</field>
+            <field name="thuoc_tinh" ref="82"/>
+        </record>
+        <record id="347" model="huyen">
+            <field name="name">Thành phố Phủ Lý</field>
+            <field name="code_huyen">347</field>
+            <field name="parent_code">35</field>
+            <field name="thuoc_tinh" ref="35"/>
+        </record>
+        <record id="340" model="huyen">
+            <field name="name">Huyện Đông Hưng</field>
+            <field name="code_huyen">340</field>
+            <field name="parent_code">34</field>
+            <field name="thuoc_tinh" ref="34"/>
+        </record>
+        <record id="341" model="huyen">
+            <field name="name">Huyện Thái Thụy</field>
+            <field name="code_huyen">341</field>
+            <field name="parent_code">34</field>
+            <field name="thuoc_tinh" ref="34"/>
+        </record>
+        <record id="342" model="huyen">
+            <field name="name">Huyện Tiền Hải</field>
+            <field name="code_huyen">342</field>
+            <field name="parent_code">34</field>
+            <field name="thuoc_tinh" ref="34"/>
+        </record>
+        <record id="343" model="huyen">
+            <field name="name">Huyện Kiến Xương</field>
+            <field name="code_huyen">343</field>
+            <field name="parent_code">34</field>
+            <field name="thuoc_tinh" ref="34"/>
+        </record>
+        <record id="815" model="huyen">
+            <field name="name">Thành phố Mỹ Tho</field>
+            <field name="code_huyen">815</field>
+            <field name="parent_code">82</field>
+            <field name="thuoc_tinh" ref="82"/>
+        </record>
+        <record id="816" model="huyen">
+            <field name="name">Thị xã Gò Công</field>
+            <field name="code_huyen">816</field>
+            <field name="parent_code">82</field>
+            <field name="thuoc_tinh" ref="82"/>
+        </record>
+        <record id="817" model="huyen">
+            <field name="name">Thị xã Cai Lậy</field>
+            <field name="code_huyen">817</field>
+            <field name="parent_code">82</field>
+            <field name="thuoc_tinh" ref="82"/>
+        </record>
+        <record id="719" model="huyen">
+            <field name="name">Huyện Bàu Bàng</field>
+            <field name="code_huyen">719</field>
+            <field name="parent_code">74</field>
+            <field name="thuoc_tinh" ref="74"/>
+        </record>
+        <record id="718" model="huyen">
+            <field name="name">Thành phố Thủ Dầu Một</field>
+            <field name="code_huyen">718</field>
+            <field name="parent_code">74</field>
+            <field name="thuoc_tinh" ref="74"/>
+        </record>
+        <record id="712" model="huyen">
+            <field name="name">Huyện Trảng Bàng</field>
+            <field name="code_huyen">712</field>
+            <field name="parent_code">72</field>
+            <field name="thuoc_tinh" ref="72"/>
+        </record>
+        <record id="711" model="huyen">
+            <field name="name">Huyện Bến Cầu</field>
+            <field name="code_huyen">711</field>
+            <field name="parent_code">72</field>
+            <field name="thuoc_tinh" ref="72"/>
+        </record>
+        <record id="710" model="huyen">
+            <field name="name">Huyện Gò Dầu</field>
+            <field name="code_huyen">710</field>
+            <field name="parent_code">72</field>
+            <field name="thuoc_tinh" ref="72"/>
+        </record>
+        <record id="420" model="huyen">
+            <field name="name">Huyện Quỳ Hợp</field>
+            <field name="code_huyen">420</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="917" model="huyen">
+            <field name="name">Quận Ô Môn</field>
+            <field name="code_huyen">917</field>
+            <field name="parent_code">92</field>
+            <field name="thuoc_tinh" ref="92"/>
+        </record>
+        <record id="916" model="huyen">
+            <field name="name">Quận Ninh Kiều</field>
+            <field name="code_huyen">916</field>
+            <field name="parent_code">92</field>
+            <field name="thuoc_tinh" ref="92"/>
+        </record>
+        <record id="195" model="huyen">
+            <field name="name">Thành phố Cẩm Phả</field>
+            <field name="code_huyen">195</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="911" model="huyen">
+            <field name="name">Huyện Phú Quốc</field>
+            <field name="code_huyen">911</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="424" model="huyen">
+            <field name="name">Huyện Anh Sơn</field>
+            <field name="code_huyen">424</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="913" model="huyen">
+            <field name="name">Huyện U Minh Thượng</field>
+            <field name="code_huyen">913</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="298" model="huyen">
+            <field name="name">Huyện Tứ Kỳ</field>
+            <field name="code_huyen">298</field>
+            <field name="parent_code">30</field>
+            <field name="thuoc_tinh" ref="30"/>
+        </record>
+        <record id="299" model="huyen">
+            <field name="name">Huyện Ninh Giang</field>
+            <field name="code_huyen">299</field>
+            <field name="parent_code">30</field>
+            <field name="thuoc_tinh" ref="30"/>
+        </record>
+        <record id="296" model="huyen">
+            <field name="name">Huyện Bình Giang</field>
+            <field name="code_huyen">296</field>
+            <field name="parent_code">30</field>
+            <field name="thuoc_tinh" ref="30"/>
+        </record>
+        <record id="297" model="huyen">
+            <field name="name">Huyện Gia Lộc</field>
+            <field name="code_huyen">297</field>
+            <field name="parent_code">30</field>
+            <field name="thuoc_tinh" ref="30"/>
+        </record>
+        <record id="294" model="huyen">
+            <field name="name">Huyện Thanh Hà</field>
+            <field name="code_huyen">294</field>
+            <field name="parent_code">30</field>
+            <field name="thuoc_tinh" ref="30"/>
+        </record>
+        <record id="426" model="huyen">
+            <field name="name">Huyện Yên Thành</field>
+            <field name="code_huyen">426</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="292" model="huyen">
+            <field name="name">Huyện Kinh Môn</field>
+            <field name="code_huyen">292</field>
+            <field name="parent_code">30</field>
+            <field name="thuoc_tinh" ref="30"/>
+        </record>
+        <record id="293" model="huyen">
+            <field name="name">Huyện Kim Thành</field>
+            <field name="code_huyen">293</field>
+            <field name="parent_code">30</field>
+            <field name="thuoc_tinh" ref="30"/>
+        </record>
+        <record id="290" model="huyen">
+            <field name="name">Thị xã Chí Linh</field>
+            <field name="code_huyen">290</field>
+            <field name="parent_code">30</field>
+            <field name="thuoc_tinh" ref="30"/>
+        </record>
+        <record id="291" model="huyen">
+            <field name="name">Huyện Nam Sách</field>
+            <field name="code_huyen">291</field>
+            <field name="parent_code">30</field>
+            <field name="thuoc_tinh" ref="30"/>
+        </record>
+        <record id="593" model="huyen">
+            <field name="name">Thành phố Phan Thiết</field>
+            <field name="code_huyen">593</field>
+            <field name="parent_code">60</field>
+            <field name="thuoc_tinh" ref="60"/>
+        </record>
+        <record id="595" model="huyen">
+            <field name="name">Huyện Tuy Phong</field>
+            <field name="code_huyen">595</field>
+            <field name="parent_code">60</field>
+            <field name="thuoc_tinh" ref="60"/>
+        </record>
+        <record id="594" model="huyen">
+            <field name="name">Thị xã La Gi</field>
+            <field name="code_huyen">594</field>
+            <field name="parent_code">60</field>
+            <field name="thuoc_tinh" ref="60"/>
+        </record>
+        <record id="597" model="huyen">
+            <field name="name">Huyện Hàm Thuận Bắc</field>
+            <field name="code_huyen">597</field>
+            <field name="parent_code">60</field>
+            <field name="thuoc_tinh" ref="60"/>
+        </record>
+        <record id="596" model="huyen">
+            <field name="name">Huyện Bắc Bình</field>
+            <field name="code_huyen">596</field>
+            <field name="parent_code">60</field>
+            <field name="thuoc_tinh" ref="60"/>
+        </record>
+        <record id="599" model="huyen">
+            <field name="name">Huyện Tánh Linh</field>
+            <field name="code_huyen">599</field>
+            <field name="parent_code">60</field>
+            <field name="thuoc_tinh" ref="60"/>
+        </record>
+        <record id="598" model="huyen">
+            <field name="name">Huyện Hàm Thuận Nam</field>
+            <field name="code_huyen">598</field>
+            <field name="parent_code">60</field>
+            <field name="thuoc_tinh" ref="60"/>
+        </record>
+        <record id="196" model="huyen">
+            <field name="name">Thành phố Uông Bí</field>
+            <field name="code_huyen">196</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="193" model="huyen">
+            <field name="name">Thành phố Hạ Long</field>
+            <field name="code_huyen">193</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="271" model="huyen">
+            <field name="name">Huyện Ba Vì</field>
+            <field name="code_huyen">271</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="272" model="huyen">
+            <field name="name">Huyện Phúc Thọ</field>
+            <field name="code_huyen">272</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="273" model="huyen">
+            <field name="name">Huyện Đan Phượng</field>
+            <field name="code_huyen">273</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="274" model="huyen">
+            <field name="name">Huyện Hoài Đức</field>
+            <field name="code_huyen">274</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="275" model="huyen">
+            <field name="name">Huyện Quốc Oai</field>
+            <field name="code_huyen">275</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="276" model="huyen">
+            <field name="name">Huyện Thạch Thất</field>
+            <field name="code_huyen">276</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="277" model="huyen">
+            <field name="name">Huyện Chương Mỹ</field>
+            <field name="code_huyen">277</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="278" model="huyen">
+            <field name="name">Huyện Thanh Oai</field>
+            <field name="code_huyen">278</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="279" model="huyen">
+            <field name="name">Huyện Thường Tín</field>
+            <field name="code_huyen">279</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="344" model="huyen">
+            <field name="name">Huyện Vũ Thư</field>
+            <field name="code_huyen">344</field>
+            <field name="parent_code">34</field>
+            <field name="thuoc_tinh" ref="34"/>
+        </record>
+        <record id="524" model="huyen">
+            <field name="name">Huyện Bình Sơn</field>
+            <field name="code_huyen">524</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="525" model="huyen">
+            <field name="name">Huyện Trà Bồng</field>
+            <field name="code_huyen">525</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="526" model="huyen">
+            <field name="name">Huyện Tây Trà</field>
+            <field name="code_huyen">526</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="527" model="huyen">
+            <field name="name">Huyện Sơn Tịnh</field>
+            <field name="code_huyen">527</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="522" model="huyen">
+            <field name="name">Thành phố Quảng Ngãi</field>
+            <field name="code_huyen">522</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="528" model="huyen">
+            <field name="name">Huyện Tư Nghĩa</field>
+            <field name="code_huyen">528</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="529" model="huyen">
+            <field name="name">Huyện Sơn Hà</field>
+            <field name="code_huyen">529</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="449" model="huyen">
+            <field name="name">Thị xã Kỳ Anh</field>
+            <field name="code_huyen">449</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="448" model="huyen">
+            <field name="name">Huyện Lộc Hà</field>
+            <field name="code_huyen">448</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="443" model="huyen">
+            <field name="name">Huyện Can Lộc</field>
+            <field name="code_huyen">443</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="442" model="huyen">
+            <field name="name">Huyện Nghi Xuân</field>
+            <field name="code_huyen">442</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="441" model="huyen">
+            <field name="name">Huyện Vũ Quang</field>
+            <field name="code_huyen">441</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="440" model="huyen">
+            <field name="name">Huyện Đức Thọ</field>
+            <field name="code_huyen">440</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="447" model="huyen">
+            <field name="name">Huyện Kỳ Anh</field>
+            <field name="code_huyen">447</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="446" model="huyen">
+            <field name="name">Huyện Cẩm Xuyên</field>
+            <field name="code_huyen">446</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="445" model="huyen">
+            <field name="name">Huyện Thạch Hà</field>
+            <field name="code_huyen">445</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="444" model="huyen">
+            <field name="name">Huyện Hương Khê</field>
+            <field name="code_huyen">444</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="108" model="huyen">
+            <field name="name">Huyện Sìn Hồ</field>
+            <field name="code_huyen">108</field>
+            <field name="parent_code">12</field>
+            <field name="thuoc_tinh" ref="12"/>
+        </record>
+        <record id="109" model="huyen">
+            <field name="name">Huyện Phong Thổ</field>
+            <field name="code_huyen">109</field>
+            <field name="parent_code">12</field>
+            <field name="thuoc_tinh" ref="12"/>
+        </record>
+        <record id="102" model="huyen">
+            <field name="name">Huyện Mường Ảng</field>
+            <field name="code_huyen">102</field>
+            <field name="parent_code">11</field>
+            <field name="thuoc_tinh" ref="11"/>
+        </record>
+        <record id="103" model="huyen">
+            <field name="name">Huyện Nậm Pồ</field>
+            <field name="code_huyen">103</field>
+            <field name="parent_code">11</field>
+            <field name="thuoc_tinh" ref="11"/>
+        </record>
+        <record id="100" model="huyen">
+            <field name="name">Huyện Điện Biên</field>
+            <field name="code_huyen">100</field>
+            <field name="parent_code">11</field>
+            <field name="thuoc_tinh" ref="11"/>
+        </record>
+        <record id="101" model="huyen">
+            <field name="name">Huyện Điện Biên Đông</field>
+            <field name="code_huyen">101</field>
+            <field name="parent_code">11</field>
+            <field name="thuoc_tinh" ref="11"/>
+        </record>
+        <record id="106" model="huyen">
+            <field name="name">Huyện Tam Đường</field>
+            <field name="code_huyen">106</field>
+            <field name="parent_code">12</field>
+            <field name="thuoc_tinh" ref="12"/>
+        </record>
+        <record id="107" model="huyen">
+            <field name="name">Huyện Mường Tè</field>
+            <field name="code_huyen">107</field>
+            <field name="parent_code">12</field>
+            <field name="thuoc_tinh" ref="12"/>
+        </record>
+        <record id="105" model="huyen">
+            <field name="name">Thành phố Lai Châu</field>
+            <field name="code_huyen">105</field>
+            <field name="parent_code">12</field>
+            <field name="thuoc_tinh" ref="12"/>
+        </record>
+        <record id="902" model="huyen">
+            <field name="name">Huyện Kiên Lương</field>
+            <field name="code_huyen">902</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="903" model="huyen">
+            <field name="name">Huyện Hòn Đất</field>
+            <field name="code_huyen">903</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="900" model="huyen">
+            <field name="name">Thị xã Hà Tiên</field>
+            <field name="code_huyen">900</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="906" model="huyen">
+            <field name="name">Huyện Giồng Riềng</field>
+            <field name="code_huyen">906</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="907" model="huyen">
+            <field name="name">Huyện Gò Quao</field>
+            <field name="code_huyen">907</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="904" model="huyen">
+            <field name="name">Huyện Tân Hiệp</field>
+            <field name="code_huyen">904</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="905" model="huyen">
+            <field name="name">Huyện Châu Thành</field>
+            <field name="code_huyen">905</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="908" model="huyen">
+            <field name="name">Huyện An Biên</field>
+            <field name="code_huyen">908</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="909" model="huyen">
+            <field name="name">Huyện An Minh</field>
+            <field name="code_huyen">909</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="643" model="huyen">
+            <field name="name">Thành phố Buôn Ma Thuột</field>
+            <field name="code_huyen">643</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="645" model="huyen">
+            <field name="name">Huyện Ea H'leo</field>
+            <field name="code_huyen">645</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="644" model="huyen">
+            <field name="name">Thị xã Buôn Hồ</field>
+            <field name="code_huyen">644</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="647" model="huyen">
+            <field name="name">Huyện Buôn Đôn</field>
+            <field name="code_huyen">647</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="646" model="huyen">
+            <field name="name">Huyện Ea Súp</field>
+            <field name="code_huyen">646</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="649" model="huyen">
+            <field name="name">Huyện Krông Búk</field>
+            <field name="code_huyen">649</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="648" model="huyen">
+            <field name="name">Huyện Cư M'gar</field>
+            <field name="code_huyen">648</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="432" model="huyen">
+            <field name="name">Thị xã Hoàng Mai</field>
+            <field name="code_huyen">432</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="194" model="huyen">
+            <field name="name">Thành phố Móng Cái</field>
+            <field name="code_huyen">194</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="430" model="huyen">
+            <field name="name">Huyện Nam Đàn</field>
+            <field name="code_huyen">430</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="431" model="huyen">
+            <field name="name">Huyện Hưng Nguyên</field>
+            <field name="code_huyen">431</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="339" model="huyen">
+            <field name="name">Huyện Hưng Hà</field>
+            <field name="code_huyen">339</field>
+            <field name="parent_code">34</field>
+            <field name="thuoc_tinh" ref="34"/>
+        </record>
+        <record id="338" model="huyen">
+            <field name="name">Huyện Quỳnh Phụ</field>
+            <field name="code_huyen">338</field>
+            <field name="parent_code">34</field>
+            <field name="thuoc_tinh" ref="34"/>
+        </record>
+        <record id="336" model="huyen">
+            <field name="name">Thành phố Thái Bình</field>
+            <field name="code_huyen">336</field>
+            <field name="parent_code">34</field>
+            <field name="thuoc_tinh" ref="34"/>
+        </record>
+        <record id="331" model="huyen">
+            <field name="name">Huyện Kim Động</field>
+            <field name="code_huyen">331</field>
+            <field name="parent_code">33</field>
+            <field name="thuoc_tinh" ref="33"/>
+        </record>
+        <record id="330" model="huyen">
+            <field name="name">Huyện Khoái Châu</field>
+            <field name="code_huyen">330</field>
+            <field name="parent_code">33</field>
+            <field name="thuoc_tinh" ref="33"/>
+        </record>
+        <record id="333" model="huyen">
+            <field name="name">Huyện Phù Cừ</field>
+            <field name="code_huyen">333</field>
+            <field name="parent_code">33</field>
+            <field name="thuoc_tinh" ref="33"/>
+        </record>
+        <record id="332" model="huyen">
+            <field name="name">Huyện Tiên Lữ</field>
+            <field name="code_huyen">332</field>
+            <field name="parent_code">33</field>
+            <field name="thuoc_tinh" ref="33"/>
+        </record>
+        <record id="058" model="huyen">
+            <field name="name">Thành Phố Bắc Kạn</field>
+            <field name="code_huyen">058</field>
+            <field name="parent_code">06</field>
+            <field name="thuoc_tinh" ref="06"/>
+        </record>
+        <record id="050" model="huyen">
+            <field name="name">Huyện Phục Hoà</field>
+            <field name="code_huyen">050</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="051" model="huyen">
+            <field name="name">Huyện Hoà An</field>
+            <field name="code_huyen">051</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="052" model="huyen">
+            <field name="name">Huyện Nguyên Bình</field>
+            <field name="code_huyen">052</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="053" model="huyen">
+            <field name="name">Huyện Thạch An</field>
+            <field name="code_huyen">053</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="855" model="huyen">
+            <field name="name">Thành phố Vĩnh Long</field>
+            <field name="code_huyen">855</field>
+            <field name="parent_code">86</field>
+            <field name="thuoc_tinh" ref="86"/>
+        </record>
+        <record id="857" model="huyen">
+            <field name="name">Huyện Long Hồ</field>
+            <field name="code_huyen">857</field>
+            <field name="parent_code">86</field>
+            <field name="thuoc_tinh" ref="86"/>
+        </record>
+        <record id="850" model="huyen">
+            <field name="name">Huyện Duyên Hải</field>
+            <field name="code_huyen">850</field>
+            <field name="parent_code">84</field>
+            <field name="thuoc_tinh" ref="84"/>
+        </record>
+        <record id="851" model="huyen">
+            <field name="name">Thị xã Duyên Hải</field>
+            <field name="code_huyen">851</field>
+            <field name="parent_code">84</field>
+            <field name="thuoc_tinh" ref="84"/>
+        </record>
+        <record id="858" model="huyen">
+            <field name="name">Huyện Mang Thít</field>
+            <field name="code_huyen">858</field>
+            <field name="parent_code">86</field>
+            <field name="thuoc_tinh" ref="86"/>
+        </record>
+        <record id="859" model="huyen">
+            <field name="name">Huyện  Vũng Liêm</field>
+            <field name="code_huyen">859</field>
+            <field name="parent_code">86</field>
+            <field name="thuoc_tinh" ref="86"/>
+        </record>
+        <record id="748" model="huyen">
+            <field name="name">Thành phố Bà Rịa</field>
+            <field name="code_huyen">748</field>
+            <field name="parent_code">77</field>
+            <field name="thuoc_tinh" ref="77"/>
+        </record>
+        <record id="349" model="huyen">
+            <field name="name">Huyện Duy Tiên</field>
+            <field name="code_huyen">349</field>
+            <field name="parent_code">35</field>
+            <field name="thuoc_tinh" ref="35"/>
+        </record>
+        <record id="740" model="huyen">
+            <field name="name">Huyện Long Thành</field>
+            <field name="code_huyen">740</field>
+            <field name="parent_code">75</field>
+            <field name="thuoc_tinh" ref="75"/>
+        </record>
+        <record id="741" model="huyen">
+            <field name="name">Huyện Xuân Lộc</field>
+            <field name="code_huyen">741</field>
+            <field name="parent_code">75</field>
+            <field name="thuoc_tinh" ref="75"/>
+        </record>
+        <record id="742" model="huyen">
+            <field name="name">Huyện Nhơn Trạch</field>
+            <field name="code_huyen">742</field>
+            <field name="parent_code">75</field>
+            <field name="thuoc_tinh" ref="75"/>
+        </record>
+        <record id="559" model="huyen">
+            <field name="name">Huyện Tuy An</field>
+            <field name="code_huyen">559</field>
+            <field name="parent_code">54</field>
+            <field name="thuoc_tinh" ref="54"/>
+        </record>
+        <record id="558" model="huyen">
+            <field name="name">Huyện Đồng Xuân</field>
+            <field name="code_huyen">558</field>
+            <field name="parent_code">54</field>
+            <field name="thuoc_tinh" ref="54"/>
+        </record>
+        <record id="747" model="huyen">
+            <field name="name">Thành phố Vũng Tàu</field>
+            <field name="code_huyen">747</field>
+            <field name="parent_code">77</field>
+            <field name="thuoc_tinh" ref="77"/>
+        </record>
+        <record id="555" model="huyen">
+            <field name="name">Thành phố Tuy Hoà</field>
+            <field name="code_huyen">555</field>
+            <field name="parent_code">54</field>
+            <field name="thuoc_tinh" ref="54"/>
+        </record>
+        <record id="557" model="huyen">
+            <field name="name">Thị xã Sông Cầu</field>
+            <field name="code_huyen">557</field>
+            <field name="parent_code">54</field>
+            <field name="thuoc_tinh" ref="54"/>
+        </record>
+        <record id="551" model="huyen">
+            <field name="name">Huyện Vân Canh</field>
+            <field name="code_huyen">551</field>
+            <field name="parent_code">52</field>
+            <field name="thuoc_tinh" ref="52"/>
+        </record>
+        <record id="550" model="huyen">
+            <field name="name">Huyện Tuy Phước</field>
+            <field name="code_huyen">550</field>
+            <field name="parent_code">52</field>
+            <field name="thuoc_tinh" ref="52"/>
+        </record>
+        <record id="238" model="huyen">
+            <field name="name">Huyện Thanh Sơn</field>
+            <field name="code_huyen">238</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="239" model="huyen">
+            <field name="name">Huyện Thanh Thuỷ</field>
+            <field name="code_huyen">239</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="234" model="huyen">
+            <field name="name">Huyện Yên Lập</field>
+            <field name="code_huyen">234</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="235" model="huyen">
+            <field name="name">Huyện Cẩm Khê</field>
+            <field name="code_huyen">235</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="236" model="huyen">
+            <field name="name">Huyện Tam Nông</field>
+            <field name="code_huyen">236</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="848" model="huyen">
+            <field name="name">Huyện Cầu Ngang</field>
+            <field name="code_huyen">848</field>
+            <field name="parent_code">84</field>
+            <field name="thuoc_tinh" ref="84"/>
+        </record>
+        <record id="230" model="huyen">
+            <field name="name">Huyện Đoan Hùng</field>
+            <field name="code_huyen">230</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="231" model="huyen">
+            <field name="name">Huyện Hạ Hoà</field>
+            <field name="code_huyen">231</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="232" model="huyen">
+            <field name="name">Huyện Thanh Ba</field>
+            <field name="code_huyen">232</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="233" model="huyen">
+            <field name="name">Huyện Phù Ninh</field>
+            <field name="code_huyen">233</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="237" model="huyen">
+            <field name="name">Huyện Lâm Thao</field>
+            <field name="code_huyen">237</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="618" model="huyen">
+            <field name="name">Huyện Ia H' Drai</field>
+            <field name="code_huyen">618</field>
+            <field name="parent_code">62</field>
+            <field name="thuoc_tinh" ref="62"/>
+        </record>
+        <record id="140" model="huyen">
+            <field name="name">Huyện Văn Chấn</field>
+            <field name="code_huyen">140</field>
+            <field name="parent_code">15</field>
+            <field name="thuoc_tinh" ref="15"/>
+        </record>
+        <record id="141" model="huyen">
+            <field name="name">Huyện Yên Bình</field>
+            <field name="code_huyen">141</field>
+            <field name="parent_code">15</field>
+            <field name="thuoc_tinh" ref="15"/>
+        </record>
+        <record id="612" model="huyen">
+            <field name="name">Huyện Đắk Tô</field>
+            <field name="code_huyen">612</field>
+            <field name="parent_code">62</field>
+            <field name="thuoc_tinh" ref="62"/>
+        </record>
+        <record id="613" model="huyen">
+            <field name="name">Huyện Kon Plông</field>
+            <field name="code_huyen">613</field>
+            <field name="parent_code">62</field>
+            <field name="thuoc_tinh" ref="62"/>
+        </record>
+        <record id="610" model="huyen">
+            <field name="name">Huyện Đắk Glei</field>
+            <field name="code_huyen">610</field>
+            <field name="parent_code">62</field>
+            <field name="thuoc_tinh" ref="62"/>
+        </record>
+        <record id="611" model="huyen">
+            <field name="name">Huyện Ngọc Hồi</field>
+            <field name="code_huyen">611</field>
+            <field name="parent_code">62</field>
+            <field name="thuoc_tinh" ref="62"/>
+        </record>
+        <record id="616" model="huyen">
+            <field name="name">Huyện Sa Thầy</field>
+            <field name="code_huyen">616</field>
+            <field name="parent_code">62</field>
+            <field name="thuoc_tinh" ref="62"/>
+        </record>
+        <record id="617" model="huyen">
+            <field name="name">Huyện Tu Mơ Rông</field>
+            <field name="code_huyen">617</field>
+            <field name="parent_code">62</field>
+            <field name="thuoc_tinh" ref="62"/>
+        </record>
+        <record id="614" model="huyen">
+            <field name="name">Huyện Kon Rẫy</field>
+            <field name="code_huyen">614</field>
+            <field name="parent_code">62</field>
+            <field name="thuoc_tinh" ref="62"/>
+        </record>
+        <record id="615" model="huyen">
+            <field name="name">Huyện Đắk Hà</field>
+            <field name="code_huyen">615</field>
+            <field name="parent_code">62</field>
+            <field name="thuoc_tinh" ref="62"/>
+        </record>
+        <record id="948" model="huyen">
+            <field name="name">Thị xã Ngã Năm</field>
+            <field name="code_huyen">948</field>
+            <field name="parent_code">94</field>
+            <field name="thuoc_tinh" ref="94"/>
+        </record>
+        <record id="949" model="huyen">
+            <field name="name">Huyện Thạnh Trị</field>
+            <field name="code_huyen">949</field>
+            <field name="parent_code">94</field>
+            <field name="thuoc_tinh" ref="94"/>
+        </record>
+        <record id="946" model="huyen">
+            <field name="name">Huyện Long Phú</field>
+            <field name="code_huyen">946</field>
+            <field name="parent_code">94</field>
+            <field name="thuoc_tinh" ref="94"/>
+        </record>
+        <record id="947" model="huyen">
+            <field name="name">Huyện Mỹ Xuyên</field>
+            <field name="code_huyen">947</field>
+            <field name="parent_code">94</field>
+            <field name="thuoc_tinh" ref="94"/>
+        </record>
+        <record id="944" model="huyen">
+            <field name="name">Huyện Mỹ Tú</field>
+            <field name="code_huyen">944</field>
+            <field name="parent_code">94</field>
+            <field name="thuoc_tinh" ref="94"/>
+        </record>
+        <record id="945" model="huyen">
+            <field name="name">Huyện Cù Lao Dung</field>
+            <field name="code_huyen">945</field>
+            <field name="parent_code">94</field>
+            <field name="thuoc_tinh" ref="94"/>
+        </record>
+        <record id="942" model="huyen">
+            <field name="name">Huyện Châu Thành</field>
+            <field name="code_huyen">942</field>
+            <field name="parent_code">94</field>
+            <field name="thuoc_tinh" ref="94"/>
+        </record>
+        <record id="943" model="huyen">
+            <field name="name">Huyện Kế Sách</field>
+            <field name="code_huyen">943</field>
+            <field name="parent_code">94</field>
+            <field name="thuoc_tinh" ref="94"/>
+        </record>
+        <record id="941" model="huyen">
+            <field name="name">Thành phố Sóc Trăng</field>
+            <field name="code_huyen">941</field>
+            <field name="parent_code">94</field>
+            <field name="thuoc_tinh" ref="94"/>
+        </record>
+        <record id="689" model="huyen">
+            <field name="name">Thị xã Đồng Xoài</field>
+            <field name="code_huyen">689</field>
+            <field name="parent_code">70</field>
+            <field name="thuoc_tinh" ref="70"/>
+        </record>
+        <record id="688" model="huyen">
+            <field name="name">Thị xã Phước Long</field>
+            <field name="code_huyen">688</field>
+            <field name="parent_code">70</field>
+            <field name="thuoc_tinh" ref="70"/>
+        </record>
+        <record id="681" model="huyen">
+            <field name="name">Huyện Đạ Huoai</field>
+            <field name="code_huyen">681</field>
+            <field name="parent_code">68</field>
+            <field name="thuoc_tinh" ref="68"/>
+        </record>
+        <record id="680" model="huyen">
+            <field name="name">Huyện Bảo Lâm</field>
+            <field name="code_huyen">680</field>
+            <field name="parent_code">68</field>
+            <field name="thuoc_tinh" ref="68"/>
+        </record>
+        <record id="683" model="huyen">
+            <field name="name">Huyện Cát Tiên</field>
+            <field name="code_huyen">683</field>
+            <field name="parent_code">68</field>
+            <field name="thuoc_tinh" ref="68"/>
+        </record>
+        <record id="682" model="huyen">
+            <field name="name">Huyện Đạ Tẻh</field>
+            <field name="code_huyen">682</field>
+            <field name="parent_code">68</field>
+            <field name="thuoc_tinh" ref="68"/>
+        </record>
+        <record id="098" model="huyen">
+            <field name="name">Huyện Tủa Chùa</field>
+            <field name="code_huyen">098</field>
+            <field name="parent_code">11</field>
+            <field name="thuoc_tinh" ref="11"/>
+        </record>
+        <record id="623" model="huyen">
+            <field name="name">Thị xã An Khê</field>
+            <field name="code_huyen">623</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="094" model="huyen">
+            <field name="name">Thành phố Điện Biên Phủ</field>
+            <field name="code_huyen">094</field>
+            <field name="parent_code">11</field>
+            <field name="thuoc_tinh" ref="11"/>
+        </record>
+        <record id="095" model="huyen">
+            <field name="name">Thị xã Mường Lay</field>
+            <field name="code_huyen">095</field>
+            <field name="parent_code">11</field>
+            <field name="thuoc_tinh" ref="11"/>
+        </record>
+        <record id="096" model="huyen">
+            <field name="name">Huyện Mường Nhé</field>
+            <field name="code_huyen">096</field>
+            <field name="parent_code">11</field>
+            <field name="thuoc_tinh" ref="11"/>
+        </record>
+        <record id="097" model="huyen">
+            <field name="name">Huyện Mường Chà</field>
+            <field name="code_huyen">097</field>
+            <field name="parent_code">11</field>
+            <field name="thuoc_tinh" ref="11"/>
+        </record>
+        <record id="133" model="huyen">
+            <field name="name">Thị xã Nghĩa Lộ</field>
+            <field name="code_huyen">133</field>
+            <field name="parent_code">15</field>
+            <field name="thuoc_tinh" ref="15"/>
+        </record>
+        <record id="132" model="huyen">
+            <field name="name">Thành phố Yên Bái</field>
+            <field name="code_huyen">132</field>
+            <field name="parent_code">15</field>
+            <field name="thuoc_tinh" ref="15"/>
+        </record>
+        <record id="137" model="huyen">
+            <field name="name">Huyện Mù Căng Chải</field>
+            <field name="code_huyen">137</field>
+            <field name="parent_code">15</field>
+            <field name="thuoc_tinh" ref="15"/>
+        </record>
+        <record id="136" model="huyen">
+            <field name="name">Huyện Văn Yên</field>
+            <field name="code_huyen">136</field>
+            <field name="parent_code">15</field>
+            <field name="thuoc_tinh" ref="15"/>
+        </record>
+        <record id="135" model="huyen">
+            <field name="name">Huyện Lục Yên</field>
+            <field name="code_huyen">135</field>
+            <field name="parent_code">15</field>
+            <field name="thuoc_tinh" ref="15"/>
+        </record>
+        <record id="494" model="huyen">
+            <field name="name">Quận Ngũ Hành Sơn</field>
+            <field name="code_huyen">494</field>
+            <field name="parent_code">48</field>
+            <field name="thuoc_tinh" ref="48"/>
+        </record>
+        <record id="495" model="huyen">
+            <field name="name">Quận Cẩm Lệ</field>
+            <field name="code_huyen">495</field>
+            <field name="parent_code">48</field>
+            <field name="thuoc_tinh" ref="48"/>
+        </record>
+        <record id="139" model="huyen">
+            <field name="name">Huyện Trạm Tấu</field>
+            <field name="code_huyen">139</field>
+            <field name="parent_code">15</field>
+            <field name="thuoc_tinh" ref="15"/>
+        </record>
+        <record id="497" model="huyen">
+            <field name="name">Huyện Hòa Vang</field>
+            <field name="code_huyen">497</field>
+            <field name="parent_code">48</field>
+            <field name="thuoc_tinh" ref="48"/>
+        </record>
+        <record id="490" model="huyen">
+            <field name="name">Quận Liên Chiểu</field>
+            <field name="code_huyen">490</field>
+            <field name="parent_code">48</field>
+            <field name="thuoc_tinh" ref="48"/>
+        </record>
+        <record id="491" model="huyen">
+            <field name="name">Quận Thanh Khê</field>
+            <field name="code_huyen">491</field>
+            <field name="parent_code">48</field>
+            <field name="thuoc_tinh" ref="48"/>
+        </record>
+        <record id="492" model="huyen">
+            <field name="name">Quận Hải Châu</field>
+            <field name="code_huyen">492</field>
+            <field name="parent_code">48</field>
+            <field name="thuoc_tinh" ref="48"/>
+        </record>
+        <record id="493" model="huyen">
+            <field name="name">Quận Sơn Trà</field>
+            <field name="code_huyen">493</field>
+            <field name="parent_code">48</field>
+            <field name="thuoc_tinh" ref="48"/>
+        </record>
+        <record id="407" model="huyen">
+            <field name="name">Huyện Tĩnh Gia</field>
+            <field name="code_huyen">407</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="406" model="huyen">
+            <field name="name">Huyện Quảng Xương</field>
+            <field name="code_huyen">406</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="405" model="huyen">
+            <field name="name">Huyện Đông Sơn</field>
+            <field name="code_huyen">405</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="404" model="huyen">
+            <field name="name">Huyện Nông Cống</field>
+            <field name="code_huyen">404</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="403" model="huyen">
+            <field name="name">Huyện Như Thanh</field>
+            <field name="code_huyen">403</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="402" model="huyen">
+            <field name="name">Huyện Như Xuân</field>
+            <field name="code_huyen">402</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="401" model="huyen">
+            <field name="name">Huyện Nga Sơn</field>
+            <field name="code_huyen">401</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="400" model="huyen">
+            <field name="name">Huyện Hậu Lộc</field>
+            <field name="code_huyen">400</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="933" model="huyen">
+            <field name="name">Huyện Châu Thành</field>
+            <field name="code_huyen">933</field>
+            <field name="parent_code">93</field>
+            <field name="thuoc_tinh" ref="93"/>
+        </record>
+        <record id="932" model="huyen">
+            <field name="name">Huyện Châu Thành A</field>
+            <field name="code_huyen">932</field>
+            <field name="parent_code">93</field>
+            <field name="thuoc_tinh" ref="93"/>
+        </record>
+        <record id="931" model="huyen">
+            <field name="name">Thị xã Ngã Bảy</field>
+            <field name="code_huyen">931</field>
+            <field name="parent_code">93</field>
+            <field name="thuoc_tinh" ref="93"/>
+        </record>
+        <record id="930" model="huyen">
+            <field name="name">Thành phố Vị Thanh</field>
+            <field name="code_huyen">930</field>
+            <field name="parent_code">93</field>
+            <field name="thuoc_tinh" ref="93"/>
+        </record>
+        <record id="937" model="huyen">
+            <field name="name">Thị xã Long Mỹ</field>
+            <field name="code_huyen">937</field>
+            <field name="parent_code">93</field>
+            <field name="thuoc_tinh" ref="93"/>
+        </record>
+        <record id="936" model="huyen">
+            <field name="name">Huyện Long Mỹ</field>
+            <field name="code_huyen">936</field>
+            <field name="parent_code">93</field>
+            <field name="thuoc_tinh" ref="93"/>
+        </record>
+        <record id="935" model="huyen">
+            <field name="name">Huyện Vị Thuỷ</field>
+            <field name="code_huyen">935</field>
+            <field name="parent_code">93</field>
+            <field name="thuoc_tinh" ref="93"/>
+        </record>
+        <record id="934" model="huyen">
+            <field name="name">Huyện Phụng Hiệp</field>
+            <field name="code_huyen">934</field>
+            <field name="parent_code">93</field>
+            <field name="thuoc_tinh" ref="93"/>
+        </record>
+        <record id="453" model="huyen">
+            <field name="name">Huyện Tuyên Hóa</field>
+            <field name="code_huyen">453</field>
+            <field name="parent_code">44</field>
+            <field name="thuoc_tinh" ref="44"/>
+        </record>
+        <record id="024" model="huyen">
+            <field name="name">Thành phố Hà Giang</field>
+            <field name="code_huyen">024</field>
+            <field name="parent_code">02</field>
+            <field name="thuoc_tinh" ref="02"/>
+        </record>
+        <record id="027" model="huyen">
+            <field name="name">Huyện Mèo Vạc</field>
+            <field name="code_huyen">027</field>
+            <field name="parent_code">02</field>
+            <field name="thuoc_tinh" ref="02"/>
+        </record>
+        <record id="026" model="huyen">
+            <field name="name">Huyện Đồng Văn</field>
+            <field name="code_huyen">026</field>
+            <field name="parent_code">02</field>
+            <field name="thuoc_tinh" ref="02"/>
+        </record>
+        <record id="021" model="huyen">
+            <field name="name">Quận Bắc Từ Liêm</field>
+            <field name="code_huyen">021</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="020" model="huyen">
+            <field name="name">Huyện Thanh Trì</field>
+            <field name="code_huyen">020</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="029" model="huyen">
+            <field name="name">Huyện Quản Bạ</field>
+            <field name="code_huyen">029</field>
+            <field name="parent_code">02</field>
+            <field name="thuoc_tinh" ref="02"/>
+        </record>
+        <record id="028" model="huyen">
+            <field name="name">Huyện Yên Minh</field>
+            <field name="code_huyen">028</field>
+            <field name="parent_code">02</field>
+            <field name="thuoc_tinh" ref="02"/>
+        </record>
+        <record id="228" model="huyen">
+            <field name="name">Thị xã Phú Thọ</field>
+            <field name="code_huyen">228</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="829" model="huyen">
+            <field name="name">Thành phố Bến Tre</field>
+            <field name="code_huyen">829</field>
+            <field name="parent_code">83</field>
+            <field name="thuoc_tinh" ref="83"/>
+        </record>
+        <record id="825" model="huyen">
+            <field name="name">Huyện Tân Phú Đông</field>
+            <field name="code_huyen">825</field>
+            <field name="parent_code">82</field>
+            <field name="thuoc_tinh" ref="82"/>
+        </record>
+        <record id="370" model="huyen">
+            <field name="name">Thành phố Tam Điệp</field>
+            <field name="code_huyen">370</field>
+            <field name="parent_code">37</field>
+            <field name="thuoc_tinh" ref="37"/>
+        </record>
+        <record id="373" model="huyen">
+            <field name="name">Huyện Gia Viễn</field>
+            <field name="code_huyen">373</field>
+            <field name="parent_code">37</field>
+            <field name="thuoc_tinh" ref="37"/>
+        </record>
+        <record id="372" model="huyen">
+            <field name="name">Huyện Nho Quan</field>
+            <field name="code_huyen">372</field>
+            <field name="parent_code">37</field>
+            <field name="thuoc_tinh" ref="37"/>
+        </record>
+        <record id="375" model="huyen">
+            <field name="name">Huyện Yên Khánh</field>
+            <field name="code_huyen">375</field>
+            <field name="parent_code">37</field>
+            <field name="thuoc_tinh" ref="37"/>
+        </record>
+        <record id="374" model="huyen">
+            <field name="name">Huyện Hoa Lư</field>
+            <field name="code_huyen">374</field>
+            <field name="parent_code">37</field>
+            <field name="thuoc_tinh" ref="37"/>
+        </record>
+        <record id="377" model="huyen">
+            <field name="name">Huyện Yên Mô</field>
+            <field name="code_huyen">377</field>
+            <field name="parent_code">37</field>
+            <field name="thuoc_tinh" ref="37"/>
+        </record>
+        <record id="376" model="huyen">
+            <field name="name">Huyện Kim Sơn</field>
+            <field name="code_huyen">376</field>
+            <field name="parent_code">37</field>
+            <field name="thuoc_tinh" ref="37"/>
+        </record>
+        <record id="708" model="huyen">
+            <field name="name">Huyện Châu Thành</field>
+            <field name="code_huyen">708</field>
+            <field name="parent_code">72</field>
+            <field name="thuoc_tinh" ref="72"/>
+        </record>
+        <record id="709" model="huyen">
+            <field name="name">Huyện Hòa Thành</field>
+            <field name="code_huyen">709</field>
+            <field name="parent_code">72</field>
+            <field name="thuoc_tinh" ref="72"/>
+        </record>
+        <record id="705" model="huyen">
+            <field name="name">Huyện Tân Biên</field>
+            <field name="code_huyen">705</field>
+            <field name="parent_code">72</field>
+            <field name="thuoc_tinh" ref="72"/>
+        </record>
+        <record id="706" model="huyen">
+            <field name="name">Huyện Tân Châu</field>
+            <field name="code_huyen">706</field>
+            <field name="parent_code">72</field>
+            <field name="thuoc_tinh" ref="72"/>
+        </record>
+        <record id="707" model="huyen">
+            <field name="name">Huyện Dương Minh Châu</field>
+            <field name="code_huyen">707</field>
+            <field name="parent_code">72</field>
+            <field name="thuoc_tinh" ref="72"/>
+        </record>
+        <record id="703" model="huyen">
+            <field name="name">Thành phố Tây Ninh</field>
+            <field name="code_huyen">703</field>
+            <field name="parent_code">72</field>
+            <field name="thuoc_tinh" ref="72"/>
+        </record>
+        <record id="393" model="huyen">
+            <field name="name">Huyện Vĩnh Lộc</field>
+            <field name="code_huyen">393</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="392" model="huyen">
+            <field name="name">Huyện Hà Trung</field>
+            <field name="code_huyen">392</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="391" model="huyen">
+            <field name="name">Huyện Thạch Thành</field>
+            <field name="code_huyen">391</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="390" model="huyen">
+            <field name="name">Huyện Cẩm Thủy</field>
+            <field name="code_huyen">390</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="397" model="huyen">
+            <field name="name">Huyện Triệu Sơn</field>
+            <field name="code_huyen">397</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="396" model="huyen">
+            <field name="name">Huyện Thường Xuân</field>
+            <field name="code_huyen">396</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="395" model="huyen">
+            <field name="name">Huyện Thọ Xuân</field>
+            <field name="code_huyen">395</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="394" model="huyen">
+            <field name="name">Huyện Yên Định</field>
+            <field name="code_huyen">394</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="399" model="huyen">
+            <field name="name">Huyện Hoằng Hóa</field>
+            <field name="code_huyen">399</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="398" model="huyen">
+            <field name="name">Huyện Thiệu Hóa</field>
+            <field name="code_huyen">398</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="797" model="huyen">
+            <field name="name">Huyện Vĩnh Hưng</field>
+            <field name="code_huyen">797</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="796" model="huyen">
+            <field name="name">Huyện Tân Hưng</field>
+            <field name="code_huyen">796</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="795" model="huyen">
+            <field name="name">Thị xã Kiến Tường</field>
+            <field name="code_huyen">795</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="794" model="huyen">
+            <field name="name">Thành phố Tân An</field>
+            <field name="code_huyen">794</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="799" model="huyen">
+            <field name="name">Huyện Tân Thạnh</field>
+            <field name="code_huyen">799</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="798" model="huyen">
+            <field name="name">Huyện Mộc Hóa</field>
+            <field name="code_huyen">798</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="586" model="huyen">
+            <field name="name">Huyện Ninh Hải</field>
+            <field name="code_huyen">586</field>
+            <field name="parent_code">58</field>
+            <field name="thuoc_tinh" ref="58"/>
+        </record>
+        <record id="587" model="huyen">
+            <field name="name">Huyện Ninh Phước</field>
+            <field name="code_huyen">587</field>
+            <field name="parent_code">58</field>
+            <field name="thuoc_tinh" ref="58"/>
+        </record>
+        <record id="584" model="huyen">
+            <field name="name">Huyện Bác Ái</field>
+            <field name="code_huyen">584</field>
+            <field name="parent_code">58</field>
+            <field name="thuoc_tinh" ref="58"/>
+        </record>
+        <record id="585" model="huyen">
+            <field name="name">Huyện Ninh Sơn</field>
+            <field name="code_huyen">585</field>
+            <field name="parent_code">58</field>
+            <field name="thuoc_tinh" ref="58"/>
+        </record>
+        <record id="582" model="huyen">
+            <field name="name">Thành phố Phan Rang-Tháp Chàm</field>
+            <field name="code_huyen">582</field>
+            <field name="parent_code">58</field>
+            <field name="thuoc_tinh" ref="58"/>
+        </record>
+        <record id="588" model="huyen">
+            <field name="name">Huyện Thuận Bắc</field>
+            <field name="code_huyen">588</field>
+            <field name="parent_code">58</field>
+            <field name="thuoc_tinh" ref="58"/>
+        </record>
+        <record id="589" model="huyen">
+            <field name="name">Huyện Thuận Nam</field>
+            <field name="code_huyen">589</field>
+            <field name="parent_code">58</field>
+            <field name="thuoc_tinh" ref="58"/>
+        </record>
+        <record id="244" model="huyen">
+            <field name="name">Thị xã Phúc Yên</field>
+            <field name="code_huyen">244</field>
+            <field name="parent_code">26</field>
+            <field name="thuoc_tinh" ref="26"/>
+        </record>
+        <record id="247" model="huyen">
+            <field name="name">Huyện Tam Dương</field>
+            <field name="code_huyen">247</field>
+            <field name="parent_code">26</field>
+            <field name="thuoc_tinh" ref="26"/>
+        </record>
+        <record id="246" model="huyen">
+            <field name="name">Huyện Lập Thạch</field>
+            <field name="code_huyen">246</field>
+            <field name="parent_code">26</field>
+            <field name="thuoc_tinh" ref="26"/>
+        </record>
+        <record id="148" model="huyen">
+            <field name="name">Thành phố Hòa Bình</field>
+            <field name="code_huyen">148</field>
+            <field name="parent_code">17</field>
+            <field name="thuoc_tinh" ref="17"/>
+        </record>
+        <record id="243" model="huyen">
+            <field name="name">Thành phố Vĩnh Yên</field>
+            <field name="code_huyen">243</field>
+            <field name="parent_code">26</field>
+            <field name="thuoc_tinh" ref="26"/>
+        </record>
+        <record id="249" model="huyen">
+            <field name="name">Huyện Bình Xuyên</field>
+            <field name="code_huyen">249</field>
+            <field name="parent_code">26</field>
+            <field name="thuoc_tinh" ref="26"/>
+        </record>
+        <record id="248" model="huyen">
+            <field name="name">Huyện Tam Đảo</field>
+            <field name="code_huyen">248</field>
+            <field name="parent_code">26</field>
+            <field name="thuoc_tinh" ref="26"/>
+        </record>
+        <record id="295" model="huyen">
+            <field name="name">Huyện Cẩm Giàng</field>
+            <field name="code_huyen">295</field>
+            <field name="parent_code">30</field>
+            <field name="thuoc_tinh" ref="30"/>
+        </record>
+        <record id="924" model="huyen">
+            <field name="name">Huyện Vĩnh Thạnh</field>
+            <field name="code_huyen">924</field>
+            <field name="parent_code">92</field>
+            <field name="thuoc_tinh" ref="92"/>
+        </record>
+        <record id="925" model="huyen">
+            <field name="name">Huyện Cờ Đỏ</field>
+            <field name="code_huyen">925</field>
+            <field name="parent_code">92</field>
+            <field name="thuoc_tinh" ref="92"/>
+        </record>
+        <record id="519" model="huyen">
+            <field name="name">Huyện Nông Sơn</field>
+            <field name="code_huyen">519</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="518" model="huyen">
+            <field name="name">Huyện Phú Ninh</field>
+            <field name="code_huyen">518</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="511" model="huyen">
+            <field name="name">Huyện Phước Sơn</field>
+            <field name="code_huyen">511</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="510" model="huyen">
+            <field name="name">Huyện Nam Giang</field>
+            <field name="code_huyen">510</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="513" model="huyen">
+            <field name="name">Huyện Thăng Bình</field>
+            <field name="code_huyen">513</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="512" model="huyen">
+            <field name="name">Huyện Hiệp Đức</field>
+            <field name="code_huyen">512</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="515" model="huyen">
+            <field name="name">Huyện Bắc Trà My</field>
+            <field name="code_huyen">515</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="514" model="huyen">
+            <field name="name">Huyện Tiên Phước</field>
+            <field name="code_huyen">514</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="517" model="huyen">
+            <field name="name">Huyện Núi Thành</field>
+            <field name="code_huyen">517</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="516" model="huyen">
+            <field name="name">Huyện Nam Trà My</field>
+            <field name="code_huyen">516</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="138" model="huyen">
+            <field name="name">Huyện Trấn Yên</field>
+            <field name="code_huyen">138</field>
+            <field name="parent_code">15</field>
+            <field name="thuoc_tinh" ref="15"/>
+        </record>
+        <record id="622" model="huyen">
+            <field name="name">Thành phố Pleiku</field>
+            <field name="code_huyen">622</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="627" model="huyen">
+            <field name="name">Huyện Chư Păh</field>
+            <field name="code_huyen">627</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="626" model="huyen">
+            <field name="name">Huyện Đăk Đoa</field>
+            <field name="code_huyen">626</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="625" model="huyen">
+            <field name="name">Huyện KBang</field>
+            <field name="code_huyen">625</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="624" model="huyen">
+            <field name="name">Thị xã Ayun Pa</field>
+            <field name="code_huyen">624</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="450" model="huyen">
+            <field name="name">Thành Phố Đồng Hới</field>
+            <field name="code_huyen">450</field>
+            <field name="parent_code">44</field>
+            <field name="thuoc_tinh" ref="44"/>
+        </record>
+        <record id="629" model="huyen">
+            <field name="name">Huyện Mang Yang</field>
+            <field name="code_huyen">629</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="628" model="huyen">
+            <field name="name">Huyện Ia Grai</field>
+            <field name="code_huyen">628</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="454" model="huyen">
+            <field name="name">Huyện Quảng Trạch</field>
+            <field name="code_huyen">454</field>
+            <field name="parent_code">44</field>
+            <field name="thuoc_tinh" ref="44"/>
+        </record>
+        <record id="455" model="huyen">
+            <field name="name">Huyện Bố Trạch</field>
+            <field name="code_huyen">455</field>
+            <field name="parent_code">44</field>
+            <field name="thuoc_tinh" ref="44"/>
+        </record>
+        <record id="456" model="huyen">
+            <field name="name">Huyện Quảng Ninh</field>
+            <field name="code_huyen">456</field>
+            <field name="parent_code">44</field>
+            <field name="thuoc_tinh" ref="44"/>
+        </record>
+        <record id="457" model="huyen">
+            <field name="name">Huyện Lệ Thủy</field>
+            <field name="code_huyen">457</field>
+            <field name="parent_code">44</field>
+            <field name="thuoc_tinh" ref="44"/>
+        </record>
+        <record id="178" model="huyen">
+            <field name="name">Thành phố Lạng Sơn</field>
+            <field name="code_huyen">178</field>
+            <field name="parent_code">20</field>
+            <field name="thuoc_tinh" ref="20"/>
+        </record>
+        <record id="199" model="huyen">
+            <field name="name">Huyện Tiên Yên</field>
+            <field name="code_huyen">199</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="173" model="huyen">
+            <field name="name">Huyện Phú Bình</field>
+            <field name="code_huyen">173</field>
+            <field name="parent_code">19</field>
+            <field name="thuoc_tinh" ref="19"/>
+        </record>
+        <record id="172" model="huyen">
+            <field name="name">Thị xã Phổ Yên</field>
+            <field name="code_huyen">172</field>
+            <field name="parent_code">19</field>
+            <field name="thuoc_tinh" ref="19"/>
+        </record>
+        <record id="171" model="huyen">
+            <field name="name">Huyện Đại Từ</field>
+            <field name="code_huyen">171</field>
+            <field name="parent_code">19</field>
+            <field name="thuoc_tinh" ref="19"/>
+        </record>
+        <record id="170" model="huyen">
+            <field name="name">Huyện Võ Nhai</field>
+            <field name="code_huyen">170</field>
+            <field name="parent_code">19</field>
+            <field name="thuoc_tinh" ref="19"/>
+        </record>
+        <record id="656" model="huyen">
+            <field name="name">Huyện Lắk</field>
+            <field name="code_huyen">656</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="973" model="huyen">
+            <field name="name">Huyện Ngọc Hiển</field>
+            <field name="code_huyen">973</field>
+            <field name="parent_code">96</field>
+            <field name="thuoc_tinh" ref="96"/>
+        </record>
+        <record id="972" model="huyen">
+            <field name="name">Huyện Phú Tân</field>
+            <field name="code_huyen">972</field>
+            <field name="parent_code">96</field>
+            <field name="thuoc_tinh" ref="96"/>
+        </record>
+        <record id="971" model="huyen">
+            <field name="name">Huyện Năm Căn</field>
+            <field name="code_huyen">971</field>
+            <field name="parent_code">96</field>
+            <field name="thuoc_tinh" ref="96"/>
+        </record>
+        <record id="970" model="huyen">
+            <field name="name">Huyện Đầm Dơi</field>
+            <field name="code_huyen">970</field>
+            <field name="parent_code">96</field>
+            <field name="thuoc_tinh" ref="96"/>
+        </record>
+        <record id="654" model="huyen">
+            <field name="name">Huyện Krông Pắc</field>
+            <field name="code_huyen">654</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="182" model="huyen">
+            <field name="name">Huyện Văn Lãng</field>
+            <field name="code_huyen">182</field>
+            <field name="parent_code">20</field>
+            <field name="thuoc_tinh" ref="20"/>
+        </record>
+        <record id="183" model="huyen">
+            <field name="name">Huyện Cao Lộc</field>
+            <field name="code_huyen">183</field>
+            <field name="parent_code">20</field>
+            <field name="thuoc_tinh" ref="20"/>
+        </record>
+        <record id="180" model="huyen">
+            <field name="name">Huyện Tràng Định</field>
+            <field name="code_huyen">180</field>
+            <field name="parent_code">20</field>
+            <field name="thuoc_tinh" ref="20"/>
+        </record>
+        <record id="181" model="huyen">
+            <field name="name">Huyện Bình Gia</field>
+            <field name="code_huyen">181</field>
+            <field name="parent_code">20</field>
+            <field name="thuoc_tinh" ref="20"/>
+        </record>
+        <record id="186" model="huyen">
+            <field name="name">Huyện Hữu Lũng</field>
+            <field name="code_huyen">186</field>
+            <field name="parent_code">20</field>
+            <field name="thuoc_tinh" ref="20"/>
+        </record>
+        <record id="187" model="huyen">
+            <field name="name">Huyện Chi Lăng</field>
+            <field name="code_huyen">187</field>
+            <field name="parent_code">20</field>
+            <field name="thuoc_tinh" ref="20"/>
+        </record>
+        <record id="184" model="huyen">
+            <field name="name">Huyện Văn Quan</field>
+            <field name="code_huyen">184</field>
+            <field name="parent_code">20</field>
+            <field name="thuoc_tinh" ref="20"/>
+        </record>
+        <record id="185" model="huyen">
+            <field name="name">Huyện Bắc Sơn</field>
+            <field name="code_huyen">185</field>
+            <field name="parent_code">20</field>
+            <field name="thuoc_tinh" ref="20"/>
+        </record>
+        <record id="652" model="huyen">
+            <field name="name">Huyện M'Đrắk</field>
+            <field name="code_huyen">652</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="188" model="huyen">
+            <field name="name">Huyện Lộc Bình</field>
+            <field name="code_huyen">188</field>
+            <field name="parent_code">20</field>
+            <field name="thuoc_tinh" ref="20"/>
+        </record>
+        <record id="189" model="huyen">
+            <field name="name">Huyện Đình Lập</field>
+            <field name="code_huyen">189</field>
+            <field name="parent_code">20</field>
+            <field name="thuoc_tinh" ref="20"/>
+        </record>
+        <record id="653" model="huyen">
+            <field name="name">Huyện Krông Bông</field>
+            <field name="code_huyen">653</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="061" model="huyen">
+            <field name="name">Huyện Ba Bể</field>
+            <field name="code_huyen">061</field>
+            <field name="parent_code">06</field>
+            <field name="thuoc_tinh" ref="06"/>
+        </record>
+        <record id="060" model="huyen">
+            <field name="name">Huyện Pác Nặm</field>
+            <field name="code_huyen">060</field>
+            <field name="parent_code">06</field>
+            <field name="thuoc_tinh" ref="06"/>
+        </record>
+        <record id="063" model="huyen">
+            <field name="name">Huyện Bạch Thông</field>
+            <field name="code_huyen">063</field>
+            <field name="parent_code">06</field>
+            <field name="thuoc_tinh" ref="06"/>
+        </record>
+        <record id="062" model="huyen">
+            <field name="name">Huyện Ngân Sơn</field>
+            <field name="code_huyen">062</field>
+            <field name="parent_code">06</field>
+            <field name="thuoc_tinh" ref="06"/>
+        </record>
+        <record id="065" model="huyen">
+            <field name="name">Huyện Chợ Mới</field>
+            <field name="code_huyen">065</field>
+            <field name="parent_code">06</field>
+            <field name="thuoc_tinh" ref="06"/>
+        </record>
+        <record id="650" model="huyen">
+            <field name="name">Huyện Krông Năng</field>
+            <field name="code_huyen">650</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="066" model="huyen">
+            <field name="name">Huyện Na Rì</field>
+            <field name="code_huyen">066</field>
+            <field name="parent_code">06</field>
+            <field name="thuoc_tinh" ref="06"/>
+        </record>
+        <record id="651" model="huyen">
+            <field name="name">Huyện Ea Kar</field>
+            <field name="code_huyen">651</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="869" model="huyen">
+            <field name="name">Huyện Tân Hồng</field>
+            <field name="code_huyen">869</field>
+            <field name="parent_code">87</field>
+            <field name="thuoc_tinh" ref="87"/>
+        </record>
+        <record id="868" model="huyen">
+            <field name="name">Thị xã Hồng Ngự</field>
+            <field name="code_huyen">868</field>
+            <field name="parent_code">87</field>
+            <field name="thuoc_tinh" ref="87"/>
+        </record>
+        <record id="218" model="huyen">
+            <field name="name">Huyện Lục Nam</field>
+            <field name="code_huyen">218</field>
+            <field name="parent_code">24</field>
+            <field name="thuoc_tinh" ref="24"/>
+        </record>
+        <record id="861" model="huyen">
+            <field name="name">Thị xã Bình Minh</field>
+            <field name="code_huyen">861</field>
+            <field name="parent_code">86</field>
+            <field name="thuoc_tinh" ref="86"/>
+        </record>
+        <record id="860" model="huyen">
+            <field name="name">Huyện Tam Bình</field>
+            <field name="code_huyen">860</field>
+            <field name="parent_code">86</field>
+            <field name="thuoc_tinh" ref="86"/>
+        </record>
+        <record id="863" model="huyen">
+            <field name="name">Huyện Bình Tân</field>
+            <field name="code_huyen">863</field>
+            <field name="parent_code">86</field>
+            <field name="thuoc_tinh" ref="86"/>
+        </record>
+        <record id="862" model="huyen">
+            <field name="name">Huyện Trà Ôn</field>
+            <field name="code_huyen">862</field>
+            <field name="parent_code">86</field>
+            <field name="thuoc_tinh" ref="86"/>
+        </record>
+        <record id="867" model="huyen">
+            <field name="name">Thành phố Sa Đéc</field>
+            <field name="code_huyen">867</field>
+            <field name="parent_code">87</field>
+            <field name="thuoc_tinh" ref="87"/>
+        </record>
+        <record id="866" model="huyen">
+            <field name="name">Thành phố Cao Lãnh</field>
+            <field name="code_huyen">866</field>
+            <field name="parent_code">87</field>
+            <field name="thuoc_tinh" ref="87"/>
+        </record>
+        <record id="883" model="huyen">
+            <field name="name">Thành phố Long Xuyên</field>
+            <field name="code_huyen">883</field>
+            <field name="parent_code">89</field>
+            <field name="thuoc_tinh" ref="89"/>
+        </record>
+        <record id="753" model="huyen">
+            <field name="name">Huyện Đất Đỏ</field>
+            <field name="code_huyen">753</field>
+            <field name="parent_code">77</field>
+            <field name="thuoc_tinh" ref="77"/>
+        </record>
+        <record id="887" model="huyen">
+            <field name="name">Thị xã Tân Châu</field>
+            <field name="code_huyen">887</field>
+            <field name="parent_code">89</field>
+            <field name="thuoc_tinh" ref="89"/>
+        </record>
+        <record id="886" model="huyen">
+            <field name="name">Huyện An Phú</field>
+            <field name="code_huyen">886</field>
+            <field name="parent_code">89</field>
+            <field name="thuoc_tinh" ref="89"/>
+        </record>
+        <record id="884" model="huyen">
+            <field name="name">Thành phố Châu Đốc</field>
+            <field name="code_huyen">884</field>
+            <field name="parent_code">89</field>
+            <field name="thuoc_tinh" ref="89"/>
+        </record>
+        <record id="889" model="huyen">
+            <field name="name">Huyện Châu Phú</field>
+            <field name="code_huyen">889</field>
+            <field name="parent_code">89</field>
+            <field name="thuoc_tinh" ref="89"/>
+        </record>
+        <record id="888" model="huyen">
+            <field name="name">Huyện Phú Tân</field>
+            <field name="code_huyen">888</field>
+            <field name="parent_code">89</field>
+            <field name="thuoc_tinh" ref="89"/>
+        </record>
+        <record id="657" model="huyen">
+            <field name="name">Huyện Cư Kuin</field>
+            <field name="code_huyen">657</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="064" model="huyen">
+            <field name="name">Huyện Chợ Đồn</field>
+            <field name="code_huyen">064</field>
+            <field name="parent_code">06</field>
+            <field name="thuoc_tinh" ref="06"/>
+        </record>
+        <record id="323" model="huyen">
+            <field name="name">Thành phố Hưng Yên</field>
+            <field name="code_huyen">323</field>
+            <field name="parent_code">33</field>
+            <field name="thuoc_tinh" ref="33"/>
+        </record>
+        <record id="326" model="huyen">
+            <field name="name">Huyện Văn Giang</field>
+            <field name="code_huyen">326</field>
+            <field name="parent_code">33</field>
+            <field name="thuoc_tinh" ref="33"/>
+        </record>
+        <record id="327" model="huyen">
+            <field name="name">Huyện Yên Mỹ</field>
+            <field name="code_huyen">327</field>
+            <field name="parent_code">33</field>
+            <field name="thuoc_tinh" ref="33"/>
+        </record>
+        <record id="325" model="huyen">
+            <field name="name">Huyện Văn Lâm</field>
+            <field name="code_huyen">325</field>
+            <field name="parent_code">33</field>
+            <field name="thuoc_tinh" ref="33"/>
+        </record>
+        <record id="328" model="huyen">
+            <field name="name">Huyện Mỹ Hào</field>
+            <field name="code_huyen">328</field>
+            <field name="parent_code">33</field>
+            <field name="thuoc_tinh" ref="33"/>
+        </record>
+        <record id="329" model="huyen">
+            <field name="name">Huyện Ân Thi</field>
+            <field name="code_huyen">329</field>
+            <field name="parent_code">33</field>
+            <field name="thuoc_tinh" ref="33"/>
+        </record>
+        <record id="201" model="huyen">
+            <field name="name">Huyện Hải Hà</field>
+            <field name="code_huyen">201</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="200" model="huyen">
+            <field name="name">Huyện Đầm Hà</field>
+            <field name="code_huyen">200</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="203" model="huyen">
+            <field name="name">Huyện Vân Đồn</field>
+            <field name="code_huyen">203</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="202" model="huyen">
+            <field name="name">Huyện Ba Chẽ</field>
+            <field name="code_huyen">202</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="205" model="huyen">
+            <field name="name">Thị xã Đông Triều</field>
+            <field name="code_huyen">205</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="204" model="huyen">
+            <field name="name">Huyện Hoành Bồ</field>
+            <field name="code_huyen">204</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="207" model="huyen">
+            <field name="name">Huyện Cô Tô</field>
+            <field name="code_huyen">207</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="206" model="huyen">
+            <field name="name">Thị xã Quảng Yên</field>
+            <field name="code_huyen">206</field>
+            <field name="parent_code">22</field>
+            <field name="thuoc_tinh" ref="22"/>
+        </record>
+        <record id="778" model="huyen">
+            <field name="name">Quận 7</field>
+            <field name="code_huyen">778</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="655" model="huyen">
+            <field name="name">Huyện Krông A Na</field>
+            <field name="code_huyen">655</field>
+            <field name="parent_code">66</field>
+            <field name="thuoc_tinh" ref="66"/>
+        </record>
+        <record id="805" model="huyen">
+            <field name="name">Huyện Tân Trụ</field>
+            <field name="code_huyen">805</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="804" model="huyen">
+            <field name="name">Huyện Thủ Thừa</field>
+            <field name="code_huyen">804</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="099" model="huyen">
+            <field name="name">Huyện Tuần Giáo</field>
+            <field name="code_huyen">099</field>
+            <field name="parent_code">11</field>
+            <field name="thuoc_tinh" ref="11"/>
+        </record>
+        <record id="667" model="huyen">
+            <field name="name">Huyện Tuy Đức</field>
+            <field name="code_huyen">667</field>
+            <field name="parent_code">67</field>
+            <field name="thuoc_tinh" ref="67"/>
+        </record>
+        <record id="666" model="huyen">
+            <field name="name">Huyện Đắk R'Lấp</field>
+            <field name="code_huyen">666</field>
+            <field name="parent_code">67</field>
+            <field name="thuoc_tinh" ref="67"/>
+        </record>
+        <record id="665" model="huyen">
+            <field name="name">Huyện Đắk Song</field>
+            <field name="code_huyen">665</field>
+            <field name="parent_code">67</field>
+            <field name="thuoc_tinh" ref="67"/>
+        </record>
+        <record id="664" model="huyen">
+            <field name="name">Huyện Krông Nô</field>
+            <field name="code_huyen">664</field>
+            <field name="parent_code">67</field>
+            <field name="thuoc_tinh" ref="67"/>
+        </record>
+        <record id="663" model="huyen">
+            <field name="name">Huyện Đắk Mil</field>
+            <field name="code_huyen">663</field>
+            <field name="parent_code">67</field>
+            <field name="thuoc_tinh" ref="67"/>
+        </record>
+        <record id="662" model="huyen">
+            <field name="name">Huyện Cư Jút</field>
+            <field name="code_huyen">662</field>
+            <field name="parent_code">67</field>
+            <field name="thuoc_tinh" ref="67"/>
+        </record>
+        <record id="661" model="huyen">
+            <field name="name">Huyện Đăk Glong</field>
+            <field name="code_huyen">661</field>
+            <field name="parent_code">67</field>
+            <field name="thuoc_tinh" ref="67"/>
+        </record>
+        <record id="660" model="huyen">
+            <field name="name">Thị xã Gia Nghĩa</field>
+            <field name="code_huyen">660</field>
+            <field name="parent_code">67</field>
+            <field name="thuoc_tinh" ref="67"/>
+        </record>
+        <record id="215" model="huyen">
+            <field name="name">Huyện Yên Thế</field>
+            <field name="code_huyen">215</field>
+            <field name="parent_code">24</field>
+            <field name="thuoc_tinh" ref="24"/>
+        </record>
+        <record id="692" model="huyen">
+            <field name="name">Huyện Lộc Ninh</field>
+            <field name="code_huyen">692</field>
+            <field name="parent_code">70</field>
+            <field name="thuoc_tinh" ref="70"/>
+        </record>
+        <record id="693" model="huyen">
+            <field name="name">Huyện Bù Đốp</field>
+            <field name="code_huyen">693</field>
+            <field name="parent_code">70</field>
+            <field name="thuoc_tinh" ref="70"/>
+        </record>
+        <record id="690" model="huyen">
+            <field name="name">Thị xã Bình Long</field>
+            <field name="code_huyen">690</field>
+            <field name="parent_code">70</field>
+            <field name="thuoc_tinh" ref="70"/>
+        </record>
+        <record id="691" model="huyen">
+            <field name="name">Huyện Bù Gia Mập</field>
+            <field name="code_huyen">691</field>
+            <field name="parent_code">70</field>
+            <field name="thuoc_tinh" ref="70"/>
+        </record>
+        <record id="696" model="huyen">
+            <field name="name">Huyện Bù Đăng</field>
+            <field name="code_huyen">696</field>
+            <field name="parent_code">70</field>
+            <field name="thuoc_tinh" ref="70"/>
+        </record>
+        <record id="697" model="huyen">
+            <field name="name">Huyện Chơn Thành</field>
+            <field name="code_huyen">697</field>
+            <field name="parent_code">70</field>
+            <field name="thuoc_tinh" ref="70"/>
+        </record>
+        <record id="694" model="huyen">
+            <field name="name">Huyện Hớn Quản</field>
+            <field name="code_huyen">694</field>
+            <field name="parent_code">70</field>
+            <field name="thuoc_tinh" ref="70"/>
+        </record>
+        <record id="695" model="huyen">
+            <field name="name">Huyện Đồng Phú</field>
+            <field name="code_huyen">695</field>
+            <field name="parent_code">70</field>
+            <field name="thuoc_tinh" ref="70"/>
+        </record>
+        <record id="698" model="huyen">
+            <field name="name">Huyện Phú Riềng</field>
+            <field name="code_huyen">698</field>
+            <field name="parent_code">70</field>
+            <field name="thuoc_tinh" ref="70"/>
+        </record>
+        <record id="542" model="huyen">
+            <field name="name">Huyện An Lão</field>
+            <field name="code_huyen">542</field>
+            <field name="parent_code">52</field>
+            <field name="thuoc_tinh" ref="52"/>
+        </record>
+        <record id="543" model="huyen">
+            <field name="name">Huyện Hoài Nhơn</field>
+            <field name="code_huyen">543</field>
+            <field name="parent_code">52</field>
+            <field name="thuoc_tinh" ref="52"/>
+        </record>
+        <record id="540" model="huyen">
+            <field name="name">Thành phố Qui Nhơn</field>
+            <field name="code_huyen">540</field>
+            <field name="parent_code">52</field>
+            <field name="thuoc_tinh" ref="52"/>
+        </record>
+        <record id="546" model="huyen">
+            <field name="name">Huyện Vĩnh Thạnh</field>
+            <field name="code_huyen">546</field>
+            <field name="parent_code">52</field>
+            <field name="thuoc_tinh" ref="52"/>
+        </record>
+        <record id="547" model="huyen">
+            <field name="name">Huyện Tây Sơn</field>
+            <field name="code_huyen">547</field>
+            <field name="parent_code">52</field>
+            <field name="thuoc_tinh" ref="52"/>
+        </record>
+        <record id="544" model="huyen">
+            <field name="name">Huyện Hoài Ân</field>
+            <field name="code_huyen">544</field>
+            <field name="parent_code">52</field>
+            <field name="thuoc_tinh" ref="52"/>
+        </record>
+        <record id="545" model="huyen">
+            <field name="name">Huyện Phù Mỹ</field>
+            <field name="code_huyen">545</field>
+            <field name="parent_code">52</field>
+            <field name="thuoc_tinh" ref="52"/>
+        </record>
+        <record id="548" model="huyen">
+            <field name="name">Huyện Phù Cát</field>
+            <field name="code_huyen">548</field>
+            <field name="parent_code">52</field>
+            <field name="thuoc_tinh" ref="52"/>
+        </record>
+        <record id="549" model="huyen">
+            <field name="name">Thị xã An Nhơn</field>
+            <field name="code_huyen">549</field>
+            <field name="parent_code">52</field>
+            <field name="thuoc_tinh" ref="52"/>
+        </record>
+        <record id="120" model="huyen">
+            <field name="name">Huyện Mường La</field>
+            <field name="code_huyen">120</field>
+            <field name="parent_code">14</field>
+            <field name="thuoc_tinh" ref="14"/>
+        </record>
+        <record id="121" model="huyen">
+            <field name="name">Huyện Bắc Yên</field>
+            <field name="code_huyen">121</field>
+            <field name="parent_code">14</field>
+            <field name="thuoc_tinh" ref="14"/>
+        </record>
+        <record id="122" model="huyen">
+            <field name="name">Huyện Phù Yên</field>
+            <field name="code_huyen">122</field>
+            <field name="parent_code">14</field>
+            <field name="thuoc_tinh" ref="14"/>
+        </record>
+        <record id="123" model="huyen">
+            <field name="name">Huyện Mộc Châu</field>
+            <field name="code_huyen">123</field>
+            <field name="parent_code">14</field>
+            <field name="thuoc_tinh" ref="14"/>
+        </record>
+        <record id="124" model="huyen">
+            <field name="name">Huyện Yên Châu</field>
+            <field name="code_huyen">124</field>
+            <field name="parent_code">14</field>
+            <field name="thuoc_tinh" ref="14"/>
+        </record>
+        <record id="125" model="huyen">
+            <field name="name">Huyện Mai Sơn</field>
+            <field name="code_huyen">125</field>
+            <field name="parent_code">14</field>
+            <field name="thuoc_tinh" ref="14"/>
+        </record>
+        <record id="126" model="huyen">
+            <field name="name">Huyện Sông Mã</field>
+            <field name="code_huyen">126</field>
+            <field name="parent_code">14</field>
+            <field name="thuoc_tinh" ref="14"/>
+        </record>
+        <record id="127" model="huyen">
+            <field name="name">Huyện Sốp Cộp</field>
+            <field name="code_huyen">127</field>
+            <field name="parent_code">14</field>
+            <field name="thuoc_tinh" ref="14"/>
+        </record>
+        <record id="128" model="huyen">
+            <field name="name">Huyện Vân Hồ</field>
+            <field name="code_huyen">128</field>
+            <field name="parent_code">14</field>
+            <field name="thuoc_tinh" ref="14"/>
+        </record>
+        <record id="219" model="huyen">
+            <field name="name">Huyện Lục Ngạn</field>
+            <field name="code_huyen">219</field>
+            <field name="parent_code">24</field>
+            <field name="thuoc_tinh" ref="24"/>
+        </record>
+        <record id="414" model="huyen">
+            <field name="name">Thị xã Thái Hoà</field>
+            <field name="code_huyen">414</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="415" model="huyen">
+            <field name="name">Huyện Quế Phong</field>
+            <field name="code_huyen">415</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="416" model="huyen">
+            <field name="name">Huyện Quỳ Châu</field>
+            <field name="code_huyen">416</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="417" model="huyen">
+            <field name="name">Huyện Kỳ Sơn</field>
+            <field name="code_huyen">417</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="412" model="huyen">
+            <field name="name">Thành phố Vinh</field>
+            <field name="code_huyen">412</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="413" model="huyen">
+            <field name="name">Thị xã Cửa Lò</field>
+            <field name="code_huyen">413</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="923" model="huyen">
+            <field name="name">Quận Thốt Nốt</field>
+            <field name="code_huyen">923</field>
+            <field name="parent_code">92</field>
+            <field name="thuoc_tinh" ref="92"/>
+        </record>
+        <record id="418" model="huyen">
+            <field name="name">Huyện Tương Dương</field>
+            <field name="code_huyen">418</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="419" model="huyen">
+            <field name="name">Huyện Nghĩa Đàn</field>
+            <field name="code_huyen">419</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="926" model="huyen">
+            <field name="name">Huyện Phong Điền</field>
+            <field name="code_huyen">926</field>
+            <field name="parent_code">92</field>
+            <field name="thuoc_tinh" ref="92"/>
+        </record>
+        <record id="927" model="huyen">
+            <field name="name">Huyện Thới Lai</field>
+            <field name="code_huyen">927</field>
+            <field name="parent_code">92</field>
+            <field name="thuoc_tinh" ref="92"/>
+        </record>
+        <record id="313" model="huyen">
+            <field name="name">Huyện An Lão</field>
+            <field name="code_huyen">313</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="312" model="huyen">
+            <field name="name">Huyện An Dương</field>
+            <field name="code_huyen">312</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="311" model="huyen">
+            <field name="name">Huyện Thuỷ Nguyên</field>
+            <field name="code_huyen">311</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="317" model="huyen">
+            <field name="name">Huyện Cát Hải</field>
+            <field name="code_huyen">317</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="316" model="huyen">
+            <field name="name">Huyện Vĩnh Bảo</field>
+            <field name="code_huyen">316</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="315" model="huyen">
+            <field name="name">Huyện Tiên Lãng</field>
+            <field name="code_huyen">315</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="314" model="huyen">
+            <field name="name">Huyện Kiến Thuỵ</field>
+            <field name="code_huyen">314</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="032" model="huyen">
+            <field name="name">Huyện Hoàng Su Phì</field>
+            <field name="code_huyen">032</field>
+            <field name="parent_code">02</field>
+            <field name="thuoc_tinh" ref="02"/>
+        </record>
+        <record id="033" model="huyen">
+            <field name="name">Huyện Xín Mần</field>
+            <field name="code_huyen">033</field>
+            <field name="parent_code">02</field>
+            <field name="thuoc_tinh" ref="02"/>
+        </record>
+        <record id="030" model="huyen">
+            <field name="name">Huyện Vị Xuyên</field>
+            <field name="code_huyen">030</field>
+            <field name="parent_code">02</field>
+            <field name="thuoc_tinh" ref="02"/>
+        </record>
+        <record id="031" model="huyen">
+            <field name="name">Huyện Bắc Mê</field>
+            <field name="code_huyen">031</field>
+            <field name="parent_code">02</field>
+            <field name="thuoc_tinh" ref="02"/>
+        </record>
+        <record id="034" model="huyen">
+            <field name="name">Huyện Bắc Quang</field>
+            <field name="code_huyen">034</field>
+            <field name="parent_code">02</field>
+            <field name="thuoc_tinh" ref="02"/>
+        </record>
+        <record id="035" model="huyen">
+            <field name="name">Huyện Quang Bình</field>
+            <field name="code_huyen">035</field>
+            <field name="parent_code">02</field>
+            <field name="thuoc_tinh" ref="02"/>
+        </record>
+        <record id="832" model="huyen">
+            <field name="name">Huyện Chợ Lách</field>
+            <field name="code_huyen">832</field>
+            <field name="parent_code">83</field>
+            <field name="thuoc_tinh" ref="83"/>
+        </record>
+        <record id="833" model="huyen">
+            <field name="name">Huyện Mỏ Cày Nam</field>
+            <field name="code_huyen">833</field>
+            <field name="parent_code">83</field>
+            <field name="thuoc_tinh" ref="83"/>
+        </record>
+        <record id="831" model="huyen">
+            <field name="name">Huyện Châu Thành</field>
+            <field name="code_huyen">831</field>
+            <field name="parent_code">83</field>
+            <field name="thuoc_tinh" ref="83"/>
+        </record>
+        <record id="836" model="huyen">
+            <field name="name">Huyện Ba Tri</field>
+            <field name="code_huyen">836</field>
+            <field name="parent_code">83</field>
+            <field name="thuoc_tinh" ref="83"/>
+        </record>
+        <record id="837" model="huyen">
+            <field name="name">Huyện Thạnh Phú</field>
+            <field name="code_huyen">837</field>
+            <field name="parent_code">83</field>
+            <field name="thuoc_tinh" ref="83"/>
+        </record>
+        <record id="834" model="huyen">
+            <field name="name">Huyện Giồng Trôm</field>
+            <field name="code_huyen">834</field>
+            <field name="parent_code">83</field>
+            <field name="thuoc_tinh" ref="83"/>
+        </record>
+        <record id="835" model="huyen">
+            <field name="name">Huyện Bình Đại</field>
+            <field name="code_huyen">835</field>
+            <field name="parent_code">83</field>
+            <field name="thuoc_tinh" ref="83"/>
+        </record>
+        <record id="838" model="huyen">
+            <field name="name">Huyện Mỏ Cày Bắc</field>
+            <field name="code_huyen">838</field>
+            <field name="parent_code">83</field>
+            <field name="thuoc_tinh" ref="83"/>
+        </record>
+        <record id="369" model="huyen">
+            <field name="name">Thành phố Ninh Bình</field>
+            <field name="code_huyen">369</field>
+            <field name="parent_code">37</field>
+            <field name="thuoc_tinh" ref="37"/>
+        </record>
+        <record id="366" model="huyen">
+            <field name="name">Huyện Hải Hậu</field>
+            <field name="code_huyen">366</field>
+            <field name="parent_code">36</field>
+            <field name="thuoc_tinh" ref="36"/>
+        </record>
+        <record id="364" model="huyen">
+            <field name="name">Huyện Xuân Trường</field>
+            <field name="code_huyen">364</field>
+            <field name="parent_code">36</field>
+            <field name="thuoc_tinh" ref="36"/>
+        </record>
+        <record id="365" model="huyen">
+            <field name="name">Huyện Giao Thủy</field>
+            <field name="code_huyen">365</field>
+            <field name="parent_code">36</field>
+            <field name="thuoc_tinh" ref="36"/>
+        </record>
+        <record id="362" model="huyen">
+            <field name="name">Huyện Nam Trực</field>
+            <field name="code_huyen">362</field>
+            <field name="parent_code">36</field>
+            <field name="thuoc_tinh" ref="36"/>
+        </record>
+        <record id="363" model="huyen">
+            <field name="name">Huyện Trực Ninh</field>
+            <field name="code_huyen">363</field>
+            <field name="parent_code">36</field>
+            <field name="thuoc_tinh" ref="36"/>
+        </record>
+        <record id="360" model="huyen">
+            <field name="name">Huyện Ý Yên</field>
+            <field name="code_huyen">360</field>
+            <field name="parent_code">36</field>
+            <field name="thuoc_tinh" ref="36"/>
+        </record>
+        <record id="361" model="huyen">
+            <field name="name">Huyện Nghĩa Hưng</field>
+            <field name="code_huyen">361</field>
+            <field name="parent_code">36</field>
+            <field name="thuoc_tinh" ref="36"/>
+        </record>
+        <record id="380" model="huyen">
+            <field name="name">Thành phố Thanh Hóa</field>
+            <field name="code_huyen">380</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="381" model="huyen">
+            <field name="name">Thị xã Bỉm Sơn</field>
+            <field name="code_huyen">381</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="382" model="huyen">
+            <field name="name">Thành phố Sầm Sơn</field>
+            <field name="code_huyen">382</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="384" model="huyen">
+            <field name="name">Huyện Mường Lát</field>
+            <field name="code_huyen">384</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="385" model="huyen">
+            <field name="name">Huyện Quan Hóa</field>
+            <field name="code_huyen">385</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="386" model="huyen">
+            <field name="name">Huyện Bá Thước</field>
+            <field name="code_huyen">386</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="387" model="huyen">
+            <field name="name">Huyện Quan Sơn</field>
+            <field name="code_huyen">387</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="388" model="huyen">
+            <field name="name">Huyện Lang Chánh</field>
+            <field name="code_huyen">388</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="389" model="huyen">
+            <field name="name">Huyện Ngọc Lặc</field>
+            <field name="code_huyen">389</field>
+            <field name="parent_code">38</field>
+            <field name="thuoc_tinh" ref="38"/>
+        </record>
+        <record id="784" model="huyen">
+            <field name="name">Huyện Hóc Môn</field>
+            <field name="code_huyen">784</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="785" model="huyen">
+            <field name="name">Huyện Bình Chánh</field>
+            <field name="code_huyen">785</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="786" model="huyen">
+            <field name="name">Huyện Nhà Bè</field>
+            <field name="code_huyen">786</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="787" model="huyen">
+            <field name="name">Huyện Cần Giờ</field>
+            <field name="code_huyen">787</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="783" model="huyen">
+            <field name="name">Huyện Củ Chi</field>
+            <field name="code_huyen">783</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="573" model="huyen">
+            <field name="name">Huyện Khánh Vĩnh</field>
+            <field name="code_huyen">573</field>
+            <field name="parent_code">56</field>
+            <field name="thuoc_tinh" ref="56"/>
+        </record>
+        <record id="572" model="huyen">
+            <field name="name">Thị xã Ninh Hòa</field>
+            <field name="code_huyen">572</field>
+            <field name="parent_code">56</field>
+            <field name="thuoc_tinh" ref="56"/>
+        </record>
+        <record id="571" model="huyen">
+            <field name="name">Huyện Vạn Ninh</field>
+            <field name="code_huyen">571</field>
+            <field name="parent_code">56</field>
+            <field name="thuoc_tinh" ref="56"/>
+        </record>
+        <record id="570" model="huyen">
+            <field name="name">Huyện Cam Lâm</field>
+            <field name="code_huyen">570</field>
+            <field name="parent_code">56</field>
+            <field name="thuoc_tinh" ref="56"/>
+        </record>
+        <record id="576" model="huyen">
+            <field name="name">Huyện Trường Sa</field>
+            <field name="code_huyen">576</field>
+            <field name="parent_code">56</field>
+            <field name="thuoc_tinh" ref="56"/>
+        </record>
+        <record id="575" model="huyen">
+            <field name="name">Huyện Khánh Sơn</field>
+            <field name="code_huyen">575</field>
+            <field name="parent_code">56</field>
+            <field name="thuoc_tinh" ref="56"/>
+        </record>
+        <record id="574" model="huyen">
+            <field name="name">Huyện Diên Khánh</field>
+            <field name="code_huyen">574</field>
+            <field name="parent_code">56</field>
+            <field name="thuoc_tinh" ref="56"/>
+        </record>
+        <record id="258" model="huyen">
+            <field name="name">Huyện Yên Phong</field>
+            <field name="code_huyen">258</field>
+            <field name="parent_code">27</field>
+            <field name="thuoc_tinh" ref="27"/>
+        </record>
+        <record id="259" model="huyen">
+            <field name="name">Huyện Quế Võ</field>
+            <field name="code_huyen">259</field>
+            <field name="parent_code">27</field>
+            <field name="thuoc_tinh" ref="27"/>
+        </record>
+        <record id="252" model="huyen">
+            <field name="name">Huyện Vĩnh Tường</field>
+            <field name="code_huyen">252</field>
+            <field name="parent_code">26</field>
+            <field name="thuoc_tinh" ref="26"/>
+        </record>
+        <record id="155" model="huyen">
+            <field name="name">Huyện Tân Lạc</field>
+            <field name="code_huyen">155</field>
+            <field name="parent_code">17</field>
+            <field name="thuoc_tinh" ref="17"/>
+        </record>
+        <record id="250" model="huyen">
+            <field name="name">Huyện Mê Linh</field>
+            <field name="code_huyen">250</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="251" model="huyen">
+            <field name="name">Huyện Yên Lạc</field>
+            <field name="code_huyen">251</field>
+            <field name="parent_code">26</field>
+            <field name="thuoc_tinh" ref="26"/>
+        </record>
+        <record id="253" model="huyen">
+            <field name="name">Huyện Sông Lô</field>
+            <field name="code_huyen">253</field>
+            <field name="parent_code">26</field>
+            <field name="thuoc_tinh" ref="26"/>
+        </record>
+        <record id="154" model="huyen">
+            <field name="name">Huyện Cao Phong</field>
+            <field name="code_huyen">154</field>
+            <field name="parent_code">17</field>
+            <field name="thuoc_tinh" ref="17"/>
+        </record>
+        <record id="156" model="huyen">
+            <field name="name">Huyện Mai Châu</field>
+            <field name="code_huyen">156</field>
+            <field name="parent_code">17</field>
+            <field name="thuoc_tinh" ref="17"/>
+        </record>
+        <record id="731" model="huyen">
+            <field name="name">Thành phố Biên Hòa</field>
+            <field name="code_huyen">731</field>
+            <field name="parent_code">75</field>
+            <field name="thuoc_tinh" ref="75"/>
+        </record>
+        <record id="732" model="huyen">
+            <field name="name">Thị xã Long Khánh</field>
+            <field name="code_huyen">732</field>
+            <field name="parent_code">75</field>
+            <field name="thuoc_tinh" ref="75"/>
+        </record>
+        <record id="735" model="huyen">
+            <field name="name">Huyện Vĩnh Cửu</field>
+            <field name="code_huyen">735</field>
+            <field name="parent_code">75</field>
+            <field name="thuoc_tinh" ref="75"/>
+        </record>
+        <record id="734" model="huyen">
+            <field name="name">Huyện Tân Phú</field>
+            <field name="code_huyen">734</field>
+            <field name="parent_code">75</field>
+            <field name="thuoc_tinh" ref="75"/>
+        </record>
+        <record id="737" model="huyen">
+            <field name="name">Huyện Trảng Bom</field>
+            <field name="code_huyen">737</field>
+            <field name="parent_code">75</field>
+            <field name="thuoc_tinh" ref="75"/>
+        </record>
+        <record id="736" model="huyen">
+            <field name="name">Huyện Định Quán</field>
+            <field name="code_huyen">736</field>
+            <field name="parent_code">75</field>
+            <field name="thuoc_tinh" ref="75"/>
+        </record>
+        <record id="739" model="huyen">
+            <field name="name">Huyện Cẩm Mỹ</field>
+            <field name="code_huyen">739</field>
+            <field name="parent_code">75</field>
+            <field name="thuoc_tinh" ref="75"/>
+        </record>
+        <record id="738" model="huyen">
+            <field name="name">Huyện Thống Nhất</field>
+            <field name="code_huyen">738</field>
+            <field name="parent_code">75</field>
+            <field name="thuoc_tinh" ref="75"/>
+        </record>
+        <record id="504" model="huyen">
+            <field name="name">Huyện Tây Giang</field>
+            <field name="code_huyen">504</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="505" model="huyen">
+            <field name="name">Huyện Đông Giang</field>
+            <field name="code_huyen">505</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="502" model="huyen">
+            <field name="name">Thành phố Tam Kỳ</field>
+            <field name="code_huyen">502</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="503" model="huyen">
+            <field name="name">Thành phố Hội An</field>
+            <field name="code_huyen">503</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="630" model="huyen">
+            <field name="name">Huyện Kông Chro</field>
+            <field name="code_huyen">630</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="631" model="huyen">
+            <field name="name">Huyện Đức Cơ</field>
+            <field name="code_huyen">631</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="632" model="huyen">
+            <field name="name">Huyện Chư Prông</field>
+            <field name="code_huyen">632</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="633" model="huyen">
+            <field name="name">Huyện Chư Sê</field>
+            <field name="code_huyen">633</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="469" model="huyen">
+            <field name="name">Huyện Triệu Phong</field>
+            <field name="code_huyen">469</field>
+            <field name="parent_code">45</field>
+            <field name="thuoc_tinh" ref="45"/>
+        </record>
+        <record id="468" model="huyen">
+            <field name="name">Huyện Cam Lộ</field>
+            <field name="code_huyen">468</field>
+            <field name="parent_code">45</field>
+            <field name="thuoc_tinh" ref="45"/>
+        </record>
+        <record id="637" model="huyen">
+            <field name="name">Huyện Krông Pa</field>
+            <field name="code_huyen">637</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="465" model="huyen">
+            <field name="name">Huyện Hướng Hóa</field>
+            <field name="code_huyen">465</field>
+            <field name="parent_code">45</field>
+            <field name="thuoc_tinh" ref="45"/>
+        </record>
+        <record id="464" model="huyen">
+            <field name="name">Huyện Vĩnh Linh</field>
+            <field name="code_huyen">464</field>
+            <field name="parent_code">45</field>
+            <field name="thuoc_tinh" ref="45"/>
+        </record>
+        <record id="467" model="huyen">
+            <field name="name">Huyện Đa Krông</field>
+            <field name="code_huyen">467</field>
+            <field name="parent_code">45</field>
+            <field name="thuoc_tinh" ref="45"/>
+        </record>
+        <record id="466" model="huyen">
+            <field name="name">Huyện Gio Linh</field>
+            <field name="code_huyen">466</field>
+            <field name="parent_code">45</field>
+            <field name="thuoc_tinh" ref="45"/>
+        </record>
+        <record id="461" model="huyen">
+            <field name="name">Thành phố Đông Hà</field>
+            <field name="code_huyen">461</field>
+            <field name="parent_code">45</field>
+            <field name="thuoc_tinh" ref="45"/>
+        </record>
+        <record id="462" model="huyen">
+            <field name="name">Thị xã Quảng Trị</field>
+            <field name="code_huyen">462</field>
+            <field name="parent_code">45</field>
+            <field name="thuoc_tinh" ref="45"/>
+        </record>
+        <record id="168" model="huyen">
+            <field name="name">Huyện Phú Lương</field>
+            <field name="code_huyen">168</field>
+            <field name="parent_code">19</field>
+            <field name="thuoc_tinh" ref="19"/>
+        </record>
+        <record id="169" model="huyen">
+            <field name="name">Huyện Đồng Hỷ</field>
+            <field name="code_huyen">169</field>
+            <field name="parent_code">19</field>
+            <field name="thuoc_tinh" ref="19"/>
+        </record>
+        <record id="164" model="huyen">
+            <field name="name">Thành phố Thái Nguyên</field>
+            <field name="code_huyen">164</field>
+            <field name="parent_code">19</field>
+            <field name="thuoc_tinh" ref="19"/>
+        </record>
+        <record id="165" model="huyen">
+            <field name="name">Thành phố Sông Công</field>
+            <field name="code_huyen">165</field>
+            <field name="parent_code">19</field>
+            <field name="thuoc_tinh" ref="19"/>
+        </record>
+        <record id="167" model="huyen">
+            <field name="name">Huyện Định Hóa</field>
+            <field name="code_huyen">167</field>
+            <field name="parent_code">19</field>
+            <field name="thuoc_tinh" ref="19"/>
+        </record>
+        <record id="964" model="huyen">
+            <field name="name">Thành phố Cà Mau</field>
+            <field name="code_huyen">964</field>
+            <field name="parent_code">96</field>
+            <field name="thuoc_tinh" ref="96"/>
+        </record>
+        <record id="966" model="huyen">
+            <field name="name">Huyện U Minh</field>
+            <field name="code_huyen">966</field>
+            <field name="parent_code">96</field>
+            <field name="thuoc_tinh" ref="96"/>
+        </record>
+        <record id="967" model="huyen">
+            <field name="name">Huyện Thới Bình</field>
+            <field name="code_huyen">967</field>
+            <field name="parent_code">96</field>
+            <field name="thuoc_tinh" ref="96"/>
+        </record>
+        <record id="960" model="huyen">
+            <field name="name">Huyện Đông Hải</field>
+            <field name="code_huyen">960</field>
+            <field name="parent_code">95</field>
+            <field name="thuoc_tinh" ref="95"/>
+        </record>
+        <record id="961" model="huyen">
+            <field name="name">Huyện Hoà Bình</field>
+            <field name="code_huyen">961</field>
+            <field name="parent_code">95</field>
+            <field name="thuoc_tinh" ref="95"/>
+        </record>
+        <record id="968" model="huyen">
+            <field name="name">Huyện Trần Văn Thời</field>
+            <field name="code_huyen">968</field>
+            <field name="parent_code">96</field>
+            <field name="thuoc_tinh" ref="96"/>
+        </record>
+        <record id="969" model="huyen">
+            <field name="name">Huyện Cái Nước</field>
+            <field name="code_huyen">969</field>
+            <field name="parent_code">96</field>
+            <field name="thuoc_tinh" ref="96"/>
+        </record>
+        <record id="076" model="huyen">
+            <field name="name">Huyện Sơn Dương</field>
+            <field name="code_huyen">076</field>
+            <field name="parent_code">08</field>
+            <field name="thuoc_tinh" ref="08"/>
+        </record>
+        <record id="074" model="huyen">
+            <field name="name">Huyện Hàm Yên</field>
+            <field name="code_huyen">074</field>
+            <field name="parent_code">08</field>
+            <field name="thuoc_tinh" ref="08"/>
+        </record>
+        <record id="075" model="huyen">
+            <field name="name">Huyện Yên Sơn</field>
+            <field name="code_huyen">075</field>
+            <field name="parent_code">08</field>
+            <field name="thuoc_tinh" ref="08"/>
+        </record>
+        <record id="072" model="huyen">
+            <field name="name">Huyện Nà Hang</field>
+            <field name="code_huyen">072</field>
+            <field name="parent_code">08</field>
+            <field name="thuoc_tinh" ref="08"/>
+        </record>
+        <record id="073" model="huyen">
+            <field name="name">Huyện Chiêm Hóa</field>
+            <field name="code_huyen">073</field>
+            <field name="parent_code">08</field>
+            <field name="thuoc_tinh" ref="08"/>
+        </record>
+        <record id="070" model="huyen">
+            <field name="name">Thành phố Tuyên Quang</field>
+            <field name="code_huyen">070</field>
+            <field name="parent_code">08</field>
+            <field name="thuoc_tinh" ref="08"/>
+        </record>
+        <record id="071" model="huyen">
+            <field name="name">Huyện Lâm Bình</field>
+            <field name="code_huyen">071</field>
+            <field name="parent_code">08</field>
+            <field name="thuoc_tinh" ref="08"/>
+        </record>
+        <record id="876" model="huyen">
+            <field name="name">Huyện Lai Vung</field>
+            <field name="code_huyen">876</field>
+            <field name="parent_code">87</field>
+            <field name="thuoc_tinh" ref="87"/>
+        </record>
+        <record id="877" model="huyen">
+            <field name="name">Huyện Châu Thành</field>
+            <field name="code_huyen">877</field>
+            <field name="parent_code">87</field>
+            <field name="thuoc_tinh" ref="87"/>
+        </record>
+        <record id="874" model="huyen">
+            <field name="name">Huyện Thanh Bình</field>
+            <field name="code_huyen">874</field>
+            <field name="parent_code">87</field>
+            <field name="thuoc_tinh" ref="87"/>
+        </record>
+        <record id="875" model="huyen">
+            <field name="name">Huyện Lấp Vò</field>
+            <field name="code_huyen">875</field>
+            <field name="parent_code">87</field>
+            <field name="thuoc_tinh" ref="87"/>
+        </record>
+        <record id="872" model="huyen">
+            <field name="name">Huyện Tháp Mười</field>
+            <field name="code_huyen">872</field>
+            <field name="parent_code">87</field>
+            <field name="thuoc_tinh" ref="87"/>
+        </record>
+        <record id="873" model="huyen">
+            <field name="name">Huyện Cao Lãnh</field>
+            <field name="code_huyen">873</field>
+            <field name="parent_code">87</field>
+            <field name="thuoc_tinh" ref="87"/>
+        </record>
+        <record id="870" model="huyen">
+            <field name="name">Huyện Hồng Ngự</field>
+            <field name="code_huyen">870</field>
+            <field name="parent_code">87</field>
+            <field name="thuoc_tinh" ref="87"/>
+        </record>
+        <record id="871" model="huyen">
+            <field name="name">Huyện Tam Nông</field>
+            <field name="code_huyen">871</field>
+            <field name="parent_code">87</field>
+            <field name="thuoc_tinh" ref="87"/>
+        </record>
+        <record id="890" model="huyen">
+            <field name="name">Huyện Tịnh Biên</field>
+            <field name="code_huyen">890</field>
+            <field name="parent_code">89</field>
+            <field name="thuoc_tinh" ref="89"/>
+        </record>
+        <record id="891" model="huyen">
+            <field name="name">Huyện Tri Tôn</field>
+            <field name="code_huyen">891</field>
+            <field name="parent_code">89</field>
+            <field name="thuoc_tinh" ref="89"/>
+        </record>
+        <record id="892" model="huyen">
+            <field name="name">Huyện Châu Thành</field>
+            <field name="code_huyen">892</field>
+            <field name="parent_code">89</field>
+            <field name="thuoc_tinh" ref="89"/>
+        </record>
+        <record id="893" model="huyen">
+            <field name="name">Huyện Chợ Mới</field>
+            <field name="code_huyen">893</field>
+            <field name="parent_code">89</field>
+            <field name="thuoc_tinh" ref="89"/>
+        </record>
+        <record id="894" model="huyen">
+            <field name="name">Huyện Thoại Sơn</field>
+            <field name="code_huyen">894</field>
+            <field name="parent_code">89</field>
+            <field name="thuoc_tinh" ref="89"/>
+        </record>
+        <record id="899" model="huyen">
+            <field name="name">Thành phố Rạch Giá</field>
+            <field name="code_huyen">899</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="439" model="huyen">
+            <field name="name">Huyện Hương Sơn</field>
+            <field name="code_huyen">439</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="003" model="huyen">
+            <field name="name">Quận Tây Hồ</field>
+            <field name="code_huyen">003</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="002" model="huyen">
+            <field name="name">Quận Hoàn Kiếm</field>
+            <field name="code_huyen">002</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="001" model="huyen">
+            <field name="name">Quận Ba Đình</field>
+            <field name="code_huyen">001</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="007" model="huyen">
+            <field name="name">Quận Hai Bà Trưng</field>
+            <field name="code_huyen">007</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="006" model="huyen">
+            <field name="name">Quận Đống Đa</field>
+            <field name="code_huyen">006</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="005" model="huyen">
+            <field name="name">Quận Cầu Giấy</field>
+            <field name="code_huyen">005</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="004" model="huyen">
+            <field name="name">Quận Long Biên</field>
+            <field name="code_huyen">004</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="009" model="huyen">
+            <field name="name">Quận Thanh Xuân</field>
+            <field name="code_huyen">009</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="008" model="huyen">
+            <field name="name">Quận Hoàng Mai</field>
+            <field name="code_huyen">008</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="261" model="huyen">
+            <field name="name">Thị xã Từ Sơn</field>
+            <field name="code_huyen">261</field>
+            <field name="parent_code">27</field>
+            <field name="thuoc_tinh" ref="27"/>
+        </record>
+        <record id="356" model="huyen">
+            <field name="name">Thành phố Nam Định</field>
+            <field name="code_huyen">356</field>
+            <field name="parent_code">36</field>
+            <field name="thuoc_tinh" ref="36"/>
+        </record>
+        <record id="808" model="huyen">
+            <field name="name">Huyện Châu Thành</field>
+            <field name="code_huyen">808</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="353" model="huyen">
+            <field name="name">Huyện Lý Nhân</field>
+            <field name="code_huyen">353</field>
+            <field name="parent_code">35</field>
+            <field name="thuoc_tinh" ref="35"/>
+        </record>
+        <record id="352" model="huyen">
+            <field name="name">Huyện Bình Lục</field>
+            <field name="code_huyen">352</field>
+            <field name="parent_code">35</field>
+            <field name="thuoc_tinh" ref="35"/>
+        </record>
+        <record id="351" model="huyen">
+            <field name="name">Huyện Thanh Liêm</field>
+            <field name="code_huyen">351</field>
+            <field name="parent_code">35</field>
+            <field name="thuoc_tinh" ref="35"/>
+        </record>
+        <record id="350" model="huyen">
+            <field name="name">Huyện Kim Bảng</field>
+            <field name="code_huyen">350</field>
+            <field name="parent_code">35</field>
+            <field name="thuoc_tinh" ref="35"/>
+        </record>
+        <record id="803" model="huyen">
+            <field name="name">Huyện Bến Lức</field>
+            <field name="code_huyen">803</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="802" model="huyen">
+            <field name="name">Huyện Đức Hòa</field>
+            <field name="code_huyen">802</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="801" model="huyen">
+            <field name="name">Huyện Đức Huệ</field>
+            <field name="code_huyen">801</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="800" model="huyen">
+            <field name="name">Huyện Thạnh Hóa</field>
+            <field name="code_huyen">800</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="807" model="huyen">
+            <field name="name">Huyện Cần Giuộc</field>
+            <field name="code_huyen">807</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="806" model="huyen">
+            <field name="name">Huyện Cần Đước</field>
+            <field name="code_huyen">806</field>
+            <field name="parent_code">80</field>
+            <field name="thuoc_tinh" ref="80"/>
+        </record>
+        <record id="359" model="huyen">
+            <field name="name">Huyện Vụ Bản</field>
+            <field name="code_huyen">359</field>
+            <field name="parent_code">36</field>
+            <field name="thuoc_tinh" ref="36"/>
+        </record>
+        <record id="358" model="huyen">
+            <field name="name">Huyện Mỹ Lộc</field>
+            <field name="code_huyen">358</field>
+            <field name="parent_code">36</field>
+            <field name="thuoc_tinh" ref="36"/>
+        </record>
+        <record id="216" model="huyen">
+            <field name="name">Huyện Tân Yên</field>
+            <field name="code_huyen">216</field>
+            <field name="parent_code">24</field>
+            <field name="thuoc_tinh" ref="24"/>
+        </record>
+        <record id="217" model="huyen">
+            <field name="name">Huyện Lạng Giang</field>
+            <field name="code_huyen">217</field>
+            <field name="parent_code">24</field>
+            <field name="thuoc_tinh" ref="24"/>
+        </record>
+        <record id="768" model="huyen">
+            <field name="name">Quận Phú Nhuận</field>
+            <field name="code_huyen">768</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="769" model="huyen">
+            <field name="name">Quận 2</field>
+            <field name="code_huyen">769</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="213" model="huyen">
+            <field name="name">Thành phố Bắc Giang</field>
+            <field name="code_huyen">213</field>
+            <field name="parent_code">24</field>
+            <field name="thuoc_tinh" ref="24"/>
+        </record>
+        <record id="762" model="huyen">
+            <field name="name">Quận Thủ Đức</field>
+            <field name="code_huyen">762</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="763" model="huyen">
+            <field name="name">Quận 9</field>
+            <field name="code_huyen">763</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="760" model="huyen">
+            <field name="name">Quận 1</field>
+            <field name="code_huyen">760</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="761" model="huyen">
+            <field name="name">Quận 12</field>
+            <field name="code_huyen">761</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="766" model="huyen">
+            <field name="name">Quận Tân Bình</field>
+            <field name="code_huyen">766</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="767" model="huyen">
+            <field name="name">Quận Tân Phú</field>
+            <field name="code_huyen">767</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="764" model="huyen">
+            <field name="name">Quận Gò Vấp</field>
+            <field name="code_huyen">764</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="765" model="huyen">
+            <field name="name">Quận Bình Thạnh</field>
+            <field name="code_huyen">765</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="288" model="huyen">
+            <field name="name">Thành phố Hải Dương</field>
+            <field name="code_huyen">288</field>
+            <field name="parent_code">30</field>
+            <field name="thuoc_tinh" ref="30"/>
+        </record>
+        <record id="281" model="huyen">
+            <field name="name">Huyện Ứng Hòa</field>
+            <field name="code_huyen">281</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="280" model="huyen">
+            <field name="name">Huyện Phú Xuyên</field>
+            <field name="code_huyen">280</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="282" model="huyen">
+            <field name="name">Huyện Mỹ Đức</field>
+            <field name="code_huyen">282</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="678" model="huyen">
+            <field name="name">Huyện Đức Trọng</field>
+            <field name="code_huyen">678</field>
+            <field name="parent_code">68</field>
+            <field name="thuoc_tinh" ref="68"/>
+        </record>
+        <record id="679" model="huyen">
+            <field name="name">Huyện Di Linh</field>
+            <field name="code_huyen">679</field>
+            <field name="parent_code">68</field>
+            <field name="thuoc_tinh" ref="68"/>
+        </record>
+        <record id="674" model="huyen">
+            <field name="name">Huyện Đam Rông</field>
+            <field name="code_huyen">674</field>
+            <field name="parent_code">68</field>
+            <field name="thuoc_tinh" ref="68"/>
+        </record>
+        <record id="675" model="huyen">
+            <field name="name">Huyện Lạc Dương</field>
+            <field name="code_huyen">675</field>
+            <field name="parent_code">68</field>
+            <field name="thuoc_tinh" ref="68"/>
+        </record>
+        <record id="676" model="huyen">
+            <field name="name">Huyện Lâm Hà</field>
+            <field name="code_huyen">676</field>
+            <field name="parent_code">68</field>
+            <field name="thuoc_tinh" ref="68"/>
+        </record>
+        <record id="677" model="huyen">
+            <field name="name">Huyện Đơn Dương</field>
+            <field name="code_huyen">677</field>
+            <field name="parent_code">68</field>
+            <field name="thuoc_tinh" ref="68"/>
+        </record>
+        <record id="672" model="huyen">
+            <field name="name">Thành phố Đà Lạt</field>
+            <field name="code_huyen">672</field>
+            <field name="parent_code">68</field>
+            <field name="thuoc_tinh" ref="68"/>
+        </record>
+        <record id="673" model="huyen">
+            <field name="name">Thành phố Bảo Lộc</field>
+            <field name="code_huyen">673</field>
+            <field name="parent_code">68</field>
+            <field name="thuoc_tinh" ref="68"/>
+        </record>
+        <record id="263" model="huyen">
+            <field name="name">Huyện Gia Bình</field>
+            <field name="code_huyen">263</field>
+            <field name="parent_code">27</field>
+            <field name="thuoc_tinh" ref="27"/>
+        </record>
+        <record id="262" model="huyen">
+            <field name="name">Huyện Thuận Thành</field>
+            <field name="code_huyen">262</field>
+            <field name="parent_code">27</field>
+            <field name="thuoc_tinh" ref="27"/>
+        </record>
+        <record id="752" model="huyen">
+            <field name="name">Huyện Long Điền</field>
+            <field name="code_huyen">752</field>
+            <field name="parent_code">77</field>
+            <field name="thuoc_tinh" ref="77"/>
+        </record>
+        <record id="260" model="huyen">
+            <field name="name">Huyện Tiên Du</field>
+            <field name="code_huyen">260</field>
+            <field name="parent_code">27</field>
+            <field name="thuoc_tinh" ref="27"/>
+        </record>
+        <record id="264" model="huyen">
+            <field name="name">Huyện Lương Tài</field>
+            <field name="code_huyen">264</field>
+            <field name="parent_code">27</field>
+            <field name="thuoc_tinh" ref="27"/>
+        </record>
+        <record id="269" model="huyen">
+            <field name="name">Thị xã Sơn Tây</field>
+            <field name="code_huyen">269</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="268" model="huyen">
+            <field name="name">Quận Hà Đông</field>
+            <field name="code_huyen">268</field>
+            <field name="parent_code">01</field>
+            <field name="thuoc_tinh" ref="01"/>
+        </record>
+        <record id="436" model="huyen">
+            <field name="name">Thành phố Hà Tĩnh</field>
+            <field name="code_huyen">436</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="536" model="huyen">
+            <field name="name">Huyện Lý Sơn</field>
+            <field name="code_huyen">536</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="535" model="huyen">
+            <field name="name">Huyện Ba Tơ</field>
+            <field name="code_huyen">535</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="534" model="huyen">
+            <field name="name">Huyện Đức Phổ</field>
+            <field name="code_huyen">534</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="533" model="huyen">
+            <field name="name">Huyện Mộ Đức</field>
+            <field name="code_huyen">533</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="532" model="huyen">
+            <field name="name">Huyện Nghĩa Hành</field>
+            <field name="code_huyen">532</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="531" model="huyen">
+            <field name="name">Huyện Minh Long</field>
+            <field name="code_huyen">531</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="530" model="huyen">
+            <field name="name">Huyện Sơn Tây</field>
+            <field name="code_huyen">530</field>
+            <field name="parent_code">51</field>
+            <field name="thuoc_tinh" ref="51"/>
+        </record>
+        <record id="437" model="huyen">
+            <field name="name">Thị xã Hồng Lĩnh</field>
+            <field name="code_huyen">437</field>
+            <field name="parent_code">42</field>
+            <field name="thuoc_tinh" ref="42"/>
+        </record>
+        <record id="775" model="huyen">
+            <field name="name">Quận 6</field>
+            <field name="code_huyen">775</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="774" model="huyen">
+            <field name="name">Quận 5</field>
+            <field name="code_huyen">774</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="777" model="huyen">
+            <field name="name">Quận Bình Tân</field>
+            <field name="code_huyen">777</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="116" model="huyen">
+            <field name="name">Thành phố Sơn La</field>
+            <field name="code_huyen">116</field>
+            <field name="parent_code">14</field>
+            <field name="thuoc_tinh" ref="14"/>
+        </record>
+        <record id="111" model="huyen">
+            <field name="name">Huyện Tân Uyên</field>
+            <field name="code_huyen">111</field>
+            <field name="parent_code">12</field>
+            <field name="thuoc_tinh" ref="12"/>
+        </record>
+        <record id="110" model="huyen">
+            <field name="name">Huyện Than Uyên</field>
+            <field name="code_huyen">110</field>
+            <field name="parent_code">12</field>
+            <field name="thuoc_tinh" ref="12"/>
+        </record>
+        <record id="112" model="huyen">
+            <field name="name">Huyện Nậm Nhùn</field>
+            <field name="code_huyen">112</field>
+            <field name="parent_code">12</field>
+            <field name="thuoc_tinh" ref="12"/>
+        </record>
+        <record id="771" model="huyen">
+            <field name="name">Quận 10</field>
+            <field name="code_huyen">771</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="119" model="huyen">
+            <field name="name">Huyện Thuận Châu</field>
+            <field name="code_huyen">119</field>
+            <field name="parent_code">14</field>
+            <field name="thuoc_tinh" ref="14"/>
+        </record>
+        <record id="118" model="huyen">
+            <field name="name">Huyện Quỳnh Nhai</field>
+            <field name="code_huyen">118</field>
+            <field name="parent_code">14</field>
+            <field name="thuoc_tinh" ref="14"/>
+        </record>
+        <record id="770" model="huyen">
+            <field name="name">Quận 3</field>
+            <field name="code_huyen">770</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="773" model="huyen">
+            <field name="name">Quận 4</field>
+            <field name="code_huyen">773</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="256" model="huyen">
+            <field name="name">Thành phố Bắc Ninh</field>
+            <field name="code_huyen">256</field>
+            <field name="parent_code">27</field>
+            <field name="thuoc_tinh" ref="27"/>
+        </record>
+        <record id="772" model="huyen">
+            <field name="name">Quận 11</field>
+            <field name="code_huyen">772</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="429" model="huyen">
+            <field name="name">Huyện Nghi Lộc</field>
+            <field name="code_huyen">429</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="428" model="huyen">
+            <field name="name">Huyện Thanh Chương</field>
+            <field name="code_huyen">428</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="919" model="huyen">
+            <field name="name">Quận Cái Răng</field>
+            <field name="code_huyen">919</field>
+            <field name="parent_code">92</field>
+            <field name="thuoc_tinh" ref="92"/>
+        </record>
+        <record id="918" model="huyen">
+            <field name="name">Quận Bình Thuỷ</field>
+            <field name="code_huyen">918</field>
+            <field name="parent_code">92</field>
+            <field name="thuoc_tinh" ref="92"/>
+        </record>
+        <record id="421" model="huyen">
+            <field name="name">Huyện Quỳnh Lưu</field>
+            <field name="code_huyen">421</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="914" model="huyen">
+            <field name="name">Huyện Giang Thành</field>
+            <field name="code_huyen">914</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="423" model="huyen">
+            <field name="name">Huyện Tân Kỳ</field>
+            <field name="code_huyen">423</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="422" model="huyen">
+            <field name="name">Huyện Con Cuông</field>
+            <field name="code_huyen">422</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="425" model="huyen">
+            <field name="name">Huyện Diễn Châu</field>
+            <field name="code_huyen">425</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="910" model="huyen">
+            <field name="name">Huyện Vĩnh Thuận</field>
+            <field name="code_huyen">910</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="427" model="huyen">
+            <field name="name">Huyện Đô Lương</field>
+            <field name="code_huyen">427</field>
+            <field name="parent_code">40</field>
+            <field name="thuoc_tinh" ref="40"/>
+        </record>
+        <record id="912" model="huyen">
+            <field name="name">Huyện Kiên Hải</field>
+            <field name="code_huyen">912</field>
+            <field name="parent_code">91</field>
+            <field name="thuoc_tinh" ref="91"/>
+        </record>
+        <record id="308" model="huyen">
+            <field name="name">Quận Đồ Sơn</field>
+            <field name="code_huyen">308</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="309" model="huyen">
+            <field name="name">Quận Dương Kinh</field>
+            <field name="code_huyen">309</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="300" model="huyen">
+            <field name="name">Huyện Thanh Miện</field>
+            <field name="code_huyen">300</field>
+            <field name="parent_code">30</field>
+            <field name="thuoc_tinh" ref="30"/>
+        </record>
+        <record id="303" model="huyen">
+            <field name="name">Quận Hồng Bàng</field>
+            <field name="code_huyen">303</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="304" model="huyen">
+            <field name="name">Quận Ngô Quyền</field>
+            <field name="code_huyen">304</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="305" model="huyen">
+            <field name="name">Quận Lê Chân</field>
+            <field name="code_huyen">305</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="306" model="huyen">
+            <field name="name">Quận Hải An</field>
+            <field name="code_huyen">306</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="307" model="huyen">
+            <field name="name">Quận Kiến An</field>
+            <field name="code_huyen">307</field>
+            <field name="parent_code">31</field>
+            <field name="thuoc_tinh" ref="31"/>
+        </record>
+        <record id="776" model="huyen">
+            <field name="name">Quận 8</field>
+            <field name="code_huyen">776</field>
+            <field name="parent_code">79</field>
+            <field name="thuoc_tinh" ref="79"/>
+        </record>
+        <record id="049" model="huyen">
+            <field name="name">Huyện Quảng Uyên</field>
+            <field name="code_huyen">049</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="048" model="huyen">
+            <field name="name">Huyện Hạ Lang</field>
+            <field name="code_huyen">048</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="047" model="huyen">
+            <field name="name">Huyện Trùng Khánh</field>
+            <field name="code_huyen">047</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="046" model="huyen">
+            <field name="name">Huyện Trà Lĩnh</field>
+            <field name="code_huyen">046</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="045" model="huyen">
+            <field name="name">Huyện Hà Quảng</field>
+            <field name="code_huyen">045</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="044" model="huyen">
+            <field name="name">Huyện Thông Nông</field>
+            <field name="code_huyen">044</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="043" model="huyen">
+            <field name="name">Huyện Bảo Lạc</field>
+            <field name="code_huyen">043</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="042" model="huyen">
+            <field name="name">Huyện Bảo Lâm</field>
+            <field name="code_huyen">042</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="458" model="huyen">
+            <field name="name">Thị xã Ba Đồn</field>
+            <field name="code_huyen">458</field>
+            <field name="parent_code">44</field>
+            <field name="thuoc_tinh" ref="44"/>
+        </record>
+        <record id="040" model="huyen">
+            <field name="name">Thành phố Cao Bằng</field>
+            <field name="code_huyen">040</field>
+            <field name="parent_code">04</field>
+            <field name="thuoc_tinh" ref="04"/>
+        </record>
+        <record id="847" model="huyen">
+            <field name="name">Huyện Châu Thành</field>
+            <field name="code_huyen">847</field>
+            <field name="parent_code">84</field>
+            <field name="thuoc_tinh" ref="84"/>
+        </record>
+        <record id="846" model="huyen">
+            <field name="name">Huyện Tiểu Cần</field>
+            <field name="code_huyen">846</field>
+            <field name="parent_code">84</field>
+            <field name="thuoc_tinh" ref="84"/>
+        </record>
+        <record id="845" model="huyen">
+            <field name="name">Huyện Cầu Kè</field>
+            <field name="code_huyen">845</field>
+            <field name="parent_code">84</field>
+            <field name="thuoc_tinh" ref="84"/>
+        </record>
+        <record id="844" model="huyen">
+            <field name="name">Huyện Càng Long</field>
+            <field name="code_huyen">844</field>
+            <field name="parent_code">84</field>
+            <field name="thuoc_tinh" ref="84"/>
+        </record>
+        <record id="842" model="huyen">
+            <field name="name">Thành phố Trà Vinh</field>
+            <field name="code_huyen">842</field>
+            <field name="parent_code">84</field>
+            <field name="thuoc_tinh" ref="84"/>
+        </record>
+        <record id="821" model="huyen">
+            <field name="name">Huyện Châu Thành</field>
+            <field name="code_huyen">821</field>
+            <field name="parent_code">82</field>
+            <field name="thuoc_tinh" ref="82"/>
+        </record>
+        <record id="849" model="huyen">
+            <field name="name">Huyện Trà Cú</field>
+            <field name="code_huyen">849</field>
+            <field name="parent_code">84</field>
+            <field name="thuoc_tinh" ref="84"/>
+        </record>
+        <record id="820" model="huyen">
+            <field name="name">Huyện Cai Lậy</field>
+            <field name="code_huyen">820</field>
+            <field name="parent_code">82</field>
+            <field name="thuoc_tinh" ref="82"/>
+        </record>
+        <record id="823" model="huyen">
+            <field name="name">Huyện Gò Công Tây</field>
+            <field name="code_huyen">823</field>
+            <field name="parent_code">82</field>
+            <field name="thuoc_tinh" ref="82"/>
+        </record>
+        <record id="822" model="huyen">
+            <field name="name">Huyện Chợ Gạo</field>
+            <field name="code_huyen">822</field>
+            <field name="parent_code">82</field>
+            <field name="thuoc_tinh" ref="82"/>
+        </record>
+        <record id="240" model="huyen">
+            <field name="name">Huyện Tân Sơn</field>
+            <field name="code_huyen">240</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="568" model="huyen">
+            <field name="name">Thành phố Nha Trang</field>
+            <field name="code_huyen">568</field>
+            <field name="parent_code">56</field>
+            <field name="thuoc_tinh" ref="56"/>
+        </record>
+        <record id="569" model="huyen">
+            <field name="name">Thành phố Cam Ranh</field>
+            <field name="code_huyen">569</field>
+            <field name="parent_code">56</field>
+            <field name="thuoc_tinh" ref="56"/>
+        </record>
+        <record id="751" model="huyen">
+            <field name="name">Huyện Xuyên Mộc</field>
+            <field name="code_huyen">751</field>
+            <field name="parent_code">77</field>
+            <field name="thuoc_tinh" ref="77"/>
+        </record>
+        <record id="750" model="huyen">
+            <field name="name">Huyện Châu Đức</field>
+            <field name="code_huyen">750</field>
+            <field name="parent_code">77</field>
+            <field name="thuoc_tinh" ref="77"/>
+        </record>
+        <record id="508" model="huyen">
+            <field name="name">Huyện Duy Xuyên</field>
+            <field name="code_huyen">508</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="754" model="huyen">
+            <field name="name">Huyện Tân Thành</field>
+            <field name="code_huyen">754</field>
+            <field name="parent_code">77</field>
+            <field name="thuoc_tinh" ref="77"/>
+        </record>
+        <record id="560" model="huyen">
+            <field name="name">Huyện Sơn Hòa</field>
+            <field name="code_huyen">560</field>
+            <field name="parent_code">54</field>
+            <field name="thuoc_tinh" ref="54"/>
+        </record>
+        <record id="561" model="huyen">
+            <field name="name">Huyện Sông Hinh</field>
+            <field name="code_huyen">561</field>
+            <field name="parent_code">54</field>
+            <field name="thuoc_tinh" ref="54"/>
+        </record>
+        <record id="562" model="huyen">
+            <field name="name">Huyện Tây Hoà</field>
+            <field name="code_huyen">562</field>
+            <field name="parent_code">54</field>
+            <field name="thuoc_tinh" ref="54"/>
+        </record>
+        <record id="563" model="huyen">
+            <field name="name">Huyện Phú Hoà</field>
+            <field name="code_huyen">563</field>
+            <field name="parent_code">54</field>
+            <field name="thuoc_tinh" ref="54"/>
+        </record>
+        <record id="564" model="huyen">
+            <field name="name">Huyện Đông Hòa</field>
+            <field name="code_huyen">564</field>
+            <field name="parent_code">54</field>
+            <field name="thuoc_tinh" ref="54"/>
+        </record>
+        <record id="506" model="huyen">
+            <field name="name">Huyện Đại Lộc</field>
+            <field name="code_huyen">506</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="507" model="huyen">
+            <field name="name">Thị xã Điện Bàn</field>
+            <field name="code_huyen">507</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="227" model="huyen">
+            <field name="name">Thành phố Việt Trì</field>
+            <field name="code_huyen">227</field>
+            <field name="parent_code">25</field>
+            <field name="thuoc_tinh" ref="25"/>
+        </record>
+        <record id="223" model="huyen">
+            <field name="name">Huyện Hiệp Hòa</field>
+            <field name="code_huyen">223</field>
+            <field name="parent_code">24</field>
+            <field name="thuoc_tinh" ref="24"/>
+        </record>
+        <record id="222" model="huyen">
+            <field name="name">Huyện Việt Yên</field>
+            <field name="code_huyen">222</field>
+            <field name="parent_code">24</field>
+            <field name="thuoc_tinh" ref="24"/>
+        </record>
+        <record id="221" model="huyen">
+            <field name="name">Huyện Yên Dũng</field>
+            <field name="code_huyen">221</field>
+            <field name="parent_code">24</field>
+            <field name="thuoc_tinh" ref="24"/>
+        </record>
+        <record id="220" model="huyen">
+            <field name="name">Huyện Sơn Động</field>
+            <field name="code_huyen">220</field>
+            <field name="parent_code">24</field>
+            <field name="thuoc_tinh" ref="24"/>
+        </record>
+        <record id="726" model="huyen">
+            <field name="name">Huyện Bắc Tân Uyên</field>
+            <field name="code_huyen">726</field>
+            <field name="parent_code">74</field>
+            <field name="thuoc_tinh" ref="74"/>
+        </record>
+        <record id="724" model="huyen">
+            <field name="name">Thị xã Dĩ An</field>
+            <field name="code_huyen">724</field>
+            <field name="parent_code">74</field>
+            <field name="thuoc_tinh" ref="74"/>
+        </record>
+        <record id="725" model="huyen">
+            <field name="name">Thị xã Thuận An</field>
+            <field name="code_huyen">725</field>
+            <field name="parent_code">74</field>
+            <field name="thuoc_tinh" ref="74"/>
+        </record>
+        <record id="722" model="huyen">
+            <field name="name">Huyện Phú Giáo</field>
+            <field name="code_huyen">722</field>
+            <field name="parent_code">74</field>
+            <field name="thuoc_tinh" ref="74"/>
+        </record>
+        <record id="723" model="huyen">
+            <field name="name">Thị xã Tân Uyên</field>
+            <field name="code_huyen">723</field>
+            <field name="parent_code">74</field>
+            <field name="thuoc_tinh" ref="74"/>
+        </record>
+        <record id="720" model="huyen">
+            <field name="name">Huyện Dầu Tiếng</field>
+            <field name="code_huyen">720</field>
+            <field name="parent_code">74</field>
+            <field name="thuoc_tinh" ref="74"/>
+        </record>
+        <record id="721" model="huyen">
+            <field name="name">Thị xã Bến Cát</field>
+            <field name="code_huyen">721</field>
+            <field name="parent_code">74</field>
+            <field name="thuoc_tinh" ref="74"/>
+        </record>
+        <record id="151" model="huyen">
+            <field name="name">Huyện Kỳ Sơn</field>
+            <field name="code_huyen">151</field>
+            <field name="parent_code">17</field>
+            <field name="thuoc_tinh" ref="17"/>
+        </record>
+        <record id="150" model="huyen">
+            <field name="name">Huyện Đà Bắc</field>
+            <field name="code_huyen">150</field>
+            <field name="parent_code">17</field>
+            <field name="thuoc_tinh" ref="17"/>
+        </record>
+        <record id="153" model="huyen">
+            <field name="name">Huyện Kim Bôi</field>
+            <field name="code_huyen">153</field>
+            <field name="parent_code">17</field>
+            <field name="thuoc_tinh" ref="17"/>
+        </record>
+        <record id="152" model="huyen">
+            <field name="name">Huyện Lương Sơn</field>
+            <field name="code_huyen">152</field>
+            <field name="parent_code">17</field>
+            <field name="thuoc_tinh" ref="17"/>
+        </record>
+        <record id="601" model="huyen">
+            <field name="name">Huyện Hàm Tân</field>
+            <field name="code_huyen">601</field>
+            <field name="parent_code">60</field>
+            <field name="thuoc_tinh" ref="60"/>
+        </record>
+        <record id="600" model="huyen">
+            <field name="name">Huyện Đức Linh</field>
+            <field name="code_huyen">600</field>
+            <field name="parent_code">60</field>
+            <field name="thuoc_tinh" ref="60"/>
+        </record>
+        <record id="157" model="huyen">
+            <field name="name">Huyện Lạc Sơn</field>
+            <field name="code_huyen">157</field>
+            <field name="parent_code">17</field>
+            <field name="thuoc_tinh" ref="17"/>
+        </record>
+        <record id="602" model="huyen">
+            <field name="name">Huyện Phú Quí</field>
+            <field name="code_huyen">602</field>
+            <field name="parent_code">60</field>
+            <field name="thuoc_tinh" ref="60"/>
+        </record>
+        <record id="159" model="huyen">
+            <field name="name">Huyện Lạc Thủy</field>
+            <field name="code_huyen">159</field>
+            <field name="parent_code">17</field>
+            <field name="thuoc_tinh" ref="17"/>
+        </record>
+        <record id="158" model="huyen">
+            <field name="name">Huyện Yên Thủy</field>
+            <field name="code_huyen">158</field>
+            <field name="parent_code">17</field>
+            <field name="thuoc_tinh" ref="17"/>
+        </record>
+        <record id="608" model="huyen">
+            <field name="name">Thành phố Kon Tum</field>
+            <field name="code_huyen">608</field>
+            <field name="parent_code">62</field>
+            <field name="thuoc_tinh" ref="62"/>
+        </record>
+        <record id="634" model="huyen">
+            <field name="name">Huyện Đăk Pơ</field>
+            <field name="code_huyen">634</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="635" model="huyen">
+            <field name="name">Huyện Ia Pa</field>
+            <field name="code_huyen">635</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="959" model="huyen">
+            <field name="name">Thị xã Giá Rai</field>
+            <field name="code_huyen">959</field>
+            <field name="parent_code">95</field>
+            <field name="thuoc_tinh" ref="95"/>
+        </record>
+        <record id="958" model="huyen">
+            <field name="name">Huyện Vĩnh Lợi</field>
+            <field name="code_huyen">958</field>
+            <field name="parent_code">95</field>
+            <field name="thuoc_tinh" ref="95"/>
+        </record>
+        <record id="951" model="huyen">
+            <field name="name">Huyện Trần Đề</field>
+            <field name="code_huyen">951</field>
+            <field name="parent_code">94</field>
+            <field name="thuoc_tinh" ref="94"/>
+        </record>
+        <record id="950" model="huyen">
+            <field name="name">Thị xã Vĩnh Châu</field>
+            <field name="code_huyen">950</field>
+            <field name="parent_code">94</field>
+            <field name="thuoc_tinh" ref="94"/>
+        </record>
+        <record id="954" model="huyen">
+            <field name="name">Thành phố Bạc Liêu</field>
+            <field name="code_huyen">954</field>
+            <field name="parent_code">95</field>
+            <field name="thuoc_tinh" ref="95"/>
+        </record>
+        <record id="957" model="huyen">
+            <field name="name">Huyện Phước Long</field>
+            <field name="code_huyen">957</field>
+            <field name="parent_code">95</field>
+            <field name="thuoc_tinh" ref="95"/>
+        </record>
+        <record id="956" model="huyen">
+            <field name="name">Huyện Hồng Dân</field>
+            <field name="code_huyen">956</field>
+            <field name="parent_code">95</field>
+            <field name="thuoc_tinh" ref="95"/>
+        </record>
+        <record id="638" model="huyen">
+            <field name="name">Huyện Phú Thiện</field>
+            <field name="code_huyen">638</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="639" model="huyen">
+            <field name="name">Huyện Chư Pưh</field>
+            <field name="code_huyen">639</field>
+            <field name="parent_code">64</field>
+            <field name="thuoc_tinh" ref="64"/>
+        </record>
+        <record id="089" model="huyen">
+            <field name="name">Huyện Văn Bàn</field>
+            <field name="code_huyen">089</field>
+            <field name="parent_code">10</field>
+            <field name="thuoc_tinh" ref="10"/>
+        </record>
+        <record id="088" model="huyen">
+            <field name="name">Huyện Sa Pa</field>
+            <field name="code_huyen">088</field>
+            <field name="parent_code">10</field>
+            <field name="thuoc_tinh" ref="10"/>
+        </record>
+        <record id="083" model="huyen">
+            <field name="name">Huyện Mường Khương</field>
+            <field name="code_huyen">083</field>
+            <field name="parent_code">10</field>
+            <field name="thuoc_tinh" ref="10"/>
+        </record>
+        <record id="082" model="huyen">
+            <field name="name">Huyện Bát Xát</field>
+            <field name="code_huyen">082</field>
+            <field name="parent_code">10</field>
+            <field name="thuoc_tinh" ref="10"/>
+        </record>
+        <record id="080" model="huyen">
+            <field name="name">Thành phố Lào Cai</field>
+            <field name="code_huyen">080</field>
+            <field name="parent_code">10</field>
+            <field name="thuoc_tinh" ref="10"/>
+        </record>
+        <record id="087" model="huyen">
+            <field name="name">Huyện Bảo Yên</field>
+            <field name="code_huyen">087</field>
+            <field name="parent_code">10</field>
+            <field name="thuoc_tinh" ref="10"/>
+        </record>
+        <record id="086" model="huyen">
+            <field name="name">Huyện Bảo Thắng</field>
+            <field name="code_huyen">086</field>
+            <field name="parent_code">10</field>
+            <field name="thuoc_tinh" ref="10"/>
+        </record>
+        <record id="085" model="huyen">
+            <field name="name">Huyện Bắc Hà</field>
+            <field name="code_huyen">085</field>
+            <field name="parent_code">10</field>
+            <field name="thuoc_tinh" ref="10"/>
+        </record>
+        <record id="084" model="huyen">
+            <field name="name">Huyện Si Ma Cai</field>
+            <field name="code_huyen">084</field>
+            <field name="parent_code">10</field>
+            <field name="thuoc_tinh" ref="10"/>
+        </record>
+        <record id="824" model="huyen">
+            <field name="name">Huyện Gò Công Đông</field>
+            <field name="code_huyen">824</field>
+            <field name="parent_code">82</field>
+            <field name="thuoc_tinh" ref="82"/>
+        </record>
+        <record id="483" model="huyen">
+            <field name="name">Huyện Nam Đông</field>
+            <field name="code_huyen">483</field>
+            <field name="parent_code">46</field>
+            <field name="thuoc_tinh" ref="46"/>
+        </record>
+        <record id="482" model="huyen">
+            <field name="name">Huyện Phú Lộc</field>
+            <field name="code_huyen">482</field>
+            <field name="parent_code">46</field>
+            <field name="thuoc_tinh" ref="46"/>
+        </record>
+        <record id="481" model="huyen">
+            <field name="name">Huyện A Lưới</field>
+            <field name="code_huyen">481</field>
+            <field name="parent_code">46</field>
+            <field name="thuoc_tinh" ref="46"/>
+        </record>
+        <record id="480" model="huyen">
+            <field name="name">Thị xã Hương Trà</field>
+            <field name="code_huyen">480</field>
+            <field name="parent_code">46</field>
+            <field name="thuoc_tinh" ref="46"/>
+        </record>
+        <record id="509" model="huyen">
+            <field name="name">Huyện Quế Sơn</field>
+            <field name="code_huyen">509</field>
+            <field name="parent_code">49</field>
+            <field name="thuoc_tinh" ref="49"/>
+        </record>
+        <record id="470" model="huyen">
+            <field name="name">Huyện Hải Lăng</field>
+            <field name="code_huyen">470</field>
+            <field name="parent_code">45</field>
+            <field name="thuoc_tinh" ref="45"/>
+        </record>
+        <record id="476" model="huyen">
+            <field name="name">Huyện Phong Điền</field>
+            <field name="code_huyen">476</field>
+            <field name="parent_code">46</field>
+            <field name="thuoc_tinh" ref="46"/>
+        </record>
+        <record id="477" model="huyen">
+            <field name="name">Huyện Quảng Điền</field>
+            <field name="code_huyen">477</field>
+            <field name="parent_code">46</field>
+            <field name="thuoc_tinh" ref="46"/>
+        </record>
+        <record id="474" model="huyen">
+            <field name="name">Thành phố Huế</field>
+            <field name="code_huyen">474</field>
+            <field name="parent_code">46</field>
+            <field name="thuoc_tinh" ref="46"/>
+        </record>
+        <record id="478" model="huyen">
+            <field name="name">Huyện Phú Vang</field>
+            <field name="code_huyen">478</field>
+            <field name="parent_code">46</field>
+            <field name="thuoc_tinh" ref="46"/>
+        </record>
+        <record id="479" model="huyen">
+            <field name="name">Thị xã Hương Thủy</field>
+            <field name="code_huyen">479</field>
+            <field name="parent_code">46</field>
+            <field name="thuoc_tinh" ref="46"/>
+        </record>
+
+    </data>
+</odoo>

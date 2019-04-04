@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        <record id="view_inherit_res" model="ir.ui.view">-->
+<!--            <field name="name">res.partner.tree</field>-->
+<!--            <field name="model">res.partner</field>-->
+<!--            <field name="inherit_id" ref="base.view_partner_form"/>-->
+<!--            <field name="priority" eval="8" />-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//div[@class='o_address_format']" position="replace">-->
+<!--                    <div class="o_address_format">-->
+<!--                        <field name="tinh" placeholder="Tỉnh, thành phố" options="{'no_create': True, 'no_open':True}" class="o_address_street"/>-->
+<!--                        <field name="huyen" placeholder="Quận, huyện" attrs="{'invisible':[('tinh','=',False)]}" options="{'no_create': True, 'no_open':True}" class="o_address_street"/>-->
+<!--                        <field name="xa" placeholder="Phường, xã" attrs="{'invisible':[('huyen','=',False)]}" options="{'no_create': True, 'no_open':True}" class="o_address_street"/>-->
+<!--                        <field name="so_nha" placeholder="Tên đường, số nhà..."  class="o_address_street"/>-->
+<!--                        <field name="zip" placeholder="Zip code" class="o_address_street"/>-->
+<!--                        <field name="street"  placeholder="street" attrs="{'invisible':[('tinh','!=',False)]}" class="o_address_street"/>-->
+<!--                        <field name="street2"   placeholder="street2" attrs="{'invisible':[('tinh','!=',False)]}" class="o_address_street"/>-->
+<!--                        <field name="city"  placeholder="city" attrs="{'invisible':[('tinh','!=',False)]}" class="o_address_street"/>-->
+<!--                        <field name="state_id"  placeholder="sate_id"  attrs="{'invisible':[('tinh','!=',False)]}" class="o_address_street"/>-->
+<!--                        <field name="country_id"  placeholder="country_id" attrs="{'invisible':[('tinh','!=',False)]}" class="o_address_street"/>-->
+<!--                    </div>-->
+<!--                </xpath>-->
+
+<!--            </field>-->
+<!--        </record>-->
+
+<!--        <record id="view_inherit_res1" model="ir.ui.view">-->
+<!--            <field name="name">res.partner.kanban</field>-->
+<!--            <field name="model">res.partner</field>-->
+<!--            <field name="inherit_id" ref="base.res_partner_kanban_view"/>-->
+<!--            <field name="priority" eval="8" />-->
+<!--            <field name="arch" type="xml">-->
+<!--                <field name="type" position="after">-->
+<!--                    <field name="tinh"/>-->
+<!--                    <field name="huyen"/>-->
+<!--                </field>-->
+<!--                 <xpath expr="//div[@class='oe_kanban_details']" position="inside">-->
+<!--                    <span><field name="huyen"/></span>-->
+<!--                     <span><field name="tinh"/></span>-->
+
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+    </data>
+</odoo>
