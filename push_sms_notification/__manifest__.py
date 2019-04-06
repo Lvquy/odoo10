@@ -4,11 +4,10 @@
     "summary":"",
     "author":"Lv Quy",
     "license":'LGPL-3',
-    "description":'''Push sms, notification to customer, vendor''',
-    "depends":['base','sale','purchase'],
+    "description":'''Push sms, to customer, vendor''',
+    "depends":['purchase'],
     "data":[
-        # 'view.xml'
-        'data/data.xml'
+        'views/view.xml',
     ],
     'installable': True,
     'application'   : True,
