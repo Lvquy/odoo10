@@ -18,11 +18,15 @@ class APIKEY(models.Model):
     def test(self):
         pb = pushbullet.Pushbullet(self.api_key)
         device = pb.devices[0]
-        pb.push_sms(device,self.mobile,'API SMS: Thành công rồi, haha')
-        self.status='on'
+        # pb.push_sms(device,self.mobile,'API SMS: Thành công rồi, haha')
     def change_status(self):
         if self.status == 'off':
             self.test()
+            stt_on = self.env['api.key'].search([('status','=','on')],limit=1)
+            if stt_on.status:
+                print stt_on.status
+                stt_on.status = 'off'
+            self.status = 'on'
         elif self.status =='on':
             self.status = 'off'
 
