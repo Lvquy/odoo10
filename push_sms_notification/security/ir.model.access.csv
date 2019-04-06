@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_admin,API SMS for admin,model_api_key,push_sms_notification.group_admin,1,1,1,1
+access_use,API SMS for use,model_api_key,push_sms_notification.group_use,1,0,0,0

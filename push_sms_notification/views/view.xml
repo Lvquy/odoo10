@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_api_tree" model="ir.ui.view">
+            <field name="name">api.key.tree</field>
+            <field name="model">api.key</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="API KEY" >
+                    <field name="name" />
+                    <field name="mobile" />
+                    <field name="email" />
+                    <field name="create_date"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_api_form" model="ir.ui.view">
+            <field name="name">api.key.form</field>
+            <field name="model">api.key</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="API" name="API">
+                    <header>
+                        <button name ='test' string="Test API " type="object" groups="push_sms_notification.group_admin,base.group_system"/>
+                        <button name ='change_status' string="On/Off API SMS " type="object" groups="push_sms_notification.group_admin,base.group_system"/>
+                        <field name="status" widget="statusbar" visible_status="off,on"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name" attrs="{'readonly': [('status', '=', 'on')]}"/>
+                            <field name="api_key" attrs="{'invisible': [('hide', '=', True)], 'readonly':[('status', '=', 'on')]}"/>
+                            <field name="hide" groups="push_sms_notification.group_admin,base.group_system"/>
+                            <field name="mobile" attrs="{'readonly': [('status', '=', 'on')]}" />
+                            <field name="email" attrs="{'readonly': [('status', '=', 'on')]}" />
+                            <field name="create_date" attrs="{'readonly': [('status', '=', 'on')]}"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_view_api">
+            <field name="name">API</field>
+            <field name="res_model">api.key</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="root_01" name="API KEY"  action="action_view_api" sequence="10"/>
+
+    </data>
+</odoo>
