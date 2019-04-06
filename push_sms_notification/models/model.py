@@ -11,7 +11,7 @@ class APIKEY(models.Model):
     name = fields.Char(string='Name')
     mobile = fields.Char(string="Mobile", required=True)
     email = fields.Char(string="Email", required=True)
-    create_date =fields.Datetime(string="Date create")
+    create_date =fields.Datetime(string="Create Date")
     hide = fields.Boolean(string="Hide token", default=False)
     status = fields.Selection([('off','OFF'),('on','ON')],default='off',string='Trạng thái API')
 
