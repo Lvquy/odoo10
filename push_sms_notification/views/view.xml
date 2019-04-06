@@ -23,7 +23,7 @@
             <field name="arch" type="xml">
                 <form string="API" name="API">
                     <header>
-                        <button name ='test' string="Test API " type="object" groups="push_sms_notification.group_admin,base.group_system"/>
+                        <button name ='test' confirm="Kiểm tra điện thoại, nếu có tin nhắn là thành công!" string="Test API " type="object" groups="push_sms_notification.group_admin,base.group_system"/>
                         <button name ='change_status' string="On/Off API SMS " type="object" groups="push_sms_notification.group_admin,base.group_system"/>
                         <field name="status" widget="statusbar" visible_status="off,on"/>
                     </header>
