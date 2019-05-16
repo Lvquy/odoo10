@@ -1,62 +1,84 @@
 # -*- coding: utf-8 -*-
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
-# -*- coding: utf-8 -*-
-
-
-from odoo import api, fields, models,_
+from odoo import fields, models, api
 from odoo.exceptions import UserError
 
-class Taisan(models.Model):
-    _name = 'tai.san'
-    _description = 'Cac loai tai san'
-    _rec_name = 'name'
-    _inherit = 'mail.thread'
-
-    img = fields.Binary(string='Hình ảnh')
-    code = fields.Char(string='Mã thiết bị', default='New', readonly=True)
-    name = fields.Char(string='Tên tài sản', track_visibility='onchange')
-    gia_tri = fields.Integer(string='Giá trị', track_visibility='onchange')
-    ngay_mua = fields.Date(string='Ngày mua' , track_visibility='onchange')
-    bao_hanh_toi = fields.Date(string='Bảo hành tới', track_visibility='onchange')
-    nguoi_bao_quan = fields.Many2one('hr.employee',string='Người bảo quản', track_visibility='onchange')
-    status = fields.Selection([('0','Kho'),('1','Đang dùng'),('2','Phế')],string='Trạng thái',default='0',track_visibility='onchange')
-    ngay_batdau_bao_quan = fields.Date(string="Từ khi")
-    ly_do_phe = fields.Text(string='Lý do báo phế')
-    ngay_bao_phe = fields.Date(string="Ngày báo phế")
-    nha_cung_cap = fields.Many2one('res.partner',string='Nhà cung cấp',domain=[('supplier','=',True)])
-
-
-
-
-
-    @api.model
-    def create(self, vals):
-        vals['code'] = self.env['ir.sequence'].next_by_code('code_code') or '/'
-        return super(Taisan, self).create(vals)
-
-    @api.multi
-    def confirm(self):
-        if self.nguoi_bao_quan:
-            self.env['hr.employee'].search([('thiet_bi.code','=',self.code)]).write({'thiet_bi': [(3, self.id)]})
-            self.env['hr.employee'].search([('name','=',self.nguoi_bao_quan.name)]).write({'thiet_bi': [(4, self.id)]})
-            self.write({'status': '1'})
-        elif self.nguoi_bao_quan is not True:
-            # self.env['hr.employee'].search([('thiet_bi.code', '=', self.code)]).write({'thiet_bi': [(3, self.id)]})
-            self.write({'status': '0'})
-            raise UserError (_('Cần có người bảo quản'))
-    @api.multi
-    def unconfirm(self):
-        self.env['hr.employee'].search([('thiet_bi.code', '=', self.code)]).write({'thiet_bi': [(3, self.id)]})
-        self.nguoi_bao_quan = False
-        self.write({'status':'0'})
-    @api.multi
-    def cancel(self):
-        if not self.ly_do_phe:
-            raise UserError('Cần có lý do!')
-        self.env['hr.employee'].search([('thiet_bi.code', '=', self.code)]).write({'thiet_bi': [(3, self.id)]})
-        self.nguoi_bao_quan = False
-        self.write({'status':'2'})
 class HR(models.Model):
     _inherit = 'hr.employee'
+    _order = 'tong_gt_ts desc'
 
-    thiet_bi = fields.Many2many('tai.san','nguoi_bao_quan',string='Thiet bi', readonly=True)
+    email_noibo = fields.Char(string="Email nội bộ")
+    work_email = fields.Char(string="Email ngoại bộ")
+    so_the = fields.Char(string="Số thẻ", help='Số thẻ nhân viên', required=True)
+    _sql_constraints = [
+        ('so_the_uniq', 'UNIQUE(so_the)', 'Số thẻ này đã tồn tại, Kiểm tra lại!')
+    ]
+    thiet_bi = fields.One2many('tai.san','nguoi_bao_quan',string='Thiet bi')
+    server = fields.Char(string="Server lưu trữ")
+    count_ts = fields.Integer(string='Tổng tài sản bảo quản', compute='ts_count', )
+    tong_gt_ts = fields.Integer(string='Tổng giá trị bảo quản', compute='ts_count', store=True)
+    lich_su = fields.One2many('lich.subq','ref_a', string='Lịch sử bảo quản')
+
+    @api.one
+    @api.depends('thiet_bi')
+    def ts_count(self):
+        self.count_ts  =  len(self.thiet_bi)
+        for i in self.thiet_bi:
+            self.tong_gt_ts += i.gia_tri
+
+    @api.multi
+    def unlink(self):
+        if self.thiet_bi:
+            raise UserError('Không xóa được khi còn thiết bị bảo quản')
+        else:
+            return super(HR, self).unlink()
+
+class Lichsu(models.Model):
+    _name='lich.su'
+
+    ref_hr = fields.Many2one('tai.san')
+    thiet_bi = fields.Char(string="Thiết bị")
+    nguoi_bq = fields.Char(string="Người bảo quản")
+    so_the = fields.Char(string='Số thẻ')
+    nguoi_moi = fields.Char(string="Người mới")
+    so_the_moi = fields.Char(string='Số thẻ người mới')
+    note = fields.Text(string='Note')
+    tu_ngay = fields.Date(string='Từ ngày')
+    his_type = fields.Selection([('bq','Bắt đầu bảo quản'),
+                                 ('kho','Trả kho'),
+                                 ('phe','Đã báo phế'),
+                                 ('dich_chuyen','Dịch chuyển BQ'),
+                                 ('nhap_kho_phe','Nhập kho phế'),
+                                 ('ban_phe_lieu','Bán phế liệu'),
+                                 ],string='Thuộc Kiểu')
+
+
+class LichSuBQ(models.Model):
+    _name = 'lich.subq'
+
+    ref_a = fields.Many2one('hr.employee')
+    tu_ngay = fields.Date(string='Từ ngày')
+    toi_ngay = fields.Date(string='Tới ngày')
+    ma_thiet_bi = fields.Char(string='Mã thiết bị bảo quản')
+    ten_thiet_bi = fields.Char(string='Tên thiết bị bảo quản')
+    note= fields.Text(string='Ghi chú')
+
+class Top10(models.Model):
+    _name = 'top.10'
+    _order = 'tong_gt_bq desc'
+
+    tong_gt_bq = fields.Integer(string='Tổng giá trị bảo quản',store=True, related='name.tong_gt_ts')
+    name = fields.Many2one('hr.employee', string='Tên nhân viên')
+    so_the= fields.Char(related='name.so_the', string='Số thẻ')
+    so_luong= fields.Integer(related='name.count_ts', string='Tổng số tài sản BQ')
+    bo_phan = fields.Char(related='name.department_id.name', string='Bộ phận')
+    no = fields.Integer(string='NO')
+
+    def get_data(self):
+        # print "Geting....."
+        data = self.env['hr.employee'].search([],limit=10, order='tong_gt_ts desc')
+
+        self.search([]).unlink()
+        k=1
+        for i in data:
+            self.create({'name':i.id, 'no':k})
+            k+=1

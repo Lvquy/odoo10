@@ -1,14 +1,324 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data>
-<!--        <record id="view_inherit_res" model="ir.ui.view">-->
-<!--            <field name="name">res.partner.tree</field>-->
-<!--            <field name="model">res.partner</field>-->
-<!--            <field name="inherit_id" ref="base.view_partner_form"/>-->
-<!--            <field name="priority" eval="8" />-->
-<!--            <field name="arch" type="xml">-->
-<!--                -->
-<!--        </record>-->
+        <record id="view_taisan_form" model="ir.ui.view">
+            <field name="name">tai.san.form</field>
+            <field name="model">tai.san</field>
+            <field name="arch" type="xml">
+                <form string="Tài sản">
+                    <header>
+                        <button name="confirm" string="Xác nhận" type="object" attrs="{'invisible':[('status','in',('1','2'))]}" groups="base.group_system,tai_san.group_taisan"/>
+                        <button name="unconfirm" string="Đưa về kho" type="object" attrs="{'invisible':[('status','in',('0','2'))]}" groups="base.group_system,tai_san.group_taisan" />
+                        <button name="cancel" string="Báo phế" type="object" attrs="{'invisible':[('status','in',('2'))]}" groups="base.group_system,tai_san.group_taisan" />
+                        <button name="luukho" string="Nhận TS phế" type="object" attrs="{'invisible':['|',('status','in',('0','1')),('luu_kho','=',True)]}" groups="tai_san.group_taisan_phe"/>
+                        <field name="status" widget="statusbar" visible_status="0,1,2"/>
+                    </header>
 
+                    <sheet>
+                        <field name="img" widget='image' class="oe_avatar"/>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Tên tài sản" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                            </h1>
+                            <h2>
+                                <field name="code"/>
+                            </h2>
+                            <label for="kho" string="Thuộc: "/>
+                            <field name="kho" attrs="{'readonly':[('status','in',('1','2'))]}" widget="radio"/>
+                        </div>
+                        <group>
+                            <group string="Thông tin chung">
+                                <field name="model_sp" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                                <field name="nha_cung_cap" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                                <field name="gia_tri"  attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                                <field name="currency_id" options="{'no_open':True}" />
+                                <field name="tinh_trang" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                            </group>
+
+                            <group string="Bảo hành">
+                                <field name="ngay_mua" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                                <field name="bao_hanh_toi" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                                <field name="ngay_con_bh"/>
+                                <field name="het_bh"/>
+                                <button name="onchang_time" class="btn-primary" string="Kiểm tra bảo hành" type="object"/>
+
+                            </group>
+                            <group string="Bảo quản">
+                                <field name="nguoi_bao_quan" attrs="{'readonly':[('status','in',('1','2'))]}" options="{'no_quick_create':True, 'no_create':True}"/>
+                                <field name="ngay_batdau_bao_quan" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                                <field name="nguoi_moi" options="{'no_quick_create':True, 'no_create':True}" attrs="{'invisible':[('status','in',('0','2'))]}"/>
+                                <button name="confirm_chuyen" type="object" string="Dịch chuyển BQ" class="btn-primary" attrs="{'invisible':[('status','in',('0','2'))]}"/>
+                            </group>
+                            <group string="Khác">
+                                <field name="so_luong" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                                <field name="ngay_bao_phe" attrs="{'readonly':[('status','in',('2'))]}" />
+                                <field name="ly_do_phe" />
+                                <field name="luu_kho" attrs="{'invisible':[('status','in',('0','1'))]}"/>
+                                <field name="nguoi_nhan" attrs="{'invisible':[('status','in',('0','1'))]}"/>
+                                <field name="da_ban" attrs="{'invisible':[('status','in',('0','1'))]}"/>
+                                <field name="khach_hang" attrs="{'invisible':[('status','in',('0','1'))]}"/>
+
+                                <field name="note"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page name="lich_su" string="Lịch sử thiết bị">
+                                <form string="Lịch sử thiết bị">
+                                    <field name="lich_su_bao_quan" attrs="{'readonly':[('status','in',('1','2'))]}">
+                                        <tree delete="0" create="false">
+                                            <field name="tu_ngay"/>
+                                            <field name="nguoi_bq"/>
+                                            <field name="nguoi_moi"/>
+                                            <field name="his_type"/>
+                                        </tree>
+                                    </field>
+                                </form>
+                            </page>
+                            <page name="pdf_scan" string="Giấy tờ liên quan">
+                                <form>
+                                    <p style="color:blue"> Hỗ trợ các định dạng: file nén(zip,tar,rar...) file text, file pdf, file ảnh, file word, excel <br/></p>
+                                    <group string="Các giấy tờ liên quan tài sản.">
+                                        <group>
+                                            <field name="name_1" invisible="1"/>
+                                            <field name="pdf_scan1" filename="name_1" attrs="{'readonly':[('status','in',('2'))]}"/>
+                                        </group>
+                                        <group>
+                                            <field name="name_2" invisible="1"/>
+                                            <field name="pdf_scan2" filename="name_2" attrs="{'readonly':[('status','in',('2'))]}"/>
+                                        </group>
+                                        <group>
+                                            <field name="name_3" invisible="1"/>
+                                            <field name="pdf_scan3" filename="name_3" attrs="{'readonly':[('status','in',('2'))]}"/>
+                                        </group>
+                                        <group>
+                                            <field name="name_4" invisible="1"/>
+                                            <field name="pdf_scan4" filename="name_4" attrs="{'readonly':[('status','in',('2'))]}"/>
+                                        </group>
+                                    </group>
+                                </form>
+                            </page>
+                            <page name="img" string="Hình ảnh chi tiết">
+                                <form string="Hình ảnh chi tiết">
+                                    <center>
+                                        <div>
+                                            <field name="img_1" widget="image" attrs="{'readonly':[('status','in',('2'))]}"/>
+                                        </div>
+                                        <div>
+                                            <field name="img_2" widget="image" attrs="{'readonly':[('status','in',('2'))]}"/>
+                                        </div>
+                                        <div>
+                                            <field name="img_3" widget="image" attrs="{'readonly':[('status','in',('2'))]}"/>
+                                        </div>
+                                    </center>
+                                </form>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_taisan_tree" model="ir.ui.view">
+            <field name="name">tai.san.tree</field>
+            <field name="model">tai.san</field>
+            <field name="arch" type="xml">
+                <tree string="Tài sản">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="gia_tri" widget="monetary" sum="Tổng giá trị tài sản"/>
+                    <field name="so_luong"/>
+                    <field name="nguoi_bao_quan"/>
+                    <field name="ngay_batdau_bao_quan"/>
+                    <field name="tinh_trang"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_employee_inherit_taisan_tree" model="ir.ui.view">
+            <field name="name">hr.employee.tree</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <field name="parent_id" position="after">
+                    <field name="count_ts" widget="monetary" sum="Tổng số lượng tài sản"/>
+                    <field name="tong_gt_ts" widget="monetary" sum="Tổng giá trị tài sản"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_employee_inherit_taisan_form" model="ir.ui.view">
+            <field name="name">hr.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='hr_settings']" position="after">
+                    <page name="taisan" string="Tài sản bảo quản" >
+                        <field name="thiet_bi">
+                            <tree delete="0" create="false">
+                                <field name="code"/>
+                                <field name="name"/>
+                                <field name="so_luong"/>
+                                <field name="gia_tri"/>
+                                <field name="ngay_batdau_bao_quan"/>
+                                <field name="tinh_trang"/>
+                                <field name="status"/>
+                            </tree>
+                        </field>
+                        <group class="oe_subtotal_footer oe_right">
+                            <field name="count_ts"/>
+                            <field name="tong_gt_ts"/>
+                        </group>
+                        <div class="oe_clear"/>
+                    </page>
+                </xpath>
+                <xpath expr="//page[@name='taisan']" position="after">
+                    <page name="lichsu" string="Lịch sử bảo quản">
+                        <field name="lich_su">
+                            <tree create="false" delete="0">
+                                <field name="tu_ngay"/>
+                                <field name="toi_ngay"/>
+                                <field name="ten_thiet_bi"/>
+                                <field name="ma_thiet_bi"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+                <xpath expr="//field[@name='name']" position="after">
+                    <h2>
+                        <field name="so_the" placeholder="Số thẻ"/>
+                    </h2>
+                </xpath>
+                <xpath expr="//field[@name='work_email']" position="after">
+                    <field name="email_noibo"/>
+                    <field name="server"/>
+                </xpath>
+                <xpath expr="//field[@name='work_email']" position="replace">
+                    <field name="work_email" string="Email ngoại bộ"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="open_taisan" model="ir.actions.act_window">
+            <field name="name">Tài sản: Tất cả</field>
+            <field name="res_model">tai.san</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="view_ts_search"/>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới. .
+                </p>
+            </field>
+        </record>
+        <record id="open_taisan_phe" model="ir.actions.act_window">
+            <field name="name">Tài sản: đã phế</field>
+            <field name="res_model">tai.san</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="view_ts_search"/>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('status','=','2')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới..
+                </p>
+            </field>
+        </record>
+        <record id="open_taisan_phe1" model="ir.actions.act_window">
+            <field name="name">Tài sản: đã phế</field>
+            <field name="res_model">tai.san</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="view_ts_search"/>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('status','=','2')]</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới. .
+                </p>
+            </field>
+        </record>
+
+        <!--        view tai san kho vp-->
+        <record id="open_taisan_vp" model="ir.actions.act_window">
+            <field name="name">Tài sản: văn phòng</field>
+            <field name="res_model">tai.san</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="view_ts_search"/>
+            <field name="domain">[('kho','=','vp')]</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới. .
+                </p>
+            </field>
+        </record>
+
+        <!--        view tai san kho sx-->
+        <record id="open_taisan_sx" model="ir.actions.act_window">
+            <field name="name">Tài sản: sản xuất</field>
+            <field name="res_model">tai.san</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="view_ts_search"/>
+            <field name="domain">[('kho','=','sx')]</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới. .
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem
+                id="menu_top10"
+                sequence="5" name="Top 10 $"  parent="hr.menu_hr_root"/>
+        <menuitem
+                id="menu_top10_1"
+                sequence="1" name="Giá trị BQTS"  parent="menu_top10" action="open_top10"/>
+
+        <menuitem
+                id="menu_root_ts"
+                sequence="9" name="Tài sản" groups="base.group_system,tai_san.group_taisan,tai_san.group_taisan_phe"/>
+        <menuitem
+                id="menu_root_ts_tree"
+                parent="menu_root_ts"
+                sequence="9" name="Tài sản" groups="base.group_system,tai_san.group_taisan,tai_san.group_taisan_phe"/>
+        <menuitem
+                action="open_taisan"
+                id="menu_taisan"
+                parent="menu_root_ts_tree"
+                sequence="1"
+                name="Tất cả" groups="base.group_system,tai_san.group_taisan"/>
+        <menuitem
+                action="open_taisan_vp"
+                id="menu_taisan_vp"
+                parent="menu_root_ts_tree"
+                sequence="2"
+                name="Văn Phòng" groups="base.group_system,tai_san.group_taisan"/>
+        <menuitem
+                action="open_taisan_sx"
+                id="menu_taisan_sx"
+                parent="menu_root_ts_tree"
+                sequence="3"
+                name="Sản xuất" groups="base.group_system,tai_san.group_taisan"/>
+        <menuitem
+                action="open_taisan_phe"
+                id="menu_taisan_phe"
+                parent="menu_root_ts_tree"
+                sequence="4"
+                name="Đã phế" groups="base.group_system,tai_san.group_taisan"/>
+        <menuitem
+                action="open_taisan_phe1"
+                id="menu_taisan_phe1"
+                parent="menu_root_ts_tree"
+                sequence="5"
+                name="Đã phế" groups="tai_san.group_taisan_phe"/>
     </data>
 </odoo>

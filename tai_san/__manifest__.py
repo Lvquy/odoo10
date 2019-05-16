@@ -2,17 +2,34 @@
 
 {
     "name": "Quản lý tài sản",
-    "summary": "custom...",
+    "summary": "Quản lý tài sản.",
     "version": "",
-    "category": "custom lds",
+    "category": "Tài sản",
     "website": "https://ldsvn.com/",
     "author": "Lv Quy, IT LDS",
     "license": "LGPL-3",
-    "depends": ['hr'
-    ],
+    "depends": ['hr','report','contacts'
+                ],
     "data": [
+        'views/document.xml',
+        'data/data.xml',
+        'data/ir.cron.xml',
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'views/filter.xml',
+        'views/graph.xml',
+        'views/pivot.xml',
+        'views/top10.xml',
         'views/view.xml',
-        'data/data.xml'
+        'views/sale.xml',
+        'views/lich_su.xml',
+        'views/kanban.xml',
+        'report/menu_report.xml',
+        'report/bao_quan_ts.xml',
+        'report/thong_tin_ts.xml',
+        'report/sale.xml',
     ],
     'qweb': [],
+    'application'   : True,
+    'auto_install'  : False,
 }
