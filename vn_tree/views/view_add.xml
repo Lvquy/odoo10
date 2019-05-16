@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--tree -->
+        <record id="view_t_tree" model="ir.ui.view">
+            <field name="name">tinh.tree</field>
+            <field name="model">tinh</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Tỉnh TP" groups="base.group_system">
+                    <field name="name" />
+                    <field name="code_tinh" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_t_form" model="ir.ui.view">
+            <field name="name">tinh.form</field>
+            <field name="model">tinh</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Tỉnh TP" groups="base.group_system">
+                    <group>
+                        <field name="name" />
+                        <field name="code_tinh" />
+                    </group>
+                </form>
+            </field>
+        </record>
+        <!-- action view -->
+        <record model="ir.actions.act_window" id="action_view_t">
+            <field name="name">Tỉnh TP</field>
+            <field name="res_model">tinh</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+        <record id="view_h_tree" model="ir.ui.view">
+            <field name="name">huyen.tree</field>
+            <field name="model">huyen</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Quận Huyện" groups="base.group_system">
+                    <field name="name" />
+                    <field name="code_huyen" />
+                    <field name="parent_code" />
+                    <field name="thuoc_tinh" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_h_form" model="ir.ui.view">
+            <field name="name">huyen.form</field>
+            <field name="model">huyen</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Quận Huyện" groups="base.group_system">
+                    <group>
+                        <field name="name"/>
+                        <field name="code_huyen" />
+                        <field name="parent_code" />
+                        <field name="thuoc_tinh" />
+                    </group>
+                </form>
+            </field>
+        </record>
+        <!-- action view -->
+        <record model="ir.actions.act_window" id="action_view_h">
+            <field name="name">Quận Huyện</field>
+            <field name="res_model">huyen</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+
+
+        <record id="view_x_tree" model="ir.ui.view">
+            <field name="name">xa.tree</field>
+            <field name="model">xa</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Xã Phường" groups="base.group_system">
+                    <field name="name" />
+                    <field name="code_xa" />
+                    <field name="parent_code" />
+                    <field name="thuoc_huyen" />
+                    <field name="thuoc_tinh" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_x_form" model="ir.ui.view">
+            <field name="name">xa.form</field>
+            <field name="model">xa</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <form string="Xã Phường" groups="base.group_system">
+                    <group>
+                        <field name="name" />
+                        <field name="code_xa" />
+                        <field name="parent_code" />
+                        <field name="thuoc_huyen" />
+                        <field name="thuoc_tinh" />
+                    </group>
+                </form>
+            </field>
+        </record>
+        <!-- action view -->
+        <record model="ir.actions.act_window" id="action_view_x">
+            <field name="name">Xã Phường</field>
+            <field name="res_model">xa</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tạo mới đối tượng
+                </p>
+            </field>
+        </record>
+        <menuitem id="menu_root" name="Dữ liệu địa chỉ"  sequence="3" groups="base.group_system"/>
+        <menuitem id="menu_root_t" name="Tỉnh TP" parent="menu_root" sequence="3" groups="base.group_system"/>
+        <menuitem id="menu_root_t1" name="Tỉnh TP" action="action_view_t" parent="menu_root_t" sequence="3" groups="base.group_system"/>
+
+        <menuitem id="menu_root_h" name="Quận Huyện"  parent="menu_root" sequence="4" groups="base.group_system"/>
+        <menuitem id="menu_root_h1" name="Quận Huyện" action="action_view_h" parent="menu_root_h" sequence="4" groups="base.group_system"/>
+
+        <menuitem id="menu_root_x" name="Xã Phường"  parent="menu_root"  sequence="5" groups="base.group_system"/>
+        <menuitem id="menu_root_x1" name="Xã Phường" action="action_view_x" parent="menu_root_x"  sequence="5" groups="base.group_system"/>
+    </data>
+</odoo>

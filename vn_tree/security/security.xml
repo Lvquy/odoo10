@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="vn_tree.group_admin" model="res.groups">
+        <field name="name">Nhóm mới VN tree</field>
+    </record>
+</odoo>

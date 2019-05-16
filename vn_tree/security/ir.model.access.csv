@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_xemtinh,Xem tỉnh,model_tinh,vn_tree.group_admin,1,0,1,0
+
+access_xemhuyen,Xem huyen,model_huyen,vn_tree.group_admin,1,0,1,0
+
+access_xemxa,Xem xa,model_xa,vn_tree.group_admin,1,0,1,0

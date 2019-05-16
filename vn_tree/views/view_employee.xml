@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_employee_inherit_form" model="ir.ui.view">
+            <field name="name">hr.employee.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='address_home_id']" position="after">
+                    <field name="tinh" string="Tỉnh TP" options="{'no_open' : True , 'no_create':True}"/>
+                    <field name="huyen" string="Quận Huyện" options="{'no_open' : True , 'no_create':True}"/>
+                    <field name="xa" string="Xã Phường" options="{'no_open' : True , 'no_create':True}"/>
+                    <field name="duong_sonha" string="Tên đường, số nhà..."/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
