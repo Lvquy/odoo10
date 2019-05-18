@@ -7,8 +7,8 @@
             <field name="arch" type="xml">
                 <form string="Bán phế liệu">
                     <header>
-                        <button name="confirm_sale" type="object" string="Xác nhận bán" attrs="{'invisible':[('status','in',('1','2'))]}" groups="base.group_system,tai_san.group_taisan_phe"/>
-                        <button name="cancel_sale" type="object" string="Hủy bán" attrs="{'invisible':[('status','in',('1','2'))]}"/>
+                        <button name="confirm_sale" type="object" string="Xác nhận bán" attrs="{'invisible':[('status','in',('1','2'))]}" groups="tai_san.group_taisan_phe"/>
+                        <button name="cancel_sale" type="object" string="Hủy bán" attrs="{'invisible':[('status','in',('1','2'))]}" groups="tai_san.group_taisan_phe"/>
                         <field name="status" widget="statusbar" visible_status="0,1,2"/>
                     </header>
 
