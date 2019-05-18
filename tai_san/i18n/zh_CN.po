@@ -1,0 +1,951 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vn_tree
+# 	* tai_san
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-23 01:01+0000\n"
+"PO-Revision-Date: 2019-04-24 08:42+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: zh_CN\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid ", BP:"
+msgstr ", BP:"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid ", Số thẻ:"
+msgstr ", Số thẻ:"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid ""
+"1. Người bảo quản phải chịu trách nhiệm khi tài sản bị mất mác hoặc hư hỏng thì phải bồi thường theo giá trị của bản BQTS (Nếu như không báo cáo kịp thời.)<br/>\n"
+"                            如財產有損壞或遺失保管者要跟財產保管書的單價賠償．<br/>\n"
+"                            2. Trong thời gian bảo quản mà không sử dụng đúng cách nếu bị hư hỏng thì phải chấp nhận bồi thường.<br/>\n"
+"                            在保管期間使用錯誤就要接受賠償．<br/>\n"
+"                            3. Nếu công ty có nhu cầu sử dụng lại tài sản, người BQTS phải hoàn trả mà không viện bất cứ lý do nào.<br/>\n"
+"                            如公司要求將財產收回，保管者要交回公司．<br/>\n"
+"                            4. Người BQ khi bị ngưng việc hay nghỉ việc, phải hoàn trả toàn bộ tài sản mà công ty giao trong thời hạn làm việc.<br/>\n"
+"                            保管者被辭職或離職還在工作時要將所有的財產交回公司．<br/>\n"
+"                            5. Nếu hai bên có việc phải nhờ đến Pháp luật thì Tòa án Trọng tài sẽ do bên A quyết định.<br/>\n"
+"                            如雙方需要到法律即由Ａ方決定選出法院．"
+msgstr ""
+"1. Người bảo quản phải chịu trách nhiệm khi tài sản bị mất mác hoặc hư hỏng thì phải bồi thường theo giá trị của bản BQTS (Nếu như không báo cáo kịp thời.)<br/>\n"
+"                            如財產有損壞或遺失保管者要跟財產保管書的單價賠償．<br/>\n"
+"                            2. Trong thời gian bảo quản mà không sử dụng đúng cách nếu bị hư hỏng thì phải chấp nhận bồi thường.<br/>\n"
+"                            在保管期間使用錯誤就要接受賠償．<br/>\n"
+"                            3. Nếu công ty có nhu cầu sử dụng lại tài sản, người BQTS phải hoàn trả mà không viện bất cứ lý do nào.<br/>\n"
+"                            如公司要求將財產收回，保管者要交回公司．<br/>\n"
+"                            4. Người BQ khi bị ngưng việc hay nghỉ việc, phải hoàn trả toàn bộ tài sản mà công ty giao trong thời hạn làm việc.<br/>\n"
+"                            保管者被辭職或離職還在工作時要將所有的財產交回公司．<br/>\n"
+"                            5. Nếu hai bên có việc phải nhờ đến Pháp luật thì Tòa án Trọng tài sẽ do bên A quyết định.<br/>\n"
+"                            如雙方需要到法律即由Ａ方決定選出法院．"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid ""
+"<br/>\n"
+"                                Ngày...............Tháng...............Năm...............<br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>"
+msgstr ""
+"<br/>\n"
+"                                Ngày...............Tháng...............Năm...............<br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>\n"
+"                                <br/>"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid ""
+"<br/>\n"
+"                        <b>Bảo đảm (擔保):</b><br/>"
+msgstr ""
+"<br/>\n"
+"                        <b>Bảo đảm (擔保):</b><br/>"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "<u>Ghi chú (備註):</u>"
+msgstr "<u>Ghi chú (備註):</u>"
+
+#. module: tai_san
+#: model:ir.actions.report.xml,name:tai_san.report_bqts_lds
+msgid "BQ Tài sản"
+msgstr "財產保管"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Báo phế"
+msgstr "報廢"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "Bên A: CTY CP LÂM ĐẠT HƯNG (A 方代表林達興實業有限公司)"
+msgstr "Bên A: CTY CP LÂM ĐẠT HƯNG (A 方代表林達興實業有限公司)"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "Bên B: Người bảo quản tài sản (B 方代表保管財產者)"
+msgstr "Bên B: Người bảo quản tài sản (B 方代表保管財產者)"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "BẢN BẢO QUẢN TÀI SẢN"
+msgstr "BẢN BẢO QUẢN TÀI SẢN"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Bảo hành"
+msgstr "保固"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_bao_hanh_toi
+msgid "Bảo hành tới"
+msgstr "保固到"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Bảo hành tới:"
+msgstr "保固到:"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Bảo quản"
+msgstr "保管"
+
+#. module: tai_san
+#: selection:lich.su,his_type:0
+msgid "Bắt đầu bảo quản"
+msgstr "開始保管"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_employee_kanban_inherit_hr_qlts
+msgid "Bộ phận:"
+msgstr "部門："
+
+#. module: tai_san
+#: model:ir.model,name:tai_san.model_tai_san
+msgid "Cac loai tai san"
+msgstr "Cac loai tai san"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_color
+msgid "Color"
+msgstr "Color"
+
+#. modules: vn_tree, tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su_create_uid
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_create_uid
+#: model:ir.model.fields,field_description:vn_tree.field_huyen_create_uid
+#: model:ir.model.fields,field_description:vn_tree.field_tinh_create_uid
+#: model:ir.model.fields,field_description:vn_tree.field_xa_create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. modules: vn_tree, tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su_create_date
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_create_date
+#: model:ir.model.fields,field_description:vn_tree.field_huyen_create_date
+#: model:ir.model.fields,field_description:vn_tree.field_tinh_create_date
+#: model:ir.model.fields,field_description:vn_tree.field_xa_create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_pdf_scan1
+#: model:ir.model.fields,help:tai_san.field_tai_san_pdf_scan2
+#: model:ir.model.fields,help:tai_san.field_tai_san_pdf_scan3
+#: model:ir.model.fields,help:tai_san.field_tai_san_pdf_scan4
+msgid "Các giấy tờ bảo hành liên quan!"
+msgstr "相關財產文件"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Các giấy tờ liên quan tài sản."
+msgstr "相關財產文件"
+
+#. module: tai_san
+#: code:addons/tai_san/models/taisan.py:109
+#, python-format
+msgid "Cần có người bảo quản, Ngày bắt đầu bảo quản"
+msgstr "需要保管人，開始保管日期! "
+
+#. modules: vn_tree, tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su_display_name
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_display_name
+#: model:ir.model.fields,field_description:vn_tree.field_huyen_display_name
+#: model:ir.model.fields,field_description:vn_tree.field_tinh_display_name
+#: model:ir.model.fields,field_description:vn_tree.field_xa_display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: vn_tree
+#: model:ir.ui.menu,name:vn_tree.menu_root
+msgid "Dữ liệu địa chỉ"
+msgstr "Dữ liệu địa chỉ"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_employee_inherit_taisan_form
+msgid "Email ngoại bộ"
+msgstr "外部郵件"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_hr_employee_email_noibo
+msgid "Email nội bộ"
+msgstr "內部郵件"
+
+#. modules: vn_tree, tai_san
+#: model:ir.model,name:tai_san.model_hr_employee
+#: model:ir.model,name:vn_tree.model_hr_employee
+msgid "Employee"
+msgstr "员工"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_note
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Ghi chú"
+msgstr "備註"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_gia_tri
+msgid "Giá trị"
+msgstr "財產價值"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "Giá trị TS (單價)"
+msgstr "Giá trị TS (單價)"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_gia_tri
+msgid "Giá trị thiết bị"
+msgstr "財產價值"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Giá trị:"
+msgstr "財產價值:"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Giấy tờ liên quan"
+msgstr "相關文件"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_pdf_scan1
+msgid "Giấy tờ liên quan 1"
+msgstr "相關文件 1"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_pdf_scan2
+msgid "Giấy tờ liên quan 2"
+msgstr "相關文件 2"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_pdf_scan3
+msgid "Giấy tờ liên quan 3"
+msgstr "相關文件 3"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_pdf_scan4
+msgid "Giấy tờ liên quan 4"
+msgstr "相關文件 4"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_img
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "Hình ảnh"
+msgstr "照片"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_img_1
+msgid "Hình ảnh 1"
+msgstr "照片 1"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_img_2
+msgid "Hình ảnh 2"
+msgstr "照片 2"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_img_3
+msgid "Hình ảnh 3"
+msgstr "照片 3"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Hình ảnh chi tiết"
+msgstr "明細照片"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_img
+msgid "Hình ảnh tài sản, yêu cầu tỷ lệ kích thước: width(dài):height(cao) là 4:3 "
+msgstr "Hình ảnh tài sản, yêu cầu tỷ lệ kích thước: width(dài):height(cao) là 4:3 "
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_het_bh
+msgid "Hết bảo hành"
+msgstr "超過保修期"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "Họ và tên (姓名):"
+msgstr "Họ và tên (姓名):"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Hỗ trợ các định dạng: file text, file pdf, file ảnh, file word, excel <br/>"
+msgstr "Hỗ trợ các định dạng: file text, file pdf, file ảnh, file word, excel <br/>"
+
+#. modules: vn_tree, tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su_id
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_id
+#: model:ir.model.fields,field_description:vn_tree.field_huyen_id
+#: model:ir.model.fields,field_description:vn_tree.field_tinh_id
+#: model:ir.model.fields,field_description:vn_tree.field_xa_id
+msgid "ID"
+msgstr "ID"
+
+#. module: tai_san
+#: selection:tai.san,status:0
+msgid "Kho"
+msgstr "倉庫"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Khác"
+msgstr "其他"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "Không có tài sản bảo quản"
+msgstr "沒油保管財產"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Kiểm tra bảo hành"
+msgstr "保固檢查"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "Ký nhận (收期)"
+msgstr "Ký nhận (收期)"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "Ký trả (還期)"
+msgstr "Ký trả (還期)"
+
+#. modules: vn_tree, tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su___last_update
+#: model:ir.model.fields,field_description:tai_san.field_tai_san___last_update
+#: model:ir.model.fields,field_description:vn_tree.field_huyen___last_update
+#: model:ir.model.fields,field_description:vn_tree.field_tinh___last_update
+#: model:ir.model.fields,field_description:vn_tree.field_xa___last_update
+msgid "Last Modified on"
+msgstr "最后修改日"
+
+#. modules: vn_tree, tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su_write_uid
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_write_uid
+#: model:ir.model.fields,field_description:vn_tree.field_huyen_write_uid
+#: model:ir.model.fields,field_description:vn_tree.field_tinh_write_uid
+#: model:ir.model.fields,field_description:vn_tree.field_xa_write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. modules: vn_tree, tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su_write_date
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_write_date
+#: model:ir.model.fields,field_description:vn_tree.field_huyen_write_date
+#: model:ir.model.fields,field_description:vn_tree.field_tinh_write_date
+#: model:ir.model.fields,field_description:vn_tree.field_xa_write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_ngay_batdau_bao_quan
+msgid "Là ngày Nhân viên bắt đầu nhận bảo quản"
+msgstr "是人員開始接受保管日期"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_ly_do_phe
+msgid "Lý do báo phế"
+msgstr "報廢理由"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_lichsu_form
+#: model:ir.ui.view,arch_db:tai_san.view_lichsu_tree
+msgid "Lịch sử"
+msgstr "歷史"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_lich_su_bao_quan
+msgid "Lịch sử bảo quản"
+msgstr "保管歷史"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Lịch sử thiết bị"
+msgstr "設備歷史"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Lịch sử tài sản:"
+msgstr "設備歷史:"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_model_sp
+msgid "Model sản phẩm"
+msgstr "產品型號"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_model_sp
+msgid "Model, mã sản phẩm..."
+msgstr "Model, mã sản phẩm..."
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Model:"
+msgstr "Model:"
+
+#. module: vn_tree
+#: model:ir.model.fields,field_description:vn_tree.field_huyen_code_huyen
+msgid "Mã Huyện"
+msgstr "Mã Huyện"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "Mã TS"
+msgstr "Mã TS"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Mã Ts:"
+msgstr "Mã Ts:"
+
+#. module: vn_tree
+#: model:ir.model.fields,field_description:vn_tree.field_xa_parent_code
+msgid "Mã huyện"
+msgstr "Mã huyện"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_code
+msgid "Mã thiết bị"
+msgstr "設備代碼"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_code
+msgid "Mã thiết bị là duy nhất, do LDS tự tạo và quy định cho mỗi thiết bị."
+msgstr "Mã thiết bị là duy nhất, do LDS tự tạo và quy định cho mỗi thiết bị."
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.device_kanban_view
+msgid "Mã thiết bị:"
+msgstr "設備代碼:"
+
+#. module: vn_tree
+#: model:ir.model.fields,field_description:vn_tree.field_huyen_parent_code
+#: model:ir.model.fields,field_description:vn_tree.field_tinh_code_tinh
+msgid "Mã tỉnh"
+msgstr "Mã tỉnh"
+
+#. module: vn_tree
+#: model:ir.model.fields,field_description:vn_tree.field_xa_code_xa
+msgid "Mã xã"
+msgstr "Mã xã"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_name_1
+msgid "Name1"
+msgstr "Name1"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_name_2
+msgid "Name2"
+msgstr "Name2"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_name_3
+msgid "Name3"
+msgstr "Name3"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_name_4
+msgid "Name4"
+msgstr "Name4"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_ngay_bao_phe
+msgid "Ngày báo phế"
+msgstr "報廢日期"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_ngay_con_bh
+msgid "Ngày còn bảo hành"
+msgstr "保固期限中"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_bao_hanh_toi
+msgid "Ngày hết hạn bảo hành"
+msgstr "保修到期日"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_ngay_mua
+msgid "Ngày mua"
+msgstr "購買設備的日期"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_ngay_mua
+msgid "Ngày mua thiết bị"
+msgstr "購買設備的日期"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Ngày mua:"
+msgstr "購買設備的日期:"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su_nguoi_bq
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_nguoi_bao_quan
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Người bảo quản"
+msgstr "保管人"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_nguoi_bao_quan
+msgid "Người bảo quản thiết bị"
+msgstr "保管人"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.device_kanban_view
+msgid "Người bảo quản:"
+msgstr "保管人:"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_nha_cung_cap
+msgid "Nhà cung cấp"
+msgstr "供應商"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_nha_cung_cap
+msgid "Nhà cung cấp thiết bị"
+msgstr "供應商"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Nhà cung cấp:"
+msgstr "供應商:"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_ts_search
+msgid "Nhóm bởi"
+msgstr "Nhóm bởi"
+
+#. module: tai_san
+#: model:res.groups,name:tai_san.group_taisan
+msgid "Nhóm mới Tài sản"
+msgstr "Nhóm mới Tài sản"
+
+#. module: vn_tree
+#: model:res.groups,name:vn_tree.group_admin
+msgid "Nhóm mới VN tree"
+msgstr "Nhóm mới VN tree"
+
+#. module: tai_san
+#: model:ir.actions.act_window,help:tai_san.open_taisan
+#: model:ir.actions.act_window,help:tai_san.open_taisan_sx
+#: model:ir.actions.act_window,help:tai_san.open_taisan_vp
+msgid "Nhấp để tạo mới. ."
+msgstr "Nhấp để tạo mới. ."
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su_note
+msgid "Note"
+msgstr "备注"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.device_kanban_view
+#: selection:tai.san,status:0
+msgid "Phế"
+msgstr "廢"
+
+#. module: vn_tree
+#: model:ir.actions.act_window,name:vn_tree.action_view_h
+#: model:ir.model.fields,field_description:vn_tree.field_hr_employee_huyen
+#: model:ir.ui.menu,name:vn_tree.menu_root_h
+#: model:ir.ui.menu,name:vn_tree.menu_root_h1
+#: model:ir.ui.view,arch_db:vn_tree.view_employee_inherit_form
+#: model:ir.ui.view,arch_db:vn_tree.view_h_form
+#: model:ir.ui.view,arch_db:vn_tree.view_h_tree
+msgid "Quận Huyện"
+msgstr "Quận Huyện"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su_ref_hr
+msgid "Ref hr"
+msgstr "Ref hr"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "SL (方財產)"
+msgstr "SL (方財產)"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_hr_employee_server
+msgid "Server lưu trữ"
+msgstr "留存網"
+
+#. module: tai_san
+#: selection:tai.san,kho:0
+msgid "Sản Xuất"
+msgstr "生產"
+
+#. module: tai_san
+#: model:ir.ui.menu,name:tai_san.menu_taisan_sx
+msgid "Sản xuất"
+msgstr "生產"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "Số CMND (身分證號碼):"
+msgstr "Số CMND (身分證號碼):"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_so_luong
+msgid "Số lượng"
+msgstr "數量"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_hr_employee_so_the
+msgid "Số thẻ"
+msgstr "卡號"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_hr_employee_so_the
+msgid "Số thẻ nhân viên"
+msgstr "卡號"
+
+#. module: tai_san
+#: sql_constraint:hr.employee:0
+msgid "Số thẻ này đã tồn tại, Kiểm tra lại!"
+msgstr "這卡號已存在，再次檢查!"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_employee_kanban_inherit_hr_qlts
+msgid "Số thẻ:"
+msgstr "卡號:"
+
+#. module: tai_san
+#: selection:lich.su,his_type:0
+msgid "Sửa chữa"
+msgstr "Sửa chữa"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "THÔNG TIN TÀI SẢN"
+msgstr "財產資料"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_hr_employee_thiet_bi
+msgid "Thiet bi"
+msgstr "Thiet bi"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su_thiet_bi
+msgid "Thiết bị"
+msgstr "設備"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su_his_type
+msgid "Thuộc Kiểu"
+msgstr "屬於類型"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_kho
+msgid "Thuộc Văn phòng hoặc Sản xuất"
+msgstr "Thuộc Văn phòng hoặc Sản xuất"
+
+#. module: vn_tree
+#: model:ir.model.fields,field_description:vn_tree.field_xa_thuoc_huyen
+msgid "Thuộc huyện"
+msgstr "Thuộc huyện"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_kho
+#: model:ir.ui.view,arch_db:tai_san.view_ts_search
+msgid "Thuộc kho"
+msgstr "屬於倉庫"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Thuộc kho:"
+msgstr "屬於倉庫:"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Thuộc kiểu"
+msgstr "屬於類型"
+
+#. module: vn_tree
+#: model:ir.model.fields,field_description:vn_tree.field_huyen_thuoc_tinh
+#: model:ir.model.fields,field_description:vn_tree.field_xa_thuoc_tinh
+msgid "Thuộc tỉnh"
+msgstr "Thuộc tỉnh"
+
+#. module: tai_san
+#: model:ir.actions.report.xml,name:tai_san.report_ttts_lds
+msgid "Thông tin Tài sản"
+msgstr "財產資料"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Thông tin chung"
+msgstr "一般信息"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Thông tin chung:"
+msgstr "Thông tin chung:"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_currency_id
+msgid "Tiền tệ"
+msgstr "貨幣"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.device_kanban_view
+#: model:ir.ui.view,arch_db:tai_san.view_ts_search
+msgid "Trong kho"
+msgstr "倉庫裡"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_status
+msgid "Trạng thái"
+msgstr "設備狀態"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_status
+msgid "Trạng thái thiết bị"
+msgstr "設備狀態"
+
+#. module: tai_san
+#: selection:lich.su,his_type:0
+msgid "Trả kho"
+msgstr "推給倉庫"
+
+#. module: tai_san
+#: model:ir.ui.menu,name:tai_san.menu_root_ts
+#: model:ir.ui.menu,name:tai_san.menu_root_ts_tree
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_tree
+msgid "Tài sản"
+msgstr "財產"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_employee_inherit_taisan_form
+msgid "Tài sản bảo quản"
+msgstr "財產保管"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_ts_search
+msgid "Tài sản trong kho"
+msgstr "財產在倉庫"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_ts_search
+msgid "Tài sản đang sử dụng"
+msgstr "財產在使用"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_ts_search
+msgid "Tài sản đã phế"
+msgstr "財產已廢"
+
+#. module: tai_san
+#: model:ir.actions.act_window,name:tai_san.open_taisan
+msgid "Tài sản: Tất cả"
+msgstr "財產：全部"
+
+#. module: tai_san
+#: model:ir.actions.act_window,name:tai_san.open_taisan_sx
+msgid "Tài sản: sản xuất"
+msgstr "財產：生產 "
+
+#. module: tai_san
+#: model:ir.actions.act_window,name:tai_san.open_taisan_vp
+msgid "Tài sản: văn phòng"
+msgstr "財產: 辦公室"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.bqts_report
+msgid "Tên TS (財產名稱)"
+msgstr "Tên TS (財產名稱)"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Tên Ts:"
+msgstr "財產名稱:"
+
+#. module: vn_tree
+#: model:ir.model.fields,field_description:vn_tree.field_huyen_name
+msgid "Tên huyện"
+msgstr "Tên huyện"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.device_kanban_view
+msgid "Tên thiết bị:"
+msgstr "財產名稱:"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_name
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Tên tài sản"
+msgstr "財產名稱"
+
+#. module: vn_tree
+#: model:ir.model.fields,field_description:vn_tree.field_tinh_name
+msgid "Tên tỉnh"
+msgstr "Tên tỉnh"
+
+#. module: vn_tree
+#: model:ir.model.fields,field_description:vn_tree.field_xa_name
+msgid "Tên xã"
+msgstr "Tên xã"
+
+#. module: vn_tree
+#: model:ir.model.fields,field_description:vn_tree.field_hr_employee_duong_sonha
+#: model:ir.ui.view,arch_db:vn_tree.view_employee_inherit_form
+msgid "Tên đường, số nhà..."
+msgstr "Tên đường, số nhà..."
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_ts_search
+msgid "Tìm kiếm Tài Sản"
+msgstr "Tìm kiếm Tài Sản"
+
+#. module: vn_tree
+#: model:ir.actions.act_window,help:vn_tree.action_view_h
+#: model:ir.actions.act_window,help:vn_tree.action_view_t
+#: model:ir.actions.act_window,help:vn_tree.action_view_x
+msgid "Tạo mới đối tượng"
+msgstr "Tạo mới đối tượng"
+
+#. module: tai_san
+#: model:ir.ui.menu,name:tai_san.menu_taisan
+msgid "Tất cả"
+msgstr "全部"
+
+#. module: vn_tree
+#: model:ir.actions.act_window,name:vn_tree.action_view_t
+#: model:ir.model.fields,field_description:vn_tree.field_hr_employee_tinh
+#: model:ir.ui.menu,name:vn_tree.menu_root_t
+#: model:ir.ui.menu,name:vn_tree.menu_root_t1
+#: model:ir.ui.view,arch_db:vn_tree.view_employee_inherit_form
+#: model:ir.ui.view,arch_db:vn_tree.view_t_form
+#: model:ir.ui.view,arch_db:vn_tree.view_t_tree
+msgid "Tỉnh TP"
+msgstr "Tỉnh TP"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_tai_san_ngay_batdau_bao_quan
+msgid "Từ khi"
+msgstr "從"
+
+#. module: tai_san
+#: model:ir.model.fields,field_description:tai_san.field_lich_su_tu_ngay
+#: model:ir.ui.view,arch_db:tai_san.ttts_report
+msgid "Từ ngày"
+msgstr "從"
+
+#. module: tai_san
+#: model:ir.ui.menu,name:tai_san.menu_taisan_vp selection:tai.san,kho:0
+msgid "Văn Phòng"
+msgstr " 辦公室"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Xác nhận"
+msgstr "確認"
+
+#. module: vn_tree
+#: model:ir.actions.act_window,name:vn_tree.action_view_x
+#: model:ir.model.fields,field_description:vn_tree.field_hr_employee_xa
+#: model:ir.ui.menu,name:vn_tree.menu_root_x
+#: model:ir.ui.menu,name:vn_tree.menu_root_x1
+#: model:ir.ui.view,arch_db:vn_tree.view_employee_inherit_form
+#: model:ir.ui.view,arch_db:vn_tree.view_x_form
+#: model:ir.ui.view,arch_db:vn_tree.view_x_tree
+msgid "Xã Phường"
+msgstr "Xã Phường"
+
+#. module: vn_tree
+#: model:ir.model,name:vn_tree.model_huyen
+msgid "huyen"
+msgstr "huyen"
+
+#. module: tai_san
+#: model:ir.model,name:tai_san.model_lich_su
+msgid "lich.su"
+msgstr "lich.su"
+
+#. module: tai_san
+#: model:ir.model.fields,help:tai_san.field_tai_san_ngay_bao_phe
+msgid "là ngày xếp ký đơn duyệt báo phế"
+msgstr "是經理簽署批准報廢單日期"
+
+#. module: vn_tree
+#: model:ir.model,name:vn_tree.model_tinh
+msgid "tinh"
+msgstr "tinh"
+
+#. module: vn_tree
+#: model:ir.model,name:vn_tree.model_xa
+msgid "xa"
+msgstr "xa"
+
+#. module: tai_san
+#: selection:tai.san,status:0
+msgid "Đang dùng"
+msgstr "在用"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.device_kanban_view
+#: model:ir.ui.view,arch_db:tai_san.view_ts_search
+msgid "Đang sử dụng"
+msgstr "在使用"
+
+#. module: tai_san
+#: selection:lich.su,his_type:0
+msgid "Đã báo phế"
+msgstr "已報廢"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_ts_search
+msgid "Đã phế"
+msgstr "已廢"
+
+#. module: tai_san
+#: model:ir.ui.view,arch_db:tai_san.view_taisan_form
+msgid "Đưa về kho"
+msgstr "帶回倉庫"

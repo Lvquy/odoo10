@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_ts_search" model="ir.ui.view">
+            <field name="name">tai.san.search</field>
+            <field name="model">tai.san</field>
+            <field name="arch" type="xml">
+                <search string="Tìm kiếm Tài Sản">
+                    <filter domain="[('status','=','0')]" name="sp_kho" string="Trong kho" help="Tài sản trong kho"/>
+                    <filter domain="[('status','=','1')]" name="sp_sd" string="Đang sử dụng" help="Tài sản đang sử dụng"/>
+                    <filter domain="[('status','=','2')]"  name="sp_phe" string="Đã phế" help="Tài sản đã phế"/>
+                    <filter domain="[('luu_kho','=',False),('status','=','2')]" name="sp_phe_false" string="Phế chưa xác nhận" help="Tài sản đã phế chưa xác nhận"/>
+                    <filter domain="[('da_ban','=',True)]" name="sp_phe_daban" string="Đã bán phế liệu"/>
+                    <field name="code"/>
+                    <field name="model_sp"/>
+                    <field name="name"/>
+                    <field name="nguoi_bao_quan"/>
+                    <field name="kho"/>
+                    <field name="status"/>
+                    <field name="het_bh"/>
+                    <field name="luu_kho"/>
+                    <field name="da_ban"/>
+                    <newline />
+                    <group expand="1" string="Nhóm bởi">
+                        <filter string="Thuộc kho" name="thuoc_kho" context="{'group_by':'kho'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+        <record id="view_hr_search" model="ir.ui.view">
+            <field name="name">hr.employee.search</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='job_id']" position="after">
+                    <field name="so_the"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_phelieu_search" model="ir.ui.view">
+            <field name="name">ban.phelieu.search</field>
+            <field name="model">ban.phelieu</field>
+            <field name="arch" type="xml">
+                <search string="Tìm kiếm">
+                    <filter domain="[('status','=','0')]" name="stt0" string="Bản thảo" help="Bản thảo chưa xác nhận"/>
+                    <filter domain="[('status','=','1')]" name="stt1" string="Đã bán" help="Đã xác nhận và đã bán"/>
+                    <filter domain="[('status','=','2')]" name="stt2" string="Đã hủy" help="Đã hủy"/>
+                    <field name="status"/>
+                    <field name="so"/>
+                    <field name="khach_hang"/>
+                    <field name="ngay_tao"/>
+                    <field name="ngay_xuat_kho"/>
+                    <newline />
+                    <group expand="1" string="Nhóm bởi">
+                        <filter string="Tháng xuất kho" name="theo_ngay_xuat_kho" context="{'group_by':'ngay_xuat_kho'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

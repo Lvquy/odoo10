@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_doc_tree" model="ir.ui.view">
+            <field name="name">doc.lds.tree</field>
+            <field name="model">doc.lds</field>
+            <field name="arch" type="xml">
+                <tree string="Hướng dẫn sử dụng nội bộ">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_doc_form" model="ir.ui.view">
+            <field name="name">doc.lds.form</field>
+            <field name="model">doc.lds</field>
+            <field name="arch" type="xml">
+                <form string="Hướng dẫn sử dụng nội bộ">
+                    <field name="name"/>
+                    <field name="document"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_document" model="ir.actions.act_window">
+            <field name="name">Hướng dẫn sử dụng</field>
+            <field name="res_model">doc.lds</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới. .
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+                id="menu_document"
+                sequence="20" name="Hướng dẫn" action="open_document"/>
+
+    </data>
+</odoo>

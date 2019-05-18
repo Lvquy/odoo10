@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+<!-- graph views  -->
+        <record model="ir.ui.view" id="view_graph_hr">
+            <field name="name">top.10.graph</field>
+            <field name="model">top.10</field>
+            <field name="arch" type="xml">
+                <graph string="Top 10" type="bar">
+                    <field name="name"/>
+                    <field name="tong_gt_bq" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_graph_pl">
+            <field name="name">ban.phelieu.graph</field>
+            <field name="model">ban.phelieu</field>
+            <field name="arch" type="xml">
+                <graph string="Top 10" type="bar">
+                    <field name="ngay_xuat_kho"/>
+                    <field name="tong_tien" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+    </data>
+</odoo>

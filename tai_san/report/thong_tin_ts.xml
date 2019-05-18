@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Thông tin tài sản-->
+    <template id="ttts_report">
+        <t t-foreach="docs" t-as="o">
+            <div class="page">
+                <link rel="stylesheet" href="/tai_san/static/src/css/style1.css"/>
+                <center>
+                    <img src="/tai_san/static/src/img/logo.png" width="100%" height="auto"></img>
+                    <h3>THÔNG TIN TÀI SẢN</h3>
+                    <br/>
+                    <div class="col-xs-6" t-if="o.img">
+                        <span t-field="o.img" t-field-options='{"widget": "image"}'/>
+                    </div>
+                    <div class="col-xs-6" t-if="o.img_1">
+                        <span t-field="o.img_1" t-field-options='{"widget": "image"}'/>
+                    </div>
+                </center>
+                <br/>
+                <h4 class="col-xs-12">Thông tin chung:</h4>
+                <table width="100%">
+                    <tr >
+                        <td>Mã Ts: <span t-field="o.code"/></td>
+                        <td>Tên Ts: <span t-field="o.name"/></td>
+                    </tr>
+                    <tr>
+                        <td>Model: <span t-field="o.model_sp"/></td>
+                        <td>Thuộc kho: <span t-field="o.kho"/></td>
+                    </tr>
+                    <tr>
+                        <td>Nhà cung cấp: <span t-field="o.nha_cung_cap.name"/></td>
+                        <td>Giá trị: <span t-field="o.gia_tri"/> <span t-field="o.currency_id.name"/></td>
+                    </tr>
+                    <tr>
+                        <td>Ngày mua: <span t-field="o.ngay_mua"/></td>
+                        <td>Bảo hành tới: <span t-field="o.bao_hanh_toi"/></td>
+                    </tr>
+                </table>
+
+                <br/>
+                <h4 class="col-xs-12">Lịch sử tài sản:</h4>
+                <table width="100%">
+                    <tr>
+                        <td id="col1">Ngày</td>
+                        <td id="col2">Người bảo quản/ST</td>
+                        <td id="col5">Người mới/ST</td>
+                        <td id="col3">Thuộc kiểu</td>
+                        <td id="col4">Ghi chú</td>
+                    </tr>
+                    <tr t-foreach="o.lich_su_bao_quan" t-as="l">
+                        <td><span t-field="l.tu_ngay"/> </td>
+                        <td>
+                            <span t-field="l.nguoi_bq"/> /
+                            <span t-field="l.so_the"/>
+                        </td>
+                        <td>
+                            <span t-field="l.nguoi_moi"/> /
+                            <span t-field="l.so_the_moi"/>
+                        </td>
+                        <td><span t-field="l.his_type"/></td>
+                        <td><span t-field="l.note"/></td>
+                    </tr>
+                </table>
+                <div class="text-right">
+                    Thông tin tại thời điểm: <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%H:%M Giờ, Ngày %d, Tháng %m, Năm %Y' )"/>
+                </div>
+
+            </div>
+        </t>
+    </template>
+    <template id="report_ttts">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="tai_san.ttts_report"/>
+        </t>
+    </template>
+</odoo>

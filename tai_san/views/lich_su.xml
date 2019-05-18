@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_lichsu_tree" model="ir.ui.view">
+            <field name="name">lich.su.tree</field>
+            <field name="model">lich.su</field>
+            <field name="arch" type="xml">
+                <tree string="Lịch sử">
+                    <field name="tu_ngay"/>
+                    <field name="nguoi_bq"/>
+                    <field name="nguoi_moi"/>
+                    <field name="his_type"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_lichsu_form" model="ir.ui.view">
+            <field name="name">lich.su.form</field>
+            <field name="model">lich.su</field>
+            <field name="arch" type="xml">
+                <form name="lichsu" string="Lịch sử">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="tu_ngay"/>
+                                <field name="thiet_bi"/>
+                                <field name="his_type"/>
+                            </group>
+                            <group>
+
+                            </group>
+                            <group>
+                                <field name="nguoi_bq"/>
+                                <field name="so_the"/>
+                            </group>
+                            <group>
+                                <field name="nguoi_moi"/>
+                                <field name="so_the_moi"/>
+                            </group>
+                            <group>
+                                <field name="note"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_lichsu_ts_tree" model="ir.ui.view">
+            <field name="name">lich.subq.tree</field>
+            <field name="model">lich.subq</field>
+            <field name="arch" type="xml">
+                <tree string="Lịch sử">
+                    <field name="tu_ngay"/>
+                    <field name="toi_ngay"/>
+                    <field name="ten_thiet_bi"/>
+                    <field name="ma_thiet_bi"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_lichsu_ts_form" model="ir.ui.view">
+            <field name="name">lich.subq.form</field>
+            <field name="model">lich.subq</field>
+            <field name="arch" type="xml">
+                <form string="Lịch sử">
+                    <sheet>
+                        <group>
+                            <field name="tu_ngay"/>
+                            <field name="toi_ngay"/>
+                            <field name="ten_thiet_bi"/>
+                            <field name="ma_thiet_bi"/>
+                            <field name="note"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

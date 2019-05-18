@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <report
+            string ="BQ Tài sản"
+            id = "report_bqts_lds"
+            model="hr.employee"
+            report_type = "qweb-pdf"
+            name = "tai_san.report_bqts"
+            file="tai_san.report_bqts"
+        />
+        <report
+            string ="Thông tin Tài sản"
+            id = "report_ttts_lds"
+            model="tai.san"
+            report_type = "qweb-pdf"
+            name = "tai_san.report_ttts"
+            file="tai_san.report_ttts"
+        />
+        <report
+            string ="Đơn hàng bán phế liệu"
+            id = "report_banphelieu_lds"
+            model="ban.phelieu"
+            report_type = "qweb-pdf"
+            name = "tai_san.report_banphelieu"
+            file="tai_san.report_banphelieu"
+        />
+    </data>
+</odoo>

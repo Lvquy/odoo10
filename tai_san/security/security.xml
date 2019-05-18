@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="tai_san.group_taisan" model="res.groups">
+        <field name="name">Nhóm mới Tài sản</field>
+    </record>
+
+    <record id="tai_san.group_taisan_phe" model="res.groups">
+        <field name="name">Nhóm mới người nhận ts phế</field>
+    </record>
+
+</odoo>

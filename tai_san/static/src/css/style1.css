@@ -1,0 +1,55 @@
+.noborder-left{
+    border-left:0px
+    }
+.noborder-right{
+    border-right:0px
+    }
+table {
+
+    border: 1px solid black;
+    vertical-align: middle;
+}
+
+td {
+    border: 1px solid black;
+    vertical-align: middle;
+    padding: 3px;
+    text-align: left;
+}
+
+tr {
+    border: 1px solid black;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#col1{
+    width:15%;
+    text-align: center;
+    }
+#col2{
+    width:25%;
+    text-align: center;
+    }
+#col3{
+    width:20%;
+    text-align: center;
+    }
+#col4{
+    width:auto;
+    text-align: center;
+    }
+#col5{
+    width:25%;
+    text-align: center;
+    }
+
+.img{
+    width:16em;
+    height:12em;
+    padding: 0.1em
+}
+
+h3{
+    margin:5px;
+    }

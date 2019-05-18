@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <!-- pivot View -->
+        <record id="ban_phelieu_report_view_pivot" model="ir.ui.view">
+            <field name="name">ban.phelieu.pivot</field>
+            <field name="model">ban.phelieu</field>
+            <field name="arch" type="xml">
+                <pivot string="Biểu đồ thống kê bán phế liệu">
+                    <field name="ngay_xuat_kho" interval="year"/>
+                    <field name="ngay_xuat_kho" interval="month"/>
+                    <field name="ngay_xuat_kho" interval="day"/>
+                    <field name="tong_tien" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+</odoo>

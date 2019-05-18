@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_top10_tree" model="ir.ui.view">
+            <field name="name">top.10.tree</field>
+            <field name="model">top.10</field>
+            <field name="arch" type="xml">
+                <tree string="Top 10">
+                    <field name="name"/>
+                    <field name="so_the"/>
+                    <field name="bo_phan"/>
+                    <field name="so_luong" widget="monetary" sum="Tổng số tài sản"/>
+                    <field name="tong_gt_bq" widget="monetary" sum="Tổng giá trị tài sản"/>
+                    <field name="no"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_top10_form" model="ir.ui.view">
+            <field name="name">top.10.form</field>
+            <field name="model">top.10</field>
+            <field name="arch" type="xml">
+                <form string="Top 10">
+                    <group>
+                        <field name="name"/>
+                        <field name="so_the"/>
+                        <field name="bo_phan"/>
+                        <field name="so_luong"/>
+                        <field name="tong_gt_bq"/>
+                        <field name="no"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_top10" model="ir.actions.act_window">
+            <field name="name">Top 10</field>
+            <field name="res_model">top.10</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph,tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới. .
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

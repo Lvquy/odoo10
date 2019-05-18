@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_sale_form" model="ir.ui.view">
+            <field name="name">ban.phelieu.form</field>
+            <field name="model">ban.phelieu</field>
+            <field name="arch" type="xml">
+                <form string="Bán phế liệu">
+                    <header>
+                        <button name="confirm_sale" type="object" string="Xác nhận bán" attrs="{'invisible':[('status','in',('1','2'))]}"/>
+                        <button name="cancel_sale" type="object" string="Hủy bán" attrs="{'invisible':[('status','in',('1','2'))]}"/>
+                        <field name="status" widget="statusbar" visible_status="0,1,2"/>
+                    </header>
+
+                    <sheet>
+                        <group>
+                            <field name="so"/>
+                        </group>
+                        <group>
+                            <field name="khach_hang" domain="[('customer','=',True)]" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                            <field name="ngay_tao" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                            <field name="ngay_xuat_kho" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                        </group>
+                        <group>
+                            <field name="note" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                        </group>
+
+                        <notebook>
+                            <page name="line" string="Tài sản bán">
+                                <field name="tai_san_ban" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                                <group class="oe_subtotal_footer oe_right">
+                                    <field name="tong_tien"/>
+                                </group>
+                                <div class="oe_clear"/>
+                                <div class="oe_left">
+                                    Đọc tiền: <field name="doc_tien"/>
+                                </div>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_sale_tree" model="ir.ui.view">
+            <field name="name">ban.phelieu.tree</field>
+            <field name="model">ban.phelieu</field>
+            <field name="arch" type="xml">
+                <tree string="Bán phế liệu">
+                    <field name="so"/>
+                    <field name="khach_hang"/>
+                    <field name="ngay_tao"/>
+                    <field name="ngay_xuat_kho"/>
+                    <field name="tong_tien" widget="monetary" sum="Tổng tiền"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_line_sale_tree" model="ir.ui.view">
+            <field name="name">line.taisan.tree</field>
+            <field name="model">line.taisan</field>
+            <field name="arch" type="xml">
+                <tree string="Bán phế liệu">
+                    <field name="mats"/>
+                    <field name="ts"/>
+                    <field name="sl"/>
+                    <field name="dvt"/>
+                    <field name="dg"/>
+                    <field name="tong"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_line_sale_form" model="ir.ui.view">
+            <field name="name">line.taisan.form</field>
+            <field name="model">line.taisan</field>
+            <field name="arch" type="xml">
+                <form string="Bán phế liệu">
+                    <sheet>
+                        <group>
+                            <field name="ts" domain="[('status','=','2'),('luu_kho','=',True),('da_ban','=',False)]" options="{'no_create': True}"/>
+                            <field name="sl"/>
+                            <field name="dvt"/>
+                            <field name="dg"/>
+                            <field name="tong"/>
+                        </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="open_ban_phelieu" model="ir.actions.act_window">
+            <field name="name">Bán phế liệu</field>
+            <field name="res_model">ban.phelieu</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,pivot,graph</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới. .
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+                id="root_banphelieu"
+                sequence="10"
+                name="Bán phế liệu"/>
+        <menuitem
+                action="open_ban_phelieu"
+                id="menu_banphelieu"
+                parent="root_banphelieu"
+                sequence="1"
+                name="Bán phế liệu"/>
+    </data>
+</odoo>

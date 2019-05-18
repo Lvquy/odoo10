@@ -1,0 +1,50 @@
+table {
+    border: 1px solid black;
+    vertical-align: middle;
+    margin-top: 0px;
+}
+
+td {
+    border: 1px solid black;
+    vertical-align: middle;
+    padding: 3px;
+    text-align: left;
+}
+
+tr {
+    border: 1px solid black;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#col1{
+    width:25%
+    }
+#col2{
+
+    width:30%
+    }
+#col3{
+    width:45%;
+    text-align: center;
+    }
+
+.img{
+    width:16em;
+    height:12em;
+    padding: 0.1em
+}
+
+h3{
+    margin-top:1px}
+
+#note{
+    vertical-align: top;
+
+}
+.footer{
+    font-size:12px
+}
+#center{
+    text-align: center;
+    }

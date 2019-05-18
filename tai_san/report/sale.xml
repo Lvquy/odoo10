@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- bán phế liệu-->
+    <template id="ban_phelieu_report">
+        <t t-foreach="docs" t-as="o">
+                <div class="page">
+                    <link rel="stylesheet" href="/tai_san/static/src/css/style2.css"/>
+                    <center>
+                        <img src="/tai_san/static/src/img/logo.png" width="100%" height="auto"></img>
+                        <h3>ĐƠN HÀNG BÁN PHẾ LIỆU</h3>
+                    </center>
+                    <div>Số đơn hàng: <span t-field="o.so"/></div>
+                    <div>Khách hàng: <span t-field="o.khach_hang"/>, Di động: <span t-field="o.khach_hang.mobile"/> </div>
+                    <div>Ngày tạo đơn: <span t-field="o.ngay_tao"/></div>
+                    <table width="100%">
+                        <tr>
+                            <td width="5%">STT</td>
+                            <td width="20%">Hình ảnh</td>
+                            <td width="20%">Tên TS</td>
+                            <td width="15%">Mã TS</td>
+                            <td width="6%">SL</td>
+                            <td width="6%">ĐVT</td>
+                            <td width="10%">Đ.Giá(VNĐ)</td>
+                            <td>Thành Tiền</td>
+                        </tr>
+                        <t t-set="stt" t-value="1"/>
+                        <tr t-foreach="o.tai_san_ban" t-as="l">
+                            <td style="text-align:center">
+                                <t t-esc="stt"/>
+                                <t t-set="stt" t-value="stt+1"/>
+                            </td>
+
+                            <td><span t-field="l.ts.img" t-field-options='{"widget": "image"}'/></td>
+                            <td><span t-field="l.ts.name"/></td>
+                            <td><span t-field="l.mats"/></td>
+                            <td><span t-field="l.sl"/></td>
+                            <td><span t-field="l.dvt"/></td>
+                            <td><span t-field="l.dg"/></td>
+                            <td><span t-field="l.tong"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="7" style="text-align:center">Tổng tiền(VNĐ) <span t-field="o.doc_tien"/> </td>
+                            <td>
+                                <t t-esc="'{0:,.0f}'.format(float(sum(l.tong for l in o.tai_san_ban)))"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <div class="col-xs-6 text-center">Ngày......Tháng.......Năm......</div>
+                    <div class="col-xs-6 text-center">Ngày......Tháng.......Năm......</div>
+                    <div class="col-xs-6 text-center">Chữ ký ban giám đốc</div>
+                    <div class="col-xs-6 text-center">Chữ ký người làm đơn</div>
+                </div>
+        </t>
+    </template>
+    <template id="report_banphelieu">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="tai_san.ban_phelieu_report"/>
+        </t>
+    </template>
+</odoo>

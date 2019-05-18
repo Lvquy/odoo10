@@ -1,0 +1,28 @@
+table {
+    border: 1px solid black;
+    vertical-align: middle;
+    margin-top: 0px;
+}
+
+td {
+    border: 1px solid black;
+    vertical-align: middle;
+    padding: 3px;
+    text-align: center;
+}
+
+tr {
+    border: 1px solid black;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+.img{
+    width:10em;
+    height:8em;
+    padding: 0.1em
+}
+
+h3{
+    margin-top:1px}
