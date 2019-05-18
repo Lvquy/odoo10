@@ -16,7 +16,7 @@ class Taisan(models.Model):
     img_3 = fields.Binary(string='Hình ảnh 3')
     code = fields.Char(string='Mã thiết bị', default='New', readonly=True, help="Mã thiết bị là duy nhất, do LDS tự tạo và quy định cho mỗi thiết bị.")
     model_sp = fields.Char(string="Model sản phẩm",track_visibility='onchange', help='Model, mã sản phẩm...')
-    name = fields.Char(string='Tên tài sản', track_visibility='onchange')
+    name = fields.Char(string='Tên tài sản', track_visibility='onchange', readonly=True)
     gia_tri = fields.Integer(string='Giá trị', track_visibility='onchange', help="Giá trị thiết bị, Khuyến khích dùng đơn vị VNĐ")
     ngay_mua = fields.Date(string='Ngày mua' , track_visibility='onchange', help="Ngày mua thiết bị")
     bao_hanh_toi = fields.Date(string='Bảo hành tới', track_visibility='onchange', help='Ngày hết hạn bảo hành')
