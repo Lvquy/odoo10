@@ -15,7 +15,7 @@ class Sale(models.Model):
     tai_san_ban = fields.One2many('line.taisan','ref_ban',string='Tài sản bán', required=True)
     note = fields.Text(string='Ghi chú')
     status = fields.Selection([('0','Bản thảo'),('1','Đã bán'),('2','Hủy')], string='Trạng thái SO', default='0')
-    tong_tien = fields.Float(string='Tổng tiền',store=True, compute='get_tong', default=0)
+    tong_tien = fields.Float(string='Tổng tiền(VND)',store=True, compute='get_tong', default=0)
     so = fields.Char(string='Số đơn hàng', readonly=True)
     doc_tien = fields.Char(string='Đọc tiền', compute='get_doc_tien')
 
@@ -81,8 +81,8 @@ class Linets(models.Model):
     mats = fields.Char(related='ts.code',string='Mã TS')
     sl = fields.Float(string='S.Lượng', default=1)
     dvt = fields.Char(string='ĐVT')
-    dg = fields.Float(string='Đ.Giá')
-    tong = fields.Float(string='Tổng tiền', store=True, compute='compute_tong')
+    dg = fields.Float(string='Đ.Giá(VND)')
+    tong = fields.Float(string='Tổng tiền(VND)', store=True, compute='compute_tong')
 
     @api.one
     @api.depends('sl','dg')

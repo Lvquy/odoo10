@@ -67,4 +67,4 @@ def docso(so):
 		chuoi = chuoi[1:]
 	chuoi = chuoi.capitalize()
 
-	return chuoi
+	return chuoi + u' đồng'

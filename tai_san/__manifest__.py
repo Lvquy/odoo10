@@ -13,6 +13,7 @@
     "data": [
         'views/document.xml',
         'data/data.xml',
+        # 'data/document_data.xml',
         'data/ir.cron.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
@@ -26,8 +27,10 @@
         'views/kanban.xml',
         'report/menu_report.xml',
         'report/bao_quan_ts.xml',
+        'report/bao_quan_ts_1.xml',
         'report/thong_tin_ts.xml',
         'report/sale.xml',
+        'report/document.xml',
     ],
     'qweb': [],
     'application'   : True,

@@ -18,12 +18,28 @@
             file="tai_san.report_ttts"
         />
         <report
+            string ="Giấy tờ bảo quản TS"
+            id = "report_ttts_lds1"
+            model="tai.san"
+            report_type = "qweb-pdf"
+            name = "tai_san.report_bqts1"
+            file="tai_san.report_bqts1"
+        />
+        <report
             string ="Đơn hàng bán phế liệu"
             id = "report_banphelieu_lds"
             model="ban.phelieu"
             report_type = "qweb-pdf"
             name = "tai_san.report_banphelieu"
             file="tai_san.report_banphelieu"
+        />
+        <report
+            string ="Hướng dẫn lds"
+            id = "report_doc"
+            model="doc.lds"
+            report_type = "qweb-pdf"
+            name = "tai_san.document_report"
+            file="tai_san.document_report"
         />
     </data>
 </odoo>

@@ -3,10 +3,7 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_1,Người dùng nhân sự lịch sử,model_lich_su,tai_san.group_taisan,1,1,1,1
 access_2,Người dùng nhân sự tài sản,model_tai_san,tai_san.group_taisan,1,1,1,1
 access_3,Người dùng nhân sự ls bảo quản,model_lich_subq,tai_san.group_taisan,1,1,1,1
-
 access_4,Người dùng nhân sự top10,model_top_10,tai_san.group_taisan,1,1,1,1
-access_12,nguoi nhan ts phe top10,model_top_10,tai_san.group_taisan_phe,1,1,0,0
-
 access_5,ban phe lieu,model_ban_phelieu,tai_san.group_taisan,1,0,0,0
 access_6,ban phe lieu 1,model_ban_phelieu,tai_san.group_taisan_phe,1,1,1,1
 
@@ -14,7 +11,9 @@ access_7,ban phe lieu line,model_line_taisan,tai_san.group_taisan,1,1,1,1
 access_8,ban phe lieu line 1,model_line_taisan,tai_san.group_taisan_phe,1,1,1,1
 
 
-access_9,nguoi nhan ts phe,model_tai_san,tai_san.group_taisan_phe,1,1,0,0
+access_9,nguoi nha ts phe,model_tai_san,tai_san.group_taisan_phe,1,1,0,0
 access_10,nguoi nhan ts phe lịch sử,model_lich_su,tai_san.group_taisan_phe,1,1,1,0
 access_11,nguoi nhan ts phe ls bảo quản,model_lich_subq,tai_san.group_taisan_phe,1,1,0,0
-
+access_12,nguoi nhan ts phe top10,model_top_10,tai_san.group_taisan_phe,1,1,0,0
+access_13,document 1,model_doc_lds,tai_san.group_taisan_phe,1,0,0,0
+access_14,document 2,model_doc_lds,tai_san.group_taisan,1,0,0,0

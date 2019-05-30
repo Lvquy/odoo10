@@ -6,7 +6,9 @@
             <field name="model">doc.lds</field>
             <field name="arch" type="xml">
                 <tree string="Hướng dẫn sử dụng nội bộ">
+<!--                    <field name="state"/>-->
                     <field name="name"/>
+
                 </tree>
             </field>
         </record>
@@ -15,8 +17,9 @@
             <field name="model">doc.lds</field>
             <field name="arch" type="xml">
                 <form string="Hướng dẫn sử dụng nội bộ">
-                    <field name="name"/>
-                    <field name="document"/>
+<!--                    Bước: <field name="state"/>-->
+                    Name: <field name="name"/>
+<!--                    <field name="document"/>-->
                 </form>
             </field>
         </record>
@@ -35,7 +38,7 @@
 
         <menuitem
                 id="menu_document"
-                sequence="20" name="Hướng dẫn" action="open_document"/>
+                sequence="99" name="Hướng dẫn" action="open_document"/>
 
     </data>
 </odoo>
