@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_ban_form" model="ir.ui.view">
+            <field name="name">ban.form</field>
+            <field name="model">ban</field>
+            <field name="arch" type="xml">
+                <form string="Ban">
+                    <header>
+                        <button name="confirm" type="object" string="confirm"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="khach"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_ban_tree" model="ir.ui.view">
+            <field name="name">ban.tree</field>
+            <field name="model">ban</field>
+            <field name="arch" type="xml">
+                <tree string="Ban">
+                    <field name="name"/>
+                    <field name="khach"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_ban_search" model="ir.ui.view">
+            <field name="name">ban.search</field>
+            <field name="model">ban</field>
+            <field name="arch" type="xml">
+                <search string="Ban">
+<!--                    Chú ý filter_domain-->
+                    <field name="khach" filter_domain="[('khach','=',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="view_don_hang" model="ir.actions.act_window">
+            <field name="name">Đơn hàng đã lọc theo nhà cung cấp</field>
+            <field name="res_model">ban</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+<!--            <field name="domain">[('khach','=',uid)]</field>-->
+            <field name="context">{'search_default_khach': active_id}</field>
+<!--            cú pháp là search_default_  tên field cần kích hoạt trên bộ lọc : active_id (là từ khóa, không phải field hay biến )-->
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    ABC XYZ
+                </p>
+            </field>
+        </record>
+
+
+        <record id="view_khach_form" model="ir.ui.view">
+            <field name="name">khach.form</field>
+            <field name="model">khach</field>
+            <field name="arch" type="xml">
+                <form string="khach">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button text-left" name="%(test.view_don_hang)d" type="action" icon="fa-shopping-cart">
+                                <field string="SL Đơn hàng" name="count" widget="statinfo"/>
+                            </button>
+                        </div>
+                        <div>
+                            <group>
+                            <field name="name"/>
+                        </group>
+                        </div>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_khach_tree" model="ir.ui.view">
+            <field name="name">khach.tree</field>
+            <field name="model">khach</field>
+            <field name="arch" type="xml">
+                <tree string="khach">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="open_ban" model="ir.actions.act_window">
+            <field name="name">Ban</field>
+            <field name="res_model">ban</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới..
+                </p>
+            </field>
+        </record>
+        <record id="open_khach" model="ir.actions.act_window">
+            <field name="name">Khach</field>
+            <field name="res_model">khach</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới..
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+                id="menu_root"
+                sequence="1"
+                name="TEST" />
+        <menuitem
+                action="open_ban"
+                id="menu_ban"
+                parent="menu_root"
+                sequence="1"
+                name="Ban" />
+        <menuitem
+                action="open_khach"
+                id="menu_khach"
+                parent="menu_root"
+                sequence="2"
+                name="khach" />
+    </data>
+</odoo>

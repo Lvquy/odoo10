@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Bản bảo quản tài sản-->
+    <template id="bqts_report1">
+        <t t-foreach="docs" t-as="o">
+            <t t-if="o.nguoi_bao_quan">
+                <div class="page">
+                    <link rel="stylesheet" href="/tai_san/static/src/css/style.css"/>
+                    <center>
+                        <img src="/tai_san/static/src/img/logo.png" width="100%" height="auto"></img>
+                        <h3>BẢN BẢO QUẢN TÀI SẢN</h3>
+                        <h3 >財 產 保 管 書</h3>
+                    </center>
+                    <div>Bên A: CTY CP LÂM ĐẠT HƯNG (A 方代表林達興實業有限公司)</div>
+                    <div>Bên B: Người bảo quản tài sản (B 方代表保管財產者)</div>
+                    <div>Họ và tên (姓名): <span t-field="o.nguoi_bao_quan.name"/>, BP: <span t-field="o.nguoi_bao_quan.department_id.name"/> </div>
+                    <div>Số CMND (身分證號碼): <span t-field="o.nguoi_bao_quan.identification_id"/>, Số thẻ: <span t-field="o.nguoi_bao_quan.so_the"/></div>
+                    <table width="100%">
+                        <tr>
+                            <td id="col1">Mã TS</td>
+                            <td id="col2"><span t-field="o.code"/></td>
+                            <td id="col3">Hình ảnh</td>
+                        </tr>
+                        <tr>
+                            <td >Tên TS (財產名稱)</td>
+                            <td><span t-field="o.name"/></td>
+                            <td rowspan="4">
+                                <center>
+                                    <span class="img" t-field="o.img"  t-field-options='{"widget": "image"}'/>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Giá trị TS (單價)</td>
+                            <td><span t-field="o.gia_tri"/> <span t-field="o.currency_id.name"/> </td>
+                        </tr>
+                        <tr>
+                            <td>SL (方財產)</td>
+                            <td><span t-field="o.so_luong"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" id="note"><u>Ghi chú (備註):</u> <span t-field="o.note"/></td>
+                        </tr>
+                    </table>
+                    <div class="footer">
+                        <br/>
+                        <b>Bảo đảm (擔保):</b><br/>
+                        <p>1. Người bảo quản phải chịu trách nhiệm khi tài sản bị mất mác hoặc hư hỏng thì phải bồi thường theo giá trị của bản BQTS (Nếu như không báo cáo kịp thời.)<br/>
+                            如財產有損壞或遺失保管者要跟財產保管書的單價賠償．<br/>
+                            2. Trong thời gian bảo quản mà không sử dụng đúng cách nếu bị hư hỏng thì phải chấp nhận bồi thường.<br/>
+                            在保管期間使用錯誤就要接受賠償．<br/>
+                            3. Nếu công ty có nhu cầu sử dụng lại tài sản, người BQTS phải hoàn trả mà không viện bất cứ lý do nào.<br/>
+                            如公司要求將財產收回，保管者要交回公司．<br/>
+                            4. Người BQ khi bị ngưng việc hay nghỉ việc, phải hoàn trả toàn bộ tài sản mà công ty giao trong thời hạn làm việc.<br/>
+                            保管者被辭職或離職還在工作時要將所有的財產交回公司．<br/>
+                            5. Nếu hai bên có việc phải nhờ đến Pháp luật thì Tòa án Trọng tài sẽ do bên A quyết định.<br/>
+                            如雙方需要到法律即由Ａ方決定選出法院．</p>
+                    </div>
+                    <table width="100%" height="100%">
+                        <tr>
+                            <td colspan="2" id="center">Ký nhận (收期)</td>
+                            <td colspan="2" id="center">Ký trả (還期)</td>
+                        </tr>
+                        <tr>
+                            <td id="center">
+                                Người bảo quản
+                                <br/>
+                                Ngày.....tháng....Năm.....
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </td>
+                            <td id="center">
+                                Người làm chứng
+                                <br/>
+                                Ngày.....tháng....Năm.....
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </td>
+                            <td id="center">
+                                Người bảo quản
+                                <br/>
+                                Ngày.....tháng....Năm.....
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </td>
+                            <td id="center">
+                                Người làm chứng
+                                <br/>
+                                Ngày.....tháng....Năm.....
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </t>
+            <t t-else="t-else">
+                <div class="page">
+                    <center>
+                        <h2>Không có người bảo quản</h2>
+                    </center>
+                </div>
+            </t>
+        </t>
+    </template>
+    <template id="report_bqts1">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="tai_san.bqts_report1"/>
+        </t>
+    </template>
+</odoo>

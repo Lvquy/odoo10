@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Hướng dẫn -->
+    <template id="document_lds">
+        <div class="page">
+            <link rel="stylesheet" href="/tai_san/static/src/css/style.css"/>
+            <center>
+                <h1>TÀI LIỆU HƯỚNG DẪN</h1>
+            </center>
+
+            <h2>Quy trình: Tài sản mới - Nhập kho - Nhân viên bảo quản/Chuyển bảo quản - Trả ko/Báo phế - Bán phế liệu </h2>
+
+            <hr/>
+            <h3>Sau khi đăng nhập với tài khoản được cấp, giao diện sẽ như hình sau.</h3>
+
+            <img src="/tai_san/static/src/img/1.png" width="100%" height="auto"></img>
+            <hr/>
+
+            <h3>Cách tạo 1 nhân viên mới</h3>
+            <p>Từ màn chính, chọn menu Nhân viên nhấp Tạo
+                Một form hiện ra, điền đầy đủ các thông tin rồi nhấp lưu</p>
+            <img src="/tai_san/static/src/img/2.png" width="100%" height="auto"></img>
+            <hr/>
+            <h3>Cách tạo 1 tài sản mới</h3>
+            <p>Chọn menu Tài sản, chọn Tạo , một form hiện ra điền đầy đủ thông tin cho tài sản rồi nhấp lưu<br/>
+            - Tài sản có các trạng thái đó là : Trong kho, Đang có người sử dụng , Đã phế , Đã bán phế liệu <br/>
+
+            </p>
+            <img src="/tai_san/static/src/img/3.png" width="100%" height="auto"></img>
+            <img src="/tai_san/static/src/img/4.png" width="100%" height="auto"></img>
+            <hr/>
+
+            <h3>Cách tạo 1 Liên hệ mới(Nhà cung cấp/Khách hàng)</h3>
+            <p>Chọn menu Liên hệ , chọn Tạo rồi điền đầy đủ thông tin<br/>
+            Lưu ý chọn là nhà cung cấp hoặc là khách hàng ở Tab Bán hàng , mua hàng</p>
+            <img src="/tai_san/static/src/img/5.png" width="100%" height="auto"></img>
+            <img src="/tai_san/static/src/img/6.png" width="100%" height="auto"></img>
+            <hr/>
+
+            <h3>Cách giao tài sản bảo quản cho 1 người</h3>
+            <p>Chọn Tài sản cần giao nhấp sửa rồi chọn người bảo quản, Thời gian bảo quản từ khi nào, rồi nhấp Xác nhận.<br/>
+            Khi đó tài sản này sẽ được gán cho người bảo quản đã chọn phía dưới.</p>
+            <img src="/tai_san/static/src/img/7.png" width="100%" height="auto"></img>
+            <hr/>
+
+            <h3>Cách chuyển bảo quản tài sản cho người khác</h3>
+            <p>Chọn nhân viên cần chuyển chọn sửa chọn tab Tài sản bảo quản, chọn tài sản cần chuyển, chọn người nhận thiết bị chọn Dịch chuyển BQ </p>
+            <img src="/tai_san/static/src/img/8.png" width="100%" height="auto"></img>
+            <img src="/tai_san/static/src/img/9.png" width="100%" height="auto"></img>
+            <hr/>
+            <h3>Cách báo phế 1 tài sản</h3>
+            <p>Chọn tài sản cần báo phế, nhấp sửa, chọn ngày báo phế, lý do rồi nhấp báo phế.</p>
+            <img src="/tai_san/static/src/img/10.png" width="100%" height="auto"></img>
+            <hr/>
+            <h3>Cách nhận tài sản phế về kho</h3>
+            <p>Khi có 1 tài sản báo phế, ở màn menu sẽ xuất hiện số tài sản đã báo phế cần được xác nhận. <br/>/
+            Khi đó cần vào bộ lọc để lọc ra những tài sản đã báo phế và cần được xác nhận. Rồi nhấn vào nút Nhận TS phế</p>
+            <img src="/tai_san/static/src/img/11.png" width="100%" height="auto"></img>
+            <img src="/tai_san/static/src/img/12.png" width="100%" height="auto"></img>
+            <hr/>
+            <h3>Cách tạo đơn hàng bán phế liệu</h3>
+            <p>Chọn menu Bán phế liệu, chọn Tạo , Chọn khách hàng, chọn tài sản phế cần bán , điền thông tin đơn hàng nhấp lưu.<br/>
+                Rồi in đơn hàng trình BGĐ, khi BGD duyệt thì nhấp xác nhận bán / Hủy bán.</p>
+            <img src="/tai_san/static/src/img/13.png" width="100%" height="auto"></img>
+            <img src="/tai_san/static/src/img/14.png" width="100%" height="auto"></img>
+            <img src="/tai_san/static/src/img/15.png" width="100%" height="auto"></img>
+            <img src="/tai_san/static/src/img/16.png" width="100%" height="auto"></img>
+
+            <hr/>
+            <h3>Để truy cập nhanh các tài sản cũng như nhân viên hay liên hệ có thể dùng các bộ lọc tìm kiếm </h3>
+            <img src="/tai_san/static/src/img/17.png" width="100%" height="auto"></img>
+
+
+
+
+
+
+
+        </div>
+    </template>
+
+    <template id="document_report">
+        <t t-call="tai_san.document_lds"/>
+    </template>
+</odoo>
