@@ -12,6 +12,7 @@
                 ],
     "data": [
         'views/view.xml',
+        'views/config.xml',
     ],
     'qweb': [],
     'application'   : True,
