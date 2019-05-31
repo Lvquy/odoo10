@@ -32,7 +32,7 @@ class MySetting(models.TransientModel):
     test_config = fields.Char()
 
     @api.model
-    def get_default_test_config_values(self, fields):
+    def get_default_tuythich(self, fields):
         """
         Method argument "fields" is a list of names
         of all available fields.
@@ -43,6 +43,6 @@ class MySetting(models.TransientModel):
             }
 
     @api.one
-    def set_ban_values(self):
+    def set_tuythich_abc(self):
         ban = self.env['ban'].search([],limit=1)
         ban.name = self.test_config
