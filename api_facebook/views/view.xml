@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_api_tree" model="ir.ui.view">
+            <field name="name">api.facebook.tree</field>
+            <field name="model">api.facebook</field>
+            <field name="arch" type="xml">
+                <tree string="API FB">
+<!--                    <field name="api_key"/>-->
+                    <field name="fields_list"/>
+                    <field name="cmt"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_api_form" model="ir.ui.view">
+            <field name="name">api.facebook.form</field>
+            <field name="model">api.facebook</field>
+            <field name="arch" type="xml">
+                <form string="Hướng dẫn sử dụng nội bộ">
+                    <group>
+                        <field name="api_key"/>
+                        <field name="fields_list"/>
+                        <field name="cmt"/>
+                    </group>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="view_ihr_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="lang" position="after">
+                    <field name="name_fb"/>
+                    <field name="link_fb" widget="url"/>
+                    <button name="get_fb" type="object" string="Get FB"/>
+                </field>
+
+            </field>
+        </record>
+
+        <record id="open_api" model="ir.actions.act_window">
+            <field name="name">API FB</field>
+            <field name="res_model">api.facebook</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới. .
+                </p>
+            </field>
+        </record>
+
+
+        <menuitem
+                id="menu_api"
+                sequence="99" name="API FB" action="open_api"/>
+
+    </data>
+</odoo>
