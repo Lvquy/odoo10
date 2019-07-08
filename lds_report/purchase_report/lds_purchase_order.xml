@@ -142,17 +142,13 @@
                             </td>
                             <td>
                                 <t t-if="line.product_uom.name.upper() =='M3'
-								or line.product_uom.name.upper() =='(3)M3'
-								or line.product_uom.name.upper() =='(4)M3'
-								or line.product_uom.name.upper() =='(4.75)M3'
-								or line.product_uom.name.upper() =='(12)M3'
-								or line.product_uom.name.upper() =='(18)M3'
-								or line.product_uom.name.upper() =='(9)M3'
-								or line.product_uom.name.upper() =='(6)M3'
-								or line.product_uom.name.upper() =='(21)M3'
+								or line.product_uom.name.upper() =='M'
 								">
-									<span t-esc="'{0:,.3f}'.format(float(line.product_qty))"/>							
+									<span t-esc="'{0:,.2f}'.format(float(line.product_qty))"/>
 								</t>
+                                <t t-elseif="line.product_uom.name.upper() == 'KG.'">
+                                    <span t-esc="'{0:,.3f}'.format(int(line.product_qty))"/>
+                                </t>
 								<t t-else="t-else">
 									<span t-esc="'{0:,.0f}'.format(int(line.product_qty))"/>								
 								</t>	
