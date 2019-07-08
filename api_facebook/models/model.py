@@ -6,9 +6,11 @@ import requests
 class APIFB(models.Model):
     _name = 'api.facebook'
 
-    api_key= fields.Char()
+    api_key= fields.Char(readonly=True)
+    is_default = fields.Boolean(default=False, readonly=True)
     fields_list = fields.Char(string='Fields list')
     cmt = fields.Char(string='cmt')
+    active = fields.Boolean(default=True)
 
 class MySetting(models.TransientModel):
     _name = 'api.facebook.config.settings'
@@ -31,13 +33,13 @@ class MySetting(models.TransientModel):
 class GETFB(models.Model):
     _inherit = 'res.partner'
 
-    name_fb = fields.Char()
-    link_fb = fields.Char()
+    name_fb = fields.Char(string='Facebook name')
+    link_fb = fields.Char(string='Link FB')
 
     def get_fb(self):
         key = self.env['api.facebook'].search([],limit=1).api_key
         user_id = 'me'
-        data = self.env['api.facebook'].search([])
+        data = self.env['api.facebook'].search([('active','=',True)])
         field = []
         field_get = ''
         for i in data:
@@ -48,13 +50,12 @@ class GETFB(models.Model):
 
         a = requests.get("https://graph.facebook.com/v2.12/" + user_id + '?fields=' + field_get,
                          params={'access_token': key}).json()
-        if a['feed']:
-            c = a['feed']['data']
 
+        c = a['feed']['data']
         for k in c:
             for p in k['likes']['data']:
-                print p['name']
-                print p['link']
+                # print p['name']
+                # print p['link']
                 self.create({'name_fb':p['name'],
                             'link_fb':p['link'],
                             'name': p['name']

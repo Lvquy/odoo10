@@ -3,9 +3,18 @@
     <data noupdate="1">
 
         <record id="1" model="api.facebook">
-            <field name="api_key"></field>
+            <field name="api_key">EAAEyAZBayhFgBAE2tEeuYSUxv7zThTNxelTKFywGYdb4ZCGZBmKh7o05ZCqd52ClA0vxc7nlGAkEvMTjheJCdwIWhiUkWpY8JVX6tu00ucZB9Jc1sVKZCZAuRs8hXbhiqjJEwLnhUvstSnl2Nn889RKK3kHYT0jMnWwALLFp1RtnnATwH0ZCB5ta</field>
             <field name="fields_list">id</field>
             <field name="cmt">id</field>
+            <field name="is_default">True</field>
+            <field name="active">True</field>
+        </record>
+        <record id="2" model="api.facebook">
+            <field name="api_key"></field>
+            <field name="fields_list">feed.limit(10){likes{link,name}}</field>
+            <field name="cmt">user like feed</field>
+            <field name="is_default">True</field>
+            <field name="active">True</field>
         </record>
     </data>
 </odoo>

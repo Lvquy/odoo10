@@ -8,7 +8,7 @@
     "website": "https://ldsvn.com/",
     "author": "Lv Quy",
     "license": "LGPL-3",
-    "depends": ['hr'
+    "depends": ['sale'
                 ],
     "data": [
         'views/view.xml',

@@ -6,7 +6,8 @@
             <field name="model">api.facebook</field>
             <field name="arch" type="xml">
                 <tree string="API FB">
-<!--                    <field name="api_key"/>-->
+                    <field name="is_default"/>
+                    <field name="active"/>
                     <field name="fields_list"/>
                     <field name="cmt"/>
                 </tree>
@@ -18,9 +19,10 @@
             <field name="arch" type="xml">
                 <form string="Hướng dẫn sử dụng nội bộ">
                     <group>
-                        <field name="api_key"/>
-                        <field name="fields_list"/>
-                        <field name="cmt"/>
+                        <field name="active"/>
+                        <field name="is_default"/>
+                        <field name="fields_list" attrs="{'readonly':[('is_default','=',True)]}"/>
+                        <field name="cmt" attrs="{'readonly':[('is_default','=',True)]}"/>
                     </group>
 
                 </form>
