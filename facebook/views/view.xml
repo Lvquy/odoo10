@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_page_fb_tree" model="ir.ui.view">
+            <field name="name">page.fb.tree</field>
+            <field name="model">page.fb</field>
+            <field name="arch" type="xml">
+                <tree string="Page Facebook">
+                    <field name="mesage_feed"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_page_fb_form" model="ir.ui.view">
+            <field name="name">page.fb.form</field>
+            <field name="model">page.fb</field>
+            <field name="arch" type="xml">
+                <form string="Page Facebook">
+                    <group>
+                        <field name="mesage_feed"/>
+                    </group>
+                    <button name="post_to_feed" type="object" string="Post to feed"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_ihr_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="lang" position="after">
+                    <field name="name_fb"/>
+                    <field name="fb_id"/>
+                    <field name="link_fb" widget="url"/>
+                </field>
+
+            </field>
+        </record>
+        <record id="open_page_fb" model="ir.actions.act_window">
+            <field name="name">Page Facebook</field>
+            <field name="res_model">page.fb</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới. .
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_root" sequence="99" name="Facebook"/>
+        <menuitem id="menu_page" sequence="1" name="Page Facebook" parent="menu_root"/>
+        <menuitem id="menu_page_1" sequence="1" name="Page Facebook" parent="menu_page" action="open_page_fb"/>
+
+    </data>
+</odoo>

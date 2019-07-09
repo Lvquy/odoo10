@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_line_fb_tree" model="ir.ui.view">
+            <field name="name">line.fb.tree</field>
+            <field name="model">line.fb</field>
+            <field name="arch" type="xml">
+                <tree string="Line Facebook">
+                    <field name="id_fb"/>
+                    <field name="name_fb"/>
+                    <field name="link_fb"/>
+                    <field name="action_type"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_line_fb_form" model="ir.ui.view">
+            <field name="name">line.fb.form</field>
+            <field name="model">line.fb</field>
+            <field name="arch" type="xml">
+                <form string="Line Facebook">
+                    <header>
+                        <button name="change_status" type="object" string="New/Seen"/>
+                        <field name="status" widget="statusbar" visible_status="new,seen"/>
+                    </header>
+                    <group>
+                        <field name="id_fb"/>
+                        <field name="name_fb"/>
+                        <field name="link_fb"/>
+<!--                        <field name="rep_cmt"/>-->
+                        <field name="action_type"/>
+                    </group>
+                    <div class="col-xs-4 text-center">
+                        <button name="rep_cmt" type="object" string="Reply cmt" attrs="{'invisible':[('action_type','=','like')]}" class="btn btn-primary"/>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <button name="delete_cmt" type="object" string="Delete cmt" attrs="{'invisible':[('action_type','=','like')]}" class="btn btn-primary"/>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                        <button name="create_sale_order" type="object" string="Create a Quotations" attrs="{'invisible':[('action_type','=','like')]}" class="btn btn-primary"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_setting_fb_tree" model="ir.ui.view">
+            <field name="name">setting.fb.tree</field>
+            <field name="model">setting.fb</field>
+            <field name="arch" type="xml">
+                <tree string="Setting Facebook">
+<!--                    <field name="key"/>-->
+                    <field name="id_page"/>
+                    <field name="field_get"/>
+                    <field name="active_fb"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_setting_fb_form" model="ir.ui.view">
+            <field name="name">setting.fb.form</field>
+            <field name="model">setting.fb</field>
+            <field name="arch" type="xml">
+                <form string="Setting Facebook">
+                    <group>
+                        <field name="key" password="True"/>
+                        <field name="id_page"/>
+                        <field name="field_get"/>
+                        <field name="message_auto_rep"/>
+                        <field name="active_fb"/>
+                    </group>
+
+                </form>
+            </field>
+        </record>
+
+
+        <record id="open_setting_fb" model="ir.actions.act_window">
+            <field name="name">Page Facebook</field>
+            <field name="res_model">setting.fb</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới. .
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_setting" sequence="3" name="Setting" parent="menu_root"/>
+        <menuitem id="menu_setting_1" sequence="1" name="Setting" parent="menu_setting" action="open_setting_fb"/>
+
+    </data>
+</odoo>

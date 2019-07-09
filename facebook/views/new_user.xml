@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="view_new_user_tree" model="ir.ui.view">
+            <field name="name">new.user.tree</field>
+            <field name="model">new.user</field>
+            <field name="arch" type="xml">
+                <tree string="Data Facebook">
+                    <field name="id_post"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_new_user_form" model="ir.ui.view">
+            <field name="name">new.user.form</field>
+            <field name="model">new.user</field>
+            <field name="arch" type="xml">
+                <form string="Data Facebook">
+                    <header>
+                        <button name="create_user_fb" type="object" string="Create customer" class="btn btn-primary"/>
+                        <button name="get_data_fb" type="object" string="Get Data" class="btn btn-primary"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="id_post"/>
+                            <field name="note"/>
+                        </group>
+
+                        <notebook>
+                            <page name="data" string="Data Likes for Post" >
+                                <field name="data_get" />
+                            </page>
+                            <page name="data" string="Data Comment for Post">
+                                <field name="data_get_cmt" />
+                            </page>
+                        </notebook>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="open_new_user" model="ir.actions.act_window">
+            <field name="name">Data Facebook</field>
+            <field name="res_model">new.user</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới. .
+                </p>
+            </field>
+        </record>
+        <menuitem id="menu_page_newuser" sequence="2" name="Data Facebook" parent="menu_page" action="open_new_user"/>
+
+    </data>
+</odoo>

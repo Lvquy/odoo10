@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="view_get_id_tree" model="ir.ui.view">
+            <field name="name">get.id.tree</field>
+            <field name="model">get.id</field>
+            <field name="arch" type="xml">
+                <tree string="Tools Get ID">
+                    <field name="fb_url" />
+                    <field name="id_fb"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_get_id_form" model="ir.ui.view">
+            <field name="name">get.id.form</field>
+            <field name="model">get.id</field>
+            <field name="arch" type="xml">
+                <form string="Tools Get ID">
+                    <group>
+                        <field name="fb_url" />
+                        <field name="id_fb"/>
+                    </group>
+                    <button name="get_id_fb" type="object" string="Get ID"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="open_get_id" model="ir.actions.act_window">
+            <field name="name">Get ID Facebook</field>
+            <field name="res_model">get.id</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Nhấp để tạo mới. .
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="menu_get_id" sequence="2" name="Tools" parent="menu_root"/>
+        <menuitem id="menu_get_id_1" sequence="1" name="Get ID" parent="menu_get_id" action="open_get_id"/>
+    </data>
+</odoo>
