@@ -16,6 +16,7 @@
         'views/setting.xml',
         'views/get_id.xml',
         'views/new_user.xml',
+        'data/cron_job.xml',
     ],
     'qweb': [],
     'application'   : True,

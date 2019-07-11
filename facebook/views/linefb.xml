@@ -12,6 +12,7 @@
                     <field name="link_fb"/>
                     <field name="mobile_fb"/>
                     <field name="email_fb"/>
+                    <field name="msg"/>
                     <field name="action_type"/>
                     <field name="status"/>
                 </tree>
@@ -32,6 +33,7 @@
                         <field name="link_fb"/>
                         <field name="mobile_fb"/>
                         <field name="email_fb"/>
+                        <field name="msg"/>
                         <field name="action_type"/>
                     </group>
                     <div class="col-xs-4 text-center">

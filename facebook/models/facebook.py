@@ -33,15 +33,20 @@ class ToolsGetID(models.Model):
                 return
             except Exception:
                 return 0
+    @api.multi
     def get_id_post(self):
         if self.type_get == 'id_post':
             graph_api_url = 'https://graph.facebook.com/v3.3/'+self.id_page+"/feed"+'?limit='+str(self.limit_post)
             params={'access_token': self.env['setting.fb'].search([('active_fb','=',True)],limit=1).key}
-            data = requests.get(graph_api_url,params=params).json()
+            try:
+                data = requests.get(graph_api_url,params=params).json()
+                bb = data.get("data")
+            except Exception:
+                return 0
             data_id_old = []
             for i in self.data_post:
                 data_id_old.append(i.id_post)
-            for i in data.get("data"):
+            for i in bb:
                 if i.get('id') not in data_id_old:
                     self.search([]).write({
                         'data_post': [(0, 0, {
@@ -70,6 +75,8 @@ class NewUser(models.Model):
         print 'create customer from data fb'
         data_like = self.data_get
         data_cmt = self.data_get_cmt
+
+
         customer = self.env['res.partner']
         data_id_customer_old = []
 
@@ -85,6 +92,8 @@ class NewUser(models.Model):
                     'fb_id': i.id_fb,
                     'custommer': True,
                 })
+
+
         for i in data_cmt:
             if i.id_fb not in data_id_customer_old:
                 customer.create({
@@ -94,7 +103,6 @@ class NewUser(models.Model):
                     'fb_id': i.id_fb,
                 })
 
-    @api.multi
     def get_data_fb(self):
         data_api = self.env['setting.fb'].search([('active_fb','=',True)], limit=1)
         key = data_api.key
@@ -102,21 +110,19 @@ class NewUser(models.Model):
         field_get = data_api.field_get
         like = self.search([('id_post', '=', self.id_post)], limit=1)
         cmt = self.search([('id_post', '=', self.id_post)], limit=1)
-
-        try:
-            a = requests.get("https://graph.facebook.com/v3.3/" + user_id + '_' + self.id_post + '?fields=' + field_get,
+        a = requests.get("https://graph.facebook.com/v3.3/" + user_id + '_' + self.id_post + '?fields=' + field_get,
                          params={'access_token': key}).json()
-            data_like_get = a.get("likes").get('data')
+        try:
             data_cmt_get = a.get("comments").get('data')
         except Exception:
-            return 0
+            data_cmt_get =  {}
 
         data_cmt_old = []
         data_cmt_new = []
         for i in self.data_get_cmt:
             data_cmt_old.append(i.id_fb)
 
-        for i in a.get('comments').get('data'):
+        for i in data_cmt_get:
             data_cmt_new.append(i.get('from').get('id'))
 
         for i in data_cmt_old:
@@ -131,9 +137,14 @@ class NewUser(models.Model):
                         'name_fb': k.get("from").get("name"),
                         'link_fb': '',
                         'action_type': 'comment',
+                        'msg': k.get("message"),
                     })]
                 })
         # end cmt *********************************************************
+        try:
+            data_like_get = a.get("likes").get('data')
+        except Exception:
+            data_like_get = {}
 
         data_like_new = []
         data_like_old = []
@@ -159,3 +170,5 @@ class NewUser(models.Model):
                         'action_type': 'like',
                     })]
                 })
+
+        # ****************
