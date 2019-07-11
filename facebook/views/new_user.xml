@@ -8,6 +8,7 @@
             <field name="arch" type="xml">
                 <tree string="Data Facebook">
                     <field name="id_post"/>
+                    <field name="note"/>
                 </tree>
             </field>
         </record>

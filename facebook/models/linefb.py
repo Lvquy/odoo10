@@ -9,6 +9,8 @@ class LineFB(models.Model):
     name_fb = fields.Char()
     link_fb = fields.Char()
     rep_cmt = fields.Char()
+    email_fb = fields.Char()
+    mobile_fb = fields.Char()
     action_type = fields.Selection([('like','like'),('comment','comment')])
     cnect_cmt = fields.Many2one('new.user',domain="[('action_type','=','comment')]")
     cnect_like = fields.Many2one('new.user' ,domain="[('action_type','=','like')]")

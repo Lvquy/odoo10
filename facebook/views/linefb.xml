@@ -10,6 +10,8 @@
                     <field name="id_fb"/>
                     <field name="name_fb"/>
                     <field name="link_fb"/>
+                    <field name="mobile_fb"/>
+                    <field name="email_fb"/>
                     <field name="action_type"/>
                     <field name="status"/>
                 </tree>
@@ -28,7 +30,8 @@
                         <field name="id_fb"/>
                         <field name="name_fb"/>
                         <field name="link_fb"/>
-<!--                        <field name="rep_cmt"/>-->
+                        <field name="mobile_fb"/>
+                        <field name="email_fb"/>
                         <field name="action_type"/>
                     </group>
                     <div class="col-xs-4 text-center">

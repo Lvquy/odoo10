@@ -2,7 +2,7 @@
 
 from odoo import fields, models, api
 import requests
-
+import json
 class FaceBook(models.Model):
     _name = 'setting.fb'
 
@@ -16,18 +16,40 @@ class ToolsGetID(models.Model):
     _name = 'get.id'
 
     fb_url = fields.Char()
-    id_fb = fields.Char()
+    id_fb = fields.Char(readonly=True)
+    type_get = fields.Selection([('id_post','Get ID Post'),('id_user_page','Get ID User, Page')],default='id_post')
+    id_page = fields.Char(default=lambda self: self.env['setting.fb'].search([('active_fb','=',True)],limit=1).id_page)
+    limit_post= fields.Integer(default=5)
+    data_post = fields.One2many('line.datapost', 'ref', string='Data Post')
+    name = fields.Char()
 
     def get_id_fb(self):
-        URL = "https://findmyfbid.com/"
-        PARAMS = {'url': self.fb_url}
-        try:
-            r = requests.post(url=URL, params=PARAMS)
-            self.id_fb = r.json().get("id")
-            return
-        except Exception:
-            return 0
-
+        if self.type_get =='id_user_page':
+            URL = "https://findmyfbid.com/"
+            PARAMS = {'url': self.fb_url}
+            try:
+                r = requests.post(url=URL, params=PARAMS)
+                self.id_fb = r.json().get("id")
+                return
+            except Exception:
+                return 0
+    def get_id_post(self):
+        if self.type_get == 'id_post':
+            graph_api_url = 'https://graph.facebook.com/v3.3/'+self.id_page+"/feed"+'?limit='+str(self.limit_post)
+            params={'access_token': self.env['setting.fb'].search([('active_fb','=',True)],limit=1).key}
+            data = requests.get(graph_api_url,params=params).json()
+            data_id_old = []
+            for i in self.data_post:
+                data_id_old.append(i.id_post)
+            for i in data.get("data"):
+                if i.get('id') not in data_id_old:
+                    self.search([]).write({
+                        'data_post': [(0, 0, {
+                            'message_post': i.get('message'),
+                            'id_post': i.get('id'),
+                            'link_fb': 'https://facebook.com/'+i.get('id'),
+                        })]
+                    })
 class PageFB(models.Model):
     _name = 'page.fb'
 
@@ -39,24 +61,38 @@ class PageFB(models.Model):
 class NewUser(models.Model):
     _name = 'new.user'
 
-    id_post = fields.Char()
+    id_post = fields.Char(required=True)
     note =fields.Text(string='Description')
     data_get = fields.One2many('line.fb', 'cnect_cmt')
     data_get_cmt = fields.One2many('line.fb', 'cnect_like')
 
     def create_user_fb(self):
-        print 'create fb'
+        print 'create customer from data fb'
         data_like = self.data_get
         data_cmt = self.data_get_cmt
         customer = self.env['res.partner']
+        data_id_customer_old = []
+
+        for i in customer.search([('active','=',True)]):
+            data_id_customer_old.append(i.fb_id)
+
         for i in data_like:
-            print i.id_fb
-            customer.create({
-                'name_fb':i.name_fb,
-                'link_fb':'https://facebook.com'+'/'+i.id_fb,
-                'name': i.name_fb,
-                'fb_id': i.id_fb,
-            })
+            if i.id_fb not in data_id_customer_old:
+                customer.create({
+                    'name_fb':i.name_fb,
+                    'link_fb':'https://facebook.com'+'/'+i.id_fb,
+                    'name': i.name_fb,
+                    'fb_id': i.id_fb,
+                    'custommer': True,
+                })
+        for i in data_cmt:
+            if i.id_fb not in data_id_customer_old:
+                customer.create({
+                    'name_fb':i.name_fb,
+                    'link_fb':'https://facebook.com'+'/'+i.id_fb,
+                    'name': i.name_fb,
+                    'fb_id': i.id_fb,
+                })
 
     @api.multi
     def get_data_fb(self):
@@ -68,9 +104,27 @@ class NewUser(models.Model):
         cmt = self.search([('id_post', '=', self.id_post)], limit=1)
 
         try:
-            a = requests.get("https://graph.facebook.com/v3.3/" + user_id + '_' + self.id_post + '?fields=' + field_get,params={'access_token': key}).json()
-            data_cmt = a.get("comments").get('data')
-            for k in data_cmt:
+            a = requests.get("https://graph.facebook.com/v3.3/" + user_id + '_' + self.id_post + '?fields=' + field_get,
+                         params={'access_token': key}).json()
+            data_like_get = a.get("likes").get('data')
+            data_cmt_get = a.get("comments").get('data')
+        except Exception:
+            return 0
+
+        data_cmt_old = []
+        data_cmt_new = []
+        for i in self.data_get_cmt:
+            data_cmt_old.append(i.id_fb)
+
+        for i in a.get('comments').get('data'):
+            data_cmt_new.append(i.get('from').get('id'))
+
+        for i in data_cmt_old:
+            if i in data_cmt_new:
+                del data_cmt_new[data_cmt_new.index(i)]
+                print 'trung: ', i
+        for k in data_cmt_get:
+            if k.get("from").get("id") in data_cmt_new:
                 cmt.write({
                     'data_get_cmt': [(0, 0, {
                         'id_fb': k.get("from").get("id"),
@@ -79,13 +133,24 @@ class NewUser(models.Model):
                         'action_type': 'comment',
                     })]
                 })
-        except Exception:
-            print 'khong co cmt'
-        try:
-            a = requests.get("https://graph.facebook.com/v3.3/" + user_id + '_' + self.id_post + '?fields=' + field_get,params={'access_token': key}).json()
-            data_like = a.get("likes").get("data")
+        # end cmt *********************************************************
 
-            for k in data_like:
+        data_like_new = []
+        data_like_old = []
+
+        for i in self.data_get:
+            data_like_old.append(i.id_fb)
+
+        for i in data_like_get:
+            data_like_new.append(i.get('id'))
+
+        for i in data_like_old:
+            if i in data_like_new:
+                del data_like_new[data_like_new.index(i)]
+                print 'trung: ', i
+
+        for k in data_like_get:
+            if k.get("id") in data_like_new:
                 like.write({
                     'data_get': [(0, 0, {
                         'id_fb': k.get("id"),
@@ -94,6 +159,3 @@ class NewUser(models.Model):
                         'action_type': 'like',
                     })]
                 })
-
-        except Exception:
-            print 'khong co like'
