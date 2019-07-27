@@ -32,6 +32,9 @@ class Taisan(models.Model):
     currency_id = fields.Many2one('res.currency', default=lambda self: self.env['res.currency'].search([('name','=','VND')]).id, readonly=True, string='Tiền tệ', help="Chú ý: Nên đổi ra giá trị của VNĐ để tiện việc thống kê Tổng giá trị TS")
     lich_su_bao_quan = fields.One2many('lich.su','ref_hr',string="Lịch sử bảo quản")
     so_luong = fields.Integer(string='Số lượng', default=1)
+    so_luong_bp = fields.Integer(string='Số lượng báo phế', default=1, required=True)
+    so_luong_da_phe= fields.Integer(string='Số lượng đã phế', readonly=True)
+
     ngay_con_bh = fields.Integer(string='Ngày còn bảo hành',compute='onchang_time')
     color = fields.Integer(default=0, compute='onchange_color')
     pdf_scan4 = fields.Binary(string="Giấy tờ liên quan 4", help='Các giấy tờ bảo hành liên quan!')
@@ -48,6 +51,7 @@ class Taisan(models.Model):
     nguoi_nhan = fields.Many2one('res.users',string='Người nhận ts phế', readonly=True)
     da_ban = fields.Boolean(string='Đã bán', default=False,readonly=True)
     khach_hang =fields.Many2one('res.partner',string='Khách hàng', readonly=True)
+
 
     def _needaction_domain_get(self):
         return [('status', '=', '2'),('luu_kho','=',False)]
@@ -163,28 +167,57 @@ class Taisan(models.Model):
     # báo phế
     @api.multi
     def cancel(self):
-        if not self.ly_do_phe or not self.ngay_bao_phe:
-            raise UserError('Cần có lý do và ngày báo phế!')
+        if self.so_luong == self.so_luong_bp:
+            if not self.ly_do_phe or not self.ngay_bao_phe:
+                raise UserError('Cần có lý do và ngày báo phế!')
 
-        hist = self.search([('code', '=', self.code)])
-        hist.write({
-            'lich_su_bao_quan': [(0, 0, {
-                'his_type': 'phe',
-                'note': '',
-                'tu_ngay': self.ngay_bao_phe,
-                'thiet_bi': self.code,
-                'nguoi_bq': self.nguoi_bao_quan.name,
-                'so_the': self.nguoi_bao_quan.so_the,
-            })]
-        })
 
-        self._create_his()
-        self.env['hr.employee'].search([('thiet_bi.code', '=', self.code)]).write({'thiet_bi': [(3, self.id)]})
-        self.nguoi_bao_quan = False
-        self.write({'status':'2'})
-        self.env['top.10'].get_data()
-        self.tinh_trang = 'phe'
-        self.luu_kho = False
+            hist = self.search([('code', '=', self.code)])
+            hist.write({
+                'lich_su_bao_quan': [(0, 0, {
+                    'his_type': 'phe',
+                    'note': '',
+                    'tu_ngay': self.ngay_bao_phe,
+                    'thiet_bi': self.code,
+                    'nguoi_bq': self.nguoi_bao_quan.name,
+                    'so_the': self.nguoi_bao_quan.so_the,
+                })]
+            })
+
+            self._create_his()
+            self.env['hr.employee'].search([('thiet_bi.code', '=', self.code)]).write({'thiet_bi': [(3, self.id)]})
+            self.nguoi_bao_quan = False
+            self.write({'status':'2'})
+            self.env['top.10'].get_data()
+            self.tinh_trang = 'phe'
+            self.luu_kho = False
+        if self.so_luong < self.so_luong_bp:
+            raise UserError('Số lượng báo phế không được lớn hơn số lượng trong kho!')
+        else:
+            if not self.ly_do_phe or not self.ngay_bao_phe:
+                raise UserError('Cần có lý do và ngày báo phế!')
+            self.so_luong = self.so_luong - self.so_luong_bp
+            self.so_luong_da_phe += self.so_luong_bp
+
+            hist = self.search([('code', '=', self.code)])
+            hist.write({
+                'lich_su_bao_quan': [(0, 0, {
+                    'his_type': 'phe',
+                    'note': '',
+                    'tu_ngay': self.ngay_bao_phe,
+                    'thiet_bi': self.code,
+                    'nguoi_bq': self.nguoi_bao_quan.name,
+                    'so_the': self.nguoi_bao_quan.so_the,
+                })]
+            })
+
+            self._create_his()
+            # self.env['hr.employee'].search([('thiet_bi.code', '=', self.code)]).write({'thiet_bi': [(3, self.id)]})
+            # self.nguoi_bao_quan = False
+            # self.write({'status': '2'})
+            self.env['top.10'].get_data()
+            # self.tinh_trang = 'phe'
+            # self.luu_kho = False
 
     def luukho(self):
         self.luu_kho = True

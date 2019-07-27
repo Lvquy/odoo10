@@ -70,7 +70,7 @@ class Sale(models.Model):
     @api.onchange('tong_tien')
     def get_doc_tien(self):
         self.doc_tien = num2text.docso(int(self.tong_tien))
-        print self.doc_tien
+        # print self.doc_tien
 
 
 class Linets(models.Model):

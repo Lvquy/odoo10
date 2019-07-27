@@ -8,7 +8,7 @@
     "website": "https://ldsvn.com/",
     "author": "Lv Quy, IT LDS",
     "license": "LGPL-3",
-    "depends": ['hr','report','contacts'
+    "depends": ['hr','report',
                 ],
     "data": [
         'views/document.xml',
@@ -17,10 +17,12 @@
         'data/ir.cron.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
+        'security/rule.xml',
         'views/filter.xml',
         'views/graph.xml',
         'views/pivot.xml',
         'views/top10.xml',
+        'views/customer_kho_ns.xml',
         'views/view.xml',
         'views/sale.xml',
         'views/lich_su.xml',

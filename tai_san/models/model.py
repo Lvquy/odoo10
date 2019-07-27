@@ -2,13 +2,20 @@
 from odoo import fields, models, api
 from odoo.exceptions import UserError
 
+class RESP(models.Model):
+    _name = 'res.partner'
+    _inherit = 'res.partner'
+    # is_bqts = fields.Boolean(default=False)
+    is_customer_bqts = fields.Boolean(default=False)
+    is_supplier_bqts = fields.Boolean(default=False)
+
 class HR(models.Model):
     _inherit = 'hr.employee'
     _order = 'tong_gt_ts desc'
 
     email_noibo = fields.Char(string="Email nội bộ")
     work_email = fields.Char(string="Email ngoại bộ")
-    so_the = fields.Char(string="Số thẻ", help='Số thẻ nhân viên', required=True)
+    so_the = fields.Char(string="Số thẻ", help='Số thẻ nhân viên', default='NEW')
     _sql_constraints = [
         ('so_the_uniq', 'UNIQUE(so_the)', 'Số thẻ này đã tồn tại, Kiểm tra lại!')
     ]
@@ -17,6 +24,7 @@ class HR(models.Model):
     count_ts = fields.Integer(string='Tổng tài sản bảo quản', compute='ts_count', )
     tong_gt_ts = fields.Integer(string='Tổng giá trị bảo quản', compute='ts_count', store=True)
     lich_su = fields.One2many('lich.subq','ref_a', string='Lịch sử bảo quản')
+    pdf = fields.One2many('pdf.file', 'cnt', string='PDF')
 
     @api.one
     @api.depends('thiet_bi')
@@ -82,3 +90,12 @@ class Top10(models.Model):
         for i in data:
             self.create({'name':i.id, 'no':k})
             k+=1
+
+class PDF(models.Model):
+    _name = 'pdf.file'
+
+    name = fields.Char(default='name')
+    pdf = fields.Binary(string='Đính kèm PDF ')
+    ts = fields.Many2one('tai.san',string='Tên tài sản')
+    ma_ts = fields.Char(related='ts.code', string='Mã tài sản')
+    cnt = fields.Many2one('hr.employee')

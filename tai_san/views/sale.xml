@@ -17,7 +17,7 @@
                             <field name="so"/>
                         </group>
                         <group>
-                            <field name="khach_hang" domain="[('customer','=',True)]" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                            <field name="khach_hang" options="{'no_create':True}"  domain="[('is_customer_bqts','=',True)]" attrs="{'readonly':[('status','in',('1','2'))]}"/>
                             <field name="ngay_tao" attrs="{'readonly':[('status','in',('1','2'))]}"/>
                             <field name="ngay_xuat_kho" attrs="{'readonly':[('status','in',('1','2'))]}"/>
                         </group>

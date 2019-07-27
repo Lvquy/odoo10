@@ -9,7 +9,7 @@
                     <header>
                         <button name="confirm" string="Xác nhận" type="object" attrs="{'invisible':[('status','in',('1','2'))]}" groups="base.group_system,tai_san.group_taisan"/>
                         <button name="unconfirm" string="Đưa về kho" type="object" attrs="{'invisible':[('status','in',('0','2'))]}" groups="base.group_system,tai_san.group_taisan" />
-                        <button name="cancel" string="Báo phế" type="object" attrs="{'invisible':[('status','in',('2'))]}" groups="base.group_system,tai_san.group_taisan" />
+                        <button name="cancel" confirm='Xác nhận báo phế với số lượng đã chọn!' string="Báo phế" type="object" attrs="{'invisible':[('status','in',('2'))]}" groups="base.group_system,tai_san.group_taisan" />
                         <button name="luukho" string="Nhận TS phế" type="object" attrs="{'invisible':['|',('status','in',('0','1')),('luu_kho','=',True)]}" groups="tai_san.group_taisan_phe"/>
                         <field name="status" widget="statusbar" visible_status="0,1,2"/>
                     </header>
@@ -52,6 +52,8 @@
                             </group>
                             <group string="Khác">
                                 <field name="so_luong" attrs="{'readonly':[('status','in',('1','2'))]}"/>
+                                <field name="so_luong_bp" attrs="{'readonly':[('status','in',('2'))]}"/>
+                                <field name="so_luong_da_phe"/>
                                 <field name="ngay_bao_phe" attrs="{'readonly':[('status','in',('2'))]}" />
                                 <field name="ly_do_phe" />
                                 <field name="luu_kho" attrs="{'invisible':[('status','in',('0','1'))]}"/>
@@ -65,7 +67,7 @@
                         <notebook>
                             <page name="lich_su" string="Lịch sử thiết bị">
                                 <form string="Lịch sử thiết bị">
-                                    <field name="lich_su_bao_quan" attrs="{'readonly':[('status','in',('1','2'))]}">
+                                    <field name="lich_su_bao_quan">
                                         <tree delete="0" create="false">
                                             <field name="tu_ngay"/>
                                             <field name="nguoi_bq"/>
@@ -190,6 +192,12 @@
                         </field>
                     </page>
                 </xpath>
+                <xpath expr="//page[@name='lichsu']" position="after">
+                    <page name="pdf" string="PDF">
+                        <field name="pdf"/>
+                    </page>
+                </xpath>
+
 
                 <xpath expr="//field[@name='name']" position="after">
                     <h2>
@@ -275,6 +283,33 @@
             </field>
         </record>
 
+        <record id="view_pdf_tree" model="ir.ui.view">
+            <field name="name">pdf.file.tree</field>
+            <field name="model">pdf.file</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ma_ts"/>
+                    <field name="ts"/>
+                    <field name="pdf"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_pdf_form" model="ir.ui.view">
+            <field name="name">pdf.file.form</field>
+            <field name="model">pdf.file</field>
+            <field name="arch" type="xml">
+                <form string="PDF" name="pdf">
+                    <group>
+                        <field name="name" invisible="1"/>
+                        <field name="ts"/>
+                        <field name="ma_ts"/>
+                        <field name="pdf" filename="name"/>
+                    </group>
+
+                </form>
+
+            </field>
+        </record>
 
         <menuitem
                 id="menu_top10"
@@ -320,5 +355,23 @@
                 parent="menu_root_ts_tree"
                 sequence="5"
                 name="Đã phế" groups="tai_san.group_taisan_phe"/>
+
+        <menuitem
+                id="menu_root_cus"
+                parent="menu_root_ts"
+                sequence="19" name="Nhà cung cấp/ Khách hàng" />
+
+        <menuitem
+                action="action_partner_customer"
+                id="menu_customer"
+                parent="menu_root_cus"
+                sequence="1"
+                name="Khách hàng"/>
+        <menuitem
+                action="action_partner_supplier"
+                id="menu_nhacc"
+                parent="menu_root_cus"
+                sequence="2"
+                name="Nhà cung cấp"/>
     </data>
 </odoo>
